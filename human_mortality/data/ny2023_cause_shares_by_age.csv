@@ -1,0 +1,13 @@
+# Source: New York State Dept of Health, Vital Statistics 2023, Table 34a (Total rows), transcribed
+# URL: https://healthweb-back.health.ny.gov/statistics/vital_statistics/2023/table34a.htm
+# heart = Diseases of the Heart deaths, cancer = Malignant Neoplasms deaths; 0 where not in the age group's top 5
+lo,hi,all,heart,cancer
+0,0,825,0,0
+1,9,303,0,42
+10,19,560,20,56
+20,24,762,28,40
+25,44,7844,653,754
+45,64,27197,5798,7071
+65,74,30749,7420,9009
+75,84,40700,10445,9307
+85,250,53342,16805,5979

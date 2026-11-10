@@ -1,0 +1,9 @@
+# Source: Montoya et al. 2023 Front Vet Sci 10:1082102: life expectancy at birth by size group (purebreds, all survey years), adult-weight cutoffs, mean annual dogs per group, breeds per group
+# URL: https://www.frontiersin.org/journals/veterinary-science/articles/10.3389/fvets.2023.1082102/pdf (opened 2026-11-10)
+# kg_lo/kg_hi are the paper's cutoffs; toy lower bound and giant upper bound are NOT in the paper (set to 2 and 70 kg by this stream: ASSUMPTION used only to pick a representative mass)
+size,kg_lo,kg_hi,e0,lo,hi,mean_annual_n,n_breeds
+toy,2,5.5,13.36,13.33,13.38,409204,19
+small,5.5,11,13.53,13.52,13.55,545988,94
+medium,11,26,12.70,12.68,12.72,251831,215
+large,26,45,11.51,11.49,11.52,592413,154
+giant,45,70,9.51,9.45,9.58,26099,26

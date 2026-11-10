@@ -1,0 +1,1163 @@
+{
+  "_note": "Merged by run_all.py. JUDGEMENT/ILLUSTRATIVE inputs are labelled in each script and in findings.md.",
+  "escape_velocity": {
+    "us2024_gm_fit": {
+      "a": 5.082586723715136e-05,
+      "b": 0.08371125444714853,
+      "c": 0.000632618197462177,
+      "rmse_log": 0.027428051402258985
+    },
+    "symbolic_check_de_dt_equals_minus_rho_over_b_de_dx": true,
+    "ev_requirements": [
+      {
+        "age": 30,
+        "mu": 0.0011068867502377674,
+        "e_period": 51.662911221690365,
+        "de_dx": -0.9428142698055808,
+        "mu_e_minus_1": -0.9428150080900009,
+        "rho_individual": 0.085,
+        "pct_mortality_fall_per_yr_individual": 8.148771559854262,
+        "rho_strong": 0.09015554405757395,
+        "pct_mortality_fall_per_yr_strong": 8.6210960238441,
+        "check_de_dt_at_rho_strong": 1.0000008305084407,
+        "slope_fall_per_yr_strong": 0.0012471060483698706,
+        "slope_fall_per_yr_individual": 0.001175789378363963,
+        "slope_fall_pct_of_b_strong": 1.4671835863174947,
+        "slope_fall_pct_of_b_individual": 1.3832816216046622,
+        "species": "human",
+        "b": 0.085
+      },
+      {
+        "age": 50,
+        "mu": 0.003674425879610825,
+        "e_period": 33.32010326459706,
+        "de_dx": -0.8775649138925701,
+        "mu_e_minus_1": -0.8775677502532594,
+        "rho_individual": 0.085,
+        "pct_mortality_fall_per_yr_individual": 8.148771559854262,
+        "rho_strong": 0.09685861858012632,
+        "pct_mortality_fall_per_yr_strong": 9.231567323910284,
+        "check_de_dt_at_rho_strong": 1.0000036828472503,
+        "slope_fall_per_yr_strong": 0.001276052245749904,
+        "slope_fall_per_yr_individual": 0.001119818679163935,
+        "slope_fall_pct_of_b_strong": 1.5012379361763573,
+        "slope_fall_pct_of_b_individual": 1.3174337401928646,
+        "species": "human",
+        "b": 0.085
+      },
+      {
+        "age": 70,
+        "mu": 0.017729,
+        "e_period": 17.371299653714907,
+        "de_dx": -0.6920176673617107,
+        "mu_e_minus_1": -0.6920242284392883,
+        "rho_individual": 0.085,
+        "pct_mortality_fall_per_yr_individual": 8.148771559854262,
+        "rho_strong": 0.12282806946181524,
+        "pct_mortality_fall_per_yr_strong": 11.55842924415632,
+        "check_de_dt_at_rho_strong": 1.0000137000680809,
+        "slope_fall_per_yr_strong": 0.0014742225817354678,
+        "slope_fall_per_yr_individual": 0.0010201880721845372,
+        "slope_fall_pct_of_b_strong": 1.7343795079240798,
+        "slope_fall_pct_of_b_individual": 1.200221261393573,
+        "species": "human",
+        "b": 0.085
+      },
+      {
+        "age": 30,
+        "mu": 0.001002858731203643,
+        "e_period": 51.53732545414841,
+        "de_dx": -0.948314728987043,
+        "mu_e_minus_1": -0.9483153431854235,
+        "rho_individual": 0.09,
+        "pct_mortality_fall_per_yr_individual": 8.60688147287718,
+        "rho_strong": 0.09490513956853944,
+        "pct_mortality_fall_per_yr_strong": 9.054079793122016,
+        "check_de_dt_at_rho_strong": 1.0000006829145036,
+        "slope_fall_per_yr_strong": 0.001308949837049469,
+        "slope_fall_per_yr_individual": 0.0012412964099792014,
+        "slope_fall_pct_of_b_strong": 1.4543887078327433,
+        "slope_fall_pct_of_b_individual": 1.3792182333102239,
+        "species": "human",
+        "b": 0.09
+      },
+      {
+        "age": 50,
+        "mu": 0.003375479681858403,
+        "e_period": 33.029669958511,
+        "de_dx": -0.8885062947925348,
+        "mu_e_minus_1": -0.8885090201565572,
+        "rho_individual": 0.09,
+        "pct_mortality_fall_per_yr_individual": 8.60688147287718,
+        "rho_strong": 0.1012932879219862,
+        "pct_mortality_fall_per_yr_strong": 9.633204088159841,
+        "check_de_dt_at_rho_strong": 1.000003452084286,
+        "slope_fall_per_yr_strong": 0.0013367910013649801,
+        "slope_fall_per_yr_individual": 0.0011877472195348008,
+        "slope_fall_pct_of_b_strong": 1.485323334849978,
+        "slope_fall_pct_of_b_individual": 1.3197191328164453,
+        "species": "human",
+        "b": 0.09
+      },
+      {
+        "age": 70,
+        "mu": 0.017729,
+        "e_period": 16.85416314374111,
+        "de_dx": -0.7011857151866252,
+        "mu_e_minus_1": -0.7011925416246139,
+        "rho_individual": 0.09,
+        "pct_mortality_fall_per_yr_individual": 8.60688147287718,
+        "rho_strong": 0.12835276283954236,
+        "pct_mortality_fall_per_yr_strong": 12.045694569301057,
+        "check_de_dt_at_rho_strong": 1.0000138838144323,
+        "slope_fall_per_yr_strong": 0.0015480814091488394,
+        "slope_fall_per_yr_individual": 0.0010854925700411475,
+        "slope_fall_pct_of_b_strong": 1.7200904546098215,
+        "slope_fall_pct_of_b_individual": 1.206102855601275,
+        "species": "human",
+        "b": 0.09
+      },
+      {
+        "age": 2,
+        "mu": 0.01330263106427226,
+        "e_period": 10.11115250277652,
+        "de_dx": -0.865488232355105,
+        "mu_e_minus_1": -0.8654950686209708,
+        "rho_individual": 0.3,
+        "pct_mortality_fall_per_yr_individual": 25.91817793182821,
+        "rho_strong": 0.3466224255650612,
+        "pct_mortality_fall_per_yr_strong": 29.292774973152923,
+        "check_de_dt_at_rho_strong": 1.0000091245512266,
+        "slope_fall_per_yr_strong": 0.03461118747448745,
+        "slope_fall_per_yr_individual": 0.029955575467005294,
+        "slope_fall_pct_of_b_strong": 11.537062491495817,
+        "slope_fall_pct_of_b_individual": 9.985191822335098,
+        "species": "dog",
+        "b": 0.3
+      },
+      {
+        "age": 6,
+        "mu": 0.03256570589972848,
+        "e_period": 6.800017953870356,
+        "de_dx": -0.7785371743338487,
+        "mu_e_minus_1": -0.7785526152013846,
+        "rho_individual": 0.3,
+        "pct_mortality_fall_per_yr_individual": 25.91817793182821,
+        "rho_strong": 0.38533041202668156,
+        "pct_mortality_fall_per_yr_strong": 31.9774155730153,
+        "check_de_dt_at_rho_strong": 1.0000254707813738,
+        "slope_fall_per_yr_strong": 0.03433041718060821,
+        "slope_fall_per_yr_individual": 0.02672750598549293,
+        "slope_fall_pct_of_b_strong": 11.443472393536071,
+        "slope_fall_pct_of_b_individual": 8.909168661830977,
+        "species": "dog",
+        "b": 0.3
+      },
+      {
+        "age": 10,
+        "mu": 0.09652136664486724,
+        "e_period": 3.986504965527757,
+        "de_dx": -0.6151920551826784,
+        "mu_e_minus_1": -0.6152170925907116,
+        "rho_individual": 0.3,
+        "pct_mortality_fall_per_yr_individual": 25.91817793182821,
+        "rho_strong": 0.48763274559990555,
+        "pct_mortality_fall_per_yr_strong": 38.592164538653215,
+        "check_de_dt_at_rho_strong": 1.0000661459215188,
+        "slope_fall_per_yr_strong": 0.037323470522149446,
+        "slope_fall_per_yr_individual": 0.022961102537071232,
+        "slope_fall_pct_of_b_strong": 12.441156840716483,
+        "slope_fall_pct_of_b_individual": 7.653700845690412,
+        "species": "dog",
+        "b": 0.3
+      },
+      {
+        "age": 2,
+        "mu": 0.012140606569621796,
+        "e_period": 10.083817461036231,
+        "de_dx": -0.8775701453238582,
+        "mu_e_minus_1": -0.8775763394856766,
+        "rho_individual": 0.32,
+        "pct_mortality_fall_per_yr_individual": 27.385096292630905,
+        "rho_strong": 0.36464064218908093,
+        "pct_mortality_fall_per_yr_strong": 30.55538393042484,
+        "check_de_dt_at_rho_strong": 1.0000080412755352,
+        "slope_fall_per_yr_strong": 0.036317712035067284,
+        "slope_fall_per_yr_individual": 0.03187133982844403,
+        "slope_fall_pct_of_b_strong": 11.349285010958527,
+        "slope_fall_pct_of_b_individual": 9.959793696388758,
+        "species": "dog",
+        "b": 0.32
+      },
+      {
+        "age": 6,
+        "mu": 0.030682189252962747,
+        "e_period": 6.7161187416450305,
+        "de_dx": -0.7939193550843271,
+        "mu_e_minus_1": -0.7939347737234772,
+        "rho_individual": 0.32,
+        "pct_mortality_fall_per_yr_individual": 27.385096292630905,
+        "rho_strong": 0.4030557806395493,
+        "pct_mortality_fall_per_yr_strong": 33.172517851305805,
+        "check_de_dt_at_rho_strong": 1.000024457803228,
+        "slope_fall_per_yr_strong": 0.03609421596970251,
+        "slope_fall_per_yr_individual": 0.02865589666494064,
+        "slope_fall_pct_of_b_strong": 11.279442490532034,
+        "slope_fall_pct_of_b_individual": 8.95496770779395,
+        "species": "dog",
+        "b": 0.32
+      },
+      {
+        "age": 10,
+        "mu": 0.0973695821067943,
+        "e_period": 3.8477428338393755,
+        "de_dx": -0.6253204660322531,
+        "mu_e_minus_1": -0.6253468882146476,
+        "rho_individual": 0.32,
+        "pct_mortality_fall_per_yr_individual": 27.385096292630905,
+        "rho_strong": 0.5117159868078873,
+        "pct_mortality_fall_per_yr_strong": 40.05339800718015,
+        "check_de_dt_at_rho_strong": 1.0000675607022558,
+        "slope_fall_per_yr_strong": 0.03950287553210129,
+        "slope_fall_per_yr_individual": 0.024701956537347667,
+        "slope_fall_pct_of_b_strong": 12.344648603781653,
+        "slope_fall_pct_of_b_individual": 7.719361417921146,
+        "species": "dog",
+        "b": 0.32
+      },
+      {
+        "age": 2,
+        "mu": 0.011124541199778643,
+        "e_period": 10.063506216905761,
+        "de_dx": -0.8880425716100149,
+        "mu_e_minus_1": -0.8880481104758033,
+        "rho_individual": 0.34,
+        "pct_mortality_fall_per_yr_individual": 28.822967723739033,
+        "rho_strong": 0.38286214000031255,
+        "pct_mortality_fall_per_yr_strong": 31.80930995085728,
+        "check_de_dt_at_rho_strong": 1.0000070218154633,
+        "slope_fall_per_yr_strong": 0.03800734825928291,
+        "slope_fall_per_yr_individual": 0.03375214328825102,
+        "slope_fall_pct_of_b_strong": 11.178631840965561,
+        "slope_fall_pct_of_b_individual": 9.927100967132652,
+        "species": "dog",
+        "b": 0.34
+      },
+      {
+        "age": 6,
+        "mu": 0.02886239639914637,
+        "e_period": 6.644922592585242,
+        "de_dx": -0.8081963166945982,
+        "mu_e_minus_1": -0.8082116100911614,
+        "rho_individual": 0.34,
+        "pct_mortality_fall_per_yr_individual": 28.822967723739033,
+        "rho_strong": 0.4206819052768248,
+        "pct_mortality_fall_per_yr_strong": 34.34010711515337,
+        "check_de_dt_at_rho_strong": 1.0000234093423543,
+        "slope_fall_per_yr_strong": 0.03782826820687238,
+        "slope_fall_per_yr_individual": 0.03057266703172963,
+        "slope_fall_pct_of_b_strong": 11.125961237315405,
+        "slope_fall_pct_of_b_individual": 8.991960891685185,
+        "species": "dog",
+        "b": 0.34
+      },
+      {
+        "age": 10,
+        "mu": 0.09797250901513638,
+        "e_period": 3.724497333244324,
+        "de_dx": -0.6350738949092438,
+        "mu_e_minus_1": -0.635101651441869,
+        "rho_individual": 0.34,
+        "pct_mortality_fall_per_yr_individual": 28.822967723739033,
+        "rho_strong": 0.5353473719177068,
+        "pct_mortality_fall_per_yr_strong": 41.45341195882059,
+        "check_de_dt_at_rho_strong": 1.0000688086466702,
+        "slope_fall_per_yr_strong": 0.04164378966365987,
+        "slope_fall_per_yr_individual": 0.02644688370048178,
+        "slope_fall_pct_of_b_strong": 12.248173430488198,
+        "slope_fall_pct_of_b_individual": 7.778495206024053,
+        "species": "dog",
+        "b": 0.34
+      }
+    ],
+    "identity_check_max_abs_err_de_dx": 2.7756532625211605e-05,
+    "strong_threshold_check_max_abs_err": 6.880864667024866e-05,
+    "cohort_remaining_le": {
+      "human age 50 (b=0.085)": {
+        "rho=0": 33.32010327038673,
+        "rho=0.5b": 52.32671463593987,
+        "rho=0.9b": 123.01260274820838,
+        "rho=b": 272.1515640167987
+      },
+      "human age 70 (b=0.085)": {
+        "rho=0": 17.37129967029576,
+        "rho=0.5b": 24.282806808683166,
+        "rho=0.9b": 41.383246247048014,
+        "rho=b": 56.404802865355485
+      },
+      "dog age 6 (b=0.32)": {
+        "rho=0": 6.71611874437778,
+        "rho=0.5b": 9.996415573226557,
+        "rho=0.9b": 19.962908089934757,
+        "rho=b": 32.592222861128626
+      }
+    },
+    "historical": [
+      {
+        "series": "Record female e0, 1840-2000 (Oeppen-Vaupel slope)",
+        "age": 0,
+        "gain_yr_per_yr": 0.243,
+        "years": "1840-2000",
+        "gap_factor_to_1yr_per_yr": 4.11522633744856,
+        "rho_implied_model": 0.021659099687527245,
+        "pct_mortality_fall_per_yr_implied": 2.142622569840036
+      },
+      {
+        "series": "US e0, 2010-2024",
+        "age": 0,
+        "gain_yr_per_yr": 0.021428571428571224,
+        "years": "2010-2024",
+        "gap_factor_to_1yr_per_yr": 46.66666666666711,
+        "rho_implied_model": 0.00190997351741861,
+        "pct_mortality_fall_per_yr_implied": 0.19081506787091973
+      },
+      {
+        "series": "US e65, 1950-2010",
+        "age": 65,
+        "gain_yr_per_yr": 0.08666666666666668,
+        "years": "1950-2010",
+        "gap_factor_to_1yr_per_yr": 11.538461538461537,
+        "rho_implied_model": 0.00978482118052378,
+        "pct_mortality_fall_per_yr_implied": 0.9737105574132876
+      },
+      {
+        "series": "US e65, 2010-2024",
+        "age": 65,
+        "gain_yr_per_yr": 0.042857142857142705,
+        "years": "2010-2024",
+        "gap_factor_to_1yr_per_yr": 23.333333333333417,
+        "rho_implied_model": 0.00483864783652273,
+        "pct_mortality_fall_per_yr_implied": 0.48269604380799525
+      },
+      {
+        "series": "Japan female e0, 2010-2024",
+        "age": 0,
+        "gain_yr_per_yr": 0.059285714285714164,
+        "years": "2010-2024",
+        "gap_factor_to_1yr_per_yr": 16.867469879518108,
+        "rho_implied_model": 0.005284260064858194,
+        "pct_mortality_fall_per_yr_implied": 0.5270322922609649
+      },
+      {
+        "series": "Japan male e0, 2010-2024",
+        "age": 0,
+        "gain_yr_per_yr": 0.11000000000000044,
+        "years": "2010-2024",
+        "gap_factor_to_1yr_per_yr": 9.090909090909054,
+        "rho_implied_model": 0.009804530722748998,
+        "pct_mortality_fall_per_yr_implied": 0.9756623010124033
+      },
+      {
+        "series": "Japan female e65, 2017-2024",
+        "age": 65,
+        "gain_yr_per_yr": -0.007142857142857244,
+        "years": "2017-2024",
+        "gap_factor_to_1yr_per_yr": Infinity,
+        "rho_implied_model": -0.000806441306087136,
+        "pct_mortality_fall_per_yr_implied": -0.08067665673059388
+      },
+      {
+        "series": "Japan female e90, 2017-2024",
+        "age": 90,
+        "gain_yr_per_yr": -0.008571428571428643,
+        "years": "2017-2024",
+        "gap_factor_to_1yr_per_yr": Infinity,
+        "rho_implied_model": -0.0019060548708093115,
+        "pct_mortality_fall_per_yr_implied": -0.1907872548075229
+      }
+    ]
+  },
+  "repair_model": {
+    "fixed_point_linear_post_repair": "T*r*(1 - f)/f",
+    "fixed_point_linear_pre_repair": "T*r/f",
+    "fixed_point_exponential_post_repair": "r*(-f*exp(T*g) + f + exp(T*g) - 1)/(g*(f*exp(T*g) - exp(T*g) + 1))",
+    "bounded_condition_exponential": "(1-f)*exp(g*T) < 1  <=>  f > 1 - exp(-g*T)",
+    "closed_form_checks": [
+      {
+        "f": 0.3,
+        "T": 2,
+        "r": 0.0121,
+        "g": 0,
+        "iterated": 0.056466666666666644,
+        "closed_form": 0.05646666666666666,
+        "contraction": 0.7
+      },
+      {
+        "f": 0.5,
+        "T": 5,
+        "r": 0.0121,
+        "g": 0.05,
+        "iterated": 0.09600082522546238,
+        "closed_form": 0.09600082522546241,
+        "contraction": 0.6420127083438707
+      },
+      {
+        "f": 0.2,
+        "T": 5,
+        "r": 0.0121,
+        "g": 0.05,
+        "iterated": Infinity,
+        "closed_form": Infinity,
+        "contraction": 1.0272203333501932
+      },
+      {
+        "f": 0.2,
+        "T": 4,
+        "r": 0.0121,
+        "g": 0.05,
+        "iterated": 1.873588640990393,
+        "closed_form": 1.8735886409904057,
+        "contraction": 0.977122206528136
+      }
+    ],
+    "scenarios_age50": [
+      {
+        "scenario": "no therapy",
+        "remaining_LE_from_50": 33.32009937906071,
+        "expected_age_at_death": 83.32009937906071
+      },
+      {
+        "scenario": "all 7 types, f=1.0 every year",
+        "remaining_LE_from_50": 1724.823614115158,
+        "expected_age_at_death": 1774.823614115158
+      },
+      {
+        "scenario": "all 7 types, f=0.5 every 5 y",
+        "remaining_LE_from_50": 1612.4034365807786,
+        "expected_age_at_death": 1662.4034365807786
+      },
+      {
+        "scenario": "all 7 types, f=0.2 every 10 y",
+        "remaining_LE_from_50": 378.0256700446346,
+        "expected_age_at_death": 428.0256700446346
+      },
+      {
+        "scenario": "6 of 7 f=1.0 yearly, 1 type f=0",
+        "remaining_LE_from_50": 328.61856410485217,
+        "expected_age_at_death": 378.61856410485217
+      },
+      {
+        "scenario": "6 of 7 f=1.0 yearly, 1 type f=0.5",
+        "remaining_LE_from_50": 1723.0729024696,
+        "expected_age_at_death": 1773.0729024696
+      }
+    ],
+    "no_therapy_LE_analytic": 33.32010326459706,
+    "unrepaired_share_sweep": [
+      {
+        "unrepaired_share": 0.0,
+        "residual_slope": 0.0,
+        "residual_doubling_time_yr": Infinity,
+        "remaining_LE_from_50": 1724.823614115158
+      },
+      {
+        "unrepaired_share": 0.02,
+        "residual_slope": 0.0017000000000000001,
+        "residual_doubling_time_yr": 407.7336356234972,
+        "remaining_LE_from_50": 1110.1656490355617
+      },
+      {
+        "unrepaired_share": 0.05,
+        "residual_slope": 0.00425,
+        "residual_doubling_time_yr": 163.0934542493989,
+        "remaining_LE_from_50": 696.4534126234026
+      },
+      {
+        "unrepaired_share": 0.14285714285714285,
+        "residual_slope": 0.012142857142857143,
+        "residual_doubling_time_yr": 57.082708987289614,
+        "remaining_LE_from_50": 328.61856410485217
+      },
+      {
+        "unrepaired_share": 0.25,
+        "residual_slope": 0.02125,
+        "residual_doubling_time_yr": 32.618690849879776,
+        "remaining_LE_from_50": 200.5118627104626
+      },
+      {
+        "unrepaired_share": 0.3333333333333333,
+        "residual_slope": 0.028333333333333335,
+        "residual_doubling_time_yr": 24.46401813740983,
+        "remaining_LE_from_50": 150.65963798934902
+      },
+      {
+        "unrepaired_share": 0.5,
+        "residual_slope": 0.0425,
+        "residual_doubling_time_yr": 16.309345424939888,
+        "remaining_LE_from_50": 95.57214091026644
+      },
+      {
+        "unrepaired_share": 1.0,
+        "residual_slope": 0.085,
+        "residual_doubling_time_yr": 8.154672712469944,
+        "remaining_LE_from_50": 33.3200993790607
+      }
+    ],
+    "self_amplifying_r_per_type": 0.002967036466136448,
+    "self_amplifying_untreated_LE_from_50": 33.32064104876865,
+    "self_amplifying_grid_g0.03": [
+      {
+        "T": 1,
+        "f": 0.02,
+        "threshold_f": 0.029554466451491845,
+        "bounded": false,
+        "remaining_LE_from_50": 68.46844760390074
+      },
+      {
+        "T": 1,
+        "f": 0.05,
+        "threshold_f": 0.029554466451491845,
+        "bounded": true,
+        "remaining_LE_from_50": 1517.0848960701242
+      },
+      {
+        "T": 1,
+        "f": 0.1,
+        "threshold_f": 0.029554466451491845,
+        "bounded": true,
+        "remaining_LE_from_50": 1684.1613305132057
+      },
+      {
+        "T": 1,
+        "f": 0.2,
+        "threshold_f": 0.029554466451491845,
+        "bounded": true,
+        "remaining_LE_from_50": 1713.7963439044688
+      },
+      {
+        "T": 1,
+        "f": 0.3,
+        "threshold_f": 0.029554466451491845,
+        "bounded": true,
+        "remaining_LE_from_50": 1720.918484849432
+      },
+      {
+        "T": 1,
+        "f": 0.5,
+        "threshold_f": 0.029554466451491845,
+        "bounded": true,
+        "remaining_LE_from_50": 1725.9099718222894
+      },
+      {
+        "T": 1,
+        "f": 0.8,
+        "threshold_f": 0.029554466451491845,
+        "bounded": true,
+        "remaining_LE_from_50": 1728.448727083863
+      },
+      {
+        "T": 2,
+        "f": 0.02,
+        "threshold_f": 0.05823546641575128,
+        "bounded": false,
+        "remaining_LE_from_50": 44.79139416284016
+      },
+      {
+        "T": 2,
+        "f": 0.05,
+        "threshold_f": 0.05823546641575128,
+        "bounded": false,
+        "remaining_LE_from_50": 98.3639251189692
+      },
+      {
+        "T": 2,
+        "f": 0.1,
+        "threshold_f": 0.05823546641575128,
+        "bounded": true,
+        "remaining_LE_from_50": 1534.9989442568824
+      },
+      {
+        "T": 2,
+        "f": 0.2,
+        "threshold_f": 0.05823546641575128,
+        "bounded": true,
+        "remaining_LE_from_50": 1688.3836481102092
+      },
+      {
+        "T": 2,
+        "f": 0.3,
+        "threshold_f": 0.05823546641575128,
+        "bounded": true,
+        "remaining_LE_from_50": 1708.543155894849
+      },
+      {
+        "T": 2,
+        "f": 0.5,
+        "threshold_f": 0.05823546641575128,
+        "bounded": true,
+        "remaining_LE_from_50": 1720.562274411043
+      },
+      {
+        "T": 2,
+        "f": 0.8,
+        "threshold_f": 0.05823546641575128,
+        "bounded": true,
+        "remaining_LE_from_50": 1726.1167798034717
+      },
+      {
+        "T": 5,
+        "f": 0.02,
+        "threshold_f": 0.1392920235749422,
+        "bounded": false,
+        "remaining_LE_from_50": 37.273122752083474
+      },
+      {
+        "T": 5,
+        "f": 0.05,
+        "threshold_f": 0.1392920235749422,
+        "bounded": false,
+        "remaining_LE_from_50": 45.51491719566967
+      },
+      {
+        "T": 5,
+        "f": 0.1,
+        "threshold_f": 0.1392920235749422,
+        "bounded": false,
+        "remaining_LE_from_50": 73.77800675886107
+      },
+      {
+        "T": 5,
+        "f": 0.2,
+        "threshold_f": 0.1392920235749422,
+        "bounded": true,
+        "remaining_LE_from_50": 1373.2464062495749
+      },
+      {
+        "T": 5,
+        "f": 0.3,
+        "threshold_f": 0.1392920235749422,
+        "bounded": true,
+        "remaining_LE_from_50": 1639.038724577152
+      },
+      {
+        "T": 5,
+        "f": 0.5,
+        "threshold_f": 0.1392920235749422,
+        "bounded": true,
+        "remaining_LE_from_50": 1699.5669800309713
+      },
+      {
+        "T": 5,
+        "f": 0.8,
+        "threshold_f": 0.1392920235749422,
+        "bounded": true,
+        "remaining_LE_from_50": 1718.2631981414008
+      },
+      {
+        "T": 10,
+        "f": 0.02,
+        "threshold_f": 0.2591817793182821,
+        "bounded": false,
+        "remaining_LE_from_50": 35.31131194799349
+      },
+      {
+        "T": 10,
+        "f": 0.05,
+        "threshold_f": 0.2591817793182821,
+        "bounded": false,
+        "remaining_LE_from_50": 38.84737163657317
+      },
+      {
+        "T": 10,
+        "f": 0.1,
+        "threshold_f": 0.2591817793182821,
+        "bounded": false,
+        "remaining_LE_from_50": 46.73469412385505
+      },
+      {
+        "T": 10,
+        "f": 0.2,
+        "threshold_f": 0.2591817793182821,
+        "bounded": false,
+        "remaining_LE_from_50": 81.5518233625997
+      },
+      {
+        "T": 10,
+        "f": 0.3,
+        "threshold_f": 0.2591817793182821,
+        "bounded": true,
+        "remaining_LE_from_50": 529.2154114157296
+      },
+      {
+        "T": 10,
+        "f": 0.5,
+        "threshold_f": 0.2591817793182821,
+        "bounded": true,
+        "remaining_LE_from_50": 1631.191446588463
+      },
+      {
+        "T": 10,
+        "f": 0.8,
+        "threshold_f": 0.2591817793182821,
+        "bounded": true,
+        "remaining_LE_from_50": 1701.4374420392285
+      }
+    ]
+  },
+  "population_consequences": {
+    "lotka": [
+      {
+        "regime": "current (Gompertz-Makeham, US 2024 level)",
+        "TFR": 1.0,
+        "NRR": 0.4772182035862858,
+        "r_per_yr": -0.024789250911068823,
+        "gen_time": 30.32242433465244,
+        "doubling_or_halving_yr": 27.9616025125811,
+        "e0": 80.23611532935809,
+        "l45": 0.9535030057655643
+      },
+      {
+        "regime": "current (Gompertz-Makeham, US 2024 level)",
+        "TFR": 1.5,
+        "NRR": 0.7158273053794288,
+        "r_per_yr": -0.011300910587763918,
+        "gen_time": 29.79958926559093,
+        "doubling_or_halving_yr": 61.335515857496624,
+        "e0": 80.23611532935809,
+        "l45": 0.9535030057655643
+      },
+      {
+        "regime": "current (Gompertz-Makeham, US 2024 level)",
+        "TFR": 2.1,
+        "NRR": 1.0021582275312002,
+        "r_per_yr": 7.341405606621824e-05,
+        "gen_time": 29.364944816101723,
+        "doubling_or_halving_yr": 9441.614013735167,
+        "e0": 80.23611532935809,
+        "l45": 0.9535030057655643
+      },
+      {
+        "regime": "current (Gompertz-Makeham, US 2024 level)",
+        "TFR": 2.25,
+        "NRR": 1.0737409580691433,
+        "r_per_yr": 0.002426483022603164,
+        "gen_time": 29.275861828950127,
+        "doubling_or_halving_yr": 285.65919237972975,
+        "e0": 80.23611532935809,
+        "l45": 0.9535030057655643
+      },
+      {
+        "regime": "current (Gompertz-Makeham, US 2024 level)",
+        "TFR": 3.0,
+        "NRR": 1.4316546107588577,
+        "r_per_yr": 0.012315888482451548,
+        "gen_time": 28.90495990661387,
+        "doubling_or_halving_yr": 56.280728876977484,
+        "e0": 80.23611532935809,
+        "l45": 0.9535030057655643
+      },
+      {
+        "regime": "negligible senescence after 25",
+        "TFR": 1.0,
+        "NRR": 0.47775791901045733,
+        "r_per_yr": -0.024743247046588753,
+        "gen_time": 30.332124289669395,
+        "doubling_or_halving_yr": 28.013590102173215,
+        "e0": 1107.1050824266465,
+        "l45": 0.9652439154231146
+      },
+      {
+        "regime": "negligible senescence after 25",
+        "TFR": 1.5,
+        "NRR": 0.716636878515686,
+        "r_per_yr": -0.011259103187481771,
+        "gen_time": 29.808600578999847,
+        "doubling_or_halving_yr": 61.56326743062524,
+        "e0": 1107.1050824266465,
+        "l45": 0.9652439154231146
+      },
+      {
+        "regime": "negligible senescence after 25",
+        "TFR": 2.1,
+        "NRR": 1.0032916299219603,
+        "r_per_yr": 0.00011186956439922244,
+        "gen_time": 29.373375026850155,
+        "doubling_or_halving_yr": 6196.030030888036,
+        "e0": 1107.1050824266465,
+        "l45": 0.9652439154231146
+      },
+      {
+        "regime": "negligible senescence after 25",
+        "TFR": 2.25,
+        "NRR": 1.074955317773529,
+        "r_per_yr": 0.0024642669754241253,
+        "gen_time": 29.284172298171587,
+        "doubling_or_halving_yr": 281.2792556458489,
+        "e0": 1107.1050824266465,
+        "l45": 0.9652439154231146
+      },
+      {
+        "regime": "negligible senescence after 25",
+        "TFR": 3.0,
+        "NRR": 1.433273757031372,
+        "r_per_yr": 0.012350933255419569,
+        "gen_time": 28.91277051621084,
+        "doubling_or_halving_yr": 56.121036866245994,
+        "e0": 1107.1050824266465,
+        "l45": 0.9652439154231146
+      },
+      {
+        "regime": "negligible senescence + fertility window 15-75 (SPECULATIVE)",
+        "TFR": 1.5,
+        "NRR": 0.7100227588521271,
+        "r_per_yr": -0.008543436212025543,
+        "gen_time": 40.56699752173471,
+        "doubling_or_halving_yr": 81.13213036977878,
+        "e0": 1107.1050824266465,
+        "l45": 0.9652439154231146
+      },
+      {
+        "regime": "negligible senescence + fertility window 15-75 (SPECULATIVE)",
+        "TFR": 2.1,
+        "NRR": 0.9940318623929779,
+        "r_per_yr": -0.000151111865843051,
+        "gen_time": 39.621587017342215,
+        "doubling_or_halving_yr": 4586.9804908627575,
+        "e0": 1107.1050824266465,
+        "l45": 0.9652439154231146
+      }
+    ],
+    "projection_pop_multiple": {
+      "current (Gompertz-Make | TFR 1.5": {
+        "y100": 0.4629455012504337,
+        "y300": 0.050157078428814394
+      },
+      "current (Gompertz-Make | TFR 2.1": {
+        "y100": 1.0053073439731384,
+        "y300": 1.0199251691856994
+      },
+      "current (Gompertz-Make | TFR 3.0": {
+        "y100": 2.556470882517789,
+        "y300": 28.779967495956246
+      },
+      "negligible senescence  | TFR 1.5": {
+        "y100": 1.5087625591606937,
+        "y300": 1.5061340532627379
+      },
+      "negligible senescence  | TFR 2.1": {
+        "y100": 2.1128069020576135,
+        "y300": 4.09564147476709
+      },
+      "negligible senescence  | TFR 3.0": {
+        "y100": 3.76579588769203,
+        "y300": 44.072337698386406
+      }
+    },
+    "stationary_size_equals_e0_check": {
+      "current (Gompertz-Makeham, US 2024 level)": {
+        "e0_lifetable": 80.23611532935809,
+        "stationary_pop_per_birth": 80.73611532935809
+      },
+      "negligible senescence after 25": {
+        "e0_lifetable": 1107.1050824266465,
+        "stationary_pop_per_birth": 1102.8464600394984
+      }
+    },
+    "background_only": [
+      {
+        "source": "US 2024 all-cause death rate, ages 5-14",
+        "hazard_per_yr": 0.000145,
+        "mean_life_yr": 6896.551724137931,
+        "median_yr": 4780.325383172037,
+        "p_survive_500y": 0.9300657466602784,
+        "p_survive_1000y": 0.8650222931107413
+      },
+      {
+        "source": "US 2024 unintentional-injury death rate (age-adjusted)",
+        "hazard_per_yr": 0.000533,
+        "mean_life_yr": 1876.1726078799247,
+        "median_yr": 1300.4637533957696,
+        "p_survive_500y": 0.7660560037261941,
+        "p_survive_1000y": 0.5868418008449466
+      },
+      {
+        "source": "US 2024 all-cause death rate, ages 15-24",
+        "hazard_per_yr": 0.000669,
+        "mean_life_yr": 1494.7683109118086,
+        "median_yr": 1036.0944402988719,
+        "p_survive_500y": 0.7156958448279017,
+        "p_survive_1000y": 0.512220542303924
+      },
+      {
+        "source": "Model hazard frozen at age 25 (GM fit)",
+        "hazard_per_yr": 0.0009081898173918115,
+        "mean_life_yr": 1101.0914027552676,
+        "median_yr": 763.2184013586088,
+        "p_survive_500y": 0.6350224612321379,
+        "p_survive_1000y": 0.40325352626932204
+      }
+    ],
+    "dog": [
+      {
+        "b_dog": 0.3,
+        "age": 2,
+        "baseline_remaining": 10.11115250277652,
+        "with_rho_0p085": 12.647520272448126,
+        "slope_halved": 15.926399105331456,
+        "dog_LEV_rho": 0.3,
+        "negligible_senescence_from_now": 75.17309885303554,
+        "background_only": 200.0
+      },
+      {
+        "b_dog": 0.3,
+        "age": 6,
+        "baseline_remaining": 6.800017953870356,
+        "with_rho_0p085": 8.249959518634473,
+        "slope_halved": 10.024986936427515,
+        "dog_LEV_rho": 0.3,
+        "negligible_senescence_from_now": 30.707149511177573,
+        "background_only": 200.0
+      },
+      {
+        "b_dog": 0.3,
+        "age": 10,
+        "baseline_remaining": 3.986504965527757,
+        "with_rho_0p085": 4.632561105629718,
+        "slope_halved": 5.359388019844606,
+        "dog_LEV_rho": 0.3,
+        "negligible_senescence_from_now": 10.360400342022897,
+        "background_only": 200.0
+      },
+      {
+        "b_dog": 0.32,
+        "age": 2,
+        "baseline_remaining": 10.083817461036231,
+        "with_rho_0p085": 12.467226734411327,
+        "slope_halved": 16.050622371928117,
+        "dog_LEV_rho": 0.32,
+        "negligible_senescence_from_now": 82.36820740919141,
+        "background_only": 200.0
+      },
+      {
+        "b_dog": 0.32,
+        "age": 6,
+        "baseline_remaining": 6.7161187416450305,
+        "with_rho_0p085": 8.0696314330169,
+        "slope_halved": 9.996415564465956,
+        "dog_LEV_rho": 0.32,
+        "negligible_senescence_from_now": 32.59219841698348,
+        "background_only": 200.0
+      },
+      {
+        "b_dog": 0.32,
+        "age": 10,
+        "baseline_remaining": 3.8477428338393755,
+        "with_rho_0p085": 4.434442959501099,
+        "slope_halved": 5.199405681560129,
+        "dog_LEV_rho": 0.32,
+        "negligible_senescence_from_now": 10.270147805535478,
+        "background_only": 200.0
+      },
+      {
+        "b_dog": 0.34,
+        "age": 2,
+        "baseline_remaining": 10.063506216905761,
+        "with_rho_0p085": 12.313298051481231,
+        "slope_halved": 16.174931498856214,
+        "dog_LEV_rho": 0.34,
+        "negligible_senescence_from_now": 89.89134761080287,
+        "background_only": 200.0
+      },
+      {
+        "b_dog": 0.34,
+        "age": 6,
+        "baseline_remaining": 6.644922592585242,
+        "with_rho_0p085": 7.915749047007443,
+        "slope_halved": 9.981263459817603,
+        "dog_LEV_rho": 0.34,
+        "negligible_senescence_from_now": 34.647157712433604,
+        "background_only": 200.0
+      },
+      {
+        "b_dog": 0.34,
+        "age": 10,
+        "baseline_remaining": 3.724497333244324,
+        "with_rho_0p085": 4.2612881885846585,
+        "slope_halved": 5.057916057856582,
+        "dog_LEV_rho": 0.34,
+        "negligible_senescence_from_now": 10.20694488742249,
+        "background_only": 200.0
+      }
+    ],
+    "economics_scott_2021": {
+      "value_1yr_LE_gain_via_slowed_aging_USD": 38000000000000.0,
+      "value_10yr_USD": 367000000000000.0,
+      "source": "https://www.london.edu/faculty-and-research/academic-research/a/alls-well-that-ages-well-the-economic-value-of-targeting-aging"
+    }
+  },
+  "bottleneck_voi": {
+    "voi_ranking": [
+      {
+        "key": "U6",
+        "question": "No damage type is beyond repair (weakest link)",
+        "p": 0.3,
+        "swing_M1_ratio": 0.999365609902955,
+        "swing_M2_ratio": 4.150342402231449,
+        "var_share_M1": 1.207424327224212e-07,
+        "var_share_M2": 0.4366375295767453,
+        "voi_score": 0.218318825159589,
+        "rank": 1
+      },
+      {
+        "key": "U1",
+        "question": "Few upstream causes (vs many independent ones)",
+        "p": 0.3,
+        "swing_M1_ratio": 0.5818793166526172,
+        "swing_M2_ratio": 2.840859980091761,
+        "var_share_M1": 0.08791358233688149,
+        "var_share_M2": 0.23500908141964072,
+        "voi_score": 0.16146133187826112,
+        "rank": 2
+      },
+      {
+        "key": "U3",
+        "question": "Biomarkers can stand in for lifespan in trials",
+        "p": 0.35,
+        "swing_M1_ratio": 0.38423749622949904,
+        "swing_M2_ratio": 1.1031579240594345,
+        "var_share_M1": 0.29716561164746474,
+        "var_share_M2": 0.002251000439206074,
+        "voi_score": 0.1497083060433354,
+        "rank": 3
+      },
+      {
+        "key": "U2",
+        "question": "Mouse lifespan results translate to humans",
+        "p": 0.4,
+        "swing_M1_ratio": 0.4275211615491337,
+        "swing_M2_ratio": 1.4456082605025329,
+        "var_share_M1": 0.24742715677155164,
+        "var_share_M2": 0.03346053153580051,
+        "voi_score": 0.14044384415367608,
+        "rank": 4
+      },
+      {
+        "key": "U5",
+        "question": "Regulators approve an aging indication",
+        "p": 0.5,
+        "swing_M1_ratio": 0.5420366173664091,
+        "swing_M2_ratio": 1.1597905480273445,
+        "var_share_M1": 0.13387313410800636,
+        "var_share_M2": 0.005639530513737562,
+        "voi_score": 0.06975633231087196,
+        "rank": 5
+      },
+      {
+        "key": "U4",
+        "question": "Partial reprogramming is safe in whole bodies",
+        "p": 0.25,
+        "swing_M1_ratio": 0.8564872813688273,
+        "swing_M2_ratio": 2.214937144737042,
+        "var_share_M1": 0.006424584023729207,
+        "var_share_M2": 0.12171826301133039,
+        "voi_score": 0.0640714235175298,
+        "rank": 6
+      }
+    ],
+    "M1_years_to_first_validated_therapy_quantiles": {
+      "p10": 9.843001610093118,
+      "p25": 13.353666670567312,
+      "p50": 20.202886124024673,
+      "p75": 31.89810465257848,
+      "p90": 48.322233348629446
+    },
+    "M2_ceiling_rho_over_b_quantiles": {
+      "p10": 0.04720362537198065,
+      "p25": 0.07338058554422999,
+      "p50": 0.14949280684937583,
+      "p75": 0.3097522371517009,
+      "p90": 0.6273895105499104
+    },
+    "P_M2_ge_1_escape_velocity_ceiling": 0.04239,
+    "scenarios": {
+      "pessimistic: U2,U3,U5 unfavourable": {
+        "share_of_draws": 0.1937,
+        "M1_median_years": 45.02077819505186,
+        "M1_p10_p90": [
+          26.021829871436747,
+          76.77284625035037
+        ],
+        "M2_median": 0.11654411705146274,
+        "P_M2_ge_1": 0.02160557563242127
+      },
+      "central: all draws": {
+        "share_of_draws": 1.0,
+        "M1_median_years": 20.202886124024673,
+        "M1_p10_p90": [
+          9.843001610093118,
+          48.322233348629446
+        ],
+        "M2_median": 0.14949280684937583,
+        "P_M2_ge_1": 0.04239
+      },
+      "optimistic: U2,U3,U5 favourable": {
+        "share_of_draws": 0.070645,
+        "M1_median_years": 8.538412730850794,
+        "M1_p10_p90": [
+          6.879950659120914,
+          11.387510990220843
+        ],
+        "M2_median": 0.2180789735160294,
+        "P_M2_ge_1": 0.08125132705782433
+      },
+      "repair-ceiling: U1,U4,U6 favourable": {
+        "share_of_draws": 0.02166,
+        "M1_median_years": 14.345257819069,
+        "M1_p10_p90": [
+          8.177728037024004,
+          29.917636157578258
+        ],
+        "M2_median": 1.635701067213295,
+        "P_M2_ge_1": 0.8580332409972299
+      }
+    },
+    "robustness": [
+      {
+        "key": "U1",
+        "mean_rank": 2.524,
+        "share_top2": 0.478,
+        "share_top3": 0.794
+      },
+      {
+        "key": "U2",
+        "mean_rank": 3.266,
+        "share_top2": 0.296,
+        "share_top3": 0.546
+      },
+      {
+        "key": "U3",
+        "mean_rank": 3.038,
+        "share_top2": 0.41,
+        "share_top3": 0.642
+      },
+      {
+        "key": "U4",
+        "mean_rank": 5.246,
+        "share_top2": 0.022,
+        "share_top3": 0.07
+      },
+      {
+        "key": "U5",
+        "mean_rank": 5.16,
+        "share_top2": 0.012,
+        "share_top3": 0.048
+      },
+      {
+        "key": "U6",
+        "mean_rank": 1.766,
+        "share_top2": 0.782,
+        "share_top3": 0.9
+      }
+    ]
+  }
+}

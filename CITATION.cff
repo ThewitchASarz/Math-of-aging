@@ -1,0 +1,21 @@
+cff-version: 1.2.0
+message: "If you use this work, please cite it as below."
+title: "The Math of Aging: Humans and Dogs"
+abstract: >-
+  A verified mathematical description of aging in humans and dogs: mortality
+  models fitted to life tables, mechanistic models, a review of intervention
+  evidence, the mathematics of escape velocity, 19 theorems with proofs, and
+  5 testable predictions. Produced with AI assistance; not peer reviewed.
+  It does not contain or claim a cure for aging.
+type: software
+authors:
+  - name: "Vext Labs Inc."
+version: 1.0.0
+date-released: 2026-11-10
+license: MIT
+keywords:
+  - aging
+  - mortality
+  - Gompertz
+  - dogs
+  - longevity

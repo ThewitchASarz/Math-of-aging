@@ -1,0 +1,932 @@
+{
+  "cancer": {
+    "armitage_doll": {
+      "N": 100000000.0,
+      "expected_slope": 6,
+      "implied_hits_naive": 7,
+      "k": 7,
+      "leading_term_symbolic": "t**7*u**7/5040",
+      "loglog_slope_exact": 5.957972141586114,
+      "max_rel_err_power_law": 0.1313930662109375,
+      "note": "ILLUSTRATIVE N,u",
+      "observed_slope_human_cancers": "about 6 (incidence ~ sixth power of age; BJC 2004 editorial on Armitage & Doll 1954)",
+      "u": 0.0005
+    },
+    "clonal_expansion": {
+      "fitted_slope_40_80": 5.8303576288143395,
+      "local_loglog_slope_at": {
+        "40": 4.074629441455096,
+        "60": 6.014909469941067,
+        "80": 8.00268460160673
+      },
+      "message": "2 hits + clonal growth 0.1/yr gives log-log slope ~6 over ages 40-80: slope alone does not identify the number of hits",
+      "model": "h(t) = N u1 u2 (e^{g t} - 1)/g"
+    },
+    "dogs_nunney": {
+      "A4": 7.84e-07,
+      "lifespan_fit": "T = 13.3 - 0.08 W",
+      "p_at": {
+        "10": 0.19140625,
+        "20": 0.2938255145280001,
+        "33.25": 0.33409826795634695,
+        "5": 0.10855376935199999,
+        "50": 0.2932363879200001,
+        "70": 0.19291988900800003
+      },
+      "p_if_lifespan_fixed_11y": {
+        "33.25": 0.38166158800000005,
+        "5": 0.057392719999999994,
+        "70": 0.80349808
+      },
+      "peak_weight_kg": [
+        33.25
+      ],
+      "source_reported": "breeds 29-42 kg were over-represented among highest-risk; >60 kg breeds lower"
+    },
+    "peto": {
+      "example_1000x_cells_2x_lifespan": {
+        "cell_ratio": 1000.0,
+        "fold_rate_reduction_needed": 11.246826503806982,
+        "fold_reduction_needed_if_uT_constant": 5.623413251903491,
+        "lifespan_ratio": 2.0,
+        "risk_if_uT_constant": 1.0,
+        "risk_naive": 1.0
+      },
+      "example_100x_cells_same_lifespan": {
+        "cell_ratio": 100.0,
+        "fold_rate_reduction_needed": 3.1622776601683795,
+        "fold_reduction_needed_if_uT_constant": 3.1622776601683795,
+        "lifespan_ratio": 1.0,
+        "risk_if_uT_constant": 0.9999999999999997,
+        "risk_naive": 0.9999999999999997
+      },
+      "k": 4,
+      "note": "ILLUSTRATIVE reference risk; ratios relative to a human-like reference",
+      "ref_risk": 0.3
+    }
+  },
+  "clocks": {
+    "aggregation": {
+      "baseline": {
+        "M_at": {
+          "100": 0.00024028493138504911,
+          "120": 0.02621489717907414,
+          "40": 3.0792916610695753e-06,
+          "60": 6.266716418697747e-06,
+          "80": 2.094387592855358e-05
+        },
+        "age_clearance_falls_below_kappa": 75.0,
+        "c0": 1.0,
+        "kappa": 0.5
+      },
+      "clearance_x1.5": {
+        "M_at": {
+          "100": 1.1542855435040065e-05,
+          "120": 0.00017977115799788204,
+          "40": 1.0011899447872396e-06,
+          "60": 1.6558280266959764e-06,
+          "80": 3.386029412394538e-06
+        },
+        "age_clearance_falls_below_kappa": 100.00000000000001,
+        "c0": 1.5,
+        "kappa": 0.5
+      },
+      "eigenvalues_symbolic": [
+        "-c - sqrt(g)*sqrt(k_m)",
+        "-c + sqrt(g)*sqrt(k_m)"
+      ],
+      "kappa": 0.5,
+      "monomer_x0.5": {
+        "M_at": {
+          "100": 3.0913943069060246e-06,
+          "120": 3.054272928810783e-05,
+          "40": 2.846685464837749e-07,
+          "60": 4.719927310159113e-07,
+          "80": 9.621094713882996e-07
+        },
+        "age_clearance_falls_below_kappa": 96.96699141100893,
+        "c0": 1.0,
+        "kappa": 0.3535533905932738
+      },
+      "params": {
+        "km": 0.25,
+        "kn": 1e-06,
+        "kp": 0.5,
+        "m": 1.0,
+        "nc": 2,
+        "note": "ILLUSTRATIVE"
+      }
+    },
+    "epigenetic": {
+      "bounded": {
+        "coef_sign_vs_ground_state": "features near 0 drift up, near 1 drift down: regression to the mean",
+        "lambda_": 1.0,
+        "median_abs_err_yr": 8.187010252469872,
+        "n_nonzero": 211,
+        "noise_x0.7_predicted_age_slope": 0.4419479345346673,
+        "pearson_r_test": 0.9044178430748321
+      },
+      "two_state": {
+        "mean_entropy_bits_at": {
+          "0": 0.1362926019190368,
+          "100": 0.7923618555129244,
+          "25": 0.5100737031757001,
+          "50": 0.6693725769316653,
+          "75": 0.7499872561316023
+        },
+        "ode_solution_verified": true,
+        "rates_note": "ILLUSTRATIVE per-year flip rates U(0,0.01)"
+      },
+      "unbounded": {
+        "lambda_": 1.0,
+        "median_abs_err_yr": 22.73143938718027,
+        "n_nonzero": 281,
+        "pearson_r_test": -0.027922043496414188
+      }
+    },
+    "mtdna": {
+      "N": 1000,
+      "frac_cells_dog_like_nu_x5_at_12": 0.005022345634651426,
+      "frac_cells_over_threshold": {
+        "12": 0.0010064931456483794,
+        "20": 0.006570444610098147,
+        "40": 0.03275601105170678,
+        "60": 0.06362840211191356,
+        "80": 0.09471152122646553
+      },
+      "median_years_to_threshold_given_reached": 17.89041095890411,
+      "note": "N, tau, nu ILLUSTRATIVE",
+      "nu_per_cell_per_year": 1.0,
+      "p_single_mutant_reaches_threshold": 0.001705,
+      "tau_days": 10.0,
+      "theory_p_reach_approx": 0.0016666666666666668,
+      "threshold": 0.6
+    },
+    "somatic_mutations": {
+      "ELB": 3206.4,
+      "dog_burden_at_14_if_L14": 3206.602,
+      "dog_rate_note": "UNVERIFIED: measured dog rate not read in this session",
+      "dog_rate_predicted": {
+        "L=12": {
+          "hi": 310.7416666666667,
+          "lo": 223.65833333333333,
+          "rate": 267.2
+        },
+        "L=14": {
+          "hi": 266.35,
+          "lo": 191.70714285714286,
+          "rate": 229.02857142857144
+        },
+        "L=16": {
+          "hi": 233.05625,
+          "lo": 167.74375,
+          "rate": 200.4
+        }
+      },
+      "human_burden_at_80": 3737.3025,
+      "human_rate_observed": 47.0,
+      "human_rate_predicted": 38.321979204015776,
+      "mouse_rate_observed": 796.0,
+      "ratio_dog_over_human_rate_if_L14": 4.872948328267477
+    },
+    "telomeres": {
+      "deterministic_shortest_end": 26.33880372890178,
+      "deterministic_single_end": 56.0,
+      "hayflick_cv": 0.19976872345399765,
+      "hayflick_mean": 26.42245,
+      "hayflick_sd": 5.278379107027081,
+      "params": {
+        "L0": 10000.0,
+        "Lc": 3000.0,
+        "ends": 92,
+        "loss_bp_per_div": "U(50,200)",
+        "note": "L0, sd, Lc ILLUSTRATIVE",
+        "sd": 1500.0
+      },
+      "years_from_7kb_to_3kb_at_population_rate": {
+        "20bp_per_yr": 200.0,
+        "40bp_per_yr": 100.0
+      }
+    }
+  },
+  "evolution": {
+    "antagonistic_pleiotropy": {
+      "max_tolerated_late_hazard_by_onset_age": {
+        "10": 0.00248336936421843,
+        "20": 0.004930154468904487,
+        "30": 0.014680172831213622,
+        "40": 0.1636304041478837,
+        "45": null,
+        "50": null
+      },
+      "phi_fertility_gain": 0.05
+    },
+    "disposable_soma": {
+      "model": "hazard = lam + a e^{b x}, b = bmax(1-rho)^3, fertility m0(1-rho) from age 2; bmax=0.25, a=1e-3",
+      "never_full_repair": "rho_opt < 1 always: at rho=1 fertility is 0, so fitness is 0 (PROVEN within model).",
+      "results": {
+        "R0_lam0.01": {
+          "doubling": 20.292399394258652,
+          "gompertz_b": 0.034157970533344524,
+          "rho_opt": 0.4849484676150943
+        },
+        "R0_lam0.02": {
+          "doubling": 13.775014439839177,
+          "gompertz_b": 0.05031916181193039,
+          "rho_opt": 0.413954777523722
+        },
+        "R0_lam0.05": {
+          "doubling": 5.189274641765037,
+          "gompertz_b": 0.1335730383166199,
+          "rho_opt": 0.18855404681885607
+        },
+        "R0_lam0.1": {
+          "doubling": 2.772638254296487,
+          "gompertz_b": 0.24999553385150142,
+          "rho_opt": 5.954900125562587e-06
+        },
+        "R0_lam0.2": {
+          "doubling": 2.772638254296487,
+          "gompertz_b": 0.24999553385150142,
+          "rho_opt": 5.954900125562587e-06
+        },
+        "R0_lam0.4": {
+          "doubling": 2.772638254296487,
+          "gompertz_b": 0.24999553385150142,
+          "rho_opt": 5.954900125562587e-06
+        },
+        "r_lam0.01": {
+          "doubling": 5.1892896133966016,
+          "gompertz_b": 0.13357265294473558,
+          "rho_opt": 0.1885548271878104
+        },
+        "r_lam0.02": {
+          "doubling": 5.189289592780299,
+          "gompertz_b": 0.13357265347540054,
+          "rho_opt": 0.18855482611322538
+        },
+        "r_lam0.05": {
+          "doubling": 5.18928959277468,
+          "gompertz_b": 0.1335726534755452,
+          "rho_opt": 0.18855482611293245
+        },
+        "r_lam0.1": {
+          "doubling": 5.189289592782777,
+          "gompertz_b": 0.13357265347533676,
+          "rho_opt": 0.18855482611335447
+        },
+        "r_lam0.2": {
+          "doubling": 5.189289592771015,
+          "gompertz_b": 0.1335726534756395,
+          "rho_opt": 0.1885548261127415
+        },
+        "r_lam0.4": {
+          "doubling": 5.189289592338595,
+          "gompertz_b": 0.13357265348677005,
+          "rho_opt": 0.1885548260902024
+        }
+      }
+    },
+    "dog_size_toy": {
+      "b_at_10kg": 0.181774677315651,
+      "b_at_60kg": 0.30496063449314453,
+      "e0_at": {
+        "10": 13.119488607913485,
+        "30": 11.213450239710289,
+        "60": 9.297826060347292
+      },
+      "k": 0.3198955851488343,
+      "note": "SPECULATIVE toy: size raises Gompertz slope b (consistent with Kraus et al. 2013: large dogs age faster). Calibrated, not predicted.",
+      "slope_target_per_kg": -0.08
+    },
+    "hamilton": {
+      "dog_like": {
+        "force_mu_at": {
+          "0": 0.1934628369055579,
+          "10.0": 0.000294262807838416,
+          "15.0": 0.0,
+          "2.0": 0.1924119060902085,
+          "6.0": 0.06694857730325657
+        },
+        "force_mu_zero_after": 10.0,
+        "generation_time": 5.1689513913699905,
+        "params": {
+          "a": 0.002,
+          "alpha": 2.0,
+          "b": 0.23,
+          "lam": 0.15,
+          "m0": 0.29480216931186554,
+          "omega": 10.0
+        },
+        "r": -2.648783940735967e-13
+      },
+      "human_like": {
+        "force_mu_at": {
+          "0": 0.03366062475498952,
+          "16.0": 0.03362684039808291,
+          "30.5": 0.015456787012266639,
+          "45.0": 2.4257984806142022e-05,
+          "50.0": 0.0
+        },
+        "force_mu_zero_after": 45.0,
+        "generation_time": 29.708301829732072,
+        "params": {
+          "a": 0.0001,
+          "alpha": 16.0,
+          "b": 0.08,
+          "lam": 0.01,
+          "m0": 0.04726614982112581,
+          "omega": 45.0
+        },
+        "r": 4.782140011777478e-14
+      },
+      "uniform_extrinsic_invariance_symbolic": true
+    },
+    "mutation_accumulation": {
+      "U_T": 0.001,
+      "age_extra_hazard_exceeds_0p1": 44.650000000000006,
+      "cap": 2.0,
+      "extra_hazard_at": {
+        "20": 0.0011901872573406736,
+        "30": 0.002123252009184704,
+        "40": 0.006976928540985252,
+        "45": 1.7420029569986832,
+        "50": 1.9999999999995453,
+        "60": 1.9999999999995453
+      },
+      "formula": "dmu(x) = U T / S(x),  S(x) = int_x^inf e^{-ry} l(y) m(y) dy",
+      "r": -0.0015308717870716772
+    },
+    "note": "All life histories ILLUSTRATIVE (synthetic)."
+  },
+  "resilience": {
+    "frailty_network": {
+      "baseline": {
+        "FI_at": {
+          "100": 0.4567524194717407,
+          "40": 0.0901484489440918,
+          "60": 0.18040859699249268,
+          "80": 0.32397469878196716
+        },
+        "delta_mean": 0.0,
+        "doubling_10th_to_90th_pct_death_ages": 12.923962333362129,
+        "frac_alive_150": 0.0005,
+        "median": 92.45,
+        "restricted_mean_150": 91.4625
+      },
+      "damage_rate_x0.8": {
+        "FI_at": {
+          "100": 0.32456815242767334,
+          "40": 0.06638205051422119,
+          "60": 0.11909827589988708,
+          "80": 0.2061663120985031
+        },
+        "delta_mean": 22.917900000000003,
+        "doubling_10th_to_90th_pct_death_ages": 16.605051874304714,
+        "frac_alive_150": 0.0475,
+        "median": 115.25,
+        "restricted_mean_150": 114.38040000000001
+      },
+      "params": {
+        "G0": 0.0016,
+        "N": 200,
+        "R": 1.5,
+        "gamma_minus": 6.5,
+        "gamma_plus": 7.5,
+        "m": 5,
+        "mean_degree": 9.170000076293945,
+        "note": "ILLUSTRATIVE; simplified from Farrell et al. (arXiv 1601.07063) which used N=800, Kramers-type rates and Gillespie updates"
+      },
+      "repair_50pct_of_damage_every_5y_from_60": {
+        "FI_at": {
+          "100": 0.009684803895652294,
+          "40": 0.0901484489440918,
+          "60": 0.08884232491254807,
+          "80": 0.016156820580363274
+        },
+        "delta_mean": 53.09945000000002,
+        "doubling_10th_to_90th_pct_death_ages": null,
+        "frac_alive_150": 0.944,
+        "median": 150.0,
+        "restricted_mean_150": 144.56195000000002
+      },
+      "repair_rate_x1.5": {
+        "FI_at": {
+          "100": 0.4559038579463959,
+          "40": 0.08964237570762634,
+          "60": 0.1783018857240677,
+          "80": 0.32504841685295105
+        },
+        "delta_mean": 0.27249999999999375,
+        "doubling_10th_to_90th_pct_death_ages": 13.01465665030713,
+        "frac_alive_150": 0.0015,
+        "median": 92.65,
+        "restricted_mean_150": 91.735
+      },
+      "repair_rate_x10": {
+        "FI_at": {
+          "100": 0.3803204596042633,
+          "40": 0.07926150411367416,
+          "60": 0.15259259939193726,
+          "80": 0.2710937559604645
+        },
+        "delta_mean": 7.5449999999999875,
+        "doubling_10th_to_90th_pct_death_ages": 17.858446759165286,
+        "frac_alive_150": 0.008,
+        "median": 99.05000000000001,
+        "restricted_mean_150": 99.0075
+      },
+      "repair_rate_x100": {
+        "FI_at": {
+          "100": 0.039002034813165665,
+          "40": 0.02306787669658661,
+          "60": 0.029052915051579475,
+          "80": 0.033840689808130264
+        },
+        "delta_mean": 56.136750000000006,
+        "doubling_10th_to_90th_pct_death_ages": null,
+        "frac_alive_150": 0.952,
+        "median": 150.0,
+        "restricted_mean_150": 147.59925
+      }
+    },
+    "reliability": {
+      "gavrilov_alpha": 0.09,
+      "gavrilov_doubling": 7.701635339554948,
+      "params": {
+        "k": 0.01,
+        "m": 1,
+        "n": 10,
+        "note": "ILLUSTRATIVE",
+        "q": 0.5
+      },
+      "rho=0.0": {
+        "doubling_20_60": 18.824098594034822,
+        "doubling_60_100": 36.92910892031938,
+        "hazard_at": {
+          "10": 0.00020073904914507816,
+          "120": 0.00430835936494238,
+          "150": 0.005546709179772166,
+          "40": 0.0008651598545966252,
+          "80": 0.0024685873845317606
+        },
+        "late_limit_no_repair": 0.01
+      },
+      "rho=0.001": {
+        "doubling_20_60": 21.13741763422865,
+        "doubling_60_100": 42.279645960750344,
+        "hazard_at": {
+          "10": 0.00018553059443880752,
+          "120": 0.00278749712592541,
+          "150": 0.0034310046755721257,
+          "40": 0.0006837149514847431,
+          "80": 0.0017275509214073998
+        },
+        "late_limit_no_repair": null
+      },
+      "rho=0.005": {
+        "doubling_20_60": 40.01283337714138,
+        "doubling_60_100": 84.27584539077104,
+        "hazard_at": {
+          "10": 0.00013544950183338656,
+          "120": 0.0005499558507053024,
+          "150": 0.0006032140109346767,
+          "40": 0.0002700194844438608,
+          "80": 0.00043642031787240003
+        },
+        "late_limit_no_repair": null
+      },
+      "rho=0.02": {
+        "doubling_20_60": -21.417061063510726,
+        "doubling_60_100": -64.16726320607584,
+        "hazard_at": {
+          "10": 4.194046151628284e-05,
+          "120": 3.5518143189464086e-06,
+          "150": 3.32798218724026e-06,
+          "40": 9.819949205568138e-06,
+          "80": 4.553909364357961e-06
+        },
+        "late_limit_no_repair": null
+      }
+    },
+    "resilience": {
+      "discussion_3to6wk": {
+        "extrapolated_critical_age": 140.0,
+        "tau40_wk": 3.0,
+        "tau90_wk": 6.0
+      },
+      "gompertz_from_resilience_symbolic": "X_c**2*epsilon_0/(2*D*t_c)",
+      "hazard_model": {
+        "approx_human_target_at_40": 0.0012226720576062283,
+        "barrier_at_birth_in_noise_units": 15.13296574046666,
+        "gompertz_doubling_50_90": 8.154672712469939,
+        "hazard_at": {
+          "100": 0.19070838834334278,
+          "120": 0.6601347372331817,
+          "140.0": 1.6053696951462593,
+          "40": 0.0012353931332494323,
+          "80": 0.041518819890793646
+        },
+        "leading_order_barrier_would_be": 11.9,
+        "t_c": 140.0
+      },
+      "interventions": {
+        "baseline": {
+          "age_hazard_reaches_1": 128.48560700876095,
+          "doubling_50_90": 8.154672712469939,
+          "e0": 82.13485514420472
+        },
+        "decline_slower_tc+20": {
+          "age_hazard_reaches_1": null,
+          "doubling_50_90": 9.02438542390998,
+          "e0": 92.05094191926459
+        },
+        "noise_x0.8": {
+          "age_hazard_reaches_1": 134.837296620776,
+          "doubling_50_90": 6.17622940849975,
+          "e0": 98.021358572106
+        },
+        "recovery_x1.2": {
+          "age_hazard_reaches_1": 130.48185231539424,
+          "doubling_50_90": 6.491554693901407,
+          "e0": 93.58816258314805
+        }
+      },
+      "joint_fit_to_human_target": {
+        "barrier0": 15.196710912622601,
+        "note": "recovery rate at age 0 fixed from the 3-wk/6-wk line; target APPROXIMATE",
+        "rms_log_error": 0.0337601291802583,
+        "t_c": 140.60723477182734
+      },
+      "results_2to8wk": {
+        "extrapolated_critical_age": 106.66666666666667,
+        "tau40_wk": 2.0,
+        "tau90_wk": 8.0
+      },
+      "simulated_estimation": {
+        "n_people": 3000,
+        "note": "Synthetic data; short series bias the autocorrelation estimate (known small-sample bias).",
+        "t_c_from_inverse_variance": 145.73044194118427,
+        "t_c_from_recovery_rate": 179.45021717156132,
+        "true_t_c": 140.0,
+        "weeks_each": 52
+      }
+    },
+    "runtime_s": 39.01449012756348
+  },
+  "saturating_removal": {
+    "dog_like_fits": {
+      "fits": {
+        "eta_beta": {
+          "beta_fold": 0.43205531005095205,
+          "doubling_4_16": 3.0564803768779876,
+          "e0": 11.350951895248832,
+          "eps_fold": 1.0,
+          "eta_fold_vs_human": 2.892602368581759,
+          "interventions": {
+            "production_x0.5": {
+              "delta_e0": 6.385898017946138,
+              "doubling_4_16": 4.777149955933594,
+              "e0": 17.73684991319497,
+              "pct_gain": 56.25870038810652
+            },
+            "production_x0.8": {
+              "delta_e0": 1.784178734660788,
+              "doubling_4_16": 3.422063823298051,
+              "e0": 13.13513062990962,
+              "pct_gain": 15.718318173893353
+            },
+            "removal_x1.25": {
+              "delta_e0": 3.648599769352934,
+              "doubling_4_16": 2.5240537504632634,
+              "e0": 14.999551664601766,
+              "pct_gain": 32.14355767713304
+            },
+            "removal_x1.5": {
+              "delta_e0": 7.431029199450387,
+              "doubling_4_16": 2.207339639456653,
+              "e0": 18.78198109469922,
+              "pct_gain": 65.46613242683897
+            }
+          },
+          "median": 11.537877939833994,
+          "params": {
+            "beta": 0.0648082965076428,
+            "eps": 0.142,
+            "eta": 0.003905013197585375
+          },
+          "rms_log_error": 0.08391679039876815
+        },
+        "eta_eps": {
+          "beta_fold": 1.0,
+          "doubling_4_16": 3.0271980611587765,
+          "e0": 11.302582888110782,
+          "eps_fold": 2.0869880948803563,
+          "eta_fold_vs_human": 5.190623015431361,
+          "interventions": {
+            "production_x0.5": {
+              "delta_e0": 6.333850017790782,
+              "doubling_4_16": 5.128485833904026,
+              "e0": 17.636432905901565,
+              "pct_gain": 56.03896100999513
+            },
+            "production_x0.8": {
+              "delta_e0": 1.7799938049296316,
+              "doubling_4_16": 3.509940427560508,
+              "e0": 13.082576693040414,
+              "pct_gain": 15.74855785222342
+            },
+            "removal_x1.25": {
+              "delta_e0": 4.672060095639058,
+              "doubling_4_16": 2.5854172539179476,
+              "e0": 15.97464298374984,
+              "pct_gain": 41.33621617191243
+            },
+            "removal_x1.5": {
+              "delta_e0": 9.548310093529102,
+              "doubling_4_16": 2.3396362459669664,
+              "e0": 20.850892981639884,
+              "pct_gain": 84.4790096923155
+            }
+          },
+          "median": 11.576292435158473,
+          "params": {
+            "beta": 0.15,
+            "eps": 0.29635230947301056,
+            "eta": 0.007007341070832337
+          },
+          "rms_log_error": 0.056907238124727505
+        },
+        "eta_only": {
+          "beta_fold": 1.0,
+          "doubling_4_16": 1.1423227776372535,
+          "e0": 10.246548340381025,
+          "eps_fold": 1.0,
+          "eta_fold_vs_human": 10.586219884569958,
+          "median": 10.278479690839115,
+          "params": {
+            "beta": 0.15,
+            "eps": 0.142,
+            "eta": 0.014291396844169446
+          },
+          "rms_log_error": 1.654944168850672
+        }
+      },
+      "target": {
+        "doubling": 3.0,
+        "e0": 11.2,
+        "gompertz_a": 0.01164151347226413,
+        "gompertz_b": 0.23104906018664842,
+        "note": "ILLUSTRATIVE dog-like target: doubling ~3 yr is an approximate target (unverified here); e0 11.2 yr from VetCompass UK."
+      }
+    },
+    "eta_rescaling": {
+      "claim": "Quasi-static hazard depends on age only through p=eta*t, so scaling eta by s compresses the whole curve by s: median/s and doubling/s. Ratio median/doubling is invariant.",
+      "dog_target_median_over_doubling": 3.8832919818805887,
+      "human_median_over_doubling": 12.985353609100997,
+      "max_abs_log_diff_check": 7.105427357601002e-15
+    },
+    "human_published_quasistatic": {
+      "age_production_equals_beta": 111.1111111111111,
+      "age_production_equals_removal_at_threshold": 107.93650793650794,
+      "doubling_100_110": 13.493638676192871,
+      "doubling_40_80": 6.147296789096138,
+      "doubling_80_100": 9.36186745299151,
+      "e0": 77.72566334045398,
+      "hazard_per_year": {
+        "100": 0.299623055242711,
+        "110": 0.5007717540487612,
+        "120": 0.7431998362137638,
+        "30": 0.0006098201608332848,
+        "50": 0.003080267981278062,
+        "70": 0.02628017942350868,
+        "80": 0.0684608111486791,
+        "90": 0.1548776322000458
+      },
+      "laplace_over_exact_hazard": {
+        "100": 0.39218882752970136,
+        "40": 1.0292550195435055,
+        "60": 1.0779008200174691,
+        "80": 1.050435195814229
+      },
+      "laplace_slope": {
+        "100": -0.09716197183098615,
+        "40": 0.13016373650783206,
+        "60": 0.11561335331308326,
+        "80": 0.081458066581306
+      },
+      "leading_order_slope_eta_Xc_over_eps": 0.1616197183098592,
+      "local_gompertz_b": {
+        "100": 0.05839356340426516,
+        "110": 0.044929304075087995,
+        "40": 0.12760827887942838,
+        "60": 0.11382799532279719,
+        "80": 0.08968681870643636
+      },
+      "median": 79.8248225465045,
+      "params": {
+        "Xc": 17.0,
+        "beta": 0.15,
+        "eps": 0.142,
+        "eta": 0.00135,
+        "kappa": 0.5,
+        "lam": 0.0004
+      }
+    },
+    "human_published_sde": {
+      "doubling_40_80": 6.592420912101156,
+      "dt_check_0p25day_n4000": {
+        "frac_alive_at_max": 0.0,
+        "median": 80.32363013698631,
+        "restricted_mean": 78.19532585616437
+      },
+      "dt_days": 1.0,
+      "frac_alive_at_max": 0.0,
+      "median": 80.77534246575343,
+      "n": 20000,
+      "quasistatic_e0": 77.72566334045398,
+      "restricted_mean": 78.51696301369863
+    },
+    "human_refit_8yr": {
+      "Xc": 17.0,
+      "beta": 0.489350322721695,
+      "doubling_40_90": 7.4674745272754794,
+      "e0": 81.94819355109738,
+      "eps": 0.4678326395743406,
+      "eta": 0.003437374301778968,
+      "kappa": 0.5,
+      "median": 84.64177965395076,
+      "rms_log_error": 0.02466529163450048,
+      "target": "hazard=(1/3000)*2^((age-25)/8), ages 40-90; APPROXIMATE target (Smithsonian summary of Gompertz law)"
+    },
+    "interventions_quasistatic": {
+      "baseline": {
+        "delta_e0": 0.0,
+        "doubling_60_90": 7.2055485102320755,
+        "e0_restricted_150": 77.72566334045398,
+        "hazard_100": 0.299623055242711,
+        "hazard_120": 0.7431998362137638,
+        "hazard_80": 0.0684608111486791,
+        "median": 79.8248225465045
+      },
+      "noise_x0.8_lifelong": {
+        "delta_e0": 8.278564078575826,
+        "doubling_60_90": 5.326793213139595,
+        "e0_restricted_150": 86.0042274190298,
+        "hazard_100": 0.2272479107187345,
+        "hazard_120": 0.6803662495140104,
+        "hazard_80": 0.03194533982273533,
+        "median": 88.08692377939227
+      },
+      "production_frozen_at_60": {
+        "delta_e0": 36.72908845220276,
+        "doubling_60_90": 6.592123111907182e+16,
+        "e0_restricted_150": 114.45475179265674,
+        "hazard_100": 0.009120777299545715,
+        "hazard_120": 0.009120777299545715,
+        "hazard_80": 0.009120777299545715,
+        "median": 125.38615135063036
+      },
+      "production_slope_x0.5_from_60": {
+        "delta_e0": 8.920815865089025,
+        "doubling_60_90": 13.079419444736189,
+        "e0_restricted_150": 86.646479205543,
+        "hazard_100": 0.0684608111486791,
+        "hazard_120": 0.1548776322000458,
+        "hazard_80": 0.02628017942350868,
+        "median": 88.29225546693664
+      },
+      "production_x0.5_lifelong": {
+        "delta_e0": 56.85402050707218,
+        "doubling_60_90": 10.76647476430975,
+        "e0_restricted_150": 134.57968384752616,
+        "hazard_100": 0.003080267981278062,
+        "hazard_120": 0.009120777299545715,
+        "hazard_80": 0.0011693456599563522,
+        "median": 145.69588850790052
+      },
+      "production_x0.8_lifelong": {
+        "delta_e0": 16.37781712963455,
+        "doubling_60_90": 7.638036493286629,
+        "e0_restricted_150": 94.10348047008853,
+        "hazard_100": 0.06846081114867901,
+        "hazard_120": 0.2344455234407577,
+        "hazard_80": 0.014045405021465002,
+        "median": 96.93626136970477
+      },
+      "removal_x1.25_lifelong": {
+        "delta_e0": 24.855516437972312,
+        "doubling_60_90": 5.719091889279276,
+        "e0_restricted_150": 102.58117977842629,
+        "hazard_100": 0.03983167477841911,
+        "hazard_120": 0.20690399373255042,
+        "hazard_80": 0.00488545728211112,
+        "median": 105.46348251225831
+      },
+      "removal_x1.5_from_60": {
+        "delta_e0": 44.10607855622236,
+        "doubling_60_90": 5.207111299644191,
+        "e0_restricted_150": 121.83174189667633,
+        "hazard_100": 0.002656161922279849,
+        "hazard_120": 0.022296348320357016,
+        "hazard_80": 0.0005780865656687399,
+        "median": 129.95951842895946
+      },
+      "removal_x1.5_lifelong": {
+        "delta_e0": 49.39495503120658,
+        "doubling_60_90": 5.207111299644191,
+        "e0_restricted_150": 127.12061837166056,
+        "hazard_100": 0.002656161922279849,
+        "hazard_120": 0.022296348320357016,
+        "hazard_80": 0.0005780865656687399,
+        "median": 131.1308361312287
+      }
+    },
+    "interventions_sde": {
+      "none": {
+        "delta_restricted_mean": 0.0,
+        "frac_alive_at_max": 0.0,
+        "median": 80.77534246575343,
+        "restricted_mean": 78.51696301369863
+      },
+      "removal_x1.5_lifelong": {
+        "delta_restricted_mean": 49.83704349315069,
+        "frac_alive_at_max": 0.03275,
+        "median": 132.33013698630137,
+        "restricted_mean": 128.35400650684932
+      },
+      "remove50pct_monthly_from60": {
+        "delta_restricted_mean": 61.44444452054795,
+        "doubling_after_start": null,
+        "frac_alive_at_max": 0.880625,
+        "median": 150.0,
+        "restricted_mean": 139.96140753424658
+      },
+      "remove50pct_monthly_from75": {
+        "delta_restricted_mean": 43.056177739726024,
+        "doubling_after_start": null,
+        "frac_alive_at_max": 0.65825,
+        "median": 150.0,
+        "restricted_mean": 121.57314075342465
+      },
+      "remove50pct_yearly_from60": {
+        "delta_restricted_mean": 4.829450342465748,
+        "doubling_after_start": 7.639929683248153,
+        "frac_alive_at_max": 0.0,
+        "median": 86.2013698630137,
+        "restricted_mean": 83.34641335616438
+      }
+    },
+    "runtime_s": 45.04850363731384,
+    "stationary_condition": {
+      "H_per_year": {
+        "0.000": 3.471139399783472e-06,
+        "0.005": 5.832095925037334e-06,
+        "0.010": 9.769689888104664e-06,
+        "0.015": 1.631332154471863e-05,
+        "0.020": 2.7145640997768084e-05,
+        "0.025": 4.500194695847174e-05,
+        "0.030": 7.430159161634111e-05,
+        "0.035": 0.00012213632410946698,
+        "0.040": 0.00019979978122272468,
+        "0.045": 0.0003251231169815701,
+        "0.050": 0.0005259861062011998,
+        "0.055": 0.0008454972407433365,
+        "0.060": 0.0013494642483793888,
+        "0.065": 0.002136869212505794,
+        "0.070": 0.0033540445389117837,
+        "0.075": 0.005212991690298246,
+        "0.080": 0.008013615692600243,
+        "0.085": 0.012168365665869409,
+        "0.090": 0.018225753340912476,
+        "0.095": 0.026886616819013248,
+        "0.100": 0.03900448737412297,
+        "0.105": 0.05556039155098954,
+        "0.110": 0.07760474255307391,
+        "0.115": 0.10616601998535398,
+        "0.120": 0.14213703680821327,
+        "0.125": 0.1861609374463376,
+        "0.130": 0.23854468457483663,
+        "0.135": 0.299223055242711,
+        "0.140": 0.3677816961412391,
+        "0.145": 0.4435300096431061,
+        "0.150": 0.525601831178401,
+        "0.155": 0.6130587968998198,
+        "0.160": 0.7049770156417947
+      },
+      "production_at_age": {
+        "100": 0.135,
+        "20": 0.027000000000000003,
+        "40": 0.054000000000000006,
+        "60": 0.081,
+        "80": 0.10800000000000001
+      },
+      "statement": "With production held at constant p the hazard is constant H(p): aging stops in this model. Hazard stays low only while p is well below the removal ceiling beta (and below beta*Xc/(kappa+Xc) at the threshold)."
+    },
+    "symbolic": {
+      "envelope_identity": true,
+      "slope_formula_matches_symbolic": true,
+      "xstar": "kappa*p/(beta - p)"
+    }
+  }
+}

@@ -1,0 +1,165 @@
+{
+  "voi_ranking": [
+    {
+      "key": "U6",
+      "question": "No damage type is beyond repair (weakest link)",
+      "p": 0.3,
+      "swing_M1_ratio": 0.999365609902955,
+      "swing_M2_ratio": 4.150342402231449,
+      "var_share_M1": 1.207424327224212e-07,
+      "var_share_M2": 0.4366375295767453,
+      "voi_score": 0.218318825159589,
+      "rank": 1
+    },
+    {
+      "key": "U1",
+      "question": "Few upstream causes (vs many independent ones)",
+      "p": 0.3,
+      "swing_M1_ratio": 0.5818793166526172,
+      "swing_M2_ratio": 2.840859980091761,
+      "var_share_M1": 0.08791358233688149,
+      "var_share_M2": 0.23500908141964072,
+      "voi_score": 0.16146133187826112,
+      "rank": 2
+    },
+    {
+      "key": "U3",
+      "question": "Biomarkers can stand in for lifespan in trials",
+      "p": 0.35,
+      "swing_M1_ratio": 0.38423749622949904,
+      "swing_M2_ratio": 1.1031579240594345,
+      "var_share_M1": 0.29716561164746474,
+      "var_share_M2": 0.002251000439206074,
+      "voi_score": 0.1497083060433354,
+      "rank": 3
+    },
+    {
+      "key": "U2",
+      "question": "Mouse lifespan results translate to humans",
+      "p": 0.4,
+      "swing_M1_ratio": 0.4275211615491337,
+      "swing_M2_ratio": 1.4456082605025329,
+      "var_share_M1": 0.24742715677155164,
+      "var_share_M2": 0.03346053153580051,
+      "voi_score": 0.14044384415367608,
+      "rank": 4
+    },
+    {
+      "key": "U5",
+      "question": "Regulators approve an aging indication",
+      "p": 0.5,
+      "swing_M1_ratio": 0.5420366173664091,
+      "swing_M2_ratio": 1.1597905480273445,
+      "var_share_M1": 0.13387313410800636,
+      "var_share_M2": 0.005639530513737562,
+      "voi_score": 0.06975633231087196,
+      "rank": 5
+    },
+    {
+      "key": "U4",
+      "question": "Partial reprogramming is safe in whole bodies",
+      "p": 0.25,
+      "swing_M1_ratio": 0.8564872813688273,
+      "swing_M2_ratio": 2.214937144737042,
+      "var_share_M1": 0.006424584023729207,
+      "var_share_M2": 0.12171826301133039,
+      "voi_score": 0.0640714235175298,
+      "rank": 6
+    }
+  ],
+  "M1_years_to_first_validated_therapy_quantiles": {
+    "p10": 9.843001610093118,
+    "p25": 13.353666670567312,
+    "p50": 20.202886124024673,
+    "p75": 31.89810465257848,
+    "p90": 48.322233348629446
+  },
+  "M2_ceiling_rho_over_b_quantiles": {
+    "p10": 0.04720362537198065,
+    "p25": 0.07338058554422999,
+    "p50": 0.14949280684937583,
+    "p75": 0.3097522371517009,
+    "p90": 0.6273895105499104
+  },
+  "P_M2_ge_1_escape_velocity_ceiling": 0.04239,
+  "scenarios": {
+    "pessimistic: U2,U3,U5 unfavourable": {
+      "share_of_draws": 0.1937,
+      "M1_median_years": 45.02077819505186,
+      "M1_p10_p90": [
+        26.021829871436747,
+        76.77284625035037
+      ],
+      "M2_median": 0.11654411705146274,
+      "P_M2_ge_1": 0.02160557563242127
+    },
+    "central: all draws": {
+      "share_of_draws": 1.0,
+      "M1_median_years": 20.202886124024673,
+      "M1_p10_p90": [
+        9.843001610093118,
+        48.322233348629446
+      ],
+      "M2_median": 0.14949280684937583,
+      "P_M2_ge_1": 0.04239
+    },
+    "optimistic: U2,U3,U5 favourable": {
+      "share_of_draws": 0.070645,
+      "M1_median_years": 8.538412730850794,
+      "M1_p10_p90": [
+        6.879950659120914,
+        11.387510990220843
+      ],
+      "M2_median": 0.2180789735160294,
+      "P_M2_ge_1": 0.08125132705782433
+    },
+    "repair-ceiling: U1,U4,U6 favourable": {
+      "share_of_draws": 0.02166,
+      "M1_median_years": 14.345257819069,
+      "M1_p10_p90": [
+        8.177728037024004,
+        29.917636157578258
+      ],
+      "M2_median": 1.635701067213295,
+      "P_M2_ge_1": 0.8580332409972299
+    }
+  },
+  "robustness": [
+    {
+      "key": "U1",
+      "mean_rank": 2.524,
+      "share_top2": 0.478,
+      "share_top3": 0.794
+    },
+    {
+      "key": "U2",
+      "mean_rank": 3.266,
+      "share_top2": 0.296,
+      "share_top3": 0.546
+    },
+    {
+      "key": "U3",
+      "mean_rank": 3.038,
+      "share_top2": 0.41,
+      "share_top3": 0.642
+    },
+    {
+      "key": "U4",
+      "mean_rank": 5.246,
+      "share_top2": 0.022,
+      "share_top3": 0.07
+    },
+    {
+      "key": "U5",
+      "mean_rank": 5.16,
+      "share_top2": 0.012,
+      "share_top3": 0.048
+    },
+    {
+      "key": "U6",
+      "mean_rank": 1.766,
+      "share_top2": 0.782,
+      "share_top3": 0.9
+    }
+  ]
+}

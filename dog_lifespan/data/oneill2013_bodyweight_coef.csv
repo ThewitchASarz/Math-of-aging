@@ -1,0 +1,9 @@
+# Source: O'Neill DG, Church DB, McGreevy PD, Thomson PC, Brodbelt DC (2013) Longevity and mortality of owned dogs in England. Vet J 198:638-643. Table 4 multivariable linear model of longevity (dogs aged >=3 y), coefficient in years vs <10 kg
+# URL: https://rvc-repository.worktribe.com/OutputFile/1409027 (opened 2026-11-10)
+kg_lo,kg_hi,coef_years,lo,hi
+0,10,0.0,0.0,0.0
+10,20,-0.5,-0.8,-0.1
+20,30,-0.7,-1.1,-0.3
+30,40,-1.4,-1.8,-1.0
+40,50,-2.4,-2.9,-1.8
+50,70,-4.0,-4.8,-3.2

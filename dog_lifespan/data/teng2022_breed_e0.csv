@@ -1,0 +1,22 @@
+# Source: Teng et al. 2022 Sci Rep 12:6415, breed life expectancy at age 0 (95% CI) and dogs in table
+# URL: https://pmc.ncbi.nlm.nih.gov/articles/PMC9050668 (opened 2026-11-10)
+breed,e0,lo,hi,n
+Jack Russell Terrier,12.72,12.53,12.90,1620
+Yorkshire Terrier,12.54,12.30,12.77,1042
+Border Collie,12.10,11.85,12.33,942
+Springer Spaniel,11.92,11.69,12.13,790
+Crossbred,11.82,11.72,11.92,6511
+Labrador Retriever,11.77,11.67,11.89,2500
+Staffordshire Bull Terrier,11.33,11.19,11.48,2364
+Cocker Spaniel,11.31,11.13,11.53,1073
+Shih-tzu,11.05,10.73,11.40,638
+Cavalier King Charles Spaniel,10.45,10.26,10.62,867
+German Shepherd Dog,10.16,10.00,10.37,1110
+Boxer,10.04,9.85,10.21,836
+Beagle,9.85,9.17,10.24,172
+Husky,9.53,8.71,9.88,154
+Chihuahua,7.91,7.48,8.39,458
+American Bulldog,7.79,7.16,8.33,129
+Pug,7.65,6.99,8.20,197
+English Bulldog,7.39,7.08,7.69,478
+French Bulldog,4.53,4.14,5.01,232

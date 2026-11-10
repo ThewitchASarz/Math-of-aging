@@ -1,0 +1,670 @@
+{
+  "translation_math": {
+    "symbolic_checks": {
+      "hazard_ratio_equals_age_shift": true,
+      "cumulative_hazard_derivative": true,
+      "small_M_series_of_expM_E1M": true
+    },
+    "closed_form_max_abs_error_years": 1.4210854715202004e-14,
+    "first_order_error_HR0.8": {
+      "M_at_10pct_error": 0.03866171607311932,
+      "M_at_25pct_error": 0.16490272649303933
+    },
+    "what_solving_ageing_requires": {
+      "human": {
+        "start_age": 50,
+        "baseline_remaining_LE": 31.29073063048514,
+        "remaining_LE_if_ageing_frozen_at_start": 254.27811180927398,
+        "HR_to_add_10y": {
+          "first_order": 0.426905754243325,
+          "exact_GM": 0.3922050975138224
+        },
+        "HR_to_add_20y": {
+          "first_order": 0.18224852300606217,
+          "exact_GM": 0.16063412208392167
+        },
+        "HR_to_add_50y": {
+          "first_order": 0.014179471478919556,
+          "exact_GM": 0.012064614910889575
+        },
+        "slope_multiplier_to_add_10y": 0.6542353998600142,
+        "slope_multiplier_to_add_20y": 0.4610862467270169,
+        "slope_multiplier_to_add_50y": 0.202830745477928
+      },
+      "dog": {
+        "start_age": 7,
+        "baseline_remaining_LE": 5.394924591079606,
+        "remaining_LE_if_ageing_frozen_at_start": 21.500182170686543,
+        "HR_to_add_1y": {
+          "first_order": 0.7264767936949118,
+          "exact_GM": 0.6627241774780369
+        },
+        "HR_to_add_2y": {
+          "first_order": 0.5277685317772395,
+          "exact_GM": 0.4498448833322301
+        },
+        "HR_to_add_5y": {
+          "first_order": 0.20235257233159754,
+          "exact_GM": 0.15315784321612833
+        },
+        "slope_multiplier_to_add_1y": 0.7334625362336479,
+        "slope_multiplier_to_add_2y": 0.5531104519576605,
+        "slope_multiplier_to_add_5y": 0.2597343228512367
+      }
+    },
+    "mortality_parameters": {
+      "human": {
+        "a": 5.576363367663802e-05,
+        "b": 0.08511920061726733,
+        "c": 0.0,
+        "b_range": [
+          0.0825,
+          0.1014
+        ],
+        "mode": 86.12258960880644
+      },
+      "dog": {
+        "a": 0.004967182098875431,
+        "b": 0.31954873909049325,
+        "c": 0.0,
+        "b_range": [
+          0.3054,
+          0.3439
+        ],
+        "mode": 13.031054745681189
+      }
+    },
+    "example_gains": {
+      "human_HR0.8_from50_first_order": 2.621541904717356,
+      "human_HR0.8_from50_exact_GM": 2.3221061623007166,
+      "human_HR0.8_from80_exact_GM": 1.3812008692814786,
+      "dog_HR0.8_from7_exact_GM": 0.5338290404357622,
+      "dog_HR0.8_from10_exact_GM": 0.42665135219912065,
+      "human_s0.9_from50_exact_GM": 2.276757340435335,
+      "human_s0.9_from20_exact_GM": 5.272771200153144,
+      "dog_s0.9_from7_exact_GM": 0.32778562414542556
+    }
+  },
+  "evidence_tables": {
+    "itp_rows": 21,
+    "human_rows": 17,
+    "dog_rows": 9,
+    "purina_median_gain_years": 1.8000000000000007,
+    "purina_implied_HR_first_order_b0.25": 0.6376281516217733,
+    "rapa_acarbose_combo_vs_singles_male_pct": {
+      "combo": 34,
+      "rapa_42ppm": 23,
+      "acarbose": 22,
+      "note": "different cohorts and doses"
+    }
+  },
+  "monte_carlo": {
+    "human": {
+      "start_age": 50.0,
+      "baseline_remaining_LE": 31.29073063048514,
+      "combo_all_independent": {
+        "mean": 6.367532540518292,
+        "p5": 2.2108299984784727,
+        "median": 5.887825719947222,
+        "p95": 12.108923460007537,
+        "P_gain_gt_0.1y": 0.999095
+      },
+      "combo_all_overlapping_pathways": {
+        "mean": 4.964044862663379,
+        "p5": 1.9578849345152596,
+        "median": 4.520734106293453,
+        "p95": 9.523909572187048,
+        "P_gain_gt_0.1y": 0.99986
+      },
+      "combo_grade_A_only": {
+        "mean": 1.2476521216904932,
+        "p5": 0.40018759583221963,
+        "median": 1.2529866584091822,
+        "p95": 2.0815079996266515,
+        "P_gain_gt_0.1y": 0.987675
+      },
+      "combined_HR_overlapping_median": 0.6500316396848108,
+      "combined_HR_overlapping_p95_best": 0.40957314057850214
+    },
+    "dog": {
+      "start_age": 7.0,
+      "baseline_remaining_LE": 5.394924591079606,
+      "combo_all_independent": {
+        "mean": 1.4553025299748126,
+        "p5": 0.25030652530460923,
+        "median": 1.390332754745365,
+        "p95": 2.8210616210810646,
+        "P_gain_gt_0.1y": 0.96757
+      },
+      "combo_all_overlapping_pathways": {
+        "mean": 1.175791420606044,
+        "p5": 0.2582142286544606,
+        "median": 1.1697585373023651,
+        "p95": 2.0517060876723683,
+        "P_gain_gt_0.1y": 0.968415
+      },
+      "combo_grade_A_only": {
+        "mean": 0.7879879232473398,
+        "p5": 0.0,
+        "median": 0.848746364867206,
+        "p95": 1.4482683822787803,
+        "P_gain_gt_0.1y": 0.84713
+      },
+      "combined_HR_overlapping_median": 0.6196345918983562,
+      "combined_HR_overlapping_p95_best": 0.4411477768223077
+    },
+    "solving_ageing_comparison": {
+      "human": {
+        "remaining_LE_now": 31.29073063048514,
+        "remaining_LE_if_ageing_stopped_at_start_age": 254.27811180927398,
+        "everything_known_overlapping_mean_gain": 4.964044862663379,
+        "everything_known_overlapping_p95_gain": 9.523909572187048,
+        "fraction_of_gap_closed_mean": 0.022261550570358342
+      },
+      "dog": {
+        "remaining_LE_now": 5.394924591079606,
+        "remaining_LE_if_ageing_stopped_at_start_age": 21.500182170686543,
+        "everything_known_overlapping_mean_gain": 1.175791420606044,
+        "everything_known_overlapping_p95_gain": 2.0517060876723683,
+        "fraction_of_gap_closed_mean": 0.07300668212192235
+      }
+    },
+    "ranked_table": [
+      {
+        "species": "dog",
+        "intervention": "Diet restriction / lean feeding",
+        "grade": "A",
+        "cluster": "nutrient",
+        "p_real": 0.85,
+        "p_harm": 0.0,
+        "start_age": 7.0,
+        "mean": 0.7879879232473398,
+        "p5": 0.0,
+        "median": 0.848746364867206,
+        "p95": 1.4482683822787803,
+        "P_gain_gt_0.1y": 0.84713
+      },
+      {
+        "species": "dog",
+        "intervention": "Rapamycin (TRIAD pending)",
+        "grade": "B",
+        "cluster": "nutrient",
+        "p_real": 0.35,
+        "p_harm": 0.1,
+        "start_age": 7.0,
+        "mean": 0.22448524559181285,
+        "p5": -0.027833711608777914,
+        "median": 0.0,
+        "p95": 1.1079760987056566,
+        "P_gain_gt_0.1y": 0.338275
+      },
+      {
+        "species": "dog",
+        "intervention": "LOY-001/003 IGF-1 lowering (large dogs)",
+        "grade": "C",
+        "cluster": "nutrient",
+        "p_real": 0.3,
+        "p_harm": 0.1,
+        "start_age": 7.0,
+        "mean": 0.14314096321562433,
+        "p5": -0.03853558844924628,
+        "median": 0.0,
+        "p95": 0.7076860431879937,
+        "P_gain_gt_0.1y": 0.288105
+      },
+      {
+        "species": "dog",
+        "intervention": "LOY-002 (senior dogs)",
+        "grade": "C",
+        "cluster": "nutrient",
+        "p_real": 0.35,
+        "p_harm": 0.05,
+        "start_age": 10.0,
+        "mean": 0.13518867482866329,
+        "p5": 0.0,
+        "median": 0.0,
+        "p95": 0.5861928705875912,
+        "P_gain_gt_0.1y": 0.331705
+      },
+      {
+        "species": "dog",
+        "intervention": "Dental cleaning",
+        "grade": "B",
+        "cluster": "infection",
+        "p_real": 0.3,
+        "p_harm": 0.02,
+        "start_age": 7.0,
+        "mean": 0.06411344407852881,
+        "p5": 0.0,
+        "median": 0.0,
+        "p95": 0.31626133921935323,
+        "P_gain_gt_0.1y": 0.26181
+      },
+      {
+        "species": "dog",
+        "intervention": "Senolytics",
+        "grade": "C",
+        "cluster": "damage",
+        "p_real": 0.15,
+        "p_harm": 0.1,
+        "start_age": 7.0,
+        "mean": 0.025876221481000067,
+        "p5": -0.04994480416064153,
+        "median": 0.0,
+        "p95": 0.2523298026011443,
+        "P_gain_gt_0.1y": 0.12463
+      },
+      {
+        "species": "human",
+        "intervention": "Exercise (inactive to active)",
+        "grade": "B",
+        "cluster": "vascular",
+        "p_real": 0.75,
+        "p_harm": 0.0,
+        "start_age": 50.0,
+        "mean": 0.9883883721720486,
+        "p5": 0.0,
+        "median": 1.054193403208315,
+        "p95": 2.232694555497331,
+        "P_gain_gt_0.1y": 0.73365
+      },
+      {
+        "species": "human",
+        "intervention": "Rapamycin / rapalogs",
+        "grade": "B",
+        "cluster": "nutrient",
+        "p_real": 0.35,
+        "p_harm": 0.15,
+        "start_age": 50.0,
+        "mean": 0.9611346054646731,
+        "p5": -0.2460932063034153,
+        "median": 0.0,
+        "p95": 4.752985715357244,
+        "P_gain_gt_0.1y": 0.349365
+      },
+      {
+        "species": "human",
+        "intervention": "Blood-pressure control",
+        "grade": "A",
+        "cluster": "vascular",
+        "p_real": 0.95,
+        "p_harm": 0.0,
+        "start_age": 50.0,
+        "mean": 0.6767273740509159,
+        "p5": 0.0,
+        "median": 0.6879728766883235,
+        "p95": 1.3137843484234837,
+        "P_gain_gt_0.1y": 0.902685
+      },
+      {
+        "species": "human",
+        "intervention": "Caloric restriction (~12%)",
+        "grade": "B",
+        "cluster": "nutrient",
+        "p_real": 0.5,
+        "p_harm": 0.05,
+        "start_age": 50.0,
+        "mean": 0.6508623796725345,
+        "p5": 0.0,
+        "median": 0.0,
+        "p95": 2.099369826001907,
+        "P_gain_gt_0.1y": 0.48717
+      },
+      {
+        "species": "human",
+        "intervention": "LDL lowering",
+        "grade": "A",
+        "cluster": "vascular",
+        "p_real": 0.95,
+        "p_harm": 0.0,
+        "start_age": 50.0,
+        "mean": 0.5676206726372047,
+        "p5": 0.0,
+        "median": 0.5765779921217871,
+        "p95": 1.0840378498959329,
+        "P_gain_gt_0.1y": 0.90416
+      },
+      {
+        "species": "human",
+        "intervention": "Acarbose",
+        "grade": "C",
+        "cluster": "nutrient",
+        "p_real": 0.3,
+        "p_harm": 0.05,
+        "start_age": 50.0,
+        "mean": 0.41088436133060013,
+        "p5": 0.0,
+        "median": 0.0,
+        "p95": 2.2876594128518475,
+        "P_gain_gt_0.1y": 0.29709
+      },
+      {
+        "species": "human",
+        "intervention": "GLP-1 receptor agonist",
+        "grade": "B",
+        "cluster": "nutrient",
+        "p_real": 0.4,
+        "p_harm": 0.05,
+        "start_age": 50.0,
+        "mean": 0.3503105477051252,
+        "p5": 0.0,
+        "median": 0.0,
+        "p95": 1.4504044446019957,
+        "P_gain_gt_0.1y": 0.381055
+      },
+      {
+        "species": "human",
+        "intervention": "SGLT2 inhibitor",
+        "grade": "B",
+        "cluster": "nutrient",
+        "p_real": 0.3,
+        "p_harm": 0.02,
+        "start_age": 50.0,
+        "mean": 0.26531631773210623,
+        "p5": 0.0,
+        "median": 0.0,
+        "p95": 1.3584770845213785,
+        "P_gain_gt_0.1y": 0.28606
+      },
+      {
+        "species": "human",
+        "intervention": "Taurine",
+        "grade": "C",
+        "cluster": "nutrient",
+        "p_real": 0.2,
+        "p_harm": 0.0,
+        "start_age": 50.0,
+        "mean": 0.2633175740094552,
+        "p5": 0.0,
+        "median": 0.0,
+        "p95": 1.7838828210176356,
+        "P_gain_gt_0.1y": 0.197765
+      },
+      {
+        "species": "human",
+        "intervention": "Glycine",
+        "grade": "C",
+        "cluster": "nutrient",
+        "p_real": 0.3,
+        "p_harm": 0.0,
+        "start_age": 50.0,
+        "mean": 0.2318351987494118,
+        "p5": 0.0,
+        "median": 0.0,
+        "p95": 1.22440772316119,
+        "P_gain_gt_0.1y": 0.29255
+      },
+      {
+        "species": "human",
+        "intervention": "Partial reprogramming (systemic)",
+        "grade": "D",
+        "cluster": "damage",
+        "p_real": 0.05,
+        "p_harm": 0.2,
+        "start_age": 50.0,
+        "mean": 0.14803195040983438,
+        "p5": -0.38066820836137055,
+        "median": 0.0,
+        "p95": 0.0,
+        "P_gain_gt_0.1y": 0.048665
+      },
+      {
+        "species": "human",
+        "intervention": "Vaccination (zoster, influenza)",
+        "grade": "B",
+        "cluster": "infection",
+        "p_real": 0.7,
+        "p_harm": 0.0,
+        "start_age": 50.0,
+        "mean": 0.12803943250656966,
+        "p5": 0.0,
+        "median": 0.13771710905952628,
+        "p95": 0.29995937767717273,
+        "P_gain_gt_0.1y": 0.595585
+      },
+      {
+        "species": "human",
+        "intervention": "Senolytics",
+        "grade": "C",
+        "cluster": "damage",
+        "p_real": 0.15,
+        "p_harm": 0.1,
+        "start_age": 50.0,
+        "mean": 0.11297648952301782,
+        "p5": -0.22255980057471597,
+        "median": 0.0,
+        "p95": 1.104004918403512,
+        "P_gain_gt_0.1y": 0.142705
+      },
+      {
+        "species": "human",
+        "intervention": "Telomerase gene therapy",
+        "grade": "C",
+        "cluster": "damage",
+        "p_real": 0.05,
+        "p_harm": 0.2,
+        "start_age": 50.0,
+        "mean": 0.09840859245283332,
+        "p5": -0.3791201674821336,
+        "median": 0.0,
+        "p95": 0.21655534550077446,
+        "P_gain_gt_0.1y": 0.05026
+      },
+      {
+        "species": "human",
+        "intervention": "Metformin",
+        "grade": "C",
+        "cluster": "nutrient",
+        "p_real": 0.15,
+        "p_harm": 0.05,
+        "start_age": 50.0,
+        "mean": 0.07871494747141519,
+        "p5": 0.0,
+        "median": 0.0,
+        "p95": 0.7259070231091663,
+        "P_gain_gt_0.1y": 0.1427
+      },
+      {
+        "species": "human",
+        "intervention": "Plasma exchange",
+        "grade": "C",
+        "cluster": "damage",
+        "p_real": 0.1,
+        "p_harm": 0.05,
+        "start_age": 50.0,
+        "mean": 0.07850143577332575,
+        "p5": 0.0,
+        "median": 0.0,
+        "p95": 0.895735832162187,
+        "P_gain_gt_0.1y": 0.095485
+      },
+      {
+        "species": "human",
+        "intervention": "Klotho",
+        "grade": "C",
+        "cluster": "damage",
+        "p_real": 0.1,
+        "p_harm": 0.05,
+        "start_age": 50.0,
+        "mean": 0.07701264507346216,
+        "p5": 0.0,
+        "median": 0.0,
+        "p95": 0.8891425012032478,
+        "P_gain_gt_0.1y": 0.094675
+      },
+      {
+        "species": "human",
+        "intervention": "17-alpha-estradiol",
+        "grade": "C",
+        "cluster": "nutrient",
+        "p_real": 0.1,
+        "p_harm": 0.2,
+        "start_age": 50.0,
+        "mean": 0.07019280966140366,
+        "p5": -0.37181327072731674,
+        "median": 0.0,
+        "p95": 1.0210609461885973,
+        "P_gain_gt_0.1y": 0.09866
+      },
+      {
+        "species": "human",
+        "intervention": "GH/IGF-1 suppression (adult)",
+        "grade": "C",
+        "cluster": "nutrient",
+        "p_real": 0.1,
+        "p_harm": 0.1,
+        "start_age": 50.0,
+        "mean": 0.06192871576748998,
+        "p5": -0.23882593573218566,
+        "median": 0.0,
+        "p95": 0.8515010787142119,
+        "P_gain_gt_0.1y": 0.093535
+      },
+      {
+        "species": "human",
+        "intervention": "NAD precursors",
+        "grade": "C",
+        "cluster": "damage",
+        "p_real": 0.05,
+        "p_harm": 0.0,
+        "start_age": 50.0,
+        "mean": 0.014721474818190054,
+        "p5": 0.0,
+        "median": 0.0,
+        "p95": 0.0,
+        "P_gain_gt_0.1y": 0.04584
+      },
+      {
+        "species": "human",
+        "intervention": "Follistatin gene therapy",
+        "grade": "D",
+        "cluster": "damage",
+        "p_real": 0.05,
+        "p_harm": 0.1,
+        "start_age": 50.0,
+        "mean": 0.00274039883594534,
+        "p5": -0.24696936502803202,
+        "median": 0.0,
+        "p95": 0.0,
+        "P_gain_gt_0.1y": 0.04592
+      }
+    ],
+    "N_draws": 200000,
+    "seed": 20261110
+  },
+  "monte_carlo_sensitivity": {
+    "human": {
+      "base": {
+        "mean": 4.9576209527702915,
+        "p95": 9.506806353764253
+      },
+      "p_real_x0.5": {
+        "mean": 2.69982996968732,
+        "p95": 6.455503359359006
+      },
+      "p_real_x1.5": {
+        "mean": 6.59068212060411,
+        "p95": 11.563844903034505
+      },
+      "all_p_real_1_(everything_works)": {
+        "mean": 16.44742439933207,
+        "p95": 22.872796752268265
+      },
+      "translation_f_mean_0.5": {
+        "mean": 6.824163457949181,
+        "p95": 13.75325385091962
+      },
+      "rho_0_(pure_redundancy)": {
+        "mean": 4.028268659565496,
+        "p95": 7.98590859733242
+      },
+      "rho_1_(fully_additive)": {
+        "mean": 6.365469400330041,
+        "p95": 12.137331147722884
+      }
+    },
+    "dog": {
+      "base": {
+        "mean": 1.170805630762684,
+        "p95": 2.047191294754101
+      },
+      "p_real_x0.5": {
+        "mean": 0.6370456853130927,
+        "p95": 1.615763779497561
+      },
+      "p_real_x1.5": {
+        "mean": 1.4646598119165013,
+        "p95": 2.34682481521635
+      },
+      "all_p_real_1_(everything_works)": {
+        "mean": 2.1704137149406955,
+        "p95": 3.0866040410338305
+      },
+      "translation_f_mean_0.5": {
+        "mean": 1.3606037006387897,
+        "p95": 2.676398215378121
+      },
+      "rho_0_(pure_redundancy)": {
+        "mean": 0.9904582412499551,
+        "p95": 1.677772237611861
+      },
+      "rho_1_(fully_additive)": {
+        "mean": 1.4472643996184227,
+        "p95": 2.7955545136600803
+      }
+    }
+  },
+  "trial_design": {
+    "events_needed": {
+      "0.95": 11932.913145317661,
+      "0.9": 2828.211546097487,
+      "0.8": 630.5201711804549,
+      "0.7": 246.7871045473585
+    },
+    "human_years_until_half_of_50y_olds_dead": 32.58,
+    "dog_years_until_half_of_7y_olds_dead": 5.49,
+    "TAME_like_design_illustrative": {
+      "annual_composite_rate_0.02": {
+        "expected_events": 339.23868984852754,
+        "min_detectable_HR_80pct_power": 0.7377019745974831
+      },
+      "annual_composite_rate_0.035": {
+        "expected_events": 568.2472620894388,
+        "min_detectable_HR_80pct_power": 0.7905292249477281
+      },
+      "annual_composite_rate_0.05": {
+        "expected_events": 777.5453379548463,
+        "min_detectable_HR_80pct_power": 0.8179597766477528
+      }
+    },
+    "dog_trials_illustrative": {
+      "STAY-like (1300 dogs >=10 y, 4 y)": {
+        "p_death_control": 0.6259211312266446,
+        "expected_events": 813.697470594638,
+        "min_detectable_HR_80pct_power": 0.8216608769918675
+      },
+      "TRIAD-like (580 dogs >=7 y, 3 y)": {
+        "p_death_control": 0.20869575928991502,
+        "expected_events": 121.04354038815072,
+        "min_detectable_HR_80pct_power": 0.6009235793659158
+      }
+    },
+    "biomarker_trial_n_per_arm": {
+      "d=0.1": {
+        "n_per_arm": 1569.7759468698173
+      },
+      "d=0.25": {
+        "n_per_arm": 251.16415149917083
+      },
+      "d=0.4": {
+        "n_per_arm": 98.11099667936358
+      }
+    },
+    "implied_HR_if_clock_fully_causal_illustrative": {
+      "h_per_SD=1.3, d=0.25": 0.9365137582048804,
+      "h_per_SD=1.3, d=0.4": 0.9003734063247073,
+      "h_per_SD=1.6, d=0.25": 0.8891397050194614,
+      "h_per_SD=1.6, d=0.4": 0.8286135043349967
+    }
+  }
+}

@@ -1,0 +1,9 @@
+species,scenario,remaining_LE
+human,today,31.29073063048514
+human,+ everything known (mean),36.25477549314852
+human,+ everything known (95th pct),40.81464020267219
+human,ageing stopped at start age,254.27811180927398
+dog,today,5.394924591079606
+dog,+ everything known (mean),6.570716011685651
+dog,+ everything known (95th pct),7.4466306787519745
+dog,ageing stopped at start age,21.500182170686543

@@ -1,0 +1,942 @@
+{
+  "part1_mortality_fits": {
+    "teng_gompertz_2to19": {
+      "a_per_year": 0.004967182098875431,
+      "b_per_year": 0.31954873909049325,
+      "c_per_year": 0.0,
+      "MRDT_years": 2.16914384495084,
+      "hazard_at_age_2": 0.009411667804726144,
+      "model_e_at": 2.0,
+      "model_remaining_LE": 9.594675751538727,
+      "table_remaining_LE": 9.58,
+      "neg_log_lik": 76883.5360298162,
+      "b_95CI_bootstrap": [
+        0.31538285065713684,
+        0.32332840708552457
+      ],
+      "MRDT_95CI_bootstrap": [
+        2.1437869698969356,
+        2.1977961416318745
+      ]
+    },
+    "teng_makeham_1to19": {
+      "a_per_year": 0.004007335814024947,
+      "b_per_year": 0.3341489634695518,
+      "c_per_year": 0.00498193141281479,
+      "MRDT_years": 2.0743657959097814,
+      "hazard_at_age_2": 0.012799898534714992,
+      "model_e_at": 2.0,
+      "model_remaining_LE": 9.544910580199959,
+      "table_remaining_LE": 9.58,
+      "neg_log_lik": 79383.27627479084
+    },
+    "montoya_gompertz_2to16": {
+      "a_per_year": 0.0034279019896587427,
+      "b_per_year": 0.30537100901319864,
+      "c_per_year": 0.0,
+      "MRDT_years": 2.269852605850958,
+      "hazard_at_age_2": 0.006313501447950123,
+      "model_e_at": 2.0,
+      "model_remaining_LE": 11.106459021860848,
+      "table_remaining_LE": 11.16,
+      "rmse_log_interval_hazard": 0.11864665884737267
+    },
+    "montoya_makeham_1to16": {
+      "a_per_year": 0.0019931693453973443,
+      "b_per_year": 0.34393448197851345,
+      "c_per_year": 0.005027988848857045,
+      "MRDT_years": 2.015346575814542,
+      "hazard_at_age_2": 0.008993342211862066,
+      "model_e_at": 2.0,
+      "model_remaining_LE": 11.110749743382074,
+      "table_remaining_LE": 11.16,
+      "rmse_log_interval_hazard": 0.13239370856356247
+    },
+    "human_male_gompertz_40to94": {
+      "a_per_year": 8.139484792777861e-05,
+      "b_per_year": 0.08251410230039809,
+      "c_per_year": 0.0,
+      "MRDT_years": 8.40034807670205,
+      "hazard_at_age_2": null,
+      "model_e_at": 40.0,
+      "model_remaining_LE": 38.2175005145644,
+      "table_remaining_LE": 38.59,
+      "hazard_at_age_40": 0.0022080743277281966,
+      "rmse_log_interval_hazard": 0.14253062554581483
+    },
+    "human_male_makeham_30to94": {
+      "a_per_year": 2.5273030252366926e-05,
+      "b_per_year": 0.09660472088126866,
+      "c_per_year": 0.0018098893608619526,
+      "MRDT_years": 7.175086002389603,
+      "hazard_at_age_2": null,
+      "model_e_at": 40.0,
+      "model_remaining_LE": 38.49605678263029,
+      "table_remaining_LE": 38.59,
+      "hazard_at_age_40": 0.003014518059431031,
+      "rmse_log_interval_hazard": 0.06506595107767997
+    },
+    "human_female_gompertz_40to94": {
+      "a_per_year": 3.142183260732032e-05,
+      "b_per_year": 0.0903263976032295,
+      "c_per_year": 0.0,
+      "MRDT_years": 7.673805210351517,
+      "hazard_at_age_2": null,
+      "model_e_at": 40.0,
+      "model_remaining_LE": 42.4618079926757,
+      "table_remaining_LE": 42.64,
+      "hazard_at_age_40": 0.0011650961111006458,
+      "rmse_log_interval_hazard": 0.15145677125825652
+    },
+    "human_female_makeham_30to94": {
+      "a_per_year": 1.2629505778301157e-05,
+      "b_per_year": 0.1014447543325099,
+      "c_per_year": 0.0007696636981986565,
+      "MRDT_years": 6.832755277695153,
+      "hazard_at_age_2": null,
+      "model_e_at": 40.0,
+      "model_remaining_LE": 42.55704867590093,
+      "table_remaining_LE": 42.64,
+      "hazard_at_age_40": 0.0015002343752502797,
+      "rmse_log_interval_hazard": 0.08379564009488566
+    },
+    "human_both_gompertz_40to94": {
+      "a_per_year": 5.576363367663802e-05,
+      "b_per_year": 0.08511920061726733,
+      "c_per_year": 0.0,
+      "MRDT_years": 8.143252938624673,
+      "hazard_at_age_2": null,
+      "model_e_at": 40.0,
+      "model_remaining_LE": 40.36017720021378,
+      "table_remaining_LE": null,
+      "hazard_at_age_40": 0.0016788930482680854,
+      "rmse_log_interval_hazard": 0.14553507115013356
+    },
+    "human_both_makeham_30to94": {
+      "a_per_year": 1.8833643403315856e-05,
+      "b_per_year": 0.09825332210165115,
+      "c_per_year": 0.0012919128846324219,
+      "MRDT_years": 7.0546945969198624,
+      "hazard_at_age_2": null,
+      "model_e_at": 40.0,
+      "model_remaining_LE": 40.55319019890486,
+      "table_remaining_LE": null,
+      "hazard_at_age_40": 0.0022508041617007577,
+      "rmse_log_interval_hazard": 0.06941424108654237
+    },
+    "comparison": {
+      "dog_MRDT_UK_years": 2.16914384495084,
+      "dog_MRDT_US_years": 2.269852605850958,
+      "human_MRDT_US2023_years": 8.143252938624673,
+      "ratio_b_dog_over_human_UK": 3.754132284762898,
+      "ratio_b_dog_over_human_US": 3.587569041987113,
+      "ratio_e0_human_over_dog": 6.1800630417651705,
+      "note": "Dog Gompertz slope b is ~3.5-4x the human slope, but dogs live ~6x shorter: the rest of the difference sits in the level parameter a (dogs start adult life at a far higher hazard)."
+    },
+    "size_class_calibration": {
+      "method": "Montoya US Gompertz-Makeham (ages 1-16) parameters held fixed except one; that one parameter is solved so model e0 matches each size group's published e0 (after removing the overall model-vs-table e0 offset of 0.232 y). Scenario A: Gompertz slope b varies (size changes the rate of aging). Scenario B: level a varies (size multiplies hazard at all ages).",
+      "model_e0_offset_years": 0.23162682318046635,
+      "rows": [
+        {
+          "size": "toy",
+          "kg_lo": 2.0,
+          "kg_hi": 5.5,
+          "e0_observed": 13.36,
+          "A_b": 0.3217404108181793,
+          "A_MRDT": 2.1543677985531446,
+          "A_a": 0.0019931693453973443,
+          "A_median": 14.35163509990255,
+          "B_a": 0.0015472937957181812,
+          "B_b": 0.34393448197851345,
+          "B_MRDT": 2.015346575814542,
+          "B_median": 14.34792855048867,
+          "c": 0.005027988848857045
+        },
+        {
+          "size": "small",
+          "kg_lo": 5.5,
+          "kg_hi": 11.0,
+          "e0_observed": 13.53,
+          "A_b": 0.316488031994736,
+          "A_MRDT": 2.190121301558329,
+          "A_a": 0.0019931693453973443,
+          "A_median": 14.53370848947008,
+          "B_a": 0.0014510799652936222,
+          "B_b": 0.34393448197851345,
+          "B_MRDT": 2.015346575814542,
+          "B_median": 14.529051482112779,
+          "c": 0.005027988848857045
+        },
+        {
+          "size": "medium",
+          "kg_lo": 11.0,
+          "kg_hi": 26.0,
+          "e0_observed": 12.7,
+          "A_b": 0.34358451707461857,
+          "A_MRDT": 2.0173993475072973,
+          "A_a": 0.0019931693453973443,
+          "A_median": 13.645007525457562,
+          "B_a": 0.001985644510163914,
+          "B_b": 0.34393448197851345,
+          "B_MRDT": 2.015346575814542,
+          "B_median": 13.644953987057297,
+          "c": 0.005027988848857045
+        },
+        {
+          "size": "large",
+          "kg_lo": 26.0,
+          "kg_hi": 45.0,
+          "e0_observed": 11.51,
+          "A_b": 0.3898801338670896,
+          "A_MRDT": 1.7778468825401594,
+          "A_a": 0.0019931693453973443,
+          "A_median": 12.372108580214137,
+          "B_a": 0.0031177960432155157,
+          "B_b": 0.34393448197851345,
+          "B_MRDT": 2.015346575814542,
+          "B_median": 12.377371570658353,
+          "c": 0.005027988848857045
+        },
+        {
+          "size": "giant",
+          "kg_lo": 45.0,
+          "kg_hi": 70.0,
+          "e0_observed": 9.51,
+          "A_b": 0.4962134541772647,
+          "A_MRDT": 1.3968730084298138,
+          "A_a": 0.0019931693453973443,
+          "A_median": 10.23722028439486,
+          "B_a": 0.0067168904862684115,
+          "B_b": 0.34393448197851345,
+          "B_MRDT": 2.015346575814542,
+          "B_median": 10.240634168524267,
+          "c": 0.005027988848857045
+        }
+      ],
+      "check_McMillan": {
+        "observed_HR_small_vs_large": 0.83,
+        "scenarioB_HR_small_vs_large": 0.46541850242296856,
+        "observed_median_gap_large_minus_small_years": 0.7999999999999989
+      },
+      "note": "Calibration of one parameter to one number per group; not an independent fit. Kraus et al. 2013 found size acts mainly through the rate of aging (scenario A)."
+    },
+    "parameters_for_reuse": {
+      "teng_gompertz_2to19": {
+        "a": 0.004967182098875431,
+        "b": 0.31954873909049325,
+        "c": 0.0,
+        "units": "a, c in deaths per year (hazard); b per year; age x in years; mu(x)=c+a*exp(b*x)"
+      },
+      "teng_makeham_1to19": {
+        "a": 0.004007335814024947,
+        "b": 0.3341489634695518,
+        "c": 0.00498193141281479,
+        "units": "a, c in deaths per year (hazard); b per year; age x in years; mu(x)=c+a*exp(b*x)"
+      },
+      "montoya_gompertz_2to16": {
+        "a": 0.0034279019896587427,
+        "b": 0.30537100901319864,
+        "c": 0.0,
+        "units": "a, c in deaths per year (hazard); b per year; age x in years; mu(x)=c+a*exp(b*x)"
+      },
+      "montoya_makeham_1to16": {
+        "a": 0.0019931693453973443,
+        "b": 0.34393448197851345,
+        "c": 0.005027988848857045,
+        "units": "a, c in deaths per year (hazard); b per year; age x in years; mu(x)=c+a*exp(b*x)"
+      },
+      "human_male_gompertz_40to94": {
+        "a": 8.139484792777861e-05,
+        "b": 0.08251410230039809,
+        "c": 0.0,
+        "units": "a, c in deaths per year (hazard); b per year; age x in years; mu(x)=c+a*exp(b*x)"
+      },
+      "human_male_makeham_30to94": {
+        "a": 2.5273030252366926e-05,
+        "b": 0.09660472088126866,
+        "c": 0.0018098893608619526,
+        "units": "a, c in deaths per year (hazard); b per year; age x in years; mu(x)=c+a*exp(b*x)"
+      },
+      "human_female_gompertz_40to94": {
+        "a": 3.142183260732032e-05,
+        "b": 0.0903263976032295,
+        "c": 0.0,
+        "units": "a, c in deaths per year (hazard); b per year; age x in years; mu(x)=c+a*exp(b*x)"
+      },
+      "human_female_makeham_30to94": {
+        "a": 1.2629505778301157e-05,
+        "b": 0.1014447543325099,
+        "c": 0.0007696636981986565,
+        "units": "a, c in deaths per year (hazard); b per year; age x in years; mu(x)=c+a*exp(b*x)"
+      },
+      "human_both_gompertz_40to94": {
+        "a": 5.576363367663802e-05,
+        "b": 0.08511920061726733,
+        "c": 0.0,
+        "units": "a, c in deaths per year (hazard); b per year; age x in years; mu(x)=c+a*exp(b*x)"
+      },
+      "human_both_makeham_30to94": {
+        "a": 1.8833643403315856e-05,
+        "b": 0.09825332210165115,
+        "c": 0.0012919128846324219,
+        "units": "a, c in deaths per year (hazard); b per year; age x in years; mu(x)=c+a*exp(b*x)"
+      }
+    },
+    "RECOMMENDED_dog_parameters": {
+      "headline_model": "Gompertz mu(x)=a*exp(b*x), adult dogs ages 2-19, UK VetCompass deaths 2016-2020 (Teng et al. 2022), binomial MLE",
+      "a_per_year": 0.004967182098875431,
+      "b_per_year": 0.31954873909049325,
+      "MRDT_years": 2.16914384495084,
+      "MRDT_95CI_sampling_only": [
+        2.1437869698969356,
+        2.1977961416318745
+      ],
+      "MRDT_range_across_datasets_and_models_years": [
+        2.015346575814542,
+        2.269852605850958
+      ],
+      "life_expectancy_at_birth_years_UK_table": 11.23,
+      "life_expectancy_at_birth_years_US_table": 12.69,
+      "source_url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC9050668",
+      "alternative_US_model": {
+        "form": "Gompertz-Makeham mu(x)=c+a*exp(b*x), ages 1-16, US Banfield 2013-2019 (Montoya et al. 2023)",
+        "a_per_year": 0.0019931693453973443,
+        "b_per_year": 0.34393448197851345,
+        "c_per_year": 0.005027988848857045,
+        "MRDT_years": 2.015346575814542,
+        "source_url": "https://www.frontiersin.org/journals/veterinary-science/articles/10.3389/fvets.2023.1082102/pdf"
+      },
+      "human_comparator": {
+        "form": "Gompertz ages 40-94, US SSA 2023 period table, 50:50 sexes",
+        "a_per_year": 5.576363367663802e-05,
+        "b_per_year": 0.08511920061726733,
+        "MRDT_years": 8.143252938624673,
+        "source_url": "https://www.ssa.gov/oact/STATS/table4c6.html"
+      },
+      "units": "age in years; a and c are annual hazards (per year); b per year; MRDT = ln2/b in years",
+      "caveat": "UK table is built from recorded deaths only (no censoring) and misses early puppy deaths; US table uses clinic survivorship (Sullivan method). Both are clinic populations."
+    },
+    "sources": {
+      "teng2022": "https://pmc.ncbi.nlm.nih.gov/articles/PMC9050668",
+      "montoya2023": "https://www.frontiersin.org/journals/veterinary-science/articles/10.3389/fvets.2023.1082102/pdf",
+      "ssa2023": "https://www.ssa.gov/oact/STATS/table4c6.html",
+      "mcmillan2024": "https://www.nature.com/articles/s41598-023-50458-w.pdf"
+    }
+  },
+  "part2_size": {
+    "within_dog_allometry_montoya": {
+      "exponent_lnE0_on_lnM": -0.11191666483946298,
+      "exponent_range_over_bound_assumptions": [
+        -0.12278403390593784,
+        -0.09639726533811639
+      ],
+      "exponent_excluding_toy": -0.16844118289707,
+      "linear_years_per_kg": -0.07603340791111746,
+      "Fan2016_breed_exponent": -0.096,
+      "note": "5 size-group points only; representative masses are assumptions (geometric means of bounds)."
+    },
+    "oneill2013_years_per_kg": {
+      "slope_years_per_kg": -0.061490220901002854,
+      "difference_50plus_vs_under10_years": -4.0,
+      "note": "Weighted line through published band coefficients; band midpoints assumed. Dogs >=3 y only."
+    },
+    "gompertz_slope_vs_mass": {
+      "elasticity_dlnb_dlnM_small_to_giant": 0.2151191980019446,
+      "b_small": 0.316488031994736,
+      "b_giant": 0.4962134541772647,
+      "MRDT_small": 2.190121301558329,
+      "MRDT_giant": 1.3968730084298138,
+      "note": "If size acts only through the rate of aging (Kraus 2013), the doubling time falls from ~2.2 y (small) to ~1.4 y (giant)."
+    },
+    "years_attributable_to_size": {
+      "reference_group": "small (5.5-11 kg), e0=13.53",
+      "per_group_gap_years": {
+        "toy": 0.17,
+        "small": 0.0,
+        "medium": 0.83,
+        "large": 2.02,
+        "giant": 4.02
+      },
+      "population_weighted_mean_years_lost": 0.8655964689803262,
+      "population_weighted_mean_years_lost_above_medium": 0.4317787826582343,
+      "giant_minus_small_years": -4.02,
+      "fraction_of_small_dog_life": 0.06397608787733379,
+      "weights": "Montoya mean annual dogs per size group (purebreds only)",
+      "caveat": "Size groups also differ in breed-specific disease and face shape; this is an upper-bound association, not a causal effect."
+    },
+    "across_vs_within": {
+      "mammal_tmax_60kg_over_3kg": 1.7827842520723978,
+      "dog_e0_60kg_over_3kg_montoya": 0.7151432799623475,
+      "dog_ratio_from_Fan_exponent": 0.7500688338014833,
+      "mammal_tmax_predicted_for_30kg_years": 24.424791718266466,
+      "kleiber_metabolic_exponent": 0.75,
+      "explanation": "Across species, lifespan exponent ~+0.15 to +0.19 (de Magalhaes 2007). Within dogs, ~-0.1. Both hold because they are slopes of different relationships: ln T_ij = alpha + beta_between*ln M_j + beta_within*(ln M_ij - ln M_j). beta_between reflects evolved maintenance (large species evolved slower aging, b_species ~ M^-beta). beta_within reflects recent artificial selection for size via growth pathways (IGF-1) without time to evolve matching maintenance; here b rises with mass."
+    }
+  },
+  "part3_dog_years": {
+    "table": [
+      {
+        "dog_age": 0.5,
+        "times7": 3.5,
+        "AVMA": 7.5,
+        "Wang2020": 19.909645111040874,
+        "SQ_US_empirical": 22.882647320475446,
+        "SQ_UKdog_USHuman_empirical": 16.010031759398483,
+        "SQ_US_model": 22.882647320475446,
+        "SQ_small_model": 22.882647320475446,
+        "SQ_giant_model": 22.882647320475446,
+        "EH_US_empirical": 74.66393553709759,
+        "EH_US_model": 58.836997671430986
+      },
+      {
+        "dog_age": 1.0,
+        "times7": 7.0,
+        "AVMA": 15.0,
+        "Wang2020": 31.0,
+        "SQ_US_empirical": 33.28300906368487,
+        "SQ_UKdog_USHuman_empirical": 26.159503356900487,
+        "SQ_US_model": 33.28300906368487,
+        "SQ_small_model": 33.28300906368487,
+        "SQ_giant_model": 33.28300906368487,
+        "EH_US_empirical": 70.42667122938394,
+        "EH_US_model": 59.55198747278958
+      },
+      {
+        "dog_age": 2.0,
+        "times7": 14.0,
+        "AVMA": 24.0,
+        "Wang2020": 42.090354888959126,
+        "SQ_US_empirical": 38.83729231414582,
+        "SQ_UKdog_USHuman_empirical": 36.55158080554891,
+        "SQ_US_model": 38.83729231414582,
+        "SQ_small_model": 38.83729231414582,
+        "SQ_giant_model": 38.83729231414582,
+        "EH_US_empirical": 61.82367857339012,
+        "EH_US_model": 61.20420435316249
+      },
+      {
+        "dog_age": 3.0,
+        "times7": 21.0,
+        "AVMA": 29.0,
+        "Wang2020": 48.57779661868976,
+        "SQ_US_empirical": 42.831358039993624,
+        "SQ_UKdog_USHuman_empirical": 43.586536384332234,
+        "SQ_US_model": 42.87489637590182,
+        "SQ_small_model": 42.75404390039997,
+        "SQ_giant_model": 43.68682574317916,
+        "EH_US_empirical": 61.63541753105085,
+        "EH_US_model": 63.15567229656712
+      },
+      {
+        "dog_age": 4.0,
+        "times7": 28.0,
+        "AVMA": 34.0,
+        "Wang2020": 53.18070977791825,
+        "SQ_US_empirical": 46.40392139668098,
+        "SQ_UKdog_USHuman_empirical": 48.9488239529537,
+        "SQ_US_model": 46.83331584974935,
+        "SQ_small_model": 46.53936704267733,
+        "SQ_giant_model": 48.88809664059735,
+        "EH_US_empirical": 63.20729659161314,
+        "EH_US_model": 65.39495171124422
+      },
+      {
+        "dog_age": 5.0,
+        "times7": 35.0,
+        "AVMA": 39.0,
+        "Wang2020": 56.75100659894561,
+        "SQ_US_empirical": 49.93311819941623,
+        "SQ_UKdog_USHuman_empirical": 53.51403355967694,
+        "SQ_US_model": 50.80781527375871,
+        "SQ_small_model": 50.30683006591064,
+        "SQ_giant_model": 54.2484735543502,
+        "EH_US_empirical": 66.31147287052238,
+        "EH_US_model": 67.89600776320636
+      },
+      {
+        "dog_age": 7.0,
+        "times7": 49.0,
+        "AVMA": 49.0,
+        "Wang2020": 62.134562384885015,
+        "SQ_US_empirical": 57.06928469139413,
+        "SQ_UKdog_USHuman_empirical": 61.4829723279052,
+        "SQ_US_model": 58.24939343063757,
+        "SQ_small_model": 57.29088114532538,
+        "SQ_giant_model": 64.85729251307228,
+        "EH_US_empirical": 73.95366750194702,
+        "EH_US_model": 73.53774626908752
+      },
+      {
+        "dog_age": 10.0,
+        "times7": 70.0,
+        "AVMA": 64.0,
+        "Wang2020": 67.84136148790473,
+        "SQ_US_empirical": 69.16300864772467,
+        "SQ_UKdog_USHuman_empirical": 74.77545579017874,
+        "SQ_US_model": 69.28929780833505,
+        "SQ_small_model": 67.29949594526276,
+        "SQ_giant_model": 81.78274648187401,
+        "EH_US_empirical": 84.61755550972306,
+        "EH_US_model": 83.04640142055447
+      },
+      {
+        "dog_age": 12.0,
+        "times7": 84.0,
+        "AVMA": 74.0,
+        "Wang2020": 70.758506396608,
+        "SQ_US_empirical": 77.84982077575906,
+        "SQ_UKdog_USHuman_empirical": 83.05505877211417,
+        "SQ_US_model": 77.13109544180479,
+        "SQ_small_model": 74.48235333083622,
+        "SQ_giant_model": 91.4643919888753,
+        "EH_US_empirical": 90.13623741814556,
+        "EH_US_model": 89.75607777880448
+      },
+      {
+        "dog_age": 14.0,
+        "times7": 98.0,
+        "AVMA": 84.0,
+        "Wang2020": 73.22491727384414,
+        "SQ_US_empirical": 85.15840858962954,
+        "SQ_UKdog_USHuman_empirical": 90.07486529103349,
+        "SQ_US_model": 84.2774431540165,
+        "SQ_small_model": 81.30616787243952,
+        "SQ_giant_model": 100.69979309855415,
+        "EH_US_empirical": 95.39008537830021,
+        "EH_US_model": 96.6074222136006
+      },
+      {
+        "dog_age": 16.0,
+        "times7": 112.0,
+        "AVMA": 94.0,
+        "Wang2020": 75.3614195558365,
+        "SQ_US_empirical": 91.10166910626226,
+        "SQ_UKdog_USHuman_empirical": 96.17206518607772,
+        "SQ_US_model": 90.8164758201832,
+        "SQ_small_model": 87.55321641627158,
+        "SQ_giant_model": 111.39493323043834,
+        "EH_US_empirical": 100.38478541053739,
+        "EH_US_model": 103.53234655150365
+      },
+      {
+        "dog_age": 18.0,
+        "times7": 126.0,
+        "AVMA": 104.0,
+        "Wang2020": 77.24594812633863,
+        "SQ_US_empirical": 95.7831813522333,
+        "SQ_UKdog_USHuman_empirical": 101.38597376826067,
+        "SQ_US_model": 97.06931731528176,
+        "SQ_small_model": 93.35539760793661,
+        "SQ_giant_model": NaN,
+        "EH_US_empirical": 101.49783232196563,
+        "EH_US_model": 110.49487886119142
+      }
+    ],
+    "adult_slope_human_years_per_dog_year_ages4to12": {
+      "times7": 6.999999999999999,
+      "AVMA": 4.999999999999997,
+      "Wang2020": 2.16532712228653,
+      "SQ_US_empirical": 3.9249698452767428,
+      "SQ_UKdog_USHuman_empirical": 4.262418486973334,
+      "SQ_US_model": 3.761531899440095,
+      "SQ_small_model": 3.46298975026789,
+      "SQ_giant_model": 5.370892956908065,
+      "EH_US_empirical": 3.4370194727619903,
+      "EH_US_model": 3.056725918800931
+    },
+    "gompertz_asymptotic_slope_b_dog_over_b_human": 3.500487053482883,
+    "wang_slope_equals_mortality_slope_at_dog_age": 4.570792508454064,
+    "wang_formula": {
+      "formula": "human_age = 16*ln(dog_age) + 31",
+      "log": "natural log",
+      "breed": "Labrador retrievers (104 dogs)",
+      "humans": 320,
+      "source": "https://www.eurekalert.org/news-releases/464089 ; https://www.biorxiv.org/content/10.1101/829192.full.pdf"
+    },
+    "human_reference": "US SSA 2023 period table, 50:50 sex mix (assumption)",
+    "disagreements": {
+      "at_dog_age_1": {
+        "times7": 7.0,
+        "AVMA": 15.0,
+        "Wang2020": 31.0,
+        "SQ_US_empirical": 33.28300906368487,
+        "SQ_UKdog_USHuman_empirical": 26.159503356900487,
+        "SQ_US_model": 33.28300906368487,
+        "SQ_small_model": 33.28300906368487,
+        "SQ_giant_model": 33.28300906368487,
+        "EH_US_empirical": 70.42667122938394,
+        "EH_US_model": 59.55198747278958
+      },
+      "at_dog_age_12": {
+        "times7": 84.0,
+        "AVMA": 74.0,
+        "Wang2020": 70.758506396608,
+        "SQ_US_empirical": 77.84982077575906,
+        "SQ_UKdog_USHuman_empirical": 83.05505877211417,
+        "SQ_US_model": 77.13109544180479,
+        "SQ_small_model": 74.48235333083622,
+        "SQ_giant_model": 91.4643919888753,
+        "EH_US_empirical": 90.13623741814556,
+        "EH_US_model": 89.75607777880448
+      },
+      "at_dog_age_16": {
+        "times7": 112.0,
+        "AVMA": 94.0,
+        "Wang2020": 75.3614195558365,
+        "SQ_US_empirical": 91.10166910626226,
+        "SQ_UKdog_USHuman_empirical": 96.17206518607772,
+        "SQ_US_model": 90.8164758201832,
+        "SQ_small_model": 87.55321641627158,
+        "SQ_giant_model": 111.39493323043834,
+        "EH_US_empirical": 100.38478541053739,
+        "EH_US_model": 103.53234655150365
+      }
+    }
+  },
+  "part4_causes": {
+    "oneill2013_shares": {
+      "Behavioural abnormality": {
+        "under3": 0.1472,
+        "age3plus": 0.0282
+      },
+      "Gastrointestinal": {
+        "under3": 0.1452,
+        "age3plus": 0.0567
+      },
+      "No cause recorded": {
+        "under3": 0.1329,
+        "age3plus": 0.1294
+      },
+      "Road traffic accident": {
+        "under3": 0.1268,
+        "age3plus": 0.0
+      },
+      "Neurological": {
+        "under3": 0.0736,
+        "age3plus": 0.1157
+      },
+      "Trauma": {
+        "under3": 0.0654,
+        "age3plus": 0.0
+      },
+      "Congenital defect": {
+        "under3": 0.0491,
+        "age3plus": 0.0
+      },
+      "Respiratory": {
+        "under3": 0.0368,
+        "age3plus": 0.0389
+      },
+      "Cardiac": {
+        "under3": 0.0266,
+        "age3plus": 0.0547
+      },
+      "Dangerous Dogs Act": {
+        "under3": 0.0245,
+        "age3plus": 0.0
+      },
+      "Collapse": {
+        "under3": 0.0204,
+        "age3plus": 0.0382
+      },
+      "Neoplastic": {
+        "under3": 0.0204,
+        "age3plus": 0.1804
+      },
+      "Anorexia/losing weight": {
+        "under3": 0.0184,
+        "age3plus": 0.0248
+      },
+      "Musculoskeletal": {
+        "under3": 0.0164,
+        "age3plus": 0.1231
+      },
+      "Renal/urinary": {
+        "under3": 0.0143,
+        "age3plus": 0.0371
+      },
+      "Incontinence": {
+        "under3": 0.0,
+        "age3plus": 0.0204
+      },
+      "Abdominal (non-GIT)": {
+        "under3": 0.0,
+        "age3plus": 0.0163
+      },
+      "Reproductive": {
+        "under3": 0.0,
+        "age3plus": 0.0117
+      },
+      "Diabetes mellitus": {
+        "under3": 0.0,
+        "age3plus": 0.0109
+      }
+    },
+    "neoplastic_share_under3_vs_3plus": [
+      0.02044989775051125,
+      0.18041684759009988
+    ],
+    "external_causes_share_under3": 0.36400817995910023,
+    "teng_mean_hazard_age0to2": 0.0164683075649126,
+    "teng_mean_hazard_age3to16": 0.25137068240268945,
+    "face_shape_HR_vs_mesocephalic": {
+      "mesocephalic": 1.0,
+      "brachycephalic": 1.4,
+      "dolichocephalic": 1.1
+    },
+    "frailty_Banzato2019": {
+      "n_dogs": 401,
+      "deficits": 33,
+      "HR_FI_0.2to0.4_vs_lt0.2": 9.21,
+      "HR_FI_gt0.4_vs_lt0.2": 18.06,
+      "FI_slope_per_year": 0.016,
+      "mean_FI_survivors": 0.12,
+      "mean_FI_died": 0.29,
+      "url": "https://air.unimi.it/retrieve/handle/2434/717203/1431369/s41598-019-52585-9.pdf"
+    },
+    "inbreeding_Bannasch2021": {
+      "n_breeds_inbreeding": 227,
+      "mean_Fadj": 0.249,
+      "spearman_inbreeding_morbidity": 0.29,
+      "spearman_weight_morbidity": 0.41,
+      "predicted_morbidity_5kg_vs_60kg_increase_pct": 37,
+      "brachycephalic_morbidity_vs_other_per_10000_DYAR": [
+        1829,
+        1508
+      ],
+      "note": "Published regression coefficients could not be reconciled with the paper's worked predictions; only correlations and the stated 37% prediction are used.",
+      "url": "https://escholarship.org/content/qt5b61d7p0/qt5b61d7p0.pdf?t=rxtyal"
+    },
+    "multimorbidity_DAP_2026": {
+      "claim": "dogs with >=5 chronic conditions >2x as likely to die in a given year as dogs with 1",
+      "n_dogs": ">50,000",
+      "source": "https://www.dvm360.com/view/multiple-chronic-diseases-compound-to-shorten-dogs-lifespans-study-finds",
+      "note": "secondary report of Foreman et al. GeroScience 2026; hazard ratios not seen"
+    },
+    "fleming2011_size_pattern": "larger breeds: more musculoskeletal, GI and especially cancer deaths; smaller: more metabolic (qualitative, via ScienceDaily)"
+  },
+  "part5_power": {
+    "assumptions": "* two arms, 1:1, everyone enrolled at the same age x0 at the same time, followed for T years;\n  * no dropout, no competing loss to follow-up; endpoint = death from any cause;\n  * treatment multiplies the whole hazard by HR from enrollment onward (proportional hazards);\n  * two-sided alpha = 0.05, power = 0.80.",
+    "formula": "D = (z_{1-a/2}+z_pow)^2/(0.25 ln(HR)^2); N = D / P(death in T)",
+    "deaths_needed": {
+      "HR0.9": 2828.211546097487,
+      "HR0.8": 630.5201711804549,
+      "HR0.7": 246.7871045473585,
+      "HR0.6": 120.31570437749926
+    },
+    "N_total_key": {
+      "dog_large_26to45kg_age7_HR0.8_T3": 4034.4566701138515,
+      "dog_large_26to45kg_age7_HR0.8_T5": 1752.1998958622796,
+      "dog_large_26to45kg_age7_HR0.8_T10": 652.7211249937492,
+      "dog_large_26to45kg_age7_HR0.7_T3": 1666.5586255012702,
+      "dog_large_26to45kg_age7_HR0.7_T5": 720.0711199170286,
+      "dog_large_26to45kg_age7_HR0.7_T10": 258.38212758464863,
+      "dog_all_US_age7_HR0.8_T3": 5659.6347377185,
+      "dog_all_US_age7_HR0.8_T5": 2522.830643297716,
+      "dog_all_US_age7_HR0.8_T10": 759.4933834800576,
+      "dog_all_US_age7_HR0.7_T3": 2340.196702999312,
+      "dog_all_US_age7_HR0.7_T5": 1039.8218998476793,
+      "dog_all_US_age7_HR0.7_T10": 305.5088173645403,
+      "human_US_age65_HR0.8_T3": 16654.912348488757,
+      "human_US_age65_HR0.8_T5": 9229.14443724628,
+      "human_US_age65_HR0.8_T10": 3777.728047802274,
+      "human_US_age65_HR0.7_T3": 6897.111803309261,
+      "human_US_age65_HR0.7_T5": 3819.6052467398163,
+      "human_US_age65_HR0.7_T10": 1560.133670588276,
+      "human_US_age50_HR0.8_T3": 54999.31263022575,
+      "human_US_age50_HR0.8_T5": 30783.335981052947,
+      "human_US_age50_HR0.8_T10": 12724.359500358292,
+      "human_US_age50_HR0.7_T3": 22788.093340981428,
+      "human_US_age50_HR0.7_T5": 12752.340259408356,
+      "human_US_age50_HR0.7_T10": 5268.159868615288
+    },
+    "duration_years_for_fixed_N": {
+      "dog_large_26to45kg_age7_HR0.8_N580": null,
+      "dog_large_26to45kg_age7_HR0.8_N2000": 4.75,
+      "dog_large_26to45kg_age7_HR0.7_N580": 5.75,
+      "dog_large_26to45kg_age7_HR0.7_N2000": 2.75,
+      "dog_all_US_age7_HR0.8_N580": null,
+      "dog_all_US_age7_HR0.8_N2000": 5.75,
+      "dog_all_US_age7_HR0.7_N580": 7.0,
+      "dog_all_US_age7_HR0.7_N2000": 3.5,
+      "human_US_age65_HR0.8_N580": null,
+      "human_US_age65_HR0.8_N2000": 15.5,
+      "human_US_age65_HR0.7_N580": 19.25,
+      "human_US_age65_HR0.7_N2000": 8.5,
+      "human_US_age50_HR0.8_N580": null,
+      "human_US_age50_HR0.8_N2000": 28.25,
+      "human_US_age50_HR0.7_N580": 32.75,
+      "human_US_age50_HR0.7_N2000": 18.5
+    },
+    "TRIAD_like_power_analytic": {
+      "HR0.9": 0.07413683470485764,
+      "HR0.8": 0.184668091140528,
+      "HR0.7": 0.3793407873093882,
+      "HR0.6": 0.6328130263410053,
+      "HR0.5": 0.8561918956324825
+    },
+    "monte_carlo_check": {
+      "TRIAD_like_HR0.8": {
+        "analytic": 0.184668091140528,
+        "monte_carlo": 0.179
+      },
+      "TRIAD_like_HR0.7": {
+        "analytic": 0.3793407873093882,
+        "monte_carlo": 0.368
+      },
+      "human65_HR0.8_T5_at_designN": {
+        "N": 9229,
+        "analytic": 0.7999938624326856,
+        "monte_carlo": 0.8133333333333334
+      }
+    },
+    "LE_gain": [
+      {
+        "model": "dog_large_26to45kg_age7",
+        "HR": 0.9,
+        "e_control": 5.581951474837417,
+        "e_treated": 5.809970115562265,
+        "gain_years": 0.2280186407248488,
+        "gain_pct_of_remaining": 4.084926960628768,
+        "gompertz_shift_lnHR_over_b": 0.27023822581774265
+      },
+      {
+        "model": "dog_large_26to45kg_age7",
+        "HR": 0.8,
+        "e_control": 5.581951474837417,
+        "e_treated": 6.068406601028689,
+        "gain_years": 0.48645512619127196,
+        "gain_pct_of_remaining": 8.714786009590682,
+        "gompertz_shift_lnHR_over_b": 0.5723388598975897
+      },
+      {
+        "model": "dog_large_26to45kg_age7",
+        "HR": 0.7,
+        "e_control": 5.581951474837417,
+        "e_treated": 6.365620458996696,
+        "gain_years": 0.783668984159279,
+        "gain_pct_of_remaining": 14.039337097284683,
+        "gompertz_shift_lnHR_over_b": 0.9148323111541846
+      },
+      {
+        "model": "dog_large_26to45kg_age7",
+        "HR": 0.6,
+        "e_control": 5.581951474837417,
+        "e_treated": 6.713890532469601,
+        "gain_years": 1.1319390576321844,
+        "gain_pct_of_remaining": 20.278554242809033,
+        "gompertz_shift_lnHR_over_b": 1.3102119841277462
+      },
+      {
+        "model": "dog_all_US_age7",
+        "HR": 0.9,
+        "e_control": 6.7740468862641885,
+        "e_treated": 7.039999991136668,
+        "gain_years": 0.26595310487247925,
+        "gain_pct_of_remaining": 3.926059404929059,
+        "gompertz_shift_lnHR_over_b": 0.30633891388769924
+      },
+      {
+        "model": "dog_all_US_age7",
+        "HR": 0.8,
+        "e_control": 6.7740468862641885,
+        "e_treated": 7.340914258659307,
+        "gain_years": 0.5668673723951185,
+        "gain_pct_of_remaining": 8.368223336991687,
+        "gompertz_shift_lnHR_over_b": 0.6487966836897444
+      },
+      {
+        "model": "dog_all_US_age7",
+        "HR": 0.7,
+        "e_control": 6.7740468862641885,
+        "e_treated": 7.686343552610413,
+        "gain_years": 0.9122966663462249,
+        "gain_pct_of_remaining": 13.467528076844275,
+        "gompertz_shift_lnHR_over_b": 1.0370432818684778
+      },
+      {
+        "model": "dog_all_US_age7",
+        "HR": 0.6,
+        "e_control": 6.7740468862641885,
+        "e_treated": 8.090309029528838,
+        "gain_years": 1.316262143264649,
+        "gain_pct_of_remaining": 19.430957083182417,
+        "gompertz_shift_lnHR_over_b": 1.4852410866959929
+      },
+      {
+        "model": "human_US_age65",
+        "HR": 0.9,
+        "e_control": 19.169367198079243,
+        "e_treated": 20.023268163081394,
+        "gain_years": 0.8539009650021505,
+        "gain_pct_of_remaining": 4.454507841488429,
+        "gompertz_shift_lnHR_over_b": 1.072335402041899
+      },
+      {
+        "model": "human_US_age65",
+        "HR": 0.8,
+        "e_control": 19.169367198079243,
+        "e_treated": 20.99465259087217,
+        "gain_years": 1.825285392792928,
+        "gain_pct_of_remaining": 9.521886528293017,
+        "gompertz_shift_lnHR_over_b": 2.2711043915985796
+      },
+      {
+        "model": "human_US_age65",
+        "HR": 0.7,
+        "e_control": 19.169367198079243,
+        "e_treated": 22.11618697856562,
+        "gain_years": 2.9468197804863756,
+        "gain_pct_of_remaining": 15.372545948108527,
+        "gompertz_shift_lnHR_over_b": 3.630156582082007
+      },
+      {
+        "model": "human_US_age65",
+        "HR": 0.6,
+        "e_control": 19.169367198079243,
+        "e_treated": 23.435935946653707,
+        "gain_years": 4.266568748574464,
+        "gain_pct_of_remaining": 22.257222705828134,
+        "gompertz_shift_lnHR_over_b": 5.199067195280171
+      },
+      {
+        "model": "human_US_age50",
+        "HR": 0.9,
+        "e_control": 31.5950960309527,
+        "e_treated": 32.6168975076672,
+        "gain_years": 1.0218014767144972,
+        "gain_pct_of_remaining": 3.234050865721285,
+        "gompertz_shift_lnHR_over_b": 1.072335402041899
+      },
+      {
+        "model": "human_US_age50",
+        "HR": 0.8,
+        "e_control": 31.5950960309527,
+        "e_treated": 33.76562408499209,
+        "gain_years": 2.1705280540393908,
+        "gain_pct_of_remaining": 6.869825785346544,
+        "gompertz_shift_lnHR_over_b": 2.2711043915985796
+      },
+      {
+        "model": "human_US_age50",
+        "HR": 0.7,
+        "e_control": 31.5950960309527,
+        "e_treated": 35.075360709194406,
+        "gain_years": 3.4802646782417064,
+        "gain_pct_of_remaining": 11.015205254740176,
+        "gompertz_shift_lnHR_over_b": 3.630156582082007
+      },
+      {
+        "model": "human_US_age50",
+        "HR": 0.6,
+        "e_control": 31.5950960309527,
+        "e_treated": 36.59601665804302,
+        "gain_years": 5.00092062709032,
+        "gain_pct_of_remaining": 15.828154540790377,
+        "gompertz_shift_lnHR_over_b": 5.199067195280171
+      }
+    ],
+    "TRIAD_design_source": "https://vetmed.tamu.edu/news/press-releases/dog-aging-project-triad/",
+    "note": "Large-dog hazard uses the size-class calibration (scenario A: size acts on Gompertz slope)."
+  }
+}

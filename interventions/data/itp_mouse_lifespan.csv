@@ -1,0 +1,25 @@
+# NIA Interventions Testing Program, UM-HET3 mice. % change in median lifespan vs controls unless 'metric' says otherwise.
+# Master list of tested compounds (qualitative): https://www.nia.nih.gov/research/dab/interventions-testing-program-itp/supported-interventions (page last updated 13 Apr 2026)
+# start_age_months: only rows marked 'from source' were checked; others are approximate (unverified).
+intervention,start_age_months,male_pct,female_pct,metric,note,source,start_age_note
+"Rapamycin (42 ppm, highest dose)",9.0,23.0,26.0,median,both sexes,Miller et al. 2014 Aging Cell; abstract read via https://pubmed.ncbi.nlm.nih.gov/24341993/,approximate/unverified start age
+Rapamycin (from 20 months),20.0,9.0,14.0,age at 90% mortality (not median),both sexes,Harrison et al. 2009 Nature; abstract via https://scholars.uthscsa.edu/en/publications/rapamycin-fed-late-in-life-extends-lifespan-in-genetically-hetero/,from source
+Rapamycin + acarbose,9.0,34.0,28.0,median,both sexes,Strong et al. 2022 Aging Cell e13724; via https://www.lifespan.io/news/combination-of-rapamycin-and-acarbose-extends-lifespan/,approximate/unverified start age
+Rapamycin + metformin,9.0,23.0,23.0,median,both sexes,"Strong et al. 2016 Aging Cell, Tables 1-2; https://ueaeprints.uea.ac.uk/58877/4/Manuscript.pdf",approximate/unverified start age
+Acarbose,4.0,22.0,5.0,median,males (F: max only),Harrison et al. 2014 Aging Cell; https://pubmed.ncbi.nlm.nih.gov/24245565/,approximate/unverified start age
+Acarbose (from 16 months),16.0,6.0,2.0,median,M median; both sexes 90th pct,Strong et al. 2016; https://ueaeprints.uea.ac.uk/58877/4/Manuscript.pdf,from source
+17-alpha-estradiol (14 ppm),10.0,19.0,1.0,median,males only,Strong et al. 2016; https://ueaeprints.uea.ac.uk/58877/4/Manuscript.pdf,approximate/unverified start age
+17-alpha-estradiol (from 16 months),16.0,19.0,,median,males only,Harrison et al. 2021 Aging Cell; https://mouseion.jax.org/stfb2021/88,from source
+17-alpha-estradiol (from 20 months),20.0,11.0,,median,males only,Harrison et al. 2021; https://mouseion.jax.org/stfb2021/88,from source
+Canagliflozin,7.0,14.0,0.0,median,males only (F: no benefit),Miller et al. 2020 JCI Insight; https://doaj.org/article/8346a43abd5742d2afbdcea95b0aa4d1,from source
+Glycine,9.0,5.0,5.0,"lifespan (4-6%, sexes pooled in abstract)",both sexes,Miller et al. 2019 Aging Cell; https://mouseion.jax.org/stfb2019/117,approximate/unverified start age
+NDGA (2500 ppm),9.0,10.0,,median,males only,Strong et al. 2016; https://ueaeprints.uea.ac.uk/58877/4/Manuscript.pdf,approximate/unverified start age
+Astaxanthin,12.0,12.0,0.0,median,males only; NOT replicated in 2022 cohort,Harrison et al. 2024 GeroScience; https://mouseion.jax.org/stfb2024/24 ; replication null per https://www.nia.nih.gov/research/dab/interventions-testing-program-itp/supported-interventions,approximate/unverified start age
+Meclizine,12.0,8.0,0.0,median,males only; NOT replicated in 2022 cohort,Harrison et al. 2024; https://mouseion.jax.org/stfb2024/24 ; https://www.nia.nih.gov/research/dab/interventions-testing-program-itp/supported-interventions,approximate/unverified start age
+Protandim,10.0,7.0,3.0,median,males only,Strong et al. 2016; https://ueaeprints.uea.ac.uk/58877/4/Manuscript.pdf,approximate/unverified start age
+Captopril,5.0,,5.0,median,females small (4-5%); males indeterminate,Strong et al. 2022; https://www.lifespan.io/news/combination-of-rapamycin-and-acarbose-extends-lifespan/,approximate/unverified start age
+Metformin,9.0,7.0,0.0,median,NOT significant (M p=0.35),Strong et al. 2016; https://ueaeprints.uea.ac.uk/58877/4/Manuscript.pdf,approximate/unverified start age
+Resveratrol,,0.0,0.0,no increase,no effect (3 tests),https://www.nia.nih.gov/research/dab/interventions-testing-program-itp/supported-interventions,from source
+Nicotinamide riboside,,0.0,0.0,no increase,no effect either sex,Harrison et al. 2021; https://mouseion.jax.org/stfb2021/88,from source
+Fisetin (continuous or intermittent),,0.0,0.0,no increase,no effect either sex,Harrison et al. 2024; https://mouseion.jax.org/stfb2024/24,from source
+"Simvastatin, enalapril, curcumin, green tea, fish oil, MitoQ, alpha-ketoglutarate, others",,0.0,0.0,no increase,no effect,https://www.nia.nih.gov/research/dab/interventions-testing-program-itp/supported-interventions,from source

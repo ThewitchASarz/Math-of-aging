@@ -1,0 +1,936 @@
+{
+  "fits": {
+    "source": "US Social Security Administration period life table, data year 2023 (2026 Trustees Report)",
+    "source_url": "https://www.ssa.gov/oact/STATS/table4c6.html",
+    "data_year": 2023,
+    "units": {
+      "a": "per year (hazard at age 0 implied by the adult fit)",
+      "b": "per year of age",
+      "c": "per year",
+      "s2": "dimensionless (variance of gamma frailty)",
+      "ages": "years"
+    },
+    "method": "NLS on log one-year hazard; moving-block bootstrap CIs (L=5, 2000 reps, seed 1). CIs reflect fit determinacy to a smoothed table, not death-count sampling error.",
+    "models": {
+      "male": {
+        "gompertz": {
+          "fit_ages": [
+            40,
+            95
+          ],
+          "n_ages": 56,
+          "params": {
+            "a": 7.83587271433994e-05,
+            "b": 0.08316384840873389
+          },
+          "ci95": {
+            "a": [
+              5.758200268297254e-05,
+              0.00010842797350053693
+            ],
+            "b": [
+              0.07872268590862609,
+              0.08760228412941291
+            ]
+          },
+          "rmse_log_hazard_in_range": 0.1481130187417013,
+          "max_abs_pct_error_in_range": 27.50295156352082,
+          "aic_gaussian_log": -209.89532152757164,
+          "mean_pct_error_by_age_band": {
+            "0": -98.64566450340793,
+            "1-14": -5.262038537112117,
+            "15-29": -58.308956489197115,
+            "30-39": -42.447784998330434,
+            "40-79": 5.0120778419391385,
+            "80-94": -7.556937732746863,
+            "95-104": -26.407386317150923,
+            "105-119": -20.171139450656668
+          },
+          "doubling_time_years": 8.334717474271558,
+          "doubling_time_ci95": [
+            7.9124327344704195,
+            8.80492290830226
+          ],
+          "e0_if_law_held_from_birth": 76.92070166358361,
+          "e0_numeric_check": 76.9207016567016,
+          "e0_approx_(ln(b/a)-gamma)/b": 76.83693246750828,
+          "modal_age_closed_ln(b/a)/b": 83.77763658289062,
+          "modal_age_numeric": 83.77763658289062
+        },
+        "gompertz_makeham": {
+          "fit_ages": [
+            30,
+            95
+          ],
+          "n_ages": 66,
+          "params": {
+            "a": 2.4131279797648663e-05,
+            "b": 0.09725637134516656,
+            "c": 0.0018343702330338681
+          },
+          "ci95": {
+            "a": [
+              1.7690785620769135e-05,
+              3.272529629471061e-05
+            ],
+            "b": [
+              0.09355378630270852,
+              0.10119661599491538
+            ],
+            "c": [
+              0.0015899960219238158,
+              0.0021205623604295116
+            ]
+          },
+          "rmse_log_hazard_in_range": 0.06730501391615501,
+          "max_abs_pct_error_in_range": 13.874742160081926,
+          "aic_gaussian_log": -350.2047118243058,
+          "mean_pct_error_by_age_band": {
+            "0": -69.17514139869034,
+            "1-14": 993.3749645378356,
+            "15-29": 80.3596869795207,
+            "30-39": 2.359880624647025,
+            "40-79": 0.5717799241525487,
+            "80-94": -1.1889366632851532,
+            "95-104": -6.589292719791031,
+            "105-119": 20.022683460037303
+          },
+          "doubling_time_years": 7.127010508133597,
+          "doubling_time_ci95": [
+            6.849509479593394,
+            7.409076724240263
+          ],
+          "e0_if_law_held_from_birth": 73.79003410668346,
+          "e0_numeric_check": 73.79003409984513,
+          "modal_age_numeric": 84.95854894885731
+        },
+        "gamma_gompertz": {
+          "fit_ages": [
+            70,
+            110
+          ],
+          "n_ages": 41,
+          "params": {
+            "a": 7.569419484923751e-06,
+            "b": 0.11206899112056873,
+            "s2": 0.06263771467999081
+          },
+          "ci95": {
+            "a": [
+              4.646863741804434e-06,
+              1.1931416625037265e-05
+            ],
+            "b": [
+              0.10651556998270821,
+              0.11808512684651527
+            ],
+            "s2": [
+              0.04220610506599792,
+              0.08540595051831922
+            ]
+          },
+          "rmse_log_hazard_in_range": 0.05180266573505274,
+          "max_abs_pct_error_in_range": 12.755175521615921,
+          "aic_gaussian_log": -236.74572085588204,
+          "mean_pct_error_by_age_band": {
+            "0": -99.86723606177483,
+            "1-14": -87.96431784668698,
+            "15-29": -92.23779016221214,
+            "30-39": -84.49282027147467,
+            "40-79": -37.75619585459604,
+            "80-94": 2.487230172170154,
+            "95-104": -3.3263196781426663,
+            "105-119": -12.899590669001313
+          },
+          "doubling_time_years": 6.185004198121381,
+          "doubling_time_ci95": [
+            5.869894025357524,
+            6.507472857465544
+          ],
+          "late_life_plateau_b/s2_per_year": 1.7891615569488266,
+          "plateau_ci95": [
+            1.3707453155014528,
+            2.542513270871574
+          ],
+          "plateau_annual_death_prob": 0.8328997850370808,
+          "note": "Fitted 70-110; SSA rates above ~100 are actuarial extrapolations, so the implied plateau describes SSA's extrapolation, not observed data."
+        },
+        "kannisto": {
+          "fit_ages": [
+            80,
+            110
+          ],
+          "n_ages": 31,
+          "params": {
+            "a": 0.051809909524705614,
+            "b": 0.1376114878882479
+          },
+          "ci95": {
+            "a": [
+              0.048795555013813996,
+              0.054262809262274836
+            ],
+            "b": [
+              0.13373044089517608,
+              0.14220751459436362
+            ]
+          },
+          "rmse_log_hazard_in_range": 0.0484151322266172,
+          "max_abs_pct_error_in_range": 14.797805134386946,
+          "aic_gaussian_log": -183.73245761846113,
+          "mean_pct_error_by_age_band": {
+            "0": -99.9847602035918,
+            "1-14": -98.25047783357508,
+            "15-29": -98.40664794598656,
+            "30-39": -95.62440017925807,
+            "40-79": -61.936674683180826,
+            "80-94": 0.8023153331346428,
+            "95-104": 0.8711462376571212,
+            "105-119": -26.731889730722337
+          },
+          "asymptote_per_year": 1.0,
+          "note": "Kannisto hazard tends to 1/yr; fitted only to 80-110 where SSA values are largely actuarial extrapolation above ~100."
+        }
+      },
+      "female": {
+        "gompertz": {
+          "fit_ages": [
+            40,
+            95
+          ],
+          "n_ages": 56,
+          "params": {
+            "a": 3.0293066061308875e-05,
+            "b": 0.09095168638858403
+          },
+          "ci95": {
+            "a": [
+              2.1702676559354886e-05,
+              4.304632039973946e-05
+            ],
+            "b": [
+              0.08607373586422304,
+              0.09590116867980047
+            ]
+          },
+          "rmse_log_hazard_in_range": 0.15610297444285445,
+          "max_abs_pct_error_in_range": 26.67689293530362,
+          "aic_gaussian_log": -204.01081245453415,
+          "mean_pct_error_by_age_band": {
+            "0": -99.3827889582727,
+            "1-14": -48.76687652092356,
+            "15-29": -51.026238909404476,
+            "30-39": -37.31147933388172,
+            "40-79": 5.610039368257412,
+            "80-94": -8.729073965401236,
+            "95-104": -28.356393463475136,
+            "105-119": -25.33586960561366
+          },
+          "doubling_time_years": 7.621048141961081,
+          "doubling_time_ci95": [
+            7.227724021531574,
+            8.052946390677754
+          ],
+          "e0_if_law_held_from_birth": 81.7220411338119,
+          "e0_numeric_check": 81.72204112625386,
+          "e0_approx_(ln(b/a)-gamma)/b": 81.6911649729484,
+          "modal_age_closed_ln(b/a)/b": 88.03756368000946,
+          "modal_age_numeric": 88.03756368000948
+        },
+        "gompertz_makeham": {
+          "fit_ages": [
+            30,
+            95
+          ],
+          "n_ages": 66,
+          "params": {
+            "a": 1.2067632515886826e-05,
+            "b": 0.10209779587873778,
+            "c": 0.0007832288302749922
+          },
+          "ci95": {
+            "a": [
+              8.392276979314715e-06,
+              1.693304079475368e-05
+            ],
+            "b": [
+              0.09785672166150233,
+              0.10665886525403334
+            ],
+            "c": [
+              0.0006290558116138972,
+              0.0009607837609319477
+            ]
+          },
+          "rmse_log_hazard_in_range": 0.08574540696613553,
+          "max_abs_pct_error_in_range": 20.106185495443576,
+          "aic_gaussian_log": -318.24120398310663,
+          "mean_pct_error_by_age_band": {
+            "0": -84.50941099967591,
+            "1-14": 501.033274394913,
+            "15-29": 99.38922356281954,
+            "30-39": 4.8926439419096655,
+            "40-79": 0.922993265372359,
+            "80-94": -3.093934738552761,
+            "95-104": -12.726385246800284,
+            "105-119": 4.267848066592618
+          },
+          "doubling_time_years": 6.78905136584144,
+          "doubling_time_ci95": [
+            6.4987301234552906,
+            7.083286347540041
+          ],
+          "e0_if_law_held_from_birth": 80.2371931260813,
+          "e0_numeric_check": 80.2371931181823,
+          "modal_age_numeric": 88.4214701208604
+        },
+        "gamma_gompertz": {
+          "fit_ages": [
+            70,
+            110
+          ],
+          "n_ages": 41,
+          "params": {
+            "a": 3.1800923416892408e-06,
+            "b": 0.11862505391405319,
+            "s2": 0.05581999706151161
+          },
+          "ci95": {
+            "a": [
+              2.357870561847296e-06,
+              4.201624347329452e-06
+            ],
+            "b": [
+              0.11520111925666371,
+              0.12230474122328125
+            ],
+            "s2": [
+              0.04098087841376227,
+              0.07067340222092378
+            ]
+          },
+          "rmse_log_hazard_in_range": 0.03396007841386751,
+          "max_abs_pct_error_in_range": 8.931279725413196,
+          "aic_gaussian_log": -271.37070789986643,
+          "mean_pct_error_by_age_band": {
+            "0": -99.9342880629005,
+            "1-14": -92.94878783845915,
+            "15-29": -90.29222020234002,
+            "30-39": -82.48266710987437,
+            "40-79": -36.756612840292306,
+            "80-94": 1.6287565263417152,
+            "95-104": -2.0717451543969867,
+            "105-119": -10.62409137041056
+          },
+          "doubling_time_years": 5.843176948624595,
+          "doubling_time_ci95": [
+            5.667377843468277,
+            6.016844150755513
+          ],
+          "late_life_plateau_b/s2_per_year": 2.125135438171605,
+          "plateau_ci95": [
+            1.7261112925497362,
+            2.8182676791852974
+          ],
+          "plateau_annual_death_prob": 0.880583206420772,
+          "note": "Fitted 70-110; SSA rates above ~100 are actuarial extrapolations, so the implied plateau describes SSA's extrapolation, not observed data."
+        },
+        "kannisto": {
+          "fit_ages": [
+            80,
+            110
+          ],
+          "n_ages": 31,
+          "params": {
+            "a": 0.03693733115235463,
+            "b": 0.14336869409226116
+          },
+          "ci95": {
+            "a": [
+              0.03386370048090879,
+              0.03939960197734595
+            ],
+            "b": [
+              0.1374100151950053,
+              0.14960133243151638
+            ]
+          },
+          "rmse_log_hazard_in_range": 0.06238824764138836,
+          "max_abs_pct_error_in_range": 18.056997137670802,
+          "aic_gaussian_log": -168.0114583463563,
+          "mean_pct_error_by_age_band": {
+            "0": -99.99192724853904,
+            "1-14": -98.90273701714098,
+            "15-29": -97.89474496804644,
+            "30-39": -94.87260665944683,
+            "40-79": -60.82285481978903,
+            "80-94": 0.5185582984238905,
+            "95-104": 2.417433516237911,
+            "105-119": -28.73283628308255
+          },
+          "asymptote_per_year": 1.0,
+          "note": "Kannisto hazard tends to 1/yr; fitted only to 80-110 where SSA values are largely actuarial extrapolation above ~100."
+        }
+      }
+    },
+    "observed": {
+      "male": {
+        "e0_published": 75.79,
+        "e0_recomputed_from_qx": 75.7922910559304,
+        "e30_published": 47.5,
+        "e65_published": 18.12,
+        "modal_age_at_death_adult": 87,
+        "median_age_at_death": 80.27778955952617,
+        "hazard_age20_per_year": 0.0012357632409664447,
+        "hazard_age30_per_year": 0.002087176638553861,
+        "minimum_hazard_per_year": 0.00012000720057605185,
+        "age_of_minimum_hazard": 8,
+        "loglinear_slope_40_90": 0.07977988098589775,
+        "doubling_time_40_90_years": 8.68824535702766,
+        "local_log_slope_10y_centered": {
+          "30": 0.04802440505903673,
+          "40": 0.042294675603874184,
+          "50": 0.06465969700494759,
+          "60": 0.0791454312167956,
+          "70": 0.07287500976743755,
+          "80": 0.10397246703757645,
+          "90": 0.11402134652864462,
+          "100": 0.07298749637865279,
+          "110": 0.08227146294238866
+        }
+      },
+      "female": {
+        "e0_published": 81.06,
+        "e0_recomputed_from_qx": 81.06240604310315,
+        "e30_published": 52.08,
+        "e65_published": 20.66,
+        "modal_age_at_death_adult": 89,
+        "median_age_at_death": 84.84324320905498,
+        "hazard_age20_per_year": 0.00044109726909816605,
+        "hazard_age30_per_year": 0.0008783856677607206,
+        "minimum_hazard_per_year": 9.800480231375373e-05,
+        "age_of_minimum_hazard": 9,
+        "loglinear_slope_40_90": 0.08754370106424253,
+        "doubling_time_40_90_years": 7.917727627842583,
+        "local_log_slope_10y_centered": {
+          "30": 0.06860308103477333,
+          "40": 0.05932268630854336,
+          "50": 0.07298083943452953,
+          "60": 0.08128926804754773,
+          "70": 0.08573333626956356,
+          "80": 0.11265532433296736,
+          "90": 0.11886993688506693,
+          "100": 0.08975394274843254,
+          "110": 0.08737399655062136
+        }
+      }
+    },
+    "sex_convergence_age_gompertz": 122.0336771558726,
+    "sex_convergence_age_gm_senescent_part": 143.13598019070105
+  },
+  "le_sensitivity": {
+    "inputs": "SSA 2023 period table; GM Makeham c from fits; interventions act from age 30 unless noted",
+    "units": "years of period life expectancy at birth (e0)",
+    "male": {
+      "e0_baseline": 75.78452649813312,
+      "keyfitz_entropy_H": 0.1680449788005375,
+      "remove_all_makeham_c": 3.7138739644430103,
+      "halve_makeham_c": 2.100570965086135,
+      "proportional": {
+        "0.01": {
+          "exact_gain": 0.12790619828163585,
+          "keyfitz_first_order_delta*H*e0": 0.12735209148787552
+        },
+        "0.1": {
+          "exact_gain": 1.3319356412151535,
+          "keyfitz_first_order_delta*H*e0": 1.2735209148787552
+        },
+        "0.2": {
+          "exact_gain": 2.798246089993711,
+          "keyfitz_first_order_delta*H*e0": 2.5470418297575104
+        },
+        "0.5": {
+          "exact_gain": 8.445204628696885,
+          "keyfitz_first_order_delta*H*e0": 6.367604574393776
+        }
+      },
+      "slow_aging": {
+        "0.1": 4.277024247683698,
+        "0.2": 9.516475406105826,
+        "0.5": 35.295847410209404,
+        "1.0": 419.3735459673826
+      },
+      "delay_aging": {
+        "1": 0.8743938433419913,
+        "5": 4.35377607733318,
+        "10": 8.662352913288771,
+        "20": 17.14578095466827
+      }
+    },
+    "female": {
+      "e0_baseline": 81.05363819290952,
+      "keyfitz_entropy_H": 0.13516006327388946,
+      "remove_all_makeham_c": 1.8101768246738459,
+      "halve_makeham_c": 1.0833050805531883,
+      "proportional": {
+        "0.01": {
+          "exact_gain": 0.11003810830709426,
+          "keyfitz_first_order_delta*H*e0": 0.10955214866732593
+        },
+        "0.1": {
+          "exact_gain": 1.1468992750642855,
+          "keyfitz_first_order_delta*H*e0": 1.0955214866732594
+        },
+        "0.2": {
+          "exact_gain": 2.4126077260154233,
+          "keyfitz_first_order_delta*H*e0": 2.191042973346519
+        },
+        "0.5": {
+          "exact_gain": 7.328144023233406,
+          "keyfitz_first_order_delta*H*e0": 5.477607433366297
+        }
+      },
+      "slow_aging": {
+        "0.1": 5.258779786182686,
+        "0.2": 11.813533449253768,
+        "0.5": 45.03490837363658,
+        "1.0": 1070.2244008871708
+      },
+      "delay_aging": {
+        "1": 0.9396570239789384,
+        "5": 4.690042171710388,
+        "10": 9.359531181341708,
+        "20": 18.637209599971285
+      }
+    },
+    "gompertz_analytic_checks": {
+      "model": "pure Gompertz, female fit (a, b) applied from birth",
+      "e0": 81.72204112625386,
+      "delay_10y_numeric": 9.982898353612455,
+      "delay_10y_theory": 10.0,
+      "halve_hazard_numeric": 7.606877967848533,
+      "halve_hazard_theory_ln2/b": 7.621048141961081,
+      "entropy_numeric": 0.13420650339826512,
+      "entropy_theory_1/(b e0)": 0.13453957107847028,
+      "slope_minus10pct_anchor30_numeric": 4.5028129123858776,
+      "slope_minus10pct_first_order_0.1*((e0-30)-1/b)": 4.072719276547056
+    },
+    "taeuber": {
+      "method": "independent competing risks: mu_x(-k) = mu_x (1 - f_k(age group)); f from NY State 2023 deaths by age (both sexes) applied to US SSA 2023 hazards by sex; 'US-scaled' multiplies f by US/NY all-age share ratio",
+      "us_2023_share_heart": 0.2203134685489705,
+      "us_2023_share_cancer": 0.19843388664507253,
+      "ny_2023_share_heart": 0.25379112313370755,
+      "ny_2023_share_cancer": 0.19878363639724686,
+      "male": {
+        "ny_fractions": {
+          "eliminate_heart": 2.9632929052246197,
+          "eliminate_cancer": 2.7502687194690054,
+          "eliminate_both": 6.580333685577216
+        },
+        "us_scaled": {
+          "eliminate_heart": 2.508249831463445,
+          "eliminate_cancer": 2.744971050475428,
+          "eliminate_both": 5.965331795654407
+        },
+        "lifetable_prob_die_of_cancer_ny_fractions": 0.19221657569823042,
+        "lifetable_prob_die_of_heart_ny_fractions": 0.25564208037997116
+      },
+      "female": {
+        "ny_fractions": {
+          "eliminate_heart": 2.866569227122838,
+          "eliminate_cancer": 2.3387507950141924,
+          "eliminate_both": 5.9530380603514885
+        },
+        "us_scaled": {
+          "eliminate_heart": 2.4229226177351677,
+          "eliminate_cancer": 2.3343029051168713,
+          "eliminate_both": 5.369812857469924
+        },
+        "lifetable_prob_die_of_cancer_ny_fractions": 0.17641540901474867,
+        "lifetable_prob_die_of_heart_ny_fractions": 0.2728021987000385
+      },
+      "published_comparisons": {
+        "NCHS 1999-2001 cause-elimination tables (NVSR 61(9), 2013)": "heart disease: almost 4 years; cancer: more than 3 years (abstract)",
+        "Keyfitz 1977, US males 1964": "eliminating cancer: about 2.27 years",
+        "1989 US tables (Wikipedia, Taeuber paradox page)": "cancer 3.36 years; major cardiovascular disease 6.73 years"
+      }
+    }
+  },
+  "why_gompertz": {
+    "reliability_symbolic": {
+      "S_block_series_minus_closed_simplified": "0",
+      "organism_hazard": "k*lambda*m*exp(-k*x)/(exp(lambda*exp(-k*x)) - 1)",
+      "small_x_limit": "m*lam*k*exp(-lam)*exp(lam*k*x)  (Gompertz: R=m lam k e^-lam, slope lam k)",
+      "large_x_limit": "k*m"
+    },
+    "reliability_simulation": {
+      "params_ILLUSTRATIVE": {
+        "k_element_failure_rate": 0.02,
+        "lambda_mean_functional_elements": 5.0,
+        "m_blocks": 20,
+        "N_individuals": 200000,
+        "seed": 42
+      },
+      "n_alive_at_birth": 174522,
+      "gompertz_slope_theory_lam*k": 0.1,
+      "plateau_theory_m*k": 0.4,
+      "median_abs_rel_error_sim_vs_exact_hazard": 0.006445435163364488,
+      "max_abs_rel_error_sim_vs_exact_hazard_bins_with_>=50_alive": 0.12488748416730377,
+      "fitted_loglinear_slope_ages_0_40_sim": 0.05058206027050471,
+      "exact_mean_loglinear_slope_ages_0_40": 0.05145920476984037,
+      "local_log_slope_formula": "d ln mu/dx = k*( y/(1-exp(-y)) - 1 ),  y = lam*exp(-k x); ~ k(lam e^{-kx} - 1) for large y: the slope is largest at birth (~ lam k - k) and declines steadily with age",
+      "sim_hazard_last_bins": [
+        0.1904737555041606,
+        0.236523844407124,
+        0.223145428663328
+      ]
+    },
+    "frailty_symbolic": {
+      "S_pop_from_integral_equals_closed": true,
+      "population_hazard": "a*b*exp(b*x)/(-a*sigma2*(1 - exp(b*x)) + b)",
+      "limit_x_to_inf": "b/sigma2",
+      "mean_frailty_of_survivors": "zbar(x) = 1/(1 + s2 H0(x))"
+    },
+    "frailty_simulation": {
+      "params": {
+        "a": 3.1800923416892408e-06,
+        "b": 0.11862505391405319,
+        "s2": 0.05581999706151161,
+        "source": "female gamma-Gompertz fit to SSA 2023 ages 70-110",
+        "N": 1000000,
+        "seed": 42
+      },
+      "plateau_theory_b/s2": 2.125135438171605,
+      "median_abs_rel_error_sim_vs_theory": 0.006508084033590211,
+      "mean_frailty_survivors_at_100_sim": 0.8242679147572236,
+      "mean_frailty_survivors_at_100_theory": 0.8249047072737877,
+      "individual_hazard_doubling_time_ln2/b": 5.843176948624595
+    },
+    "strehler_mildvan": {
+      "params_ILLUSTRATIVE": {
+        "K": 2.0,
+        "V0": 10.0,
+        "B": 0.00909090909090909,
+        "D": 1.0
+      },
+      "gompertz_b_theory_V0B/D": 0.09090909090909091,
+      "gompertz_b_sim": 0.09002972669739252,
+      "gompertz_a_theory_K e^-V0/D": 9.079985952496971e-05,
+      "median_abs_rel_error_sim_vs_theory": 0.016941462471195157,
+      "compensation_relation": "ln a = ln K - b/B ; populations differing only in V0/D share the convergence point x*=1/B where mu=K",
+      "US2023_male_female_gompertz_crossing_age": 122.0336771558726
+    }
+  },
+  "limits": {
+    "note": "N = number of births (female) in a cohort experiencing the stated hazards; the 'n at 110' counts in the Calment calculation are ILLUSTRATIVE grid values, not data.",
+    "median_max_age_table": {
+      "gompertz_makeham": {
+        "1000": 107.89,
+        "10000": 110.61,
+        "100000": 112.74,
+        "1000000": 114.49,
+        "10000000": 115.97,
+        "100000000": 117.25,
+        "1000000000": 118.39,
+        "10000000000": 119.41
+      },
+      "gamma_gompertz_from_70": {
+        "1000": 107.12,
+        "10000": 110.04,
+        "100000": 112.47,
+        "1000000": 114.58,
+        "10000000": 116.47,
+        "100000000": 118.21,
+        "1000000000": 119.83,
+        "10000000000": 121.35
+      },
+      "gm_then_plateau:barbi2018_1904cohort": {
+        "1000": 107.86,
+        "10000": 111.43,
+        "100000": 115.0,
+        "1000000": 118.57,
+        "10000000": 122.14,
+        "100000000": 125.71,
+        "1000000000": 129.28,
+        "10000000000": 132.85
+      },
+      "gm_then_plateau:belzile2021_istat": {
+        "1000": 107.67,
+        "10000": 111.01,
+        "100000": 114.34,
+        "1000000": 117.68,
+        "10000000": 121.02,
+        "100000000": 124.36,
+        "1000000000": 127.69,
+        "10000000000": 131.03
+      },
+      "ssa_table": {
+        "1000": 107.08,
+        "10000": 110.04,
+        "100000": 112.42,
+        "1000000": 114.39,
+        "10000000": 116.04,
+        "100000000": 117.41,
+        "1000000000": 118.57,
+        "10000000000": 119.53
+      }
+    },
+    "gain_per_10x_cohort_at_N=1e9": {
+      "gompertz_makeham": 1.0188362761464447,
+      "gamma_gompertz_from_70": 1.527573337210569,
+      "gm_then_plateau:barbi2018_1904cohort": 3.569899368983016,
+      "gm_then_plateau:belzile2021_istat": 3.3370798449188896,
+      "ssa_table": 0.9583968384982029
+    },
+    "gompertz_closed_form_check": {
+      "N=1e+06": {
+        "closed_form": 114.54843848794945,
+        "numeric": 114.5484384879491
+      },
+      "N=1e+09": {
+        "closed_form": 118.43501175267747,
+        "numeric": 118.4350117526779
+      }
+    },
+    "calment_record": {
+      "barbi2018_1904cohort": {
+        "hazard_per_year": 0.645,
+        "p_one_110yo_reaches_122.45": 0.00032567524429470907,
+        "n_at_110_for_50pct_chance": 2128.3385602766434,
+        "p_record_given_n": {
+          "100": 0.032042913125510816,
+          "1000": 0.2779603641483867,
+          "10000": 0.9614867308163455
+        }
+      },
+      "belzile2021_istat": {
+        "hazard_per_year": 0.69,
+        "p_one_110yo_reaches_122.45": 0.00018599045643217772,
+        "n_at_110_for_50pct_chance": 3726.7889646407993,
+        "p_record_given_n": {
+          "100": 0.018427150737221995,
+          "1000": 0.1697184812078919,
+          "10000": 0.8443125121999895
+        }
+      },
+      "gompertz_makeham_female": {
+        "p_one_110yo_reaches_122.45": 1.1699499419327246e-10,
+        "n_at_110_for_50pct_chance": 5924588358.155611
+      }
+    },
+    "record_data": {
+      "Jeanne Calment (France)": "122 y 164 d, died 1997",
+      "Kane Tanaka (Japan)": "119 y 107 d, died 2022",
+      "Sarah Knauss (USA)": "119 y 97 d, died 1999",
+      "oldest living per page (Ethel Caterham, UK)": "117 y 79 d as listed when opened 2026-11-10",
+      "source": "https://en.wikipedia.org/wiki/List_of_the_verified_oldest_people"
+    }
+  },
+  "no_aging": {
+    "units": "years; hazards per year",
+    "source_url": "https://www.ssa.gov/oact/STATS/table4c6.html",
+    "data_year": 2023,
+    "male": {
+      "age20": {
+        "hazard_per_year": 0.0012357632409664447,
+        "A_constant_from_birth": {
+          "life_expectancy": 809.216496210016,
+          "median": 560.9061328105702,
+          "p_survive_to_100": 0.8837541869299431,
+          "p_survive_to_500": 0.5390852159465799,
+          "p_survive_to_1000": 0.2906128700521707,
+          "age_1pct_still_alive": 3726.579682356111
+        },
+        "B_real_until_then_frozen": {
+          "e0": 818.610995873444,
+          "median": 570.3951024507988,
+          "p_survive_to_100": 0.8941780284260221,
+          "p_survive_to_500": 0.5454437021942394,
+          "p_survive_to_1000": 0.2940406359840821
+        }
+      },
+      "age30": {
+        "hazard_per_year": 0.002087176638553861,
+        "A_constant_from_birth": {
+          "life_expectancy": 479.1161330230625,
+          "median": 332.0979967657195,
+          "p_survive_to_100": 0.8116243541887025,
+          "p_survive_to_500": 0.3521886465380982,
+          "p_survive_to_1000": 0.1240368427503375,
+          "age_1pct_still_alive": 2206.411331423712
+        },
+        "B_real_until_then_frozen": {
+          "e0": 495.1580724655154,
+          "median": 348.3058670366412,
+          "p_survive_to_100": 0.8395498379563764,
+          "p_survive_to_500": 0.3643063685868547,
+          "p_survive_to_1000": 0.1283045668778078
+        }
+      },
+      "makeham_c_only": {
+        "hazard_per_year": 0.0018343702330338681,
+        "life_expectancy": 545.1462207528838,
+        "median": 377.86656590777096,
+        "life_expectancy_ci95": [
+          471.57302169479885,
+          628.9323911578407
+        ]
+      },
+      "minimum_hazard_age_8_9": {
+        "hazard_per_year": 0.00012000720057605185,
+        "life_expectancy": 8332.833323332732,
+        "median": 5775.879924144043
+      },
+      "actual_2023": {
+        "e0": 75.79
+      }
+    },
+    "female": {
+      "age20": {
+        "hazard_per_year": 0.00044109726909816605,
+        "A_constant_from_birth": {
+          "life_expectancy": 2267.0736593870192,
+          "median": 1571.41571512583,
+          "p_survive_to_100": 0.956848959633106,
+          "p_survive_to_500": 0.8020786291805692,
+          "p_survive_to_1000": 0.643330127388181,
+          "age_1pct_still_alive": 10440.260025648022
+        },
+        "B_real_until_then_frozen": {
+          "e0": 2266.7674545241357,
+          "median": 1571.1511455581021,
+          "p_survive_to_100": 0.9567372890602869,
+          "p_survive_to_500": 0.8019850213242156,
+          "p_survive_to_1000": 0.6432550465270699
+        }
+      },
+      "age30": {
+        "hazard_per_year": 0.0008783856677607206,
+        "A_constant_from_birth": {
+          "life_expectancy": 1138.452090810307,
+          "median": 789.1148569477391,
+          "p_survive_to_100": 0.9159087228873225,
+          "p_survive_to_500": 0.644556475318898,
+          "p_survive_to_1000": 0.41545304987552123,
+          "age_1pct_still_alive": 5242.765626775433
+        },
+        "B_real_until_then_frozen": {
+          "e0": 1151.2780390800797,
+          "median": 802.0613885187084,
+          "p_survive_to_100": 0.9263839094458277,
+          "p_survive_to_500": 0.6519282244438264,
+          "p_survive_to_1000": 0.4202045585084112
+        }
+      },
+      "makeham_c_only": {
+        "hazard_per_year": 0.0007832288302749922,
+        "life_expectancy": 1276.7660756932291,
+        "median": 884.9868056013474,
+        "life_expectancy_ci95": [
+          1040.8169253714416,
+          1589.6840654478867
+        ]
+      },
+      "minimum_hazard_age_8_9": {
+        "hazard_per_year": 9.800480231375373e-05,
+        "life_expectancy": 10203.581624485994,
+        "median": 7072.583834625733
+      },
+      "actual_2023": {
+        "e0": 81.06
+      }
+    },
+    "context_cause_shares_NY2023": {
+      "heart+cancer share of deaths ages 20-24": 0.08923884514435695,
+      "heart+cancer share of deaths ages 25-44": 0.1793727689954105,
+      "source": "https://healthweb-back.health.ny.gov/statistics/vital_statistics/2023/table34a.htm"
+    }
+  },
+  "headline": {
+    "data": "US SSA period life table, data year 2023 (2026 Trustees Report)",
+    "source_url": "https://www.ssa.gov/oact/STATS/table4c6.html",
+    "cross_check": "NCHS Data Brief 521: US 2023 e0 male 75.8, female 81.1, total 78.4 (https://cdc.gov/nchs/products/databriefs/db521.htm)",
+    "hazard_definition": "mu(x) = c + a*exp(b*x), x = age in years, mu per year",
+    "recommended_model": "gompertz_makeham fitted to ages 30-95",
+    "units": {
+      "a": "per year",
+      "b": "per year of age",
+      "c": "per year",
+      "doubling_time": "years",
+      "e0": "years"
+    },
+    "male": {
+      "e0_period_2023": 75.79,
+      "e65_period_2023": 18.12,
+      "median_age_at_death": 80.28,
+      "modal_adult_age_at_death": 87,
+      "GM_a": 2.4131279797648663e-05,
+      "GM_a_ci95": [
+        1.7690785620769135e-05,
+        3.272529629471061e-05
+      ],
+      "GM_b": 0.09725637134516656,
+      "GM_b_ci95": [
+        0.09355378630270852,
+        0.10119661599491538
+      ],
+      "GM_c_baseline_hazard": 0.0018343702330338681,
+      "GM_c_ci95": [
+        0.0015899960219238158,
+        0.0021205623604295116
+      ],
+      "GM_doubling_time_years": 7.127010508133597,
+      "GM_doubling_time_ci95": [
+        6.849509479593394,
+        7.409076724240263
+      ],
+      "Gompertz_40_95_a": 7.83587271433994e-05,
+      "Gompertz_40_95_b": 0.08316384840873389,
+      "Gompertz_40_95_doubling_time_years": 8.334717474271558,
+      "empirical_loglinear_slope_40_90": 0.07977988098589775,
+      "empirical_doubling_time_40_90_years": 8.68824535702766,
+      "observed_hazard_age20": 0.0012357632409664447,
+      "observed_hazard_age30": 0.002087176638553861,
+      "keyfitz_entropy_H": 0.1680449788005375,
+      "no_aging_life_expectancy_hazard_frozen_at_30": 479.1161330230625,
+      "no_aging_life_expectancy_hazard_frozen_at_20": 809.216496210016
+    },
+    "female": {
+      "e0_period_2023": 81.06,
+      "e65_period_2023": 20.66,
+      "median_age_at_death": 84.84,
+      "modal_adult_age_at_death": 89,
+      "GM_a": 1.2067632515886826e-05,
+      "GM_a_ci95": [
+        8.392276979314715e-06,
+        1.693304079475368e-05
+      ],
+      "GM_b": 0.10209779587873778,
+      "GM_b_ci95": [
+        0.09785672166150233,
+        0.10665886525403334
+      ],
+      "GM_c_baseline_hazard": 0.0007832288302749922,
+      "GM_c_ci95": [
+        0.0006290558116138972,
+        0.0009607837609319477
+      ],
+      "GM_doubling_time_years": 6.78905136584144,
+      "GM_doubling_time_ci95": [
+        6.4987301234552906,
+        7.083286347540041
+      ],
+      "Gompertz_40_95_a": 3.0293066061308875e-05,
+      "Gompertz_40_95_b": 0.09095168638858403,
+      "Gompertz_40_95_doubling_time_years": 7.621048141961081,
+      "empirical_loglinear_slope_40_90": 0.08754370106424253,
+      "empirical_doubling_time_40_90_years": 7.917727627842583,
+      "observed_hazard_age20": 0.00044109726909816605,
+      "observed_hazard_age30": 0.0008783856677607206,
+      "keyfitz_entropy_H": 0.13516006327388946,
+      "no_aging_life_expectancy_hazard_frozen_at_30": 1138.452090810307,
+      "no_aging_life_expectancy_hazard_frozen_at_20": 2267.0736593870192
+    },
+    "doubling_time_note": "The mortality doubling time depends on method: 6.8-7.1 y (GM, slope of the senescent part after removing c), 7.6-8.3 y (pure Gompertz 40-95), 7.9-8.7 y (raw log-linear 40-90). Quote ~7-9 years, not a single number."
+  }
+}

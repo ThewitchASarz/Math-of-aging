@@ -1,0 +1,26 @@
+# Source: Teng KT, Brodbelt DC, Pegram C, Church DB, O'Neill DG (2022) Life tables of annual life expectancy and mortality for companion dogs in the United Kingdom. Sci Rep 12:6415.
+# URL: https://pmc.ncbi.nlm.nih.gov/articles/PMC9050668 (opened 2026-11-10 via WebFetch; Table: overall life table, transcribed)
+# Data: VetCompass UK primary-care records, 30,563 confirmed deaths 2016-01-01 to 2020-07-31. Built from deaths only (hypothetical cohort).
+# age_start = start of 1-year interval; last row is the open interval 20+.
+age_start,dx,lx,qx,ex
+0,514,30563,0.017,11.23
+1,481,30049,0.016,10.41
+2,482,29568,0.016,9.58
+3,489,29086,0.017,8.73
+4,559,28597,0.020,7.87
+5,677,28038,0.024,7.02
+6,892,27361,0.033,6.18
+7,1254,26469,0.047,5.37
+8,1730,25215,0.069,4.61
+9,2265,23485,0.096,3.91
+10,2852,21220,0.134,3.28
+11,3449,18368,0.188,2.71
+12,3645,14919,0.244,2.23
+13,3785,11274,0.336,1.79
+14,3126,7489,0.417,1.46
+15,2249,4363,0.515,1.19
+16,1253,2114,0.593,0.99
+17,542,861,0.630,0.87
+18,218,319,0.683,0.72
+19,78,101,0.772,0.59
+20,23,23,1.000,0.46

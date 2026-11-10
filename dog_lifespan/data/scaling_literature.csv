@@ -1,0 +1,8 @@
+# Allometric scaling of lifespan on body mass: T = a * M^b
+# de Magalhaes, Costa & Church 2007 J Gerontol A 62:149 (tmax years, M grams) URL: https://datawookie.dev/content/blog/2021/2021-04-12-hagr-database-of-animal-ageing-and-longevity/magalhaes-2007.pdf (opened 2026-11-10)
+# Fan, Olbricht, Baker & Hou 2016 Aging 8:3209 (dog breeds, average lifespan vs adult mass) URL: https://static-site-aging-prod.impactaging.com/article/101081/text (opened 2026-11-10); intercept not reported
+group,a,b,r2,n,source
+mammals_all,4.88,0.153,0.43,856,deMagalhaes2007
+mammals_no_bats,3.34,0.193,0.57,783,deMagalhaes2007
+primates,6.47,0.189,0.57,137,deMagalhaes2007
+dog_breeds_within_species,,-0.096,,90,Fan2016

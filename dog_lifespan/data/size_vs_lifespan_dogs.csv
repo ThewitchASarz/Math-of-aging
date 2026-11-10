@@ -1,0 +1,7 @@
+# Series for figures/size_vs_lifespan.png; e0 from Montoya 2023; M_rep_kg = geometric mean of group bounds (ASSUMPTION)
+size,M_rep_kg,e0,lo,hi
+toy,3.3166247903554,13.36,13.33,13.38
+small,7.7781745930520225,13.53,13.52,13.55
+medium,16.911534525287763,12.7,12.68,12.72
+large,34.20526275297414,11.51,11.49,11.52
+giant,56.124860801609124,9.51,9.45,9.58

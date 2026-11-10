@@ -1,0 +1,22 @@
+# Source: O'Neill et al. 2013 Vet J 198:638-643, Table 3 attributed cause of death by age group (counts; '-' in paper -> blank)
+# URL: https://rvc-repository.worktribe.com/OutputFile/1409027 (opened 2026-11-10)
+cause,under3_n,age3plus_n
+Behavioural abnormality,72,130
+Gastrointestinal,71,261
+No cause recorded,65,596
+Road traffic accident,62,
+Neurological,36,533
+Trauma,32,
+Congenital defect,24,
+Respiratory,18,179
+Cardiac,13,252
+Dangerous Dogs Act,12,
+Collapse,10,176
+Neoplastic,10,831
+Anorexia/losing weight,9,114
+Musculoskeletal,8,567
+Renal/urinary,7,171
+Incontinence,,94
+Abdominal (non-GIT),,75
+Reproductive,,54
+Diabetes mellitus,,50

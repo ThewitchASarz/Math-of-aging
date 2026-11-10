@@ -1,0 +1,22 @@
+# Source: Montoya M, Morrison JA, Arrignon F, et al. (2023) Life expectancy tables for dogs and cats derived from clinical data. Front Vet Sci 10:1082102. Table 3 (global dog life table)
+# URL: https://www.frontiersin.org/journals/veterinary-science/articles/10.3389/fvets.2023.1082102/pdf (opened 2026-11-10)
+# Data: Banfield Pet Hospital records (>1000 US hospitals), 13,292,929 unique dogs, survey years 2013-2019, Sullivan method. Last row is open interval 17+.
+age_start,qx,ex
+0,0.0267,12.69
+1,0.0107,12.03
+2,0.0096,11.16
+3,0.0104,10.26
+4,0.0122,9.36
+5,0.0159,8.47
+6,0.0208,7.60
+7,0.0293,6.75
+8,0.0431,5.94
+9,0.0619,5.19
+10,0.0873,4.50
+11,0.1176,3.88
+12,0.1594,3.33
+13,0.2086,2.87
+14,0.2645,2.49
+15,0.3215,2.21
+16,0.3691,2.01
+17,0.4166,1.90

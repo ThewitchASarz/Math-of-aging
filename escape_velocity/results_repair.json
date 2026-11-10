@@ -1,0 +1,327 @@
+{
+  "fixed_point_linear_post_repair": "T*r*(1 - f)/f",
+  "fixed_point_linear_pre_repair": "T*r/f",
+  "fixed_point_exponential_post_repair": "r*(-f*exp(T*g) + f + exp(T*g) - 1)/(g*(f*exp(T*g) - exp(T*g) + 1))",
+  "bounded_condition_exponential": "(1-f)*exp(g*T) < 1  <=>  f > 1 - exp(-g*T)",
+  "closed_form_checks": [
+    {
+      "f": 0.3,
+      "T": 2,
+      "r": 0.0121,
+      "g": 0,
+      "iterated": 0.056466666666666644,
+      "closed_form": 0.05646666666666666,
+      "contraction": 0.7
+    },
+    {
+      "f": 0.5,
+      "T": 5,
+      "r": 0.0121,
+      "g": 0.05,
+      "iterated": 0.09600082522546238,
+      "closed_form": 0.09600082522546241,
+      "contraction": 0.6420127083438707
+    },
+    {
+      "f": 0.2,
+      "T": 5,
+      "r": 0.0121,
+      "g": 0.05,
+      "iterated": Infinity,
+      "closed_form": Infinity,
+      "contraction": 1.0272203333501932
+    },
+    {
+      "f": 0.2,
+      "T": 4,
+      "r": 0.0121,
+      "g": 0.05,
+      "iterated": 1.873588640990393,
+      "closed_form": 1.8735886409904057,
+      "contraction": 0.977122206528136
+    }
+  ],
+  "scenarios_age50": [
+    {
+      "scenario": "no therapy",
+      "remaining_LE_from_50": 33.32009937906071,
+      "expected_age_at_death": 83.32009937906071
+    },
+    {
+      "scenario": "all 7 types, f=1.0 every year",
+      "remaining_LE_from_50": 1724.823614115158,
+      "expected_age_at_death": 1774.823614115158
+    },
+    {
+      "scenario": "all 7 types, f=0.5 every 5 y",
+      "remaining_LE_from_50": 1612.4034365807786,
+      "expected_age_at_death": 1662.4034365807786
+    },
+    {
+      "scenario": "all 7 types, f=0.2 every 10 y",
+      "remaining_LE_from_50": 378.0256700446346,
+      "expected_age_at_death": 428.0256700446346
+    },
+    {
+      "scenario": "6 of 7 f=1.0 yearly, 1 type f=0",
+      "remaining_LE_from_50": 328.61856410485217,
+      "expected_age_at_death": 378.61856410485217
+    },
+    {
+      "scenario": "6 of 7 f=1.0 yearly, 1 type f=0.5",
+      "remaining_LE_from_50": 1723.0729024696,
+      "expected_age_at_death": 1773.0729024696
+    }
+  ],
+  "no_therapy_LE_analytic": 33.32010326459706,
+  "unrepaired_share_sweep": [
+    {
+      "unrepaired_share": 0.0,
+      "residual_slope": 0.0,
+      "residual_doubling_time_yr": Infinity,
+      "remaining_LE_from_50": 1724.823614115158
+    },
+    {
+      "unrepaired_share": 0.02,
+      "residual_slope": 0.0017000000000000001,
+      "residual_doubling_time_yr": 407.7336356234972,
+      "remaining_LE_from_50": 1110.1656490355617
+    },
+    {
+      "unrepaired_share": 0.05,
+      "residual_slope": 0.00425,
+      "residual_doubling_time_yr": 163.0934542493989,
+      "remaining_LE_from_50": 696.4534126234026
+    },
+    {
+      "unrepaired_share": 0.14285714285714285,
+      "residual_slope": 0.012142857142857143,
+      "residual_doubling_time_yr": 57.082708987289614,
+      "remaining_LE_from_50": 328.61856410485217
+    },
+    {
+      "unrepaired_share": 0.25,
+      "residual_slope": 0.02125,
+      "residual_doubling_time_yr": 32.618690849879776,
+      "remaining_LE_from_50": 200.5118627104626
+    },
+    {
+      "unrepaired_share": 0.3333333333333333,
+      "residual_slope": 0.028333333333333335,
+      "residual_doubling_time_yr": 24.46401813740983,
+      "remaining_LE_from_50": 150.65963798934902
+    },
+    {
+      "unrepaired_share": 0.5,
+      "residual_slope": 0.0425,
+      "residual_doubling_time_yr": 16.309345424939888,
+      "remaining_LE_from_50": 95.57214091026644
+    },
+    {
+      "unrepaired_share": 1.0,
+      "residual_slope": 0.085,
+      "residual_doubling_time_yr": 8.154672712469944,
+      "remaining_LE_from_50": 33.3200993790607
+    }
+  ],
+  "self_amplifying_r_per_type": 0.002967036466136448,
+  "self_amplifying_untreated_LE_from_50": 33.32064104876865,
+  "self_amplifying_grid_g0.03": [
+    {
+      "T": 1,
+      "f": 0.02,
+      "threshold_f": 0.029554466451491845,
+      "bounded": false,
+      "remaining_LE_from_50": 68.46844760390074
+    },
+    {
+      "T": 1,
+      "f": 0.05,
+      "threshold_f": 0.029554466451491845,
+      "bounded": true,
+      "remaining_LE_from_50": 1517.0848960701242
+    },
+    {
+      "T": 1,
+      "f": 0.1,
+      "threshold_f": 0.029554466451491845,
+      "bounded": true,
+      "remaining_LE_from_50": 1684.1613305132057
+    },
+    {
+      "T": 1,
+      "f": 0.2,
+      "threshold_f": 0.029554466451491845,
+      "bounded": true,
+      "remaining_LE_from_50": 1713.7963439044688
+    },
+    {
+      "T": 1,
+      "f": 0.3,
+      "threshold_f": 0.029554466451491845,
+      "bounded": true,
+      "remaining_LE_from_50": 1720.918484849432
+    },
+    {
+      "T": 1,
+      "f": 0.5,
+      "threshold_f": 0.029554466451491845,
+      "bounded": true,
+      "remaining_LE_from_50": 1725.9099718222894
+    },
+    {
+      "T": 1,
+      "f": 0.8,
+      "threshold_f": 0.029554466451491845,
+      "bounded": true,
+      "remaining_LE_from_50": 1728.448727083863
+    },
+    {
+      "T": 2,
+      "f": 0.02,
+      "threshold_f": 0.05823546641575128,
+      "bounded": false,
+      "remaining_LE_from_50": 44.79139416284016
+    },
+    {
+      "T": 2,
+      "f": 0.05,
+      "threshold_f": 0.05823546641575128,
+      "bounded": false,
+      "remaining_LE_from_50": 98.3639251189692
+    },
+    {
+      "T": 2,
+      "f": 0.1,
+      "threshold_f": 0.05823546641575128,
+      "bounded": true,
+      "remaining_LE_from_50": 1534.9989442568824
+    },
+    {
+      "T": 2,
+      "f": 0.2,
+      "threshold_f": 0.05823546641575128,
+      "bounded": true,
+      "remaining_LE_from_50": 1688.3836481102092
+    },
+    {
+      "T": 2,
+      "f": 0.3,
+      "threshold_f": 0.05823546641575128,
+      "bounded": true,
+      "remaining_LE_from_50": 1708.543155894849
+    },
+    {
+      "T": 2,
+      "f": 0.5,
+      "threshold_f": 0.05823546641575128,
+      "bounded": true,
+      "remaining_LE_from_50": 1720.562274411043
+    },
+    {
+      "T": 2,
+      "f": 0.8,
+      "threshold_f": 0.05823546641575128,
+      "bounded": true,
+      "remaining_LE_from_50": 1726.1167798034717
+    },
+    {
+      "T": 5,
+      "f": 0.02,
+      "threshold_f": 0.1392920235749422,
+      "bounded": false,
+      "remaining_LE_from_50": 37.273122752083474
+    },
+    {
+      "T": 5,
+      "f": 0.05,
+      "threshold_f": 0.1392920235749422,
+      "bounded": false,
+      "remaining_LE_from_50": 45.51491719566967
+    },
+    {
+      "T": 5,
+      "f": 0.1,
+      "threshold_f": 0.1392920235749422,
+      "bounded": false,
+      "remaining_LE_from_50": 73.77800675886107
+    },
+    {
+      "T": 5,
+      "f": 0.2,
+      "threshold_f": 0.1392920235749422,
+      "bounded": true,
+      "remaining_LE_from_50": 1373.2464062495749
+    },
+    {
+      "T": 5,
+      "f": 0.3,
+      "threshold_f": 0.1392920235749422,
+      "bounded": true,
+      "remaining_LE_from_50": 1639.038724577152
+    },
+    {
+      "T": 5,
+      "f": 0.5,
+      "threshold_f": 0.1392920235749422,
+      "bounded": true,
+      "remaining_LE_from_50": 1699.5669800309713
+    },
+    {
+      "T": 5,
+      "f": 0.8,
+      "threshold_f": 0.1392920235749422,
+      "bounded": true,
+      "remaining_LE_from_50": 1718.2631981414008
+    },
+    {
+      "T": 10,
+      "f": 0.02,
+      "threshold_f": 0.2591817793182821,
+      "bounded": false,
+      "remaining_LE_from_50": 35.31131194799349
+    },
+    {
+      "T": 10,
+      "f": 0.05,
+      "threshold_f": 0.2591817793182821,
+      "bounded": false,
+      "remaining_LE_from_50": 38.84737163657317
+    },
+    {
+      "T": 10,
+      "f": 0.1,
+      "threshold_f": 0.2591817793182821,
+      "bounded": false,
+      "remaining_LE_from_50": 46.73469412385505
+    },
+    {
+      "T": 10,
+      "f": 0.2,
+      "threshold_f": 0.2591817793182821,
+      "bounded": false,
+      "remaining_LE_from_50": 81.5518233625997
+    },
+    {
+      "T": 10,
+      "f": 0.3,
+      "threshold_f": 0.2591817793182821,
+      "bounded": true,
+      "remaining_LE_from_50": 529.2154114157296
+    },
+    {
+      "T": 10,
+      "f": 0.5,
+      "threshold_f": 0.2591817793182821,
+      "bounded": true,
+      "remaining_LE_from_50": 1631.191446588463
+    },
+    {
+      "T": 10,
+      "f": 0.8,
+      "threshold_f": 0.2591817793182821,
+      "bounded": true,
+      "remaining_LE_from_50": 1701.4374420392285
+    }
+  ]
+}

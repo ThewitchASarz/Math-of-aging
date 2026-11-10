@@ -1,0 +1,9 @@
+series,age,gain_yr_per_yr,years,gap_factor_to_1yr_per_yr,rho_implied_model,pct_mortality_fall_per_yr_implied,source
+"Record female e0, 1840-2000 (Oeppen-Vaupel slope)",0,0.243,1840-2000,4.11522633744856,0.021659099687527245,2.142622569840036,https://u.demog.berkeley.edu/~jrw/Biblio/Eprints/%20M-O/oeppen.vaupel.2002.pdf
+"US e0, 2010-2024",0,0.021428571428571224,2010-2024,46.66666666666711,0.00190997351741861,0.19081506787091973,https://www.cdc.gov/nchs/data/hus/2016/015.pdf ; https://cdc.gov/nchs/products/databriefs/db548.htm
+"US e65, 1950-2010",65,0.08666666666666668,1950-2010,11.538461538461537,0.00978482118052378,0.9737105574132876,https://www.cdc.gov/nchs/data/hus/2016/015.pdf
+"US e65, 2010-2024",65,0.042857142857142705,2010-2024,23.333333333333417,0.00483864783652273,0.48269604380799525,https://www.cdc.gov/nchs/data/hus/2016/015.pdf ; https://cdc.gov/nchs/products/databriefs/db548.htm
+"Japan female e0, 2010-2024",0,0.059285714285714164,2010-2024,16.867469879518108,0.005284260064858194,0.5270322922609649,https://www.mhlw.go.jp/english/database/db-hw/lifetb24/dl/lifetb24-02.pdf
+"Japan male e0, 2010-2024",0,0.11000000000000044,2010-2024,9.090909090909054,0.009804530722748998,0.9756623010124033,https://www.mhlw.go.jp/english/database/db-hw/lifetb24/dl/lifetb24-02.pdf
+"Japan female e65, 2017-2024",65,-0.007142857142857244,2017-2024,inf,-0.000806441306087136,-0.08067665673059388,https://www.mhlw.go.jp/english/database/db-hw/lifetb17/dl/lifetb17-06.pdf ; https://www.mhlw.go.jp/english/database/db-hw/lifetb24/dl/lifetb24-01.pdf
+"Japan female e90, 2017-2024",90,-0.008571428571428643,2017-2024,inf,-0.0019060548708093115,-0.1907872548075229,https://www.mhlw.go.jp/english/database/db-hw/lifetb17/dl/lifetb17-06.pdf ; https://www.mhlw.go.jp/english/database/db-hw/lifetb24/dl/lifetb24-01.pdf

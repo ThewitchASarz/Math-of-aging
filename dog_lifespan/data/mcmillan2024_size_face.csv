@@ -1,0 +1,10 @@
+# Source: McMillan KM, Bielby J, Williams CL, et al. (2024) Longevity of companion dog breeds: those at risk from early death. Sci Rep 14:531. Kaplan-Meier medians and Cox HRs (purebreds)
+# URL: https://www.nature.com/articles/s41598-023-50458-w.pdf (opened 2026-11-10)
+# 584,734 UK dogs (284,734 deceased), 18 data sources, 155 breeds. HR for size is relative to large (reference); HR for face shape relative to mesocephalic.
+group_type,group,median_years,lo,hi,n,events,HR
+size,small,12.7,12.7,12.8,223222,112063,0.83
+size,medium,12.5,12.4,12.6,73532,35787,0.88
+size,large,11.9,11.9,11.9,123072,61976,1.0
+face,mesocephalic,12.8,12.7,12.8,267753,138357,1.0
+face,brachycephalic,11.2,11.2,11.3,88103,40644,1.4
+face,dolichocephalic,12.1,12.0,12.1,66369,33224,1.1
