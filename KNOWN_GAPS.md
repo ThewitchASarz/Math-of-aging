@@ -32,8 +32,10 @@ Things in this project that are unverified, unresolved or approximate. Read this
 
 - **The frozen-production shortcut for the worn-out-cell model is off by up to 20 percent for dogs** (`experiments/002_dog_cell_model/sde_check.py`). Any result that depends on differences smaller than that, including the ranking of which setting differs between dogs and humans, is not supported. The same shortcut is used in `damage_repair/saturating_removal.py`, where its error for humans was measured at about 7 percent in the doubling time.
 - **Predicted senescent-cell lifetimes in dogs were withdrawn** as lab predictions; see `experiments/002_dog_cell_model/RESULT.md`.
-- **Experiment 001 assumes a treatment effect that starts at enrolment and persists.** The rapamycin trial treats for one year only. The effect of a fading treatment on the fingerprint test has not been simulated.
-- **Experiment 001 assumes dog mortality follows the doubling law exactly.** Levelling-off at the oldest ages would bias the slope test and has not been tested.
+- **The fingerprint test is valid only while treatment continues** (experiment 003). A benefit that fades after treatment stops is misread as faster aging. No analysis for stop-and-watch trials has been built yet.
+- **The doubling law overstates dog death rates from about age 16** (experiment 004): by 19 percent at 16 and by 50 to 95 percent at 17 to 19 when fitted to younger ages. Results here that concern dogs older than 15 lean on it.
+- **Hidden differences between dogs.** The fingerprint test holds up under frailty of the size fitted to the UK table, but not under frailty three times larger. Differences between breeds have not been measured against that threshold.
+- **The UK dog table is built from deaths in one period**, not by following dogs. Its shape at the oldest ages mixes aging with breed mix and recording errors.
 
 ## Judgement, not data
 

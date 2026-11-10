@@ -1,0 +1,246 @@
+{
+ "note": "Simulated trials with one year of treatment. Analysed with the constant-effect models of experiment 001. Entry ages 7 to 12 are an assumption.",
+ "dog_a_per_year": 0.004967182098875431,
+ "dog_b_per_year": 0.31954873909049325,
+ "treatment_years": 1.0,
+ "seed": 20261111,
+ "trials_per_case": 400,
+ "lasting_risk_cut_from_kept_benefit": {
+  "aging slowed 20% for 1 year, benefit kept": 0.9380896603489258,
+  "aging slowed 50% for 1 year, benefit kept": 0.8523360802494001,
+  "aging stopped for 1 year, benefit kept": 0.7264770258396923
+ },
+ "cases": [
+  {
+   "design": "580 dogs, 3 years (the rapamycin trial's shape)",
+   "effect": "no effect",
+   "n_trials": 400,
+   "mean_deaths": 244.825,
+   "detected_by_usual_test": 0.0575,
+   "slope_change_flagged": 0.045,
+   "flagged_as_faster_aging": 0.025,
+   "median_slope_estimate": 1.007861281948892,
+   "median_hazard_ratio_estimate": 0.9932821612528966
+  },
+  {
+   "design": "580 dogs, 3 years (the rapamycin trial's shape)",
+   "effect": "aging slowed 20% for 1 year, benefit kept",
+   "n_trials": 400,
+   "mean_deaths": 239.41,
+   "detected_by_usual_test": 0.08,
+   "slope_change_flagged": 0.0525,
+   "flagged_as_faster_aging": 0.0275,
+   "median_slope_estimate": 0.9787838124436329,
+   "median_hazard_ratio_estimate": 0.940104887316369
+  },
+  {
+   "design": "580 dogs, 3 years (the rapamycin trial's shape)",
+   "effect": "aging slowed 50% for 1 year, benefit kept",
+   "n_trials": 400,
+   "mean_deaths": 232.14,
+   "detected_by_usual_test": 0.17,
+   "slope_change_flagged": 0.07,
+   "flagged_as_faster_aging": 0.0075,
+   "median_slope_estimate": 0.8755697965970222,
+   "median_hazard_ratio_estimate": 0.8748110178203967
+  },
+  {
+   "design": "580 dogs, 3 years (the rapamycin trial's shape)",
+   "effect": "aging stopped for 1 year, benefit kept",
+   "n_trials": 400,
+   "mean_deaths": 221.2225,
+   "detected_by_usual_test": 0.4975,
+   "slope_change_flagged": 0.1075,
+   "flagged_as_faster_aging": 0.005,
+   "median_slope_estimate": 0.7505946670080272,
+   "median_hazard_ratio_estimate": 0.7655903167479516
+  },
+  {
+   "design": "580 dogs, 3 years (the rapamycin trial's shape)",
+   "effect": "risk cut 30% for 1 year, then fades",
+   "n_trials": 400,
+   "mean_deaths": 238.3725,
+   "detected_by_usual_test": 0.1,
+   "slope_change_flagged": 0.2275,
+   "flagged_as_faster_aging": 0.2275,
+   "median_slope_estimate": 1.4612693778596866,
+   "median_hazard_ratio_estimate": 0.8998635059749578
+  },
+  {
+   "design": "580 dogs, 3 years (the rapamycin trial's shape)",
+   "effect": "risk cut 50% for 1 year, then fades",
+   "n_trials": 400,
+   "mean_deaths": 232.7275,
+   "detected_by_usual_test": 0.2475,
+   "slope_change_flagged": 0.5225,
+   "flagged_as_faster_aging": 0.5225,
+   "median_slope_estimate": 1.767460134207119,
+   "median_hazard_ratio_estimate": 0.8545837900183701
+  },
+  {
+   "design": "580 dogs, 3 years (the rapamycin trial's shape)",
+   "effect": "risk cut 30%, persists after treatment",
+   "n_trials": 400,
+   "mean_deaths": 215.3825,
+   "detected_by_usual_test": 0.705,
+   "slope_change_flagged": 0.0475,
+   "flagged_as_faster_aging": 0.0175,
+   "median_slope_estimate": 1.0260894253890962,
+   "median_hazard_ratio_estimate": 0.704699135642858
+  },
+  {
+   "design": "580 dogs, 10 years",
+   "effect": "no effect",
+   "n_trials": 400,
+   "mean_deaths": 577.2025,
+   "detected_by_usual_test": 0.045,
+   "slope_change_flagged": 0.04,
+   "flagged_as_faster_aging": 0.02,
+   "median_slope_estimate": 1.0098701515680535,
+   "median_hazard_ratio_estimate": 0.9966149085943327
+  },
+  {
+   "design": "580 dogs, 10 years",
+   "effect": "aging slowed 20% for 1 year, benefit kept",
+   "n_trials": 400,
+   "mean_deaths": 576.7375,
+   "detected_by_usual_test": 0.09,
+   "slope_change_flagged": 0.04,
+   "flagged_as_faster_aging": 0.0225,
+   "median_slope_estimate": 0.9948959988352855,
+   "median_hazard_ratio_estimate": 0.9442361253840476
+  },
+  {
+   "design": "580 dogs, 10 years",
+   "effect": "aging slowed 50% for 1 year, benefit kept",
+   "n_trials": 400,
+   "mean_deaths": 575.9975,
+   "detected_by_usual_test": 0.435,
+   "slope_change_flagged": 0.07,
+   "flagged_as_faster_aging": 0.0225,
+   "median_slope_estimate": 0.9897811561294153,
+   "median_hazard_ratio_estimate": 0.8608476439533781
+  },
+  {
+   "design": "580 dogs, 10 years",
+   "effect": "aging stopped for 1 year, benefit kept",
+   "n_trials": 400,
+   "mean_deaths": 574.065,
+   "detected_by_usual_test": 0.94,
+   "slope_change_flagged": 0.0475,
+   "flagged_as_faster_aging": 0.0075,
+   "median_slope_estimate": 0.9608904056802132,
+   "median_hazard_ratio_estimate": 0.7403685558623836
+  },
+  {
+   "design": "580 dogs, 10 years",
+   "effect": "risk cut 30% for 1 year, then fades",
+   "n_trials": 400,
+   "mean_deaths": 576.985,
+   "detected_by_usual_test": 0.095,
+   "slope_change_flagged": 0.09,
+   "flagged_as_faster_aging": 0.0875,
+   "median_slope_estimate": 1.0681992166763528,
+   "median_hazard_ratio_estimate": 0.9611236255540556
+  },
+  {
+   "design": "580 dogs, 10 years",
+   "effect": "risk cut 50% for 1 year, then fades",
+   "n_trials": 400,
+   "mean_deaths": 577.0675,
+   "detected_by_usual_test": 0.1175,
+   "slope_change_flagged": 0.235,
+   "flagged_as_faster_aging": 0.235,
+   "median_slope_estimate": 1.1245776729872503,
+   "median_hazard_ratio_estimate": 0.9330122954257836
+  },
+  {
+   "design": "580 dogs, 10 years",
+   "effect": "risk cut 30%, persists after treatment",
+   "n_trials": 400,
+   "mean_deaths": 573.19,
+   "detected_by_usual_test": 0.9825,
+   "slope_change_flagged": 0.035,
+   "flagged_as_faster_aging": 0.02,
+   "median_slope_estimate": 0.9952141280620966,
+   "median_hazard_ratio_estimate": 0.7010029531222575
+  },
+  {
+   "design": "5,000 dogs, 3 years",
+   "effect": "no effect",
+   "n_trials": 400,
+   "mean_deaths": 2099.0025,
+   "detected_by_usual_test": 0.0375,
+   "slope_change_flagged": 0.055,
+   "flagged_as_faster_aging": 0.0225,
+   "median_slope_estimate": 0.9988564355863105,
+   "median_hazard_ratio_estimate": 1.0009219810617085
+  },
+  {
+   "design": "5,000 dogs, 3 years",
+   "effect": "aging slowed 20% for 1 year, benefit kept",
+   "n_trials": 400,
+   "mean_deaths": 2059.8925,
+   "detected_by_usual_test": 0.225,
+   "slope_change_flagged": 0.0825,
+   "flagged_as_faster_aging": 0.0175,
+   "median_slope_estimate": 0.9505506092490918,
+   "median_hazard_ratio_estimate": 0.9492234710194855
+  },
+  {
+   "design": "5,000 dogs, 3 years",
+   "effect": "aging slowed 50% for 1 year, benefit kept",
+   "n_trials": 400,
+   "mean_deaths": 1996.4225,
+   "detected_by_usual_test": 0.86,
+   "slope_change_flagged": 0.1925,
+   "flagged_as_faster_aging": 0.0,
+   "median_slope_estimate": 0.8660828800214235,
+   "median_hazard_ratio_estimate": 0.8734328015735848
+  },
+  {
+   "design": "5,000 dogs, 3 years",
+   "effect": "aging stopped for 1 year, benefit kept",
+   "n_trials": 400,
+   "mean_deaths": 1904.0875,
+   "detected_by_usual_test": 1.0,
+   "slope_change_flagged": 0.4875,
+   "flagged_as_faster_aging": 0.0,
+   "median_slope_estimate": 0.7451211545123761,
+   "median_hazard_ratio_estimate": 0.7623985219600966
+  },
+  {
+   "design": "5,000 dogs, 3 years",
+   "effect": "risk cut 30% for 1 year, then fades",
+   "n_trials": 400,
+   "mean_deaths": 2049.1075,
+   "detected_by_usual_test": 0.5075,
+   "slope_change_flagged": 0.925,
+   "flagged_as_faster_aging": 0.925,
+   "median_slope_estimate": 1.4444816113505796,
+   "median_hazard_ratio_estimate": 0.9147972822498103
+  },
+  {
+   "design": "5,000 dogs, 3 years",
+   "effect": "risk cut 50% for 1 year, then fades",
+   "n_trials": 400,
+   "mean_deaths": 2012.3225,
+   "detected_by_usual_test": 0.9175,
+   "slope_change_flagged": 1.0,
+   "flagged_as_faster_aging": 1.0,
+   "median_slope_estimate": 1.7959946903111013,
+   "median_hazard_ratio_estimate": 0.8567981123947781
+  },
+  {
+   "design": "5,000 dogs, 3 years",
+   "effect": "risk cut 30%, persists after treatment",
+   "n_trials": 400,
+   "mean_deaths": 1855.8225,
+   "detected_by_usual_test": 1.0,
+   "slope_change_flagged": 0.0425,
+   "flagged_as_faster_aging": 0.0325,
+   "median_slope_estimate": 0.9956489191595185,
+   "median_hazard_ratio_estimate": 0.7017930671190007
+  }
+ ]
+}

@@ -2,6 +2,22 @@
 
 One entry per experiment, newest first. Each entry says what was predicted, what happened, and what changed as a result.
 
+## 2026-11-10: experiment 004, old dogs and hidden frailty
+
+- **Question.** Does the doubling law hold for old dogs, and does hidden frailty break the fingerprint test?
+- **Predicted.** Levelling-off fits better; the plain law is fine to age 16 and fails by age 18; frailty would push false alarms above 10 percent in a long trial.
+- **Happened.** Levelling-off fits far better (confirmed). The plain law is 19 percent too high at 16, one year earlier than predicted (refuted), and 80 percent too high at 18 (confirmed). With frailty of the fitted size, false alarms stay near 6 percent (refuted, in the useful direction).
+- **Check.** All numbers reproduced independently; no errors. The check corrected our wording (risk bends, it does not level off) and showed that frailty three times larger would break the test.
+- **Changed.** "Follow dogs until death" stands, with a condition: a long trial should model differences between dogs. Two items added to `KNOWN_GAPS.md`.
+
+## 2026-11-10: experiment 003, treatment that stops after one year
+
+- **Question.** What can a trial detect when treatment lasts one year, and can a fading benefit fool the fingerprint test?
+- **Predicted.** One year of 20 percent slowed aging is undetectable in a 580-dog, 3-year trial; a year of stopped aging is detected about half the time; a fading risk cut is misread as faster aging.
+- **Happened.** 8 percent, 50 percent, and misread in 23 percent of 580-dog trials (93 percent of 5,000-dog trials). All four confirmed.
+- **Check.** Reproduced independently, including identical decisions on shared simulated trials; no errors.
+- **Changed.** Prediction 2 of the theory paper now says the slope comparison is valid only while treatment continues.
+
 ## 2026-11-10: experiment 002, the worn-out-cell model fitted to dogs
 
 - **Question.** Which setting of the model must differ between dogs and humans?
@@ -24,6 +40,6 @@ Predictions recorded in `001_trial_fingerprint/PREDICTION.md` and `002_dog_cell_
 
 ## Next in the queue
 
-1. **003: a fading effect.** The rapamycin trial treats for one year. Simulate a slope effect that stops when treatment stops, and measure how often the fingerprint test is fooled.
-2. **004: does the doubling law hold for old dogs?** Test for levelling-off in the dog tables above age 14, since experiment 001 depends on it.
-3. **005: fit the model itself, not the shortcut.** Refit experiment 002 using simulated death rates, to see whether any ranking of the alternatives survives.
+1. **005: fit the model itself, not the shortcut.** Refit experiment 002 by solving the model's equation directly, to see whether any ranking of the alternatives survives.
+2. **006: an analysis for stop-and-watch trials.** Build and test a model with separate on-treatment and after-treatment effects, so a fading benefit is not misread as faster aging.
+3. **007: differences between breeds.** Measure how much dogs differ by breed and size in the published tables, and test the fingerprint test against differences of that size.

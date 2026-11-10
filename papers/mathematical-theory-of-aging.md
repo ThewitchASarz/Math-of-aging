@@ -425,7 +425,7 @@ The theorems become science only where they stick their neck out. Each predictio
 
 - **From:** Theorems 2, 4 and 5.
 - **Claim:** A treatment that only lowers risk shifts the curve of log death rate against age sideways, keeping its slope. A treatment that slows aging changes the slope. A level-only treatment can add at most one doubling time unless it cuts risk by more than half: 2.2 years in dogs.
-- **Test:** Follow treated and placebo dogs until most have died, then compare the slopes of log death rate against age. Our simulation (experiment 001 in the repository) finds the trials now running are too short for this: with 3 to 4 years of follow-up a true 20 percent slowing of aging is recognised in 10 to 28 percent of trials, against 90 percent with 10 years.
+- **Test:** Follow treated and placebo dogs until most have died, then compare the slopes of log death rate against age. Our simulation (experiment 001 in the repository) finds the trials now running are too short for this: with 3 to 4 years of follow-up a true 20 percent slowing of aging is recognised in 10 to 28 percent of trials, against 90 percent with 10 years. The comparison is valid only while treatment continues: a benefit that fades after treatment stops is misread as faster aging (experiment 003).
 - **Killed if:** A trial shows a gain beyond one doubling time with parallel curves and a risk cut under half. That would contradict Assumption G for treated animals.
 
 ### Prediction 3: one dog year gained is worth about 3.5 human years

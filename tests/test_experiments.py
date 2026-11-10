@@ -7,6 +7,8 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parents[1]
 EXP1 = ROOT / "experiments" / "001_trial_fingerprint"
 EXP2 = ROOT / "experiments" / "002_dog_cell_model"
+EXP3 = ROOT / "experiments" / "003_fading_effect"
+EXP4 = ROOT / "experiments" / "004_old_dogs"
 
 
 def case(results, design_start, effect):
@@ -53,3 +55,26 @@ def test_experiment_002_recorded_result():
         assert fits["B"]["beta_ratio_to_human"] < 0.6                   # dogs clear less in that fit
     check = json.loads((EXP2 / "sde_check.json").read_text())
     assert 0.1 < check["max_abs_log_error"] < 0.3                       # the shortcut is only approximate
+
+
+def test_experiment_003_recorded_result():
+    r = json.loads((EXP3 / "results.json").read_text())
+    short = "580 dogs, 3 years"
+    assert case(r, short, "aging slowed 20% for 1 year, benefit kept")["detected_by_usual_test"] < 0.10
+    assert 0.40 < case(r, short, "aging stopped for 1 year, benefit kept")["detected_by_usual_test"] < 0.75
+    fade = case(r, short, "risk cut 30% for 1 year, then fades")
+    assert fade["slope_change_flagged"] > 0.08
+    assert fade["flagged_as_faster_aging"] > 0.9 * fade["slope_change_flagged"]   # read as faster aging
+    assert case(r, "5,000 dogs", "risk cut 30% for 1 year, then fades")["slope_change_flagged"] > 0.25
+
+
+def test_experiment_004_recorded_result():
+    r = json.loads((EXP4 / "results.json").read_text())
+    p1 = r["part1_uk_fit"]
+    assert p1["likelihood_ratio"] > 50 and 0.05 < p1["with_frailty"]["frailty_variance"] < 0.2
+    ratio = r["part2_forecast_old_ages"]["forecast_over_observed"]
+    assert ratio["14"] < 1.1 and ratio["15"] < 1.1          # the doubling law holds to about 15
+    assert ratio["16"] > 1.15 and ratio["18"] > 1.5         # and overstates risk after that
+    rows = {(c["design"], c["effect"]): c for c in r["part4_trials_with_frailty"]["cases"]}
+    assert rows[("1,300 dogs, 10 years", "risk cut 30%")]["slope_change_flagged"] < 0.10
+    assert rows[("1,300 dogs, 10 years", "aging slowed 20%")]["slope_change_flagged"] > 0.8

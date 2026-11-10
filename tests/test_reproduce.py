@@ -21,10 +21,13 @@ PARTS = {
     "escape_velocity": ["run_all.py"],
     "experiments/001_trial_fingerprint": ["fingerprint.py"],
     "experiments/002_dog_cell_model": ["dog_cell_model.py"],
+    "experiments/003_fading_effect": ["fading.py"],
+    "experiments/004_old_dogs": ["old_dogs.py"],
 }
 # Experiments count outcomes over simulated trials and stop optimisers at a tolerance, so a different
 # machine can move a count by one or two trials. They get a looser comparison.
-LOOSE = {"experiments/001_trial_fingerprint": (0.05, 0.011), "experiments/002_dog_cell_model": (0.02, 1e-3)}
+LOOSE = {"experiments/001_trial_fingerprint": (0.05, 0.011), "experiments/002_dog_cell_model": (0.02, 1e-3),
+         "experiments/003_fading_effect": (0.05, 0.011), "experiments/004_old_dogs": (0.05, 0.011)}
 SKIP_KEYS = ("runtime", "seconds", "elapsed", "time_s")
 
 

@@ -29,5 +29,7 @@ Every experiment follows the same seven steps, in order.
 | --- | --- | --- |
 | 001 | Can the dog trials now running tell a treatment that slows aging from one that only delays death? | Done. No: 10 to 28% of trials would recognise a true 20% slowing; 90% with 10 years of follow-up. All 4 predictions confirmed. |
 | 002 | When the worn-out-cell model is fitted to real dog data, which setting must differ from humans? | Done. Speed alone fails sixfold; which other setting differs cannot be told from death records. 2 confirmed, 1 refuted, 1 inconclusive; 1 claim withdrawn after the check. |
+| 003 | What can a trial detect when treatment stops after one year? | Done. One year of 20% slowed aging is detected in 8% of 580-dog, 3-year trials; a fading benefit is misread as faster aging in 23%. All 4 predictions confirmed. |
+| 004 | Does the doubling law hold for old dogs, and does hidden frailty break the fingerprint test? | Done. The law overstates risk from age 16 (19%) to 19 (95%); frailty of the fitted size does not break the test. 2 confirmed, 2 refuted. |
 
 The queue of next experiments is at the end of `LOG.md`.

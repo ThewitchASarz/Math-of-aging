@@ -1,0 +1,291 @@
+{
+ "note": "Parts 1-3 use the published dog life tables. Part 4 simulates trials with hidden frailty of the size fitted in part 1 and analyses them with the plain models of experiment 001.",
+ "seed": 20261112,
+ "part1_uk_fit": {
+  "plain": {
+   "a": 0.004967182365652174,
+   "b": 0.31954873730398153,
+   "doubling_time_years": 2.169143857077944,
+   "loglik": -76883.5360298162
+  },
+  "with_frailty": {
+   "a": 0.0040539974756693,
+   "b": 0.3459138429982158,
+   "frailty_variance": 0.10190214599720965,
+   "individual_doubling_time_years": 2.003814517950704,
+   "population_plateau_per_year": 3.394568775889056,
+   "loglik": -76833.22947815966
+  },
+  "likelihood_ratio": 100.6131033130805,
+  "p_value": 5.591275136936733e-24,
+  "p_value_note": "Halved because the frailty variance cannot be negative.",
+  "deaths_used": 29545.0,
+  "by_age": [
+   {
+    "age": 2,
+    "observed": 0.016435736703755213,
+    "plain": 0.01108924390672507,
+    "with_frailty": 0.009669494587466734
+   },
+   {
+    "age": 3,
+    "observed": 0.016955141536482837,
+    "plain": 0.015264415853551656,
+    "with_frailty": 0.01364948398923105
+   },
+   {
+    "age": 4,
+    "observed": 0.01974108427269138,
+    "plain": 0.021011567002224243,
+    "with_frailty": 0.019258235692860205
+   },
+   {
+    "age": 5,
+    "observed": 0.024442091152316412,
+    "plain": 0.028922557674307053,
+    "with_frailty": 0.027153006565660383
+   },
+   {
+    "age": 6,
+    "observed": 0.033144404885950385,
+    "plain": 0.03981208742475372,
+    "with_frailty": 0.03824715200572083
+   },
+   {
+    "age": 7,
+    "observed": 0.04853518137938871,
+    "plain": 0.054801595452405163,
+    "with_frailty": 0.053801017019593014
+   },
+   {
+    "age": 8,
+    "observed": 0.07107713604973019,
+    "plain": 0.07543475005688315,
+    "with_frailty": 0.07553643445734938
+   },
+   {
+    "age": 9,
+    "observed": 0.1014177862931213,
+    "plain": 0.1038364206218503,
+    "with_frailty": 0.10577230437471484
+   },
+   {
+    "age": 10,
+    "observed": 0.1443341130486812,
+    "plain": 0.14293150357663317,
+    "with_frailty": 0.14756813571496405
+   },
+   {
+    "age": 11,
+    "observed": 0.20797445173644474,
+    "plain": 0.19674613774560448,
+    "with_frailty": 0.20484209962934802
+   },
+   {
+    "age": 12,
+    "observed": 0.28013637874132785,
+    "plain": 0.2708223292219023,
+    "with_frailty": 0.2823963577824532
+   },
+   {
+    "age": 13,
+    "observed": 0.4090639123921533,
+    "plain": 0.3727886851838086,
+    "with_frailty": 0.3857361210999485
+   },
+   {
+    "age": 14,
+    "observed": 0.5402753831257574,
+    "plain": 0.51314603267888,
+    "with_frailty": 0.5205258162901959
+   },
+   {
+    "age": 15,
+    "observed": 0.7245780066934266,
+    "plain": 0.7063488279539419,
+    "with_frailty": 0.691531053945126
+   },
+   {
+    "age": 16,
+    "observed": 0.8982426620024522,
+    "plain": 0.972293723381723,
+    "with_frailty": 0.9010268266213527
+   },
+   {
+    "age": 17,
+    "observed": 0.9929034016428864,
+    "plain": 1.338368589448748,
+    "with_frailty": 1.1469747476547532
+   },
+   {
+    "age": 18,
+    "observed": 1.1500705859435851,
+    "plain": 1.8422730067545612,
+    "with_frailty": 1.4217084099890729
+   },
+   {
+    "age": 19,
+    "observed": 1.4796263009121098,
+    "plain": 2.5359006914637816,
+    "with_frailty": 1.7120810456335518
+   }
+  ]
+ },
+ "part2_forecast_old_ages": {
+  "fit_ages": "2-13",
+  "a": 0.004385168567269717,
+  "b": 0.33265005758927835,
+  "doubling_time_years": 2.0837127929067467,
+  "forecast_over_observed": {
+   "14": 1.0142823809543164,
+   "15": 1.0547681279661616,
+   "16": 1.1866333564052454,
+   "17": 1.4971706890666738,
+   "18": 1.802693542198531,
+   "19": 1.954170446564737
+  }
+ },
+ "part3_us_curvature": {
+  "quadratic_coefficient_per_year2": 0.0011808741108056955,
+  "local_doubling_time_at_age_4": 2.3706952497486977,
+  "local_doubling_time_at_age_15": 2.1772390445204928,
+  "forecast_over_observed_from_fit_2_13": {
+   "14": 0.9824046233909728,
+   "15": 1.062300591303336,
+   "16": 1.2212914580206309
+  }
+ },
+ "part4_trials_with_frailty": {
+  "trials_per_case": 400,
+  "cases": [
+   {
+    "design": "580 dogs, 3 years",
+    "effect": "no effect",
+    "n_trials": 400,
+    "detected_by_usual_test": 0.04,
+    "slope_change_flagged": 0.0325,
+    "median_slope_estimate": 0.9699123861418473
+   },
+   {
+    "design": "580 dogs, 3 years",
+    "effect": "risk cut 30%",
+    "n_trials": 400,
+    "detected_by_usual_test": 0.7625,
+    "slope_change_flagged": 0.045,
+    "median_slope_estimate": 1.0022490355616394
+   },
+   {
+    "design": "580 dogs, 3 years",
+    "effect": "risk cut 50%",
+    "n_trials": 400,
+    "detected_by_usual_test": 0.9975,
+    "slope_change_flagged": 0.0575,
+    "median_slope_estimate": 1.0454409671218197
+   },
+   {
+    "design": "580 dogs, 3 years",
+    "effect": "aging slowed 20%",
+    "n_trials": 400,
+    "detected_by_usual_test": 0.12,
+    "slope_change_flagged": 0.08,
+    "median_slope_estimate": 0.7804122506502691
+   },
+   {
+    "design": "1,300 dogs, 4 years",
+    "effect": "no effect",
+    "n_trials": 400,
+    "detected_by_usual_test": 0.0425,
+    "slope_change_flagged": 0.05,
+    "median_slope_estimate": 0.9979030171444332
+   },
+   {
+    "design": "1,300 dogs, 4 years",
+    "effect": "risk cut 30%",
+    "n_trials": 400,
+    "detected_by_usual_test": 1.0,
+    "slope_change_flagged": 0.06,
+    "median_slope_estimate": 1.0266682202483544
+   },
+   {
+    "design": "1,300 dogs, 4 years",
+    "effect": "risk cut 50%",
+    "n_trials": 400,
+    "detected_by_usual_test": 1.0,
+    "slope_change_flagged": 0.07,
+    "median_slope_estimate": 1.0510308418624277
+   },
+   {
+    "design": "1,300 dogs, 4 years",
+    "effect": "aging slowed 20%",
+    "n_trials": 400,
+    "detected_by_usual_test": 0.4775,
+    "slope_change_flagged": 0.2975,
+    "median_slope_estimate": 0.7843324789772318
+   },
+   {
+    "design": "1,300 dogs, 10 years",
+    "effect": "no effect",
+    "n_trials": 400,
+    "detected_by_usual_test": 0.055,
+    "slope_change_flagged": 0.0525,
+    "median_slope_estimate": 0.9888601934469693
+   },
+   {
+    "design": "1,300 dogs, 10 years",
+    "effect": "risk cut 30%",
+    "n_trials": 400,
+    "detected_by_usual_test": 1.0,
+    "slope_change_flagged": 0.055,
+    "median_slope_estimate": 1.0094680541918417
+   },
+   {
+    "design": "1,300 dogs, 10 years",
+    "effect": "risk cut 50%",
+    "n_trials": 400,
+    "detected_by_usual_test": 1.0,
+    "slope_change_flagged": 0.0975,
+    "median_slope_estimate": 1.0306491891046983
+   },
+   {
+    "design": "1,300 dogs, 10 years",
+    "effect": "aging slowed 20%",
+    "n_trials": 400,
+    "detected_by_usual_test": 0.9875,
+    "slope_change_flagged": 0.8725,
+    "median_slope_estimate": 0.7925958555815331
+   },
+   {
+    "design": "5,000 dogs, 3 years",
+    "effect": "no effect",
+    "n_trials": 400,
+    "detected_by_usual_test": 0.0675,
+    "slope_change_flagged": 0.04,
+    "median_slope_estimate": 0.9881692284395556
+   },
+   {
+    "design": "5,000 dogs, 3 years",
+    "effect": "risk cut 30%",
+    "n_trials": 400,
+    "detected_by_usual_test": 1.0,
+    "slope_change_flagged": 0.0425,
+    "median_slope_estimate": 1.0042219297356858
+   },
+   {
+    "design": "5,000 dogs, 3 years",
+    "effect": "risk cut 50%",
+    "n_trials": 400,
+    "detected_by_usual_test": 1.0,
+    "slope_change_flagged": 0.0475,
+    "median_slope_estimate": 1.0172732638553237
+   },
+   {
+    "design": "5,000 dogs, 3 years",
+    "effect": "aging slowed 20%",
+    "n_trials": 400,
+    "detected_by_usual_test": 0.6975,
+    "slope_change_flagged": 0.385,
+    "median_slope_estimate": 0.7943950641643491
+   }
+  ]
+ }
+}
