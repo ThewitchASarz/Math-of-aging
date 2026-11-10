@@ -1,0 +1,195 @@
+{
+ "seed": 20261114,
+ "part1_spread_of_risk": {
+  "note": "Variance of risk multipliers divided by the squared mean. Differences inside a breed or a size class are not counted, so these are lower bounds on the true spread between dogs.",
+  "breeds_in_table": 19,
+  "shortest_lived": [
+   "French Bulldog",
+   4.53
+  ],
+  "longest_lived": [
+   "Jack Russell Terrier",
+   12.72
+  ],
+  "variance_between_breeds_uk": 0.7064188568194505,
+  "variance_between_pure_breeds_uk": 0.7782363418504796,
+  "highest_to_lowest_breed_risk": 13.696004844984872,
+  "variance_between_size_classes_us": 0.14102126404577991,
+  "highest_to_lowest_size_risk": 3.985316044197936,
+  "fitted_frailty_variance_experiment_004": 0.102,
+  "variance_that_broke_the_test": 0.3
+ },
+ "part2_trials_with_mixed_sizes": {
+  "note": "Size-class rates of aging are a calibration to published life expectancies (scenario A), not a fit to full life tables. Class shares among trial dogs are assumed equal to US population shares.",
+  "size_classes": [
+   "toy",
+   "small",
+   "medium",
+   "large",
+   "giant"
+  ],
+  "rate_of_aging_per_year": [
+   0.3217404108181793,
+   0.316488031994736,
+   0.34358451707461857,
+   0.3898801338670896,
+   0.4962134541772647
+  ],
+  "population_share": [
+   0.22415565847819954,
+   0.29908383021963425,
+   0.13794914915353582,
+   0.3245147312979483,
+   0.014296630850682128
+  ],
+  "common_level_a": 0.0019931693453973443,
+  "trials_per_case": 300,
+  "gradient_check_max_relative_error": 9.294041249827254e-09,
+  "cases": [
+   {
+    "design": "1,300 dogs, 4 years",
+    "effect": "no effect",
+    "analysis": "ignoring size",
+    "n_trials": 300,
+    "detected_by_usual_test": 0.08666666666666667,
+    "slope_change_flagged": 0.09333333333333334,
+    "median_slope_estimate": 0.897977905502519
+   },
+   {
+    "design": "1,300 dogs, 4 years",
+    "effect": "no effect",
+    "analysis": "size-aware",
+    "n_trials": 300,
+    "detected_by_usual_test": 0.06666666666666667,
+    "slope_change_flagged": 0.06666666666666667,
+    "median_slope_estimate": 0.9871564908006363
+   },
+   {
+    "design": "1,300 dogs, 4 years",
+    "effect": "risk cut 30%",
+    "analysis": "ignoring size",
+    "n_trials": 300,
+    "detected_by_usual_test": 0.9933333333333333,
+    "slope_change_flagged": 0.06333333333333334,
+    "median_slope_estimate": 0.9413330394045689
+   },
+   {
+    "design": "1,300 dogs, 4 years",
+    "effect": "risk cut 30%",
+    "analysis": "size-aware",
+    "n_trials": 300,
+    "detected_by_usual_test": 1.0,
+    "slope_change_flagged": 0.04666666666666667,
+    "median_slope_estimate": 0.9762639227581869
+   },
+   {
+    "design": "1,300 dogs, 4 years",
+    "effect": "risk cut 50%",
+    "analysis": "ignoring size",
+    "n_trials": 300,
+    "detected_by_usual_test": 1.0,
+    "slope_change_flagged": 0.05333333333333334,
+    "median_slope_estimate": 0.9788958051615616
+   },
+   {
+    "design": "1,300 dogs, 4 years",
+    "effect": "risk cut 50%",
+    "analysis": "size-aware",
+    "n_trials": 300,
+    "detected_by_usual_test": 1.0,
+    "slope_change_flagged": 0.07666666666666666,
+    "median_slope_estimate": 0.980954098798835
+   },
+   {
+    "design": "1,300 dogs, 4 years",
+    "effect": "aging slowed 20%",
+    "analysis": "ignoring size",
+    "n_trials": 300,
+    "detected_by_usual_test": 0.3933333333333333,
+    "slope_change_flagged": 0.42333333333333334,
+    "median_slope_estimate": 0.7030209564470695
+   },
+   {
+    "design": "1,300 dogs, 4 years",
+    "effect": "aging slowed 20%",
+    "analysis": "size-aware",
+    "n_trials": 300,
+    "detected_by_usual_test": 0.4666666666666667,
+    "slope_change_flagged": 0.32,
+    "median_slope_estimate": 0.7778277210000843
+   },
+   {
+    "design": "1,300 dogs, 10 years",
+    "effect": "no effect",
+    "analysis": "ignoring size",
+    "n_trials": 300,
+    "detected_by_usual_test": 0.04666666666666667,
+    "slope_change_flagged": 0.07333333333333333,
+    "median_slope_estimate": 0.9795160894306534
+   },
+   {
+    "design": "1,300 dogs, 10 years",
+    "effect": "no effect",
+    "analysis": "size-aware",
+    "n_trials": 300,
+    "detected_by_usual_test": 0.04666666666666667,
+    "slope_change_flagged": 0.043333333333333335,
+    "median_slope_estimate": 1.0013423620025517
+   },
+   {
+    "design": "1,300 dogs, 10 years",
+    "effect": "risk cut 30%",
+    "analysis": "ignoring size",
+    "n_trials": 300,
+    "detected_by_usual_test": 0.9966666666666667,
+    "slope_change_flagged": 0.06666666666666667,
+    "median_slope_estimate": 0.9997379641575566
+   },
+   {
+    "design": "1,300 dogs, 10 years",
+    "effect": "risk cut 30%",
+    "analysis": "size-aware",
+    "n_trials": 300,
+    "detected_by_usual_test": 1.0,
+    "slope_change_flagged": 0.06,
+    "median_slope_estimate": 0.9952670535870075
+   },
+   {
+    "design": "1,300 dogs, 10 years",
+    "effect": "risk cut 50%",
+    "analysis": "ignoring size",
+    "n_trials": 300,
+    "detected_by_usual_test": 1.0,
+    "slope_change_flagged": 0.056666666666666664,
+    "median_slope_estimate": 0.9994436957059415
+   },
+   {
+    "design": "1,300 dogs, 10 years",
+    "effect": "risk cut 50%",
+    "analysis": "size-aware",
+    "n_trials": 300,
+    "detected_by_usual_test": 1.0,
+    "slope_change_flagged": 0.07333333333333333,
+    "median_slope_estimate": 0.9893812032135902
+   },
+   {
+    "design": "1,300 dogs, 10 years",
+    "effect": "aging slowed 20%",
+    "analysis": "ignoring size",
+    "n_trials": 300,
+    "detected_by_usual_test": 0.9966666666666667,
+    "slope_change_flagged": 0.8966666666666666,
+    "median_slope_estimate": 0.782145297015686
+   },
+   {
+    "design": "1,300 dogs, 10 years",
+    "effect": "aging slowed 20%",
+    "analysis": "size-aware",
+    "n_trials": 300,
+    "detected_by_usual_test": 1.0,
+    "slope_change_flagged": 0.9433333333333334,
+    "median_slope_estimate": 0.8005203052566934
+   }
+  ]
+ }
+}

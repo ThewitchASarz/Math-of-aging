@@ -1,0 +1,197 @@
+{
+ "note": "Trials simulated as in experiment 003, analysed with separate risk ratios on and after treatment. 'lasting_benefit_reported' is the share of trials in which a 5% likelihood-ratio test rejects 'the after-treatment ratio is 1'.",
+ "seed": 20261113,
+ "trials_per_case": 400,
+ "gradient_check_max_relative_error": 5.085206424155666e-08,
+ "cases": [
+  {
+   "design": "580 dogs, 3 years (the rapamycin trial's shape)",
+   "effect": "no effect",
+   "n_trials": 400,
+   "lasting_benefit_reported": 0.0475,
+   "any_effect_reported": 0.045,
+   "median_ratio_on_treatment": 1.0088363704247338,
+   "median_ratio_after_treatment": 1.0072994480770383
+  },
+  {
+   "design": "580 dogs, 3 years (the rapamycin trial's shape)",
+   "effect": "aging slowed 20% for 1 year, benefit kept",
+   "n_trials": 400,
+   "lasting_benefit_reported": 0.0825,
+   "any_effect_reported": 0.08,
+   "median_ratio_on_treatment": 0.9724529347621611,
+   "median_ratio_after_treatment": 0.9328569386626409
+  },
+  {
+   "design": "580 dogs, 3 years (the rapamycin trial's shape)",
+   "effect": "aging slowed 50% for 1 year, benefit kept",
+   "n_trials": 400,
+   "lasting_benefit_reported": 0.2175,
+   "any_effect_reported": 0.1625,
+   "median_ratio_on_treatment": 0.9112829959019119,
+   "median_ratio_after_treatment": 0.8447388080107556
+  },
+  {
+   "design": "580 dogs, 3 years (the rapamycin trial's shape)",
+   "effect": "aging stopped for 1 year, benefit kept",
+   "n_trials": 400,
+   "lasting_benefit_reported": 0.5575,
+   "any_effect_reported": 0.47,
+   "median_ratio_on_treatment": 0.852547483414015,
+   "median_ratio_after_treatment": 0.7288118146401793
+  },
+  {
+   "design": "580 dogs, 3 years (the rapamycin trial's shape)",
+   "effect": "risk cut 30% for 1 year, then fades",
+   "n_trials": 400,
+   "lasting_benefit_reported": 0.045,
+   "any_effect_reported": 0.315,
+   "median_ratio_on_treatment": 0.695655302522975,
+   "median_ratio_after_treatment": 1.0027665498081184
+  },
+  {
+   "design": "580 dogs, 3 years (the rapamycin trial's shape)",
+   "effect": "risk cut 50% for 1 year, then fades",
+   "n_trials": 400,
+   "lasting_benefit_reported": 0.045,
+   "any_effect_reported": 0.7925,
+   "median_ratio_on_treatment": 0.491675250683346,
+   "median_ratio_after_treatment": 0.9880060924672455
+  },
+  {
+   "design": "580 dogs, 3 years (the rapamycin trial's shape)",
+   "effect": "risk cut 30%, persists after treatment",
+   "n_trials": 400,
+   "lasting_benefit_reported": 0.645,
+   "any_effect_reported": 0.6325,
+   "median_ratio_on_treatment": 0.6932459950967442,
+   "median_ratio_after_treatment": 0.7008154117209522
+  },
+  {
+   "design": "580 dogs, 10 years",
+   "effect": "no effect",
+   "n_trials": 400,
+   "lasting_benefit_reported": 0.0725,
+   "any_effect_reported": 0.0525,
+   "median_ratio_on_treatment": 1.0080868031005044,
+   "median_ratio_after_treatment": 0.9954523485458879
+  },
+  {
+   "design": "580 dogs, 10 years",
+   "effect": "aging slowed 20% for 1 year, benefit kept",
+   "n_trials": 400,
+   "lasting_benefit_reported": 0.09,
+   "any_effect_reported": 0.0825,
+   "median_ratio_on_treatment": 0.9794225142060122,
+   "median_ratio_after_treatment": 0.9414503763420804
+  },
+  {
+   "design": "580 dogs, 10 years",
+   "effect": "aging slowed 50% for 1 year, benefit kept",
+   "n_trials": 400,
+   "lasting_benefit_reported": 0.47,
+   "any_effect_reported": 0.365,
+   "median_ratio_on_treatment": 0.9215806416739408,
+   "median_ratio_after_treatment": 0.8493934405877581
+  },
+  {
+   "design": "580 dogs, 10 years",
+   "effect": "aging stopped for 1 year, benefit kept",
+   "n_trials": 400,
+   "lasting_benefit_reported": 0.94,
+   "any_effect_reported": 0.9175,
+   "median_ratio_on_treatment": 0.8611871160288702,
+   "median_ratio_after_treatment": 0.7222272824078311
+  },
+  {
+   "design": "580 dogs, 10 years",
+   "effect": "risk cut 30% for 1 year, then fades",
+   "n_trials": 400,
+   "lasting_benefit_reported": 0.0525,
+   "any_effect_reported": 0.3725,
+   "median_ratio_on_treatment": 0.693777829458415,
+   "median_ratio_after_treatment": 1.0001051402593635
+  },
+  {
+   "design": "580 dogs, 10 years",
+   "effect": "risk cut 50% for 1 year, then fades",
+   "n_trials": 400,
+   "lasting_benefit_reported": 0.0375,
+   "any_effect_reported": 0.8425,
+   "median_ratio_on_treatment": 0.5060166934563244,
+   "median_ratio_after_treatment": 0.9993773724931013
+  },
+  {
+   "design": "580 dogs, 10 years",
+   "effect": "risk cut 30%, persists after treatment",
+   "n_trials": 400,
+   "lasting_benefit_reported": 0.985,
+   "any_effect_reported": 0.9775,
+   "median_ratio_on_treatment": 0.7030183413935449,
+   "median_ratio_after_treatment": 0.6967601932927188
+  },
+  {
+   "design": "5,000 dogs, 3 years",
+   "effect": "no effect",
+   "n_trials": 400,
+   "lasting_benefit_reported": 0.0425,
+   "any_effect_reported": 0.0475,
+   "median_ratio_on_treatment": 1.0054006517893619,
+   "median_ratio_after_treatment": 1.0010051103713753
+  },
+  {
+   "design": "5,000 dogs, 3 years",
+   "effect": "aging slowed 20% for 1 year, benefit kept",
+   "n_trials": 400,
+   "lasting_benefit_reported": 0.265,
+   "any_effect_reported": 0.21,
+   "median_ratio_on_treatment": 0.9682200470900784,
+   "median_ratio_after_treatment": 0.9405043045465367
+  },
+  {
+   "design": "5,000 dogs, 3 years",
+   "effect": "aging slowed 50% for 1 year, benefit kept",
+   "n_trials": 400,
+   "lasting_benefit_reported": 0.87,
+   "any_effect_reported": 0.8125,
+   "median_ratio_on_treatment": 0.929146106713342,
+   "median_ratio_after_treatment": 0.8574578542058489
+  },
+  {
+   "design": "5,000 dogs, 3 years",
+   "effect": "aging stopped for 1 year, benefit kept",
+   "n_trials": 400,
+   "lasting_benefit_reported": 1.0,
+   "any_effect_reported": 1.0,
+   "median_ratio_on_treatment": 0.8512980556717171,
+   "median_ratio_after_treatment": 0.7290684078681553
+  },
+  {
+   "design": "5,000 dogs, 3 years",
+   "effect": "risk cut 30% for 1 year, then fades",
+   "n_trials": 400,
+   "lasting_benefit_reported": 0.0575,
+   "any_effect_reported": 0.995,
+   "median_ratio_on_treatment": 0.6987621542268958,
+   "median_ratio_after_treatment": 1.001790361075586
+  },
+  {
+   "design": "5,000 dogs, 3 years",
+   "effect": "risk cut 50% for 1 year, then fades",
+   "n_trials": 400,
+   "lasting_benefit_reported": 0.0625,
+   "any_effect_reported": 1.0,
+   "median_ratio_on_treatment": 0.4954380591177002,
+   "median_ratio_after_treatment": 1.0034621441465892
+  },
+  {
+   "design": "5,000 dogs, 3 years",
+   "effect": "risk cut 30%, persists after treatment",
+   "n_trials": 400,
+   "lasting_benefit_reported": 1.0,
+   "any_effect_reported": 1.0,
+   "median_ratio_on_treatment": 0.7049381086235758,
+   "median_ratio_after_treatment": 0.7004350638765191
+  }
+ ]
+}

@@ -31,5 +31,7 @@ Every experiment follows the same seven steps, in order.
 | 002 | When the worn-out-cell model is fitted to real dog data, which setting must differ from humans? | Done. Speed alone fails sixfold; which other setting differs cannot be told from death records. 2 confirmed, 1 refuted, 1 inconclusive; 1 claim withdrawn after the check. |
 | 003 | What can a trial detect when treatment stops after one year? | Done. One year of 20% slowed aging is detected in 8% of 580-dog, 3-year trials; a fading benefit is misread as faster aging in 23%. All 4 predictions confirmed. |
 | 004 | Does the doubling law hold for old dogs, and does hidden frailty break the fingerprint test? | Done. The law overstates risk from age 16 (19%) to 19 (95%); frailty of the fitted size does not break the test. 2 confirmed, 2 refuted. |
+| 006 | Can a two-period analysis read a trial in which treatment stops? | Done. Yes: a fading benefit is reported as lasting in 4 to 6% of trials; a lasting one is detected. Blind to modest slowing. All 4 predictions confirmed. |
+| 007 | Are breed and size differences large enough to break the slope test? | Done. Size mix: no, but adjust for it (false alarms 9% unadjusted in short trials). Breed differences: still open. 3 confirmed, 1 refuted. |
 
-The queue of next experiments is at the end of `LOG.md`.
+Experiment 005 is still in the queue. The queue of next experiments is at the end of `LOG.md`.

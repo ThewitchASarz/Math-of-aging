@@ -9,6 +9,8 @@ EXP1 = ROOT / "experiments" / "001_trial_fingerprint"
 EXP2 = ROOT / "experiments" / "002_dog_cell_model"
 EXP3 = ROOT / "experiments" / "003_fading_effect"
 EXP4 = ROOT / "experiments" / "004_old_dogs"
+EXP6 = ROOT / "experiments" / "006_stop_and_watch"
+EXP7 = ROOT / "experiments" / "007_breed_differences"
 
 
 def case(results, design_start, effect):
@@ -78,3 +80,28 @@ def test_experiment_004_recorded_result():
     rows = {(c["design"], c["effect"]): c for c in r["part4_trials_with_frailty"]["cases"]}
     assert rows[("1,300 dogs, 10 years", "risk cut 30%")]["slope_change_flagged"] < 0.10
     assert rows[("1,300 dogs, 10 years", "aging slowed 20%")]["slope_change_flagged"] > 0.8
+
+
+def test_experiment_006_recorded_result():
+    r = json.loads((EXP6 / "results.json").read_text())
+    assert r["gradient_check_max_relative_error"] < 1e-5
+    for c in r["cases"]:
+        if "fades" in c["effect"] or c["effect"] == "no effect":
+            assert 0.02 < c["lasting_benefit_reported"] < 0.09          # not fooled by a fading benefit
+    short = "580 dogs, 3 years"
+    assert case(r, short, "risk cut 30%, persists after treatment")["lasting_benefit_reported"] > 0.5
+    assert case(r, short, "aging slowed 20% for 1 year, benefit kept")["lasting_benefit_reported"] < 0.10
+    assert case(r, "580 dogs, 10 years", "aging stopped for 1 year, benefit kept")["lasting_benefit_reported"] > 0.85
+
+
+def test_experiment_007_recorded_result():
+    r = json.loads((EXP7 / "results.json").read_text())
+    p1 = r["part1_spread_of_risk"]
+    assert p1["variance_between_breeds_uk"] > 0.2 > p1["variance_between_size_classes_us"]
+    assert p1["shortest_lived"][0] == "French Bulldog"
+    rows = {(c["design"], c["effect"], c["analysis"]): c for c in r["part2_trials_with_mixed_sizes"]["cases"]}
+    for (design, effect, analysis), c in rows.items():
+        if analysis == "size-aware" and effect != "aging slowed 20%":
+            assert 0.02 < c["slope_change_flagged"] < 0.09               # size-aware analysis keeps its size
+    assert rows[("1,300 dogs, 10 years", "aging slowed 20%", "size-aware")]["slope_change_flagged"] > 0.8
+    assert rows[("1,300 dogs, 10 years", "risk cut 50%", "ignoring size")]["slope_change_flagged"] < 0.10

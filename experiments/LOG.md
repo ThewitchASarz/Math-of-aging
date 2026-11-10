@@ -2,6 +2,22 @@
 
 One entry per experiment, newest first. Each entry says what was predicted, what happened, and what changed as a result.
 
+## 2026-11-10: experiment 007, differences between breeds and sizes
+
+- **Question.** Are real differences between dogs big enough to break the slope test, and does modelling size fix it?
+- **Predicted.** Breed spread above 0.2; ignoring size breaks the test in long trials; a baseline per size class fixes it and keeps power.
+- **Happened.** Breed spread 0.71 as published, but 0.29 without one unreliable breed figure (confirmed with a caveat). Ignoring size does not break long trials (refuted) but inflates false alarms to 9 percent in 4-year trials. Size-aware analysis: 4 to 8 percent, 94 percent power (both confirmed).
+- **Check.** Reproduced independently. The check traced the French Bulldog problem to the source paper and confirmed the 9 percent with 2,000 trials.
+- **Changed.** Recommendation: adjust for size class. Whether breed differences break the test stays open and moves to the queue.
+
+## 2026-11-10: experiment 006, an analysis for stop-and-watch trials
+
+- **Question.** Can a two-period analysis read a trial in which treatment stops?
+- **Predicted.** Not fooled by a fading benefit; detects a lasting one; blind to one year of modest slowing.
+- **Happened.** Fading benefit reported as lasting in 4 to 6 percent of trials; a persisting 30 percent cut in 65 percent; a year of stopped aging in 56 percent (94 percent with 10 years); 20 percent slowing in 8 percent. All four confirmed.
+- **Check.** Reproduced independently; no errors. The check added limits: the test cannot tell slowed aging from a persisting risk cut, a partial fade was not tested, and strong hidden differences between dogs inflate false alarms.
+- **Changed.** The misreading found in experiment 003 has a fix. Two limits added to `KNOWN_GAPS.md`.
+
 ## 2026-11-10: experiment 004, old dogs and hidden frailty
 
 - **Question.** Does the doubling law hold for old dogs, and does hidden frailty break the fingerprint test?
@@ -40,6 +56,7 @@ Predictions recorded in `001_trial_fingerprint/PREDICTION.md` and `002_dog_cell_
 
 ## Next in the queue
 
-1. **005: fit the model itself, not the shortcut.** Refit experiment 002 by solving the model's equation directly, to see whether any ranking of the alternatives survives.
-2. **006: an analysis for stop-and-watch trials.** Build and test a model with separate on-treatment and after-treatment effects, so a fading benefit is not misread as faster aging.
-3. **007: differences between breeds.** Measure how much dogs differ by breed and size in the published tables, and test the fingerprint test against differences of that size.
+1. **008: differences between breeds.** Simulate trials with breed-level differences across the plausible range (spread 0.15 to 0.7) and test an analysis that models them, since stratifying by hundreds of breeds is not possible.
+2. **005: fit the cell model itself, not the shortcut.** Refit experiment 002 by solving the model's equation directly.
+3. **009: a partial fade.** Repeat experiment 006 with benefits that fade part of the way.
+4. **010: what trial would settle it?** Use experiments 001 to 009 to find the smallest dog trial (dogs, years, treatment length, analysis) that recognises a 20 percent slowing of aging 80 percent of the time.

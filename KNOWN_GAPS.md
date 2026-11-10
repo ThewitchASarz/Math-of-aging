@@ -35,6 +35,9 @@ Things in this project that are unverified, unresolved or approximate. Read this
 - **The fingerprint test is valid only while treatment continues** (experiment 003). A benefit that fades after treatment stops is misread as faster aging. No analysis for stop-and-watch trials has been built yet.
 - **The doubling law overstates dog death rates from about age 16** (experiment 004): by 19 percent at 16 and by 50 to 95 percent at 17 to 19 when fitted to younger ages. Results here that concern dogs older than 15 lean on it.
 - **Hidden differences between dogs.** The fingerprint test holds up under frailty of the size fitted to the UK table, but not under frailty three times larger. Differences between breeds have not been measured against that threshold.
+- **Stop-and-watch trials: use the two-period analysis of experiment 006, and know its limits.** It cannot tell slowed aging from a risk cut that persists; a partial fade was not tested; and "no lasting benefit" is not evidence against modest slowing (power 8 percent for a year of 20 percent slowing in 580 dogs).
+- **Ignoring size class inflates the slope test's false-alarm rate to about 9 percent in 4-year trials** (experiment 007). A baseline per size class fixes it.
+- **Breed differences are unmeasured against the breaking point.** Published breed life expectancies give a spread of 0.15 to 0.71 depending on the French Bulldog figure, which the source paper itself flags as biased by the breed's rapid growth. A spread of 0.3 broke the slope test.
 - **The UK dog table is built from deaths in one period**, not by following dogs. Its shape at the oldest ages mixes aging with breed mix and recording errors.
 
 ## Judgement, not data
