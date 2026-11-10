@@ -1,0 +1,449 @@
+{
+ "note": "Share of simulated trials in which the slope test of experiment 001 recognises a true slowing of aging. Treatment is continuous; entry ages 7 to 12 are an assumption.",
+ "seed": 20261115,
+ "trials_per_case": 300,
+ "smallest_trial_reaching_80_percent": {
+  "aging slowed 20%, 4 years": null,
+  "aging slowed 20%, 6 years": 5000,
+  "aging slowed 20%, 8 years": 1300,
+  "aging slowed 20%, 10 years": 1300,
+  "aging slowed 30%, 4 years": 5000,
+  "aging slowed 30%, 6 years": 1300,
+  "aging slowed 30%, 8 years": 600,
+  "aging slowed 30%, 10 years": 600
+ },
+ "cases": [
+  {
+   "dogs": 300,
+   "years": 4.0,
+   "effect": "aging slowed 20%",
+   "n_trials": 300,
+   "share_of_dogs_dead": 0.5487666666666666,
+   "slowing_recognised": 0.08333333333333333,
+   "detected_by_usual_test": 0.15666666666666668
+  },
+  {
+   "dogs": 300,
+   "years": 4.0,
+   "effect": "aging slowed 30%",
+   "n_trials": 300,
+   "share_of_dogs_dead": 0.5353888888888889,
+   "slowing_recognised": 0.14666666666666667,
+   "detected_by_usual_test": 0.24333333333333335
+  },
+  {
+   "dogs": 300,
+   "years": 6.0,
+   "effect": "aging slowed 20%",
+   "n_trials": 300,
+   "share_of_dogs_dead": 0.7890444444444444,
+   "slowing_recognised": 0.15666666666666668,
+   "detected_by_usual_test": 0.33666666666666667
+  },
+  {
+   "dogs": 300,
+   "years": 6.0,
+   "effect": "aging slowed 30%",
+   "n_trials": 300,
+   "share_of_dogs_dead": 0.7718111111111111,
+   "slowing_recognised": 0.2966666666666667,
+   "detected_by_usual_test": 0.5433333333333333
+  },
+  {
+   "dogs": 300,
+   "years": 8.0,
+   "effect": "aging slowed 20%",
+   "n_trials": 300,
+   "share_of_dogs_dead": 0.9308666666666666,
+   "slowing_recognised": 0.23666666666666666,
+   "detected_by_usual_test": 0.5266666666666666
+  },
+  {
+   "dogs": 300,
+   "years": 8.0,
+   "effect": "aging slowed 30%",
+   "n_trials": 300,
+   "share_of_dogs_dead": 0.913811111111111,
+   "slowing_recognised": 0.48333333333333334,
+   "detected_by_usual_test": 0.83
+  },
+  {
+   "dogs": 300,
+   "years": 10.0,
+   "effect": "aging slowed 20%",
+   "n_trials": 300,
+   "share_of_dogs_dead": 0.9847444444444445,
+   "slowing_recognised": 0.38,
+   "detected_by_usual_test": 0.6033333333333334
+  },
+  {
+   "dogs": 300,
+   "years": 10.0,
+   "effect": "aging slowed 30%",
+   "n_trials": 300,
+   "share_of_dogs_dead": 0.9750999999999999,
+   "slowing_recognised": 0.5933333333333334,
+   "detected_by_usual_test": 0.92
+  },
+  {
+   "dogs": 600,
+   "years": 4.0,
+   "effect": "aging slowed 20%",
+   "n_trials": 300,
+   "share_of_dogs_dead": 0.5475944444444445,
+   "slowing_recognised": 0.10333333333333333,
+   "detected_by_usual_test": 0.22
+  },
+  {
+   "dogs": 600,
+   "years": 4.0,
+   "effect": "aging slowed 30%",
+   "n_trials": 300,
+   "share_of_dogs_dead": 0.5332944444444445,
+   "slowing_recognised": 0.25333333333333335,
+   "detected_by_usual_test": 0.4266666666666667
+  },
+  {
+   "dogs": 600,
+   "years": 6.0,
+   "effect": "aging slowed 20%",
+   "n_trials": 300,
+   "share_of_dogs_dead": 0.7889555555555555,
+   "slowing_recognised": 0.32666666666666666,
+   "detected_by_usual_test": 0.5533333333333333
+  },
+  {
+   "dogs": 600,
+   "years": 6.0,
+   "effect": "aging slowed 30%",
+   "n_trials": 300,
+   "share_of_dogs_dead": 0.7681222222222223,
+   "slowing_recognised": 0.5066666666666667,
+   "detected_by_usual_test": 0.8566666666666667
+  },
+  {
+   "dogs": 600,
+   "years": 8.0,
+   "effect": "aging slowed 20%",
+   "n_trials": 300,
+   "share_of_dogs_dead": 0.9296166666666666,
+   "slowing_recognised": 0.46,
+   "detected_by_usual_test": 0.78
+  },
+  {
+   "dogs": 600,
+   "years": 8.0,
+   "effect": "aging slowed 30%",
+   "n_trials": 300,
+   "share_of_dogs_dead": 0.9122166666666668,
+   "slowing_recognised": 0.8066666666666666,
+   "detected_by_usual_test": 0.98
+  },
+  {
+   "dogs": 600,
+   "years": 10.0,
+   "effect": "aging slowed 20%",
+   "n_trials": 300,
+   "share_of_dogs_dead": 0.9858611111111111,
+   "slowing_recognised": 0.5766666666666667,
+   "detected_by_usual_test": 0.85
+  },
+  {
+   "dogs": 600,
+   "years": 10.0,
+   "effect": "aging slowed 30%",
+   "n_trials": 300,
+   "share_of_dogs_dead": 0.9752,
+   "slowing_recognised": 0.92,
+   "detected_by_usual_test": 0.9933333333333333
+  },
+  {
+   "dogs": 1000,
+   "years": 4.0,
+   "effect": "aging slowed 20%",
+   "n_trials": 300,
+   "share_of_dogs_dead": 0.5477733333333333,
+   "slowing_recognised": 0.16,
+   "detected_by_usual_test": 0.3333333333333333
+  },
+  {
+   "dogs": 1000,
+   "years": 4.0,
+   "effect": "aging slowed 30%",
+   "n_trials": 300,
+   "share_of_dogs_dead": 0.5349333333333333,
+   "slowing_recognised": 0.34,
+   "detected_by_usual_test": 0.6366666666666667
+  },
+  {
+   "dogs": 1000,
+   "years": 6.0,
+   "effect": "aging slowed 20%",
+   "n_trials": 300,
+   "share_of_dogs_dead": 0.78967,
+   "slowing_recognised": 0.4866666666666667,
+   "detected_by_usual_test": 0.73
+  },
+  {
+   "dogs": 1000,
+   "years": 6.0,
+   "effect": "aging slowed 30%",
+   "n_trials": 300,
+   "share_of_dogs_dead": 0.7705933333333334,
+   "slowing_recognised": 0.76,
+   "detected_by_usual_test": 0.99
+  },
+  {
+   "dogs": 1000,
+   "years": 8.0,
+   "effect": "aging slowed 20%",
+   "n_trials": 300,
+   "share_of_dogs_dead": 0.9297033333333333,
+   "slowing_recognised": 0.6933333333333334,
+   "detected_by_usual_test": 0.9133333333333333
+  },
+  {
+   "dogs": 1000,
+   "years": 8.0,
+   "effect": "aging slowed 30%",
+   "n_trials": 300,
+   "share_of_dogs_dead": 0.9130866666666667,
+   "slowing_recognised": 0.9466666666666667,
+   "detected_by_usual_test": 1.0
+  },
+  {
+   "dogs": 1000,
+   "years": 10.0,
+   "effect": "aging slowed 20%",
+   "n_trials": 300,
+   "share_of_dogs_dead": 0.98522,
+   "slowing_recognised": 0.7933333333333333,
+   "detected_by_usual_test": 0.9633333333333334
+  },
+  {
+   "dogs": 1000,
+   "years": 10.0,
+   "effect": "aging slowed 30%",
+   "n_trials": 300,
+   "share_of_dogs_dead": 0.9756433333333333,
+   "slowing_recognised": 0.9833333333333333,
+   "detected_by_usual_test": 1.0
+  },
+  {
+   "dogs": 1300,
+   "years": 4.0,
+   "effect": "aging slowed 20%",
+   "n_trials": 300,
+   "share_of_dogs_dead": 0.5479538461538461,
+   "slowing_recognised": 0.22,
+   "detected_by_usual_test": 0.3933333333333333
+  },
+  {
+   "dogs": 1300,
+   "years": 4.0,
+   "effect": "aging slowed 30%",
+   "n_trials": 300,
+   "share_of_dogs_dead": 0.5343666666666667,
+   "slowing_recognised": 0.44,
+   "detected_by_usual_test": 0.7666666666666667
+  },
+  {
+   "dogs": 1300,
+   "years": 6.0,
+   "effect": "aging slowed 20%",
+   "n_trials": 300,
+   "share_of_dogs_dead": 0.7881051282051281,
+   "slowing_recognised": 0.4866666666666667,
+   "detected_by_usual_test": 0.8666666666666667
+  },
+  {
+   "dogs": 1300,
+   "years": 6.0,
+   "effect": "aging slowed 30%",
+   "n_trials": 300,
+   "share_of_dogs_dead": 0.7707256410256411,
+   "slowing_recognised": 0.8633333333333333,
+   "detected_by_usual_test": 0.99
+  },
+  {
+   "dogs": 1300,
+   "years": 8.0,
+   "effect": "aging slowed 20%",
+   "n_trials": 300,
+   "share_of_dogs_dead": 0.9298692307692307,
+   "slowing_recognised": 0.8066666666666666,
+   "detected_by_usual_test": 0.9933333333333333
+  },
+  {
+   "dogs": 1300,
+   "years": 8.0,
+   "effect": "aging slowed 30%",
+   "n_trials": 300,
+   "share_of_dogs_dead": 0.9137717948717949,
+   "slowing_recognised": 0.9866666666666667,
+   "detected_by_usual_test": 1.0
+  },
+  {
+   "dogs": 1300,
+   "years": 10.0,
+   "effect": "aging slowed 20%",
+   "n_trials": 300,
+   "share_of_dogs_dead": 0.9852333333333333,
+   "slowing_recognised": 0.8966666666666666,
+   "detected_by_usual_test": 0.9933333333333333
+  },
+  {
+   "dogs": 1300,
+   "years": 10.0,
+   "effect": "aging slowed 30%",
+   "n_trials": 300,
+   "share_of_dogs_dead": 0.9754615384615384,
+   "slowing_recognised": 0.9966666666666667,
+   "detected_by_usual_test": 1.0
+  },
+  {
+   "dogs": 2000,
+   "years": 4.0,
+   "effect": "aging slowed 20%",
+   "n_trials": 300,
+   "share_of_dogs_dead": 0.5472933333333333,
+   "slowing_recognised": 0.3433333333333333,
+   "detected_by_usual_test": 0.5933333333333334
+  },
+  {
+   "dogs": 2000,
+   "years": 4.0,
+   "effect": "aging slowed 30%",
+   "n_trials": 300,
+   "share_of_dogs_dead": 0.5346533333333333,
+   "slowing_recognised": 0.58,
+   "detected_by_usual_test": 0.8866666666666667
+  },
+  {
+   "dogs": 2000,
+   "years": 6.0,
+   "effect": "aging slowed 20%",
+   "n_trials": 300,
+   "share_of_dogs_dead": 0.7887733333333333,
+   "slowing_recognised": 0.69,
+   "detected_by_usual_test": 0.96
+  },
+  {
+   "dogs": 2000,
+   "years": 6.0,
+   "effect": "aging slowed 30%",
+   "n_trials": 300,
+   "share_of_dogs_dead": 0.7688466666666667,
+   "slowing_recognised": 0.96,
+   "detected_by_usual_test": 1.0
+  },
+  {
+   "dogs": 2000,
+   "years": 8.0,
+   "effect": "aging slowed 20%",
+   "n_trials": 300,
+   "share_of_dogs_dead": 0.9301033333333334,
+   "slowing_recognised": 0.92,
+   "detected_by_usual_test": 0.9966666666666667
+  },
+  {
+   "dogs": 2000,
+   "years": 8.0,
+   "effect": "aging slowed 30%",
+   "n_trials": 300,
+   "share_of_dogs_dead": 0.9134950000000001,
+   "slowing_recognised": 0.9966666666666667,
+   "detected_by_usual_test": 1.0
+  },
+  {
+   "dogs": 2000,
+   "years": 10.0,
+   "effect": "aging slowed 20%",
+   "n_trials": 300,
+   "share_of_dogs_dead": 0.9851066666666667,
+   "slowing_recognised": 0.9866666666666667,
+   "detected_by_usual_test": 1.0
+  },
+  {
+   "dogs": 2000,
+   "years": 10.0,
+   "effect": "aging slowed 30%",
+   "n_trials": 300,
+   "share_of_dogs_dead": 0.9757283333333333,
+   "slowing_recognised": 1.0,
+   "detected_by_usual_test": 1.0
+  },
+  {
+   "dogs": 5000,
+   "years": 4.0,
+   "effect": "aging slowed 20%",
+   "n_trials": 300,
+   "share_of_dogs_dead": 0.54693,
+   "slowing_recognised": 0.67,
+   "detected_by_usual_test": 0.92
+  },
+  {
+   "dogs": 5000,
+   "years": 4.0,
+   "effect": "aging slowed 30%",
+   "n_trials": 300,
+   "share_of_dogs_dead": 0.5353706666666667,
+   "slowing_recognised": 0.9366666666666666,
+   "detected_by_usual_test": 1.0
+  },
+  {
+   "dogs": 5000,
+   "years": 6.0,
+   "effect": "aging slowed 20%",
+   "n_trials": 300,
+   "share_of_dogs_dead": 0.7880706666666667,
+   "slowing_recognised": 0.9766666666666667,
+   "detected_by_usual_test": 1.0
+  },
+  {
+   "dogs": 5000,
+   "years": 6.0,
+   "effect": "aging slowed 30%",
+   "n_trials": 300,
+   "share_of_dogs_dead": 0.7696806666666667,
+   "slowing_recognised": 1.0,
+   "detected_by_usual_test": 1.0
+  },
+  {
+   "dogs": 5000,
+   "years": 8.0,
+   "effect": "aging slowed 20%",
+   "n_trials": 300,
+   "share_of_dogs_dead": 0.930032,
+   "slowing_recognised": 1.0,
+   "detected_by_usual_test": 1.0
+  },
+  {
+   "dogs": 5000,
+   "years": 8.0,
+   "effect": "aging slowed 30%",
+   "n_trials": 300,
+   "share_of_dogs_dead": 0.9133293333333333,
+   "slowing_recognised": 1.0,
+   "detected_by_usual_test": 1.0
+  },
+  {
+   "dogs": 5000,
+   "years": 10.0,
+   "effect": "aging slowed 20%",
+   "n_trials": 300,
+   "share_of_dogs_dead": 0.9853126666666667,
+   "slowing_recognised": 1.0,
+   "detected_by_usual_test": 1.0
+  },
+  {
+   "dogs": 5000,
+   "years": 10.0,
+   "effect": "aging slowed 30%",
+   "n_trials": 300,
+   "share_of_dogs_dead": 0.97549,
+   "slowing_recognised": 1.0,
+   "detected_by_usual_test": 1.0
+  }
+ ]
+}

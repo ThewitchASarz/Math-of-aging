@@ -33,5 +33,6 @@ Every experiment follows the same seven steps, in order.
 | 004 | Does the doubling law hold for old dogs, and does hidden frailty break the fingerprint test? | Done. The law overstates risk from age 16 (19%) to 19 (95%); frailty of the fitted size does not break the test. 2 confirmed, 2 refuted. |
 | 006 | Can a two-period analysis read a trial in which treatment stops? | Done. Yes: a fading benefit is reported as lasting in 4 to 6% of trials; a lasting one is detected. Blind to modest slowing. All 4 predictions confirmed. |
 | 007 | Are breed and size differences large enough to break the slope test? | Done. Size mix: no, but adjust for it (false alarms 9% unadjusted in short trials). Breed differences: still open. 3 confirmed, 1 refuted. |
+| 010 | How large and how long must a dog trial be to recognise slowed aging? | Done. About 1,300 dogs treated and followed for 10 years for a 20% slowing; no 4-year trial is enough. 2 confirmed, 2 refuted; first headline corrected by the check. |
 
-Experiment 005 is still in the queue. The queue of next experiments is at the end of `LOG.md`.
+Experiments 005, 008 and 009 are still in the queue. The queue of next experiments is at the end of `LOG.md`.

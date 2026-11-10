@@ -11,6 +11,7 @@ EXP3 = ROOT / "experiments" / "003_fading_effect"
 EXP4 = ROOT / "experiments" / "004_old_dogs"
 EXP6 = ROOT / "experiments" / "006_stop_and_watch"
 EXP7 = ROOT / "experiments" / "007_breed_differences"
+EXP10 = ROOT / "experiments" / "010_trial_that_settles_it"
 
 
 def case(results, design_start, effect):
@@ -105,3 +106,15 @@ def test_experiment_007_recorded_result():
             assert 0.02 < c["slope_change_flagged"] < 0.09               # size-aware analysis keeps its size
     assert rows[("1,300 dogs, 10 years", "aging slowed 20%", "size-aware")]["slope_change_flagged"] > 0.8
     assert rows[("1,300 dogs, 10 years", "risk cut 50%", "ignoring size")]["slope_change_flagged"] < 0.10
+
+
+def test_experiment_010_recorded_result():
+    r = json.loads((EXP10 / "results.json").read_text())
+    cell = {(c["dogs"], c["years"], c["effect"]): c["slowing_recognised"] for c in r["cases"]}
+    slow20, slow30 = "aging slowed 20%", "aging slowed 30%"
+    assert all(cell[(n, 4.0, slow20)] < 0.8 for n in (300, 600, 1000, 1300, 2000, 5000))   # 4 years is never enough
+    assert cell[(1300, 10.0, slow20)] > 0.8 > cell[(600, 10.0, slow20)]
+    assert cell[(600, 10.0, slow30)] > 0.8
+    # more dogs and more years never hurt, allowing for simulation noise
+    for n in (300, 600, 1000, 1300, 2000, 5000):
+        assert cell[(n, 10.0, slow20)] >= cell[(n, 4.0, slow20)]

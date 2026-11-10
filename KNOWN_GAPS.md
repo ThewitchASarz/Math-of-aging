@@ -38,6 +38,7 @@ Things in this project that are unverified, unresolved or approximate. Read this
 - **Stop-and-watch trials: use the two-period analysis of experiment 006, and know its limits.** It cannot tell slowed aging from a risk cut that persists; a partial fade was not tested; and "no lasting benefit" is not evidence against modest slowing (power 8 percent for a year of 20 percent slowing in 580 dogs).
 - **Ignoring size class inflates the slope test's false-alarm rate to about 9 percent in 4-year trials** (experiment 007). A baseline per size class fixes it.
 - **Breed differences are unmeasured against the breaking point.** Published breed life expectancies give a spread of 0.15 to 0.71 depending on the French Bulldog figure, which the source paper itself flags as biased by the breed's rapid growth. A spread of 0.3 broke the slope test.
+- **The trial-size result of experiment 010 is an idealised lower bound.** It assumes no dropout, perfect adherence, an effect that acts fully from enrolment, and mortality that follows the doubling law at all ages. A realistic version has not been run.
 - **The UK dog table is built from deaths in one period**, not by following dogs. Its shape at the oldest ages mixes aging with breed mix and recording errors.
 
 ## Judgement, not data

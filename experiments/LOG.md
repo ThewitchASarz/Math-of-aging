@@ -2,6 +2,14 @@
 
 One entry per experiment, newest first. Each entry says what was predicted, what happened, and what changed as a result.
 
+## 2026-11-10: experiment 010, the trial that would settle it
+
+- **Question.** How large and how long must a dog trial be to recognise slowed aging?
+- **Predicted.** 1,000 dogs for 10 years for a 20 percent slowing; 1,300 dogs for 6 years would reach 55 to 80 percent; 600 dogs for 10 years for a 30 percent slowing; nothing at 4 years.
+- **Happened.** 1,000 dogs reach 78 to 79 percent, so the answer is about 1,300 (refuted, narrowly). 1,300 dogs for 6 years reach about half (refuted, on the edge). 600 dogs suffice for 30 percent (confirmed). At 4 years even 5,000 dogs reach only two in three (confirmed).
+- **Check.** Ten cells reproduced independently. The check showed our first headline, 1,300 dogs for 8 years, was a lucky draw (77 percent with 1,500 trials) and it was withdrawn.
+- **Changed.** The project now has a concrete design to recommend: about 1,300 dogs, treated throughout, followed for 10 years, analysed with a baseline per size class.
+
 ## 2026-11-10: experiment 007, differences between breeds and sizes
 
 - **Question.** Are real differences between dogs big enough to break the slope test, and does modelling size fix it?
@@ -56,7 +64,7 @@ Predictions recorded in `001_trial_fingerprint/PREDICTION.md` and `002_dog_cell_
 
 ## Next in the queue
 
-1. **008: differences between breeds.** Simulate trials with breed-level differences across the plausible range (spread 0.15 to 0.7) and test an analysis that models them, since stratifying by hundreds of breeds is not possible.
-2. **005: fit the cell model itself, not the shortcut.** Refit experiment 002 by solving the model's equation directly.
-3. **009: a partial fade.** Repeat experiment 006 with benefits that fade part of the way.
-4. **010: what trial would settle it?** Use experiments 001 to 009 to find the smallest dog trial (dogs, years, treatment length, analysis) that recognises a 20 percent slowing of aging 80 percent of the time.
+1. **008: differences between breeds.** Simulate trials with breed-level differences across the plausible range (spread 0.15 to 0.7) and test an analysis that models them.
+2. **011: a realistic version of the settling trial.** Repeat experiment 010 with dropout, mortality that bends at old ages, and a mix of sizes, to see how far 1,300 dogs moves.
+3. **005: fit the cell model itself, not the shortcut.** Refit experiment 002 by solving the model's equation directly.
+4. **009: a partial fade.** Repeat experiment 006 with benefits that fade part of the way.
