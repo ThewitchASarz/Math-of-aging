@@ -15,6 +15,11 @@ Run:  python3 fingerprint.py            (about 5 minutes on 2 cores)
 import json
 import os
 import sys
+
+# One thread per process: the linear-algebra library otherwise starts a thread pool for tiny arrays,
+# which made this script about 30 times slower on a 4-core test machine.
+for _v in ("OMP_NUM_THREADS", "OPENBLAS_NUM_THREADS", "MKL_NUM_THREADS"):
+    os.environ.setdefault(_v, "1")
 from multiprocessing import Pool
 
 import numpy as np
