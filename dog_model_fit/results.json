@@ -1,0 +1,451 @@
+{
+ "human_published": {
+  "eta": 0.00135,
+  "beta": 0.15,
+  "kappa": 0.5,
+  "eps": 0.142,
+  "Xc": 17.0,
+  "lam": 0.0004
+ },
+ "mouse_published": {
+  "eta": 0.084,
+  "beta": 0.15,
+  "kappa": 0.5,
+  "eps": 0.16,
+  "Xc": 17.0,
+  "lam": 0.0
+ },
+ "kappa": 0.5,
+ "Xc": 17.0,
+ "note": "Multipliers are relative to the published human values. Standard errors reflect sampling error in the life table only; the choice of model matters far more.",
+ "uk_dogs_binomial_fit": {
+  "ages": [
+   2,
+   3,
+   4,
+   5,
+   6,
+   7,
+   8,
+   9,
+   10,
+   11,
+   12,
+   13,
+   14,
+   15,
+   16,
+   17,
+   18
+  ],
+  "observed_q": [
+   0.016301406926406928,
+   0.01681221206078526,
+   0.019547504983040177,
+   0.02414580212568657,
+   0.03260114761887358,
+   0.04737617590388757,
+   0.06860995439222685,
+   0.09644453906748988,
+   0.1344015080113101,
+   0.187772212543554,
+   0.24431932435149809,
+   0.3357282242327479,
+   0.4174122045666978,
+   0.5154710061884025,
+   0.5927152317880795,
+   0.629500580720093,
+   0.6833855799373041
+  ],
+  "deaths": 29467,
+  "fits": {
+   "A speed alone": {
+    "multipliers": {
+     "eta": 7.9132404728342065,
+     "beta": 1.0,
+     "eps": 1.0,
+     "Xc": 1.0,
+     "kappa": 1.0
+    },
+    "background_hazard_per_year": 0.02728258183656032,
+    "log_multiplier_se": {
+     "eta": 0.0014993570844680385
+    },
+    "neg_loglik": 77371.37866760597,
+    "parameters": 2,
+    "aic": 154746.75733521194,
+    "max_relative_error_in_death_probability": 0.6543541473460748,
+    "median_relative_error_in_death_probability": 0.14418547537039816,
+    "fitted_q": [
+     0.026968300156277332,
+     0.027071245969890138,
+     0.027357948066523283,
+     0.028130711827899103,
+     0.030128157163340583,
+     0.03501580506583245,
+     0.04613639922204747,
+     0.06911726981551271,
+     0.11110098379582305,
+     0.17727416976247107,
+     0.2661553212725043,
+     0.36858536212256,
+     0.4724144876565591,
+     0.5681600698408967,
+     0.6510993901377596,
+     0.7202654211971613,
+     0.7766981223791422
+    ],
+    "doubling_time_years_4_to_14": 0.8963052141747909,
+    "senescent_cell_half_life_days_at_low_load": 2.3104906018664844,
+    "human_half_life_days_at_low_load": 2.3104906018664844,
+    "age_when_production_reaches_clearance_ceiling": 14.041164487866947
+   },
+   "B speed + noise": {
+    "multipliers": {
+     "eta": 7.118831374802381,
+     "beta": 1.0,
+     "eps": 1.4385374868018166,
+     "Xc": 1.0,
+     "kappa": 1.0
+    },
+    "background_hazard_per_year": 0.014249454860105037,
+    "log_multiplier_se": {
+     "eta": 0.0038319199880541507,
+     "eps": 0.008526686035517294
+    },
+    "neg_loglik": 76682.74895393224,
+    "parameters": 3,
+    "aic": 153371.49790786448,
+    "max_relative_error_in_death_probability": 0.05485708396346456,
+    "median_relative_error_in_death_probability": 0.023567433147797967,
+    "fitted_q": [
+     0.01590284522166187,
+     0.01739757322432309,
+     0.020065973573831445,
+     0.024714856703083647,
+     0.032578159890695416,
+     0.04540952635050238,
+     0.06546038954663662,
+     0.09522159533780296,
+     0.13684241282400322,
+     0.19130912872281589,
+     0.25772197004134517,
+     0.3331291276491033,
+     0.41313455134746463,
+     0.4930105491181581,
+     0.5687529314149673,
+     0.6376595080400856,
+     0.6983796372765139
+    ],
+    "doubling_time_years_4_to_14": 1.4852822209786052,
+    "senescent_cell_half_life_days_at_low_load": 2.3104906018664844,
+    "human_half_life_days_at_low_load": 2.3104906018664844,
+    "age_when_production_reaches_clearance_ceiling": 15.608054926598896,
+    "lr_test_vs_speed_alone": {
+     "statistic": 1377.2594273474533,
+     "df": 1,
+     "p_value": 1.8366766275114679e-301
+    }
+   },
+   "C speed + clearance": {
+    "multipliers": {
+     "eta": 5.618430920940197,
+     "beta": 0.7194583080895136,
+     "eps": 1.0,
+     "Xc": 1.0,
+     "kappa": 1.0
+    },
+    "background_hazard_per_year": 0.015806832072720257,
+    "log_multiplier_se": {
+     "eta": 0.009651488145823027,
+     "beta": 0.008846907766142626
+    },
+    "neg_loglik": 76705.08155191214,
+    "parameters": 3,
+    "aic": 153416.16310382428,
+    "max_relative_error_in_death_probability": 0.07151053983528421,
+    "median_relative_error_in_death_probability": 0.03152312737543217,
+    "fitted_q": [
+     0.016786349458564595,
+     0.017907531582592742,
+     0.020073147128687217,
+     0.024127802054015626,
+     0.031433222722451755,
+     0.043988279989669185,
+     0.06436256990898413,
+     0.09525810915364787,
+     0.1386382638678008,
+     0.19471549230184634,
+     0.26142092337497125,
+     0.33482359841708015,
+     0.4103017052528211,
+     0.48375680349986167,
+     0.5523013895141894,
+     0.614344950931843,
+     0.6693259934651822
+    ],
+    "doubling_time_years_4_to_14": 1.3847567326822576,
+    "senescent_cell_half_life_days_at_low_load": 3.211430844411095,
+    "human_half_life_days_at_low_load": 2.3104906018664844,
+    "age_when_production_reaches_clearance_ceiling": 14.228138271132947,
+    "lr_test_vs_speed_alone": {
+     "statistic": 1332.5942313876585,
+     "df": 1,
+     "p_value": 9.334802863732687e-292
+    }
+   },
+   "D speed + clearance + noise": {
+    "multipliers": {
+     "eta": 9.268267433923636,
+     "beta": 1.4258289725608189,
+     "eps": 2.076874265754194,
+     "Xc": 1.0,
+     "kappa": 1.0
+    },
+    "background_hazard_per_year": 0.012957763219009757,
+    "log_multiplier_se": {
+     "eta": 0.08428206289563732,
+     "beta": 0.11190737276385126,
+     "eps": 0.11410916747177603
+    },
+    "neg_loglik": 76676.6524929278,
+    "parameters": 4,
+    "aic": 153361.3049858556,
+    "max_relative_error_in_death_probability": 0.06290756611556181,
+    "median_relative_error_in_death_probability": 0.026381006020356645,
+    "fitted_q": [
+     0.015298382661834841,
+     0.017106644962096264,
+     0.020165296592368594,
+     0.02523910001704562,
+     0.033461198690477624,
+     0.04641504296711973,
+     0.06614341393015814,
+     0.09499694508312906,
+     0.13523460151966973,
+     0.18836547011861648,
+     0.25439354696793115,
+     0.33131243901519564,
+     0.4152092477242322,
+     0.501059952630832,
+     0.5838912751259278,
+     0.6597863154221505,
+     0.7263757034896315
+    ],
+    "doubling_time_years_4_to_14": 1.5659593826933254,
+    "senescent_cell_half_life_days_at_low_load": 1.6204542384328147,
+    "human_half_life_days_at_low_load": 2.3104906018664844,
+    "age_when_production_reaches_clearance_ceiling": 17.093317874684868,
+    "lr_test_vs_speed_alone": {
+     "statistic": 1389.4523493563465,
+     "df": 2,
+     "p_value": 1.924225224663831e-302
+    }
+   },
+   "E speed + lethal threshold": {
+    "multipliers": {
+     "eta": 6.389425001403714,
+     "beta": 1.0,
+     "eps": 1.0,
+     "Xc": 0.7073121607814662,
+     "kappa": 1.0
+    },
+    "background_hazard_per_year": 0.013071691271628806,
+    "log_multiplier_se": {
+     "eta": 0.00606926374969994,
+     "Xc": 0.007024090699269776
+    },
+    "neg_loglik": 76676.68732322723,
+    "parameters": 3,
+    "aic": 153359.37464645447,
+    "max_relative_error_in_death_probability": 0.05967648652189639,
+    "median_relative_error_in_death_probability": 0.024190564434895645,
+    "fitted_q": [
+     0.01534599483869542,
+     0.01712720778854948,
+     0.020153645747307956,
+     0.025194042074945553,
+     0.033389787780999484,
+     0.04633721347676149,
+     0.06609401331334479,
+     0.09502011367735518,
+     0.1353655826155294,
+     0.18860073328411656,
+     0.25466180471848004,
+     0.33146835154556964,
+     0.4150649008442189,
+     0.500444945102684,
+     0.582710280528412,
+     0.6580448643133896,
+     0.7241676302876909
+    ],
+    "doubling_time_years_4_to_14": 1.5590557376116252,
+    "senescent_cell_half_life_days_at_low_load": 2.3104906018664844,
+    "human_half_life_days_at_low_load": 2.3104906018664844,
+    "age_when_production_reaches_clearance_ceiling": 17.38984510917661,
+    "lr_test_vs_speed_alone": {
+     "statistic": 1389.3826887574687,
+     "df": 1,
+     "p_value": 4.261864224208333e-304
+    }
+   },
+   "F speed + saturation point": {
+    "multipliers": {
+     "eta": 5.755976887055911,
+     "beta": 1.0,
+     "eps": 1.0,
+     "Xc": 1.0,
+     "kappa": 7.236456779952378
+    },
+    "background_hazard_per_year": 0.015639284842003626,
+    "log_multiplier_se": {
+     "eta": 0.009245889646912652,
+     "kappa": 0.02930136020516511
+    },
+    "neg_loglik": 76699.55995581664,
+    "parameters": 3,
+    "aic": 153405.1199116333,
+    "max_relative_error_in_death_probability": 0.06702950560111609,
+    "median_relative_error_in_death_probability": 0.02945425782251987,
+    "fitted_q": [
+     0.016662407332753964,
+     0.017821118576450586,
+     0.02004776779940404,
+     0.024189459749930222,
+     0.03159602235453227,
+     0.0442276536301653,
+     0.06458643047337184,
+     0.09530804686496346,
+     0.1383602046800107,
+     0.19409495768821047,
+     0.26069592787157775,
+     0.3344666155093961,
+     0.41086005131944864,
+     0.485657619034625,
+     0.5557352549413149,
+     0.6192602535197467,
+     0.6754955575181695
+    ],
+    "doubling_time_years_4_to_14": 1.396010409316265,
+    "senescent_cell_half_life_days_at_low_load": 16.71976538089297,
+    "human_half_life_days_at_low_load": 2.3104906018664844,
+    "age_when_production_reaches_clearance_ceiling": 19.30360619775571,
+    "lr_test_vs_speed_alone": {
+     "statistic": 1343.6374235786498,
+     "df": 1,
+     "p_value": 3.7180653816315616e-294
+    }
+   }
+  }
+ },
+ "us_dogs_least_squares_fit": {
+  "ages": [
+   2,
+   3,
+   4,
+   5,
+   6,
+   7,
+   8,
+   9,
+   10,
+   11,
+   12,
+   13,
+   14,
+   15
+  ],
+  "fits": {
+   "A speed alone": {
+    "multipliers": {
+     "eta": 7.377148563604509,
+     "beta": 1.0,
+     "eps": 1.0,
+     "Xc": 1.0,
+     "kappa": 1.0
+    },
+    "background_hazard_per_year": 0.014676635602182707,
+    "rms_log_error": 0.3292973220439298,
+    "doubling_time_years_4_to_14": 0.9065764144572421,
+    "senescent_cell_half_life_days_at_low_load": 2.3104906018664844,
+    "human_half_life_days_at_low_load": 2.3104906018664844,
+    "age_when_production_reaches_clearance_ceiling": 15.061525486863951
+   },
+   "B speed + noise": {
+    "multipliers": {
+     "eta": 6.142188047739656,
+     "beta": 1.0,
+     "eps": 1.5000039008014274,
+     "Xc": 1.0,
+     "kappa": 1.0
+    },
+    "background_hazard_per_year": 0.007152675018697972,
+    "rms_log_error": 0.02846989335797215,
+    "doubling_time_years_4_to_14": 1.6752599198617604,
+    "senescent_cell_half_life_days_at_low_load": 2.3104906018664844,
+    "human_half_life_days_at_low_load": 2.3104906018664844,
+    "age_when_production_reaches_clearance_ceiling": 18.089825685490094
+   },
+   "C speed + clearance": {
+    "multipliers": {
+     "eta": 4.481459177631091,
+     "beta": 0.6611961550464572,
+     "eps": 1.0,
+     "Xc": 1.0,
+     "kappa": 1.0
+    },
+    "background_hazard_per_year": 0.007694160778377184,
+    "rms_log_error": 0.017528700441854086,
+    "doubling_time_years_4_to_14": 1.6183071189931957,
+    "senescent_cell_half_life_days_at_low_load": 3.49441022037423,
+    "human_half_life_days_at_low_load": 2.3104906018664844,
+    "age_when_production_reaches_clearance_ceiling": 16.393374688384593
+   },
+   "D speed + clearance + noise": {
+    "multipliers": {
+     "eta": 3.804382951748397,
+     "beta": 0.5303121203106957,
+     "eps": 0.8008640362559787,
+     "Xc": 1.0,
+     "kappa": 1.0
+    },
+    "background_hazard_per_year": 0.00803145156787406,
+    "rms_log_error": 0.01457658805394193,
+    "doubling_time_years_4_to_14": 1.5815251001443882,
+    "senescent_cell_half_life_days_at_low_load": 4.356850453489219,
+    "human_half_life_days_at_low_load": 2.3104906018664844,
+    "age_when_production_reaches_clearance_ceiling": 15.488337969848926
+   },
+   "E speed + lethal threshold": {
+    "multipliers": {
+     "eta": 5.558676949704872,
+     "beta": 1.0,
+     "eps": 1.0,
+     "Xc": 0.696762836019714,
+     "kappa": 1.0
+    },
+    "background_hazard_per_year": 0.006781978734754683,
+    "rms_log_error": 0.0367444611952645,
+    "doubling_time_years_4_to_14": 1.7131344205543653,
+    "senescent_cell_half_life_days_at_low_load": 2.3104906018664844,
+    "human_half_life_days_at_low_load": 2.3104906018664844,
+    "age_when_production_reaches_clearance_ceiling": 19.988769291046918
+   },
+   "F speed + saturation point": {
+    "multipliers": {
+     "eta": 4.634530165209227,
+     "beta": 1.0,
+     "eps": 1.0,
+     "Xc": 1.0,
+     "kappa": 9.236235656557424
+    },
+    "background_hazard_per_year": 0.007694825862137925,
+    "rms_log_error": 0.01804854441979483,
+    "doubling_time_years_4_to_14": 1.61994826726005,
+    "senescent_cell_half_life_days_at_low_load": 21.340235681100047,
+    "human_half_life_days_at_low_load": 2.3104906018664844,
+    "age_when_production_reaches_clearance_ceiling": 23.974622486051935
+   }
+  }
+ }
+}
