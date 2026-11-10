@@ -19,11 +19,16 @@ PARTS = {
     "damage_repair": ["evolution.py", "saturating_removal.py", "clocks.py", "cancer.py", "resilience.py"],
     "interventions": ["translation_math.py", "evidence_tables.py", "monte_carlo.py", "trial_design.py"],
     "escape_velocity": ["run_all.py"],
+    "experiments/001_trial_fingerprint": ["fingerprint.py"],
+    "experiments/002_dog_cell_model": ["dog_cell_model.py"],
 }
+# Experiments count outcomes over simulated trials and stop optimisers at a tolerance, so a different
+# machine can move a count by one or two trials. They get a looser comparison.
+LOOSE = {"experiments/001_trial_fingerprint": (0.05, 0.011), "experiments/002_dog_cell_model": (0.02, 1e-3)}
 SKIP_KEYS = ("runtime", "seconds", "elapsed", "time_s")
 
 
-def differences(old, new, path=""):
+def differences(old, new, path="", rel=1e-6, abs_=1e-9):
     """Yield paths where two JSON trees differ beyond floating-point noise."""
     if isinstance(old, dict) and isinstance(new, dict):
         for key in sorted(set(old) | set(new)):
@@ -32,18 +37,18 @@ def differences(old, new, path=""):
             if key not in old or key not in new:
                 yield f"{path}/{key} (missing on one side)"
             else:
-                yield from differences(old[key], new[key], f"{path}/{key}")
+                yield from differences(old[key], new[key], f"{path}/{key}", rel, abs_)
     elif isinstance(old, list) and isinstance(new, list):
         if len(old) != len(new):
             yield f"{path} (length {len(old)} vs {len(new)})"
         else:
             for i, (a, b) in enumerate(zip(old, new)):
-                yield from differences(a, b, f"{path}[{i}]")
+                yield from differences(a, b, f"{path}[{i}]", rel, abs_)
     elif isinstance(old, (int, float)) and isinstance(new, (int, float)) \
             and not isinstance(old, bool) and not isinstance(new, bool):
         if math.isnan(old) and math.isnan(new):
             return
-        if not math.isclose(old, new, rel_tol=1e-6, abs_tol=1e-9):
+        if not math.isclose(old, new, rel_tol=rel, abs_tol=abs_):
             yield f"{path}: {old} vs {new}"
     elif old != new:
         yield f"{path}: {old!r} vs {new!r}"
@@ -66,5 +71,6 @@ def test_part_reproduces(part, tmp_path):
             fresh = json.load(fh)
     finally:
         shutil.copy(backup, saved_path)
-    diffs = list(differences(saved, fresh))
+    rel, abs_ = LOOSE.get(part, (1e-6, 1e-9))
+    diffs = list(differences(saved, fresh, rel=rel, abs_=abs_))
     assert not diffs, f"{part}: {len(diffs)} values changed, e.g. {diffs[:5]}"

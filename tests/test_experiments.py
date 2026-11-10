@@ -1,0 +1,55 @@
+"""Fast checks on the recorded experiment results, plus a short live run of experiment 001."""
+import json
+import subprocess
+import sys
+from pathlib import Path
+
+ROOT = Path(__file__).resolve().parents[1]
+EXP1 = ROOT / "experiments" / "001_trial_fingerprint"
+EXP2 = ROOT / "experiments" / "002_dog_cell_model"
+
+
+def case(results, design_start, effect):
+    for c in results["cases"]:
+        if c["design"].startswith(design_start) and c["effect"] == effect:
+            return c
+    raise KeyError((design_start, effect))
+
+
+def test_experiment_001_recorded_result():
+    r = json.loads((EXP1 / "results.json").read_text())
+    assert r["gradient_check_max_relative_error"] < 1e-5
+    assert max(c["fits_not_converged"] for c in r["cases"]) < 0.02
+    # P1, P2: short trials rarely recognise a true 20% slowing of aging
+    assert case(r, "580 dogs, 3 years (like", "aging slowed 20%")["slope_change_flagged"] < 0.30
+    assert case(r, "1,300 dogs, 4 years", "aging slowed 20%")["slope_change_flagged"] < 0.50
+    # P3: length beats size
+    long_ = case(r, "1,300 dogs, 10 years", "aging slowed 20%")["slope_change_flagged"]
+    big = case(r, "5,000 dogs, 3 years", "aging slowed 20%")["slope_change_flagged"]
+    assert long_ > 0.8 > big
+    # P4: a pure risk cut is not misread as a slope change
+    false_alarms = [c["slope_change_flagged"] for c in r["cases"] if c["kind"] in ("none", "level")]
+    assert 0.02 < min(false_alarms) and max(false_alarms) < 0.09
+
+
+def test_experiment_001_runs():
+    out = subprocess.run([sys.executable, "fingerprint.py", "--quick"], cwd=EXP1,
+                         capture_output=True, text=True, timeout=300)
+    assert out.returncode == 0, out.stderr[-2000:]
+    quick = EXP1 / "results_quick.json"
+    r = json.loads(quick.read_text())
+    quick.unlink()
+    assert len(r["cases"]) == 21
+
+
+def test_experiment_002_recorded_result():
+    r = json.loads((EXP2 / "results.json").read_text())
+    for table in r["tables"].values():
+        fits = table["fits"]
+        assert fits["A"]["rmse_log_death_rate"] > 1.5                  # production alone fails
+        for name in ("B", "C", "D"):
+            assert fits[name]["rmse_log_death_rate"] < 0.3             # one more setting fixes most of it
+            assert fits[name]["rmse_log_death_rate"] > 0.15            # but not to within 15% (P2 refuted)
+        assert fits["B"]["beta_ratio_to_human"] < 0.6                   # dogs clear less in that fit
+    check = json.loads((EXP2 / "sde_check.json").read_text())
+    assert 0.1 < check["max_abs_log_error"] < 0.3                       # the shortcut is only approximate

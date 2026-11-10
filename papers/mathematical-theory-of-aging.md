@@ -417,7 +417,7 @@ The theorems become science only where they stick their neck out. Each predictio
 ### Prediction 1: dogs clear worn-out cells differently, not just faster
 
 - **From:** Theorem 10.
-- **Claim:** If the worn-out-cell model describes both species, a young adult dog must have weaker clearance of senescent cells, a lower lethal load, or larger random swings than a human sped up 3.5 times.
+- **Claim:** If the worn-out-cell model describes both species, a young adult dog must have weaker clearance of senescent cells, a lower lethal load, or larger random swings than a human sped up 3.5 times. Fitting the model to both dog life tables (experiment 002 in the repository) confirms that speed alone fails, by a factor of about six, and gives the size of each alternative: about half the human clearance capacity, a lethal load about 40 percent lower, or swings about 1.8 times larger. Death records cannot choose among them.
 - **Test:** Measure how fast senescent cells are cleared in young and old dogs, as has been done in mice, and compare with human tissue.
 - **Killed if:** Dog cell dynamics are simply human dynamics run 3.5 times faster. The model would then fail to explain why young dogs carry about 160 times the fitted level of risk.
 
@@ -425,7 +425,7 @@ The theorems become science only where they stick their neck out. Each predictio
 
 - **From:** Theorems 2, 4 and 5.
 - **Claim:** A treatment that only lowers risk shifts the curve of log death rate against age sideways, keeping its slope. A treatment that slows aging changes the slope. A level-only treatment can add at most one doubling time unless it cuts risk by more than half: 2.2 years in dogs.
-- **Test:** In the dog trials now running (1,300 and 580 dogs), plot log death rate by age for treated and placebo groups and compare slopes.
+- **Test:** Follow treated and placebo dogs until most have died, then compare the slopes of log death rate against age. Our simulation (experiment 001 in the repository) finds the trials now running are too short for this: with 3 to 4 years of follow-up a true 20 percent slowing of aging is recognised in 10 to 28 percent of trials, against 90 percent with 10 years.
 - **Killed if:** A trial shows a gain beyond one doubling time with parallel curves and a risk cut under half. That would contradict Assumption G for treated animals.
 
 ### Prediction 3: one dog year gained is worth about 3.5 human years

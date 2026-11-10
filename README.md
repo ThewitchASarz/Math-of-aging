@@ -31,6 +31,7 @@ A verified mathematical description of how humans and dogs age: mortality models
 | `interventions/` | Evidence tables, hazard-ratio-to-years math, ranked estimate of years gained |
 | `escape_velocity/` | The escape-velocity threshold, periodic repair, population effects |
 | `theory/` | `verify_theorems.py`, a computer check of every theorem |
+| `experiments/` | The working loop: numbered experiments, each with a prediction written first, an independent check and a recorded verdict |
 | `tests/` | Test suite |
 
 Each part has its code (`*.py`), its numbers (`results.json`), its charts (`figures/`), and the data behind them (`data/`).

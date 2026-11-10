@@ -1,0 +1,121 @@
+{
+ "note": "Simulated model against the frozen-production shortcut, fit-B settings for the US dog table. ratio = simulated / shortcut.",
+ "settings": {
+  "eta": 0.004559308047451212,
+  "beta": 0.07936546829522238,
+  "kappa": 0.5,
+  "eps": 0.142,
+  "Xc": 17.0
+ },
+ "dogs_simulated": 40000,
+ "time_step_days": 0.5,
+ "by_age": [
+  {
+   "age": 2,
+   "simulated_death_rate": 0.0052128701885330985,
+   "shortcut_death_rate": 0.006080712374943511,
+   "ratio": 0.8572795204084168,
+   "deaths": 207
+  },
+  {
+   "age": 3,
+   "simulated_death_rate": 0.007399932399081909,
+   "shortcut_death_rate": 0.008998207088092666,
+   "ratio": 0.8223785390396543,
+   "deaths": 292
+  },
+  {
+   "age": 4,
+   "simulated_death_rate": 0.01207855413234719,
+   "shortcut_death_rate": 0.01317395144216404,
+   "ratio": 0.9168512716457294,
+   "deaths": 472
+  },
+  {
+   "age": 5,
+   "simulated_death_rate": 0.01562004722005906,
+   "shortcut_death_rate": 0.019060742739960532,
+   "ratio": 0.8194878569612026,
+   "deaths": 602
+  },
+  {
+   "age": 6,
+   "simulated_death_rate": 0.02312088814555486,
+   "shortcut_death_rate": 0.02722111323620264,
+   "ratio": 0.8493733501980846,
+   "deaths": 874
+  },
+  {
+   "age": 7,
+   "simulated_death_rate": 0.03336091487356323,
+   "shortcut_death_rate": 0.038325006604590185,
+   "ratio": 0.8704738192939435,
+   "deaths": 1226
+  },
+  {
+   "age": 8,
+   "simulated_death_rate": 0.04797837422492802,
+   "shortcut_death_rate": 0.05313107252145055,
+   "ratio": 0.9030191175899519,
+   "deaths": 1693
+  },
+  {
+   "age": 9,
+   "simulated_death_rate": 0.06419989392902563,
+   "shortcut_death_rate": 0.07244766143430684,
+   "ratio": 0.8861555039597792,
+   "deaths": 2142
+  },
+  {
+   "age": 10,
+   "simulated_death_rate": 0.09113688495793604,
+   "shortcut_death_rate": 0.09707344826455433,
+   "ratio": 0.93884462319254,
+   "deaths": 2814
+  },
+  {
+   "age": 11,
+   "simulated_death_rate": 0.12161356306634596,
+   "shortcut_death_rate": 0.12772344592158624,
+   "ratio": 0.9521631849880456,
+   "deaths": 3377
+  },
+  {
+   "age": 12,
+   "simulated_death_rate": 0.16183888560648602,
+   "shortcut_death_rate": 0.1649522889515197,
+   "ratio": 0.9811254310878419,
+   "deaths": 3902
+  },
+  {
+   "age": 13,
+   "simulated_death_rate": 0.20831836902385847,
+   "shortcut_death_rate": 0.20909037479503872,
+   "ratio": 0.9963077890508494,
+   "deaths": 4177
+  },
+  {
+   "age": 14,
+   "simulated_death_rate": 0.27345969205776316,
+   "shortcut_death_rate": 0.26020736340467365,
+   "ratio": 1.0509298756180068,
+   "deaths": 4315
+  },
+  {
+   "age": 15,
+   "simulated_death_rate": 0.3507574597623667,
+   "shortcut_death_rate": 0.31811123471085845,
+   "ratio": 1.1026251873222317,
+   "deaths": 4059
+  },
+  {
+   "age": 16,
+   "simulated_death_rate": 0.4441932399807504,
+   "shortcut_death_rate": 0.3823818086531928,
+   "ratio": 1.1616484621621173,
+   "deaths": 3465
+  }
+ ],
+ "max_abs_log_error": 0.19907569852706747,
+ "rmse_log_error": 0.12145151925512465
+}

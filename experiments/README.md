@@ -27,5 +27,7 @@ Every experiment follows the same seven steps, in order.
 
 | No. | Question | Status |
 | --- | --- | --- |
-| 001 | Can the dog trials now running tell a treatment that slows aging from one that only delays death? | see `LOG.md` |
-| 002 | When the worn-out-cell model is fitted to real dog data, which setting must differ from humans? | see `LOG.md` |
+| 001 | Can the dog trials now running tell a treatment that slows aging from one that only delays death? | Done. No: 10 to 28% of trials would recognise a true 20% slowing; 90% with 10 years of follow-up. All 4 predictions confirmed. |
+| 002 | When the worn-out-cell model is fitted to real dog data, which setting must differ from humans? | Done. Speed alone fails sixfold; which other setting differs cannot be told from death records. 2 confirmed, 1 refuted, 1 inconclusive; 1 claim withdrawn after the check. |
+
+The queue of next experiments is at the end of `LOG.md`.

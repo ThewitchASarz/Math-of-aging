@@ -28,6 +28,13 @@ Things in this project that are unverified, unresolved or approximate. Read this
 - **"Slowing aging by 10%"** adds 3 to 5 years depending on how slowing is defined.
 - **Theorem 11** in the theory paper is an asymptotic approximation (within 2% at ages 40 to 60 for the published human parameters). The other theorems are exact within their stated assumptions.
 
+## Found by the experiments
+
+- **The frozen-production shortcut for the worn-out-cell model is off by up to 20 percent for dogs** (`experiments/002_dog_cell_model/sde_check.py`). Any result that depends on differences smaller than that, including the ranking of which setting differs between dogs and humans, is not supported. The same shortcut is used in `damage_repair/saturating_removal.py`, where its error for humans was measured at about 7 percent in the doubling time.
+- **Predicted senescent-cell lifetimes in dogs were withdrawn** as lab predictions; see `experiments/002_dog_cell_model/RESULT.md`.
+- **Experiment 001 assumes a treatment effect that starts at enrolment and persists.** The rapamycin trial treats for one year only. The effect of a fading treatment on the fingerprint test has not been simulated.
+- **Experiment 001 assumes dog mortality follows the doubling law exactly.** Levelling-off at the oldest ages would bias the slope test and has not been tested.
+
 ## Judgement, not data
 
 - The ranked estimate of years gained per treatment (`interventions/monte_carlo.py`). Its inputs are the authors' probabilities and ranges, anchored on the evidence tables.

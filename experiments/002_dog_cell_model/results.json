@@ -1,0 +1,366 @@
+{
+ "note": "Least-squares fits of the saturating-removal model to dog life tables, on the log of the yearly death rate. kappa is fixed at the human value. Ratios are dog setting / published human setting.",
+ "human_settings": {
+  "eta": 0.00135,
+  "beta": 0.15,
+  "kappa": 0.5,
+  "eps": 0.142,
+  "Xc": 17.0
+ },
+ "human_reference": {
+  "young_adult_load_at_age_30": 0.18493150684931509,
+  "clearance_half_life_days_at_age_30": 4.335692628760527,
+  "production_as_share_of_clearance_capacity_at_age_30": 0.27
+ },
+ "seed": 20261110,
+ "tables": {
+  "UK (Teng 2022), ages 2-17": {
+   "ages": [
+    2.0,
+    3.0,
+    4.0,
+    5.0,
+    6.0,
+    7.0,
+    8.0,
+    9.0,
+    10.0,
+    11.0,
+    12.0,
+    13.0,
+    14.0,
+    15.0,
+    16.0,
+    17.0
+   ],
+   "observed_hazard": [
+    0.016129381929883644,
+    0.017146158834970514,
+    0.020202707317519466,
+    0.024292692569044587,
+    0.033556783528842754,
+    0.048140375327934984,
+    0.07149600170506992,
+    0.10092591858996053,
+    0.1438703704197019,
+    0.20825493882045903,
+    0.27971390280260405,
+    0.4094731295057033,
+    0.5395680926316447,
+    0.7236063880446539,
+    0.898942093539542,
+    0.9942522733438669
+   ],
+   "fits": {
+    "A": {
+     "free_settings": [
+      "eta"
+     ],
+     "background_death_rate_per_year": 0.0,
+     "rmse_log_death_rate": 1.8131666379362426,
+     "eta_ratio_to_human": 11.205891550088941,
+     "model_doubling_time_years": 1.1353068986906194,
+     "max_abs_log_error": 4.520117398087333,
+     "young_adult_load_at_age_3": 0.2169065935490749,
+     "clearance_half_life_days_at_age_3": 4.749953379451543,
+     "production_as_share_of_clearance_capacity_at_age_3": 0.30255907185240144
+    },
+    "B": {
+     "free_settings": [
+      "eta",
+      "beta"
+     ],
+     "background_death_rate_per_year": 0.0,
+     "rmse_log_death_rate": 0.2828848507187495,
+     "eta_ratio_to_human": 3.8972742114329826,
+     "beta_ratio_to_human": 0.510663444547004,
+     "model_doubling_time_years": 2.3678503269072437,
+     "max_abs_log_error": 0.6028769618987155,
+     "young_adult_load_at_age_3": 0.12976910482958853,
+     "clearance_half_life_days_at_age_3": 7.177812836469036,
+     "production_as_share_of_clearance_capacity_at_age_3": 0.20605822647445246,
+     "bootstrap_95ci": {
+      "eta_ratio_to_human": [
+       3.8492346594840927,
+       3.952287780056037
+      ],
+      "beta_ratio_to_human": [
+       0.5061137380303119,
+       0.5162854236245564
+      ],
+      "rmse_log_death_rate": [
+       0.26516625037828184,
+       0.3048801417339329
+      ]
+     },
+     "bootstrap_note": "Sampling error only (binomial resampling of the published death counts, 200 replicates). It does not include model error."
+    },
+    "C": {
+     "free_settings": [
+      "eta",
+      "eps"
+     ],
+     "background_death_rate_per_year": 0.0,
+     "rmse_log_death_rate": 0.23020107406408044,
+     "eta_ratio_to_human": 6.323497001243195,
+     "eps_ratio_to_human": 1.8381387919524832,
+     "model_doubling_time_years": 2.3220314218629676,
+     "max_abs_log_error": 0.5287903323505514,
+     "young_adult_load_at_age_3": 0.10294314810135423,
+     "clearance_half_life_days_at_age_3": 3.35982707861683,
+     "production_as_share_of_clearance_capacity_at_age_3": 0.1707344190335663,
+     "bootstrap_95ci": {
+      "eta_ratio_to_human": [
+       6.275284931243513,
+       6.371682053423307
+      ],
+      "eps_ratio_to_human": [
+       1.822553530537903,
+       1.8511181090766708
+      ],
+      "rmse_log_death_rate": [
+       0.21061402828981596,
+       0.2526138177552279
+      ]
+     },
+     "bootstrap_note": "Sampling error only (binomial resampling of the published death counts, 200 replicates). It does not include model error."
+    },
+    "D": {
+     "free_settings": [
+      "eta",
+      "Xc"
+     ],
+     "background_death_rate_per_year": 0.0,
+     "rmse_log_death_rate": 0.2041261753599639,
+     "eta_ratio_to_human": 5.410276710305204,
+     "Xc_ratio_to_human": 0.5972484332940386,
+     "model_doubling_time_years": 2.2975303012597905,
+     "max_abs_log_error": 0.4934949987401005,
+     "young_adult_load_at_age_3": 0.08553321071163089,
+     "clearance_half_life_days_at_age_3": 3.1685988711332325,
+     "production_as_share_of_clearance_capacity_at_age_3": 0.14607747117824052
+    },
+    "E": {
+     "free_settings": [
+      "eta",
+      "beta",
+      "eps"
+     ],
+     "background_death_rate_per_year": 0.0,
+     "rmse_log_death_rate": 0.153369392382592,
+     "eta_ratio_to_human": 53.32466465114136,
+     "beta_ratio_to_human": 14.041153437452,
+     "eps_ratio_to_human": 19.99999999999999,
+     "model_doubling_time_years": 2.2481953318448773,
+     "max_abs_log_error": 0.40356277287477926,
+     "young_adult_load_at_age_3": 0.05712727850443339,
+     "clearance_half_life_days_at_age_3": 0.20430089017710268,
+     "production_as_share_of_clearance_capacity_at_age_3": 0.1025390080661412
+    },
+    "B_bg": {
+     "free_settings": [
+      "eta",
+      "beta"
+     ],
+     "background_death_rate_per_year": 0.005,
+     "rmse_log_death_rate": 0.20807989391902854,
+     "eta_ratio_to_human": 4.421550490416836,
+     "beta_ratio_to_human": 0.5715690615238805,
+     "model_doubling_time_years": 2.275562356563626,
+     "max_abs_log_error": 0.48126589180236845,
+     "young_adult_load_at_age_3": 0.1320049126718516,
+     "clearance_half_life_days_at_age_3": 6.4585703293134,
+     "production_as_share_of_clearance_capacity_at_age_3": 0.2088669091412442
+    },
+    "C_bg": {
+     "free_settings": [
+      "eta",
+      "eps"
+     ],
+     "background_death_rate_per_year": 0.005,
+     "rmse_log_death_rate": 0.16195940578364262,
+     "eta_ratio_to_human": 6.6304195822047545,
+     "eps_ratio_to_human": 1.6944899460140719,
+     "model_doubling_time_years": 2.2574651981118987,
+     "max_abs_log_error": 0.40705681664349846,
+     "young_adult_load_at_age_3": 0.10902922023559439,
+     "clearance_half_life_days_at_age_3": 3.427997191258787,
+     "production_as_share_of_clearance_capacity_at_age_3": 0.1790213287195284
+    },
+    "D_bg": {
+     "free_settings": [
+      "eta",
+      "Xc"
+     ],
+     "background_death_rate_per_year": 0.005,
+     "rmse_log_death_rate": 0.13824871712295814,
+     "eta_ratio_to_human": 5.779820370376482,
+     "Xc_ratio_to_human": 0.6338266501730236,
+     "model_doubling_time_years": 2.2446894214408757,
+     "max_abs_log_error": 0.36872483863361527,
+     "young_adult_load_at_age_3": 0.09245577480577999,
+     "clearance_half_life_days_at_age_3": 3.2439643412968238,
+     "production_as_share_of_clearance_capacity_at_age_3": 0.15605515000016504
+    }
+   }
+  },
+  "US (Montoya 2023), ages 2-16": {
+   "ages": [
+    2.0,
+    3.0,
+    4.0,
+    5.0,
+    6.0,
+    7.0,
+    8.0,
+    9.0,
+    10.0,
+    11.0,
+    12.0,
+    13.0,
+    14.0,
+    15.0,
+    16.0
+   ],
+   "observed_hazard": [
+    0.00964637705180545,
+    0.010454457903858873,
+    0.012275030875612578,
+    0.01602776107719725,
+    0.021019367224075457,
+    0.029737818263956432,
+    0.0440563861969199,
+    0.06389872585023171,
+    0.09134803945930549,
+    0.12510981104284438,
+    0.17363935641112072,
+    0.23395175003081314,
+    0.30720473894064476,
+    0.3878707997072132,
+    0.46060790760537323
+   ],
+   "fits": {
+    "A": {
+     "free_settings": [
+      "eta"
+     ],
+     "background_death_rate_per_year": 0.0,
+     "rmse_log_death_rate": 1.9057842296548555,
+     "eta_ratio_to_human": 9.872261628791632,
+     "model_doubling_time_years": 1.0038241968816526,
+     "max_abs_log_error": 4.468241930516451,
+     "young_adult_load_at_age_3": 0.1817107169197334,
+     "clearance_half_life_days_at_age_3": 4.295012583087633,
+     "production_as_share_of_clearance_capacity_at_age_3": 0.26655106397737405
+    },
+    "B": {
+     "free_settings": [
+      "eta",
+      "beta"
+     ],
+     "background_death_rate_per_year": 0.0,
+     "rmse_log_death_rate": 0.19552097358318252,
+     "eta_ratio_to_human": 3.377265220334231,
+     "beta_ratio_to_human": 0.5291031219681492,
+     "model_doubling_time_years": 2.3300940679147413,
+     "max_abs_log_error": 0.46146055376538087,
+     "young_adult_load_at_age_3": 0.10411352957968886,
+     "clearance_half_life_days_at_age_3": 6.374718299587868,
+     "production_as_share_of_clearance_capacity_at_age_3": 0.17234099963317442
+    },
+    "C": {
+     "free_settings": [
+      "eta",
+      "eps"
+     ],
+     "background_death_rate_per_year": 0.0,
+     "rmse_log_death_rate": 0.16776833344542658,
+     "eta_ratio_to_human": 5.472603838179898,
+     "eps_ratio_to_human": 1.7698340807628736,
+     "model_doubling_time_years": 2.3084746343663416,
+     "max_abs_log_error": 0.4160333426869194,
+     "young_adult_load_at_age_3": 0.08668940455388957,
+     "clearance_half_life_days_at_age_3": 3.18112465591901,
+     "production_as_share_of_clearance_capacity_at_age_3": 0.14776030363085726
+    },
+    "D": {
+     "free_settings": [
+      "eta",
+      "Xc"
+     ],
+     "background_death_rate_per_year": 0.0,
+     "rmse_log_death_rate": 0.15476640019149693,
+     "eta_ratio_to_human": 4.79307257760114,
+     "Xc_ratio_to_human": 0.6172127698731039,
+     "model_doubling_time_years": 2.297774603257661,
+     "max_abs_log_error": 0.39317513275238447,
+     "young_adult_load_at_age_3": 0.07432511259015626,
+     "clearance_half_life_days_at_age_3": 3.0484551537512123,
+     "production_as_share_of_clearance_capacity_at_age_3": 0.12941295959523078
+    },
+    "E": {
+     "free_settings": [
+      "eta",
+      "beta",
+      "eps"
+     ],
+     "background_death_rate_per_year": 0.0,
+     "rmse_log_death_rate": 0.12772184277371634,
+     "eta_ratio_to_human": 50.63219778812035,
+     "beta_ratio_to_human": 14.633361454660966,
+     "eps_ratio_to_human": 19.99999999999989,
+     "model_doubling_time_years": 2.2745538364889297,
+     "max_abs_log_error": 0.32870394549385473,
+     "young_adult_load_at_age_3": 0.05152416849004996,
+     "clearance_half_life_days_at_age_3": 0.19210965611364073,
+     "production_as_share_of_clearance_capacity_at_age_3": 0.09342141547688042
+    },
+    "B_bg": {
+     "free_settings": [
+      "eta",
+      "beta"
+     ],
+     "background_death_rate_per_year": 0.005,
+     "rmse_log_death_rate": 0.07713567092032032,
+     "eta_ratio_to_human": 4.067972327098675,
+     "beta_ratio_to_human": 0.6114351311536772,
+     "model_doubling_time_years": 2.253476160848634,
+     "max_abs_log_error": 0.2225179220707414,
+     "young_adult_load_at_age_3": 0.10948492770681369,
+     "clearance_half_life_days_at_age_3": 5.614870570370579,
+     "production_as_share_of_clearance_capacity_at_age_3": 0.17963516853279798
+    },
+    "C_bg": {
+     "free_settings": [
+      "eta",
+      "eps"
+     ],
+     "background_death_rate_per_year": 0.005,
+     "rmse_log_death_rate": 0.06284071345211568,
+     "eta_ratio_to_human": 5.928448161914841,
+     "eps_ratio_to_human": 1.5836615892506227,
+     "model_doubling_time_years": 2.2525069791792203,
+     "max_abs_log_error": 0.1841940753870963,
+     "young_adult_load_at_age_3": 0.09528635621681754,
+     "clearance_half_life_days_at_age_3": 3.2750358262782204,
+     "production_as_share_of_clearance_capacity_at_age_3": 0.16006810037170074
+    },
+    "D_bg": {
+     "free_settings": [
+      "eta",
+      "Xc"
+     ],
+     "background_death_rate_per_year": 0.005,
+     "rmse_log_death_rate": 0.0605256261660329,
+     "eta_ratio_to_human": 5.322471914599896,
+     "Xc_ratio_to_human": 0.6715891194110292,
+     "model_doubling_time_years": 2.25233599121937,
+     "max_abs_log_error": 0.16219708365467334,
+     "young_adult_load_at_age_3": 0.083912106220785,
+     "clearance_half_life_days_at_age_3": 3.1510780229858684,
+     "production_as_share_of_clearance_capacity_at_age_3": 0.14370674169419723
+    }
+   }
+  }
+ }
+}
