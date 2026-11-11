@@ -11,6 +11,7 @@ EXP3 = ROOT / "experiments" / "003_fading_effect"
 EXP4 = ROOT / "experiments" / "004_old_dogs"
 EXP6 = ROOT / "experiments" / "006_stop_and_watch"
 EXP7 = ROOT / "experiments" / "007_breed_differences"
+EXP8 = ROOT / "experiments" / "008_breed_levels"
 EXP10 = ROOT / "experiments" / "010_trial_that_settles_it"
 
 
@@ -106,6 +107,22 @@ def test_experiment_007_recorded_result():
             assert 0.02 < c["slope_change_flagged"] < 0.09               # size-aware analysis keeps its size
     assert rows[("1,300 dogs, 10 years", "aging slowed 20%", "size-aware")]["slope_change_flagged"] > 0.8
     assert rows[("1,300 dogs, 10 years", "risk cut 50%", "ignoring size")]["slope_change_flagged"] < 0.10
+
+
+def test_experiment_008_recorded_result():
+    r = json.loads((EXP8 / "results.json").read_text())
+    assert r["gradient_check_max_relative_error"] < 1e-5
+    lists = r["breed_lists"]
+    assert 0.65 < lists["all 19 groups"]["spread_at_birth"] < 0.75
+    assert 0.25 < lists["without the French Bulldog"]["spread_at_birth"] < 0.33
+    assert 0.12 < lists["without the four shortest-lived breeds"]["spread_at_birth"] < 0.18
+    for c in r["cases"]:
+        if c["effect"] != "aging slowed 20%":
+            assert 0.03 < c["slope_change_flagged"] < 0.08               # breed levels do not break the test
+        elif c["design"] == "1,300 dogs, 10 years":
+            assert c["slope_change_flagged"] > 0.8                       # and power is kept
+    # widely spread hidden differences of the same nominal size still break it
+    assert r["added_after_the_result"]["gamma_spread_0_3_risk_cut_50_slope_change_flagged"] > 0.15
 
 
 def test_experiment_010_recorded_result():

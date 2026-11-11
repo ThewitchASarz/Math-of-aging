@@ -1,0 +1,556 @@
+{
+ "note": "Simulated trials. ASSUMPTIONS: breeds differ only in level of risk and share the UK rate of aging; breed levels come from published life expectancies (Teng et al. 2022) by the conversion of experiment 007; breed mix at birth follows the table's counts; entry ages. 'slope_change_flagged' is the share of trials in which a 5% likelihood-ratio test rejects 'the slope did not change'.",
+ "seed": 20261116,
+ "dog_a_per_year": 0.004967182098875431,
+ "dog_b_per_year": 0.31954873909049325,
+ "trials_per_case": 1000,
+ "gradient_check_max_relative_error": 1.3455680579768847e-07,
+ "breed_lists": {
+  "all 19 groups": {
+   "groups": 19,
+   "spread_at_birth": 0.7064188568194506,
+   "highest_to_lowest_risk": 13.696004844984872,
+   "spread_among_dogs_at_entry": {
+    "1,300 dogs, 4 years": 0.1561631845176321,
+    "1,300 dogs, 10 years": 0.3036176561133116
+   }
+  },
+  "without the French Bulldog": {
+   "groups": 18,
+   "spread_at_birth": 0.29315812315855083,
+   "highest_to_lowest_risk": 5.491463410839855,
+   "spread_among_dogs_at_entry": {
+    "1,300 dogs, 4 years": 0.1351154853447576,
+    "1,300 dogs, 10 years": 0.2062525849577202
+   }
+  },
+  "without the four shortest-lived breeds": {
+   "groups": 15,
+   "spread_at_birth": 0.14692703207639618,
+   "highest_to_lowest_risk": 4.650754362913933,
+   "spread_among_dogs_at_entry": {
+    "1,300 dogs, 4 years": 0.08097981581514717,
+    "1,300 dogs, 10 years": 0.10912530594308252
+   }
+  }
+ },
+ "cases": [
+  {
+   "breed_list": "all 19 groups",
+   "design": "1,300 dogs, 4 years",
+   "effect": "no effect",
+   "analysis": "ignoring breed",
+   "n_trials": 1000,
+   "share_of_dogs_dead": 0.75334,
+   "detected_by_usual_test": 0.033,
+   "slope_change_flagged": 0.059,
+   "median_slope_estimate": 1.0087627791718639
+  },
+  {
+   "breed_list": "all 19 groups",
+   "design": "1,300 dogs, 4 years",
+   "effect": "no effect",
+   "analysis": "breed-aware",
+   "n_trials": 1000,
+   "share_of_dogs_dead": 0.75334,
+   "detected_by_usual_test": 0.047,
+   "slope_change_flagged": 0.06,
+   "median_slope_estimate": 1.0201147342627022
+  },
+  {
+   "breed_list": "all 19 groups",
+   "design": "1,300 dogs, 4 years",
+   "effect": "risk cut 50%",
+   "analysis": "ignoring breed",
+   "n_trials": 1000,
+   "share_of_dogs_dead": 0.6397346153846154,
+   "detected_by_usual_test": 1.0,
+   "slope_change_flagged": 0.058,
+   "median_slope_estimate": 1.026674459131574
+  },
+  {
+   "breed_list": "all 19 groups",
+   "design": "1,300 dogs, 4 years",
+   "effect": "risk cut 50%",
+   "analysis": "breed-aware",
+   "n_trials": 1000,
+   "share_of_dogs_dead": 0.6397346153846154,
+   "detected_by_usual_test": 1.0,
+   "slope_change_flagged": 0.049,
+   "median_slope_estimate": 1.0052114733320194
+  },
+  {
+   "breed_list": "all 19 groups",
+   "design": "1,300 dogs, 4 years",
+   "effect": "aging slowed 20%",
+   "analysis": "ignoring breed",
+   "n_trials": 1000,
+   "share_of_dogs_dead": 0.7297507692307693,
+   "detected_by_usual_test": 0.452,
+   "slope_change_flagged": 0.262,
+   "median_slope_estimate": 0.7855764902446303
+  },
+  {
+   "breed_list": "all 19 groups",
+   "design": "1,300 dogs, 4 years",
+   "effect": "aging slowed 20%",
+   "analysis": "breed-aware",
+   "n_trials": 1000,
+   "share_of_dogs_dead": 0.7297507692307693,
+   "detected_by_usual_test": 0.464,
+   "slope_change_flagged": 0.245,
+   "median_slope_estimate": 0.8122835106000672
+  },
+  {
+   "breed_list": "all 19 groups",
+   "design": "1,300 dogs, 10 years",
+   "effect": "no effect",
+   "analysis": "ignoring breed",
+   "n_trials": 1000,
+   "share_of_dogs_dead": 0.9857207692307691,
+   "detected_by_usual_test": 0.049,
+   "slope_change_flagged": 0.062,
+   "median_slope_estimate": 1.0004938904800917
+  },
+  {
+   "breed_list": "all 19 groups",
+   "design": "1,300 dogs, 10 years",
+   "effect": "no effect",
+   "analysis": "breed-aware",
+   "n_trials": 1000,
+   "share_of_dogs_dead": 0.9857207692307691,
+   "detected_by_usual_test": 0.056,
+   "slope_change_flagged": 0.048,
+   "median_slope_estimate": 1.002770712951157
+  },
+  {
+   "breed_list": "all 19 groups",
+   "design": "1,300 dogs, 10 years",
+   "effect": "risk cut 50%",
+   "analysis": "ignoring breed",
+   "n_trials": 1000,
+   "share_of_dogs_dead": 0.9522215384615385,
+   "detected_by_usual_test": 1.0,
+   "slope_change_flagged": 0.055,
+   "median_slope_estimate": 1.0231764468184523
+  },
+  {
+   "breed_list": "all 19 groups",
+   "design": "1,300 dogs, 10 years",
+   "effect": "risk cut 50%",
+   "analysis": "breed-aware",
+   "n_trials": 1000,
+   "share_of_dogs_dead": 0.9522215384615385,
+   "detected_by_usual_test": 1.0,
+   "slope_change_flagged": 0.043,
+   "median_slope_estimate": 1.0040139512656832
+  },
+  {
+   "breed_list": "all 19 groups",
+   "design": "1,300 dogs, 10 years",
+   "effect": "aging slowed 20%",
+   "analysis": "ignoring breed",
+   "n_trials": 1000,
+   "share_of_dogs_dead": 0.9683700000000001,
+   "detected_by_usual_test": 0.999,
+   "slope_change_flagged": 0.879,
+   "median_slope_estimate": 0.7934679254379379
+  },
+  {
+   "breed_list": "all 19 groups",
+   "design": "1,300 dogs, 10 years",
+   "effect": "aging slowed 20%",
+   "analysis": "breed-aware",
+   "n_trials": 1000,
+   "share_of_dogs_dead": 0.9683700000000001,
+   "detected_by_usual_test": 0.997,
+   "slope_change_flagged": 0.906,
+   "median_slope_estimate": 0.8026768927674425
+  },
+  {
+   "breed_list": "without the French Bulldog",
+   "design": "1,300 dogs, 4 years",
+   "effect": "no effect",
+   "analysis": "ignoring breed",
+   "n_trials": 1000,
+   "share_of_dogs_dead": 0.7736776923076922,
+   "detected_by_usual_test": 0.062,
+   "slope_change_flagged": 0.049,
+   "median_slope_estimate": 1.00275579627987
+  },
+  {
+   "breed_list": "without the French Bulldog",
+   "design": "1,300 dogs, 4 years",
+   "effect": "no effect",
+   "analysis": "breed-aware",
+   "n_trials": 1000,
+   "share_of_dogs_dead": 0.7736776923076922,
+   "detected_by_usual_test": 0.059,
+   "slope_change_flagged": 0.055,
+   "median_slope_estimate": 1.0135625190038393
+  },
+  {
+   "breed_list": "without the French Bulldog",
+   "design": "1,300 dogs, 4 years",
+   "effect": "risk cut 50%",
+   "analysis": "ignoring breed",
+   "n_trials": 1000,
+   "share_of_dogs_dead": 0.6612392307692307,
+   "detected_by_usual_test": 1.0,
+   "slope_change_flagged": 0.05,
+   "median_slope_estimate": 1.0346277148428213
+  },
+  {
+   "breed_list": "without the French Bulldog",
+   "design": "1,300 dogs, 4 years",
+   "effect": "risk cut 50%",
+   "analysis": "breed-aware",
+   "n_trials": 1000,
+   "share_of_dogs_dead": 0.6612392307692307,
+   "detected_by_usual_test": 1.0,
+   "slope_change_flagged": 0.053,
+   "median_slope_estimate": 1.0118338123792525
+  },
+  {
+   "breed_list": "without the French Bulldog",
+   "design": "1,300 dogs, 4 years",
+   "effect": "aging slowed 20%",
+   "analysis": "ignoring breed",
+   "n_trials": 1000,
+   "share_of_dogs_dead": 0.7506238461538461,
+   "detected_by_usual_test": 0.442,
+   "slope_change_flagged": 0.291,
+   "median_slope_estimate": 0.7860247966499617
+  },
+  {
+   "breed_list": "without the French Bulldog",
+   "design": "1,300 dogs, 4 years",
+   "effect": "aging slowed 20%",
+   "analysis": "breed-aware",
+   "n_trials": 1000,
+   "share_of_dogs_dead": 0.7506238461538461,
+   "detected_by_usual_test": 0.46,
+   "slope_change_flagged": 0.28,
+   "median_slope_estimate": 0.8131740251300372
+  },
+  {
+   "breed_list": "without the French Bulldog",
+   "design": "1,300 dogs, 10 years",
+   "effect": "no effect",
+   "analysis": "ignoring breed",
+   "n_trials": 1000,
+   "share_of_dogs_dead": 0.9885192307692308,
+   "detected_by_usual_test": 0.034,
+   "slope_change_flagged": 0.059,
+   "median_slope_estimate": 0.9984342650251821
+  },
+  {
+   "breed_list": "without the French Bulldog",
+   "design": "1,300 dogs, 10 years",
+   "effect": "no effect",
+   "analysis": "breed-aware",
+   "n_trials": 1000,
+   "share_of_dogs_dead": 0.9885192307692308,
+   "detected_by_usual_test": 0.045,
+   "slope_change_flagged": 0.052,
+   "median_slope_estimate": 1.0017120327127056
+  },
+  {
+   "breed_list": "without the French Bulldog",
+   "design": "1,300 dogs, 10 years",
+   "effect": "risk cut 50%",
+   "analysis": "ignoring breed",
+   "n_trials": 1000,
+   "share_of_dogs_dead": 0.9591523076923076,
+   "detected_by_usual_test": 1.0,
+   "slope_change_flagged": 0.048,
+   "median_slope_estimate": 1.017535566257631
+  },
+  {
+   "breed_list": "without the French Bulldog",
+   "design": "1,300 dogs, 10 years",
+   "effect": "risk cut 50%",
+   "analysis": "breed-aware",
+   "n_trials": 1000,
+   "share_of_dogs_dead": 0.9591523076923076,
+   "detected_by_usual_test": 1.0,
+   "slope_change_flagged": 0.047,
+   "median_slope_estimate": 0.9999790626070659
+  },
+  {
+   "breed_list": "without the French Bulldog",
+   "design": "1,300 dogs, 10 years",
+   "effect": "aging slowed 20%",
+   "analysis": "ignoring breed",
+   "n_trials": 1000,
+   "share_of_dogs_dead": 0.9734361538461539,
+   "detected_by_usual_test": 0.993,
+   "slope_change_flagged": 0.866,
+   "median_slope_estimate": 0.7946240133659036
+  },
+  {
+   "breed_list": "without the French Bulldog",
+   "design": "1,300 dogs, 10 years",
+   "effect": "aging slowed 20%",
+   "analysis": "breed-aware",
+   "n_trials": 1000,
+   "share_of_dogs_dead": 0.9734361538461539,
+   "detected_by_usual_test": 0.996,
+   "slope_change_flagged": 0.891,
+   "median_slope_estimate": 0.8021016175916598
+  },
+  {
+   "breed_list": "without the four shortest-lived breeds",
+   "design": "1,300 dogs, 4 years",
+   "effect": "no effect",
+   "analysis": "ignoring breed",
+   "n_trials": 1000,
+   "share_of_dogs_dead": 0.7954153846153846,
+   "detected_by_usual_test": 0.039,
+   "slope_change_flagged": 0.051,
+   "median_slope_estimate": 1.0036079654002121
+  },
+  {
+   "breed_list": "without the four shortest-lived breeds",
+   "design": "1,300 dogs, 4 years",
+   "effect": "no effect",
+   "analysis": "breed-aware",
+   "n_trials": 1000,
+   "share_of_dogs_dead": 0.7954153846153846,
+   "detected_by_usual_test": 0.04,
+   "slope_change_flagged": 0.056,
+   "median_slope_estimate": 1.0121900956304706
+  },
+  {
+   "breed_list": "without the four shortest-lived breeds",
+   "design": "1,300 dogs, 4 years",
+   "effect": "risk cut 50%",
+   "analysis": "ignoring breed",
+   "n_trials": 1000,
+   "share_of_dogs_dead": 0.683313076923077,
+   "detected_by_usual_test": 1.0,
+   "slope_change_flagged": 0.058,
+   "median_slope_estimate": 1.0180240661294622
+  },
+  {
+   "breed_list": "without the four shortest-lived breeds",
+   "design": "1,300 dogs, 4 years",
+   "effect": "risk cut 50%",
+   "analysis": "breed-aware",
+   "n_trials": 1000,
+   "share_of_dogs_dead": 0.683313076923077,
+   "detected_by_usual_test": 1.0,
+   "slope_change_flagged": 0.062,
+   "median_slope_estimate": 0.9945697484863911
+  },
+  {
+   "breed_list": "without the four shortest-lived breeds",
+   "design": "1,300 dogs, 4 years",
+   "effect": "aging slowed 20%",
+   "analysis": "ignoring breed",
+   "n_trials": 1000,
+   "share_of_dogs_dead": 0.7728069230769231,
+   "detected_by_usual_test": 0.434,
+   "slope_change_flagged": 0.281,
+   "median_slope_estimate": 0.7944449308227299
+  },
+  {
+   "breed_list": "without the four shortest-lived breeds",
+   "design": "1,300 dogs, 4 years",
+   "effect": "aging slowed 20%",
+   "analysis": "breed-aware",
+   "n_trials": 1000,
+   "share_of_dogs_dead": 0.7728069230769231,
+   "detected_by_usual_test": 0.458,
+   "slope_change_flagged": 0.268,
+   "median_slope_estimate": 0.8123641075423761
+  },
+  {
+   "breed_list": "without the four shortest-lived breeds",
+   "design": "1,300 dogs, 10 years",
+   "effect": "no effect",
+   "analysis": "ignoring breed",
+   "n_trials": 1000,
+   "share_of_dogs_dead": 0.9913453846153847,
+   "detected_by_usual_test": 0.07,
+   "slope_change_flagged": 0.049,
+   "median_slope_estimate": 0.9978297965885403
+  },
+  {
+   "breed_list": "without the four shortest-lived breeds",
+   "design": "1,300 dogs, 10 years",
+   "effect": "no effect",
+   "analysis": "breed-aware",
+   "n_trials": 1000,
+   "share_of_dogs_dead": 0.9913453846153847,
+   "detected_by_usual_test": 0.07,
+   "slope_change_flagged": 0.052,
+   "median_slope_estimate": 1.0017575183224037
+  },
+  {
+   "breed_list": "without the four shortest-lived breeds",
+   "design": "1,300 dogs, 10 years",
+   "effect": "risk cut 50%",
+   "analysis": "ignoring breed",
+   "n_trials": 1000,
+   "share_of_dogs_dead": 0.9653253846153846,
+   "detected_by_usual_test": 1.0,
+   "slope_change_flagged": 0.041,
+   "median_slope_estimate": 1.0112492451554882
+  },
+  {
+   "breed_list": "without the four shortest-lived breeds",
+   "design": "1,300 dogs, 10 years",
+   "effect": "risk cut 50%",
+   "analysis": "breed-aware",
+   "n_trials": 1000,
+   "share_of_dogs_dead": 0.9653253846153846,
+   "detected_by_usual_test": 1.0,
+   "slope_change_flagged": 0.049,
+   "median_slope_estimate": 1.000515166392044
+  },
+  {
+   "breed_list": "without the four shortest-lived breeds",
+   "design": "1,300 dogs, 10 years",
+   "effect": "aging slowed 20%",
+   "analysis": "ignoring breed",
+   "n_trials": 1000,
+   "share_of_dogs_dead": 0.97825,
+   "detected_by_usual_test": 0.992,
+   "slope_change_flagged": 0.868,
+   "median_slope_estimate": 0.7947352711761195
+  },
+  {
+   "breed_list": "without the four shortest-lived breeds",
+   "design": "1,300 dogs, 10 years",
+   "effect": "aging slowed 20%",
+   "analysis": "breed-aware",
+   "n_trials": 1000,
+   "share_of_dogs_dead": 0.97825,
+   "detected_by_usual_test": 0.993,
+   "slope_change_flagged": 0.879,
+   "median_slope_estimate": 0.8001548911572491
+  }
+ ],
+ "added_after_the_result": {
+  "note": "Not predictions. A control with gamma-distributed hidden differences of spread 0.3 (experiment 004's simulation), and the breed mix among dogs entering the 10-year design.",
+  "gamma_spread_0_3_risk_cut_50_slope_change_flagged": 0.215,
+  "n_trials": 1000,
+  "breed_mix_10_year_design": [
+   {
+    "group": "Jack Russell Terrier",
+    "risk_multiplier": 0.5514430891802041,
+    "share_at_birth": 0.07326007326007326,
+    "share_at_entry": 0.08307540281707594
+   },
+   {
+    "group": "Yorkshire Terrier",
+    "risk_multiplier": 0.5840913627294408,
+    "share_at_birth": 0.04712160267715823,
+    "share_at_entry": 0.05282519850728065
+   },
+   {
+    "group": "Border Collie",
+    "risk_multiplier": 0.6722692022034154,
+    "share_at_birth": 0.042599375932709266,
+    "share_at_entry": 0.046304744090096
+   },
+   {
+    "group": "Springer Spaniel",
+    "risk_multiplier": 0.7120710044979973,
+    "share_at_birth": 0.035725591281146836,
+    "share_at_entry": 0.03829863713054384
+   },
+   {
+    "group": "Crossbred",
+    "risk_multiplier": 0.7351926000476746,
+    "share_at_birth": 0.2944421833310722,
+    "share_at_entry": 0.3131238696372884
+   },
+   {
+    "group": "Labrador Retriever",
+    "risk_multiplier": 0.7470334346672192,
+    "share_at_birth": 0.11305566861122417,
+    "share_at_entry": 0.11973600539243667
+   },
+   {
+    "group": "Staffordshire Bull Terrier",
+    "risk_multiplier": 0.8598099598600609,
+    "share_at_birth": 0.10690544023877357,
+    "share_at_entry": 0.1088990921392305
+   },
+   {
+    "group": "Cocker Spaniel",
+    "risk_multiplier": 0.8653225803766602,
+    "share_at_birth": 0.04852349296793741,
+    "share_at_entry": 0.04933484526806211
+   },
+   {
+    "group": "Shih-tzu",
+    "risk_multiplier": 0.9402868937987376,
+    "share_at_birth": 0.028851806629584406,
+    "share_at_entry": 0.02859044863652816
+   },
+   {
+    "group": "Cavalier King Charles Spaniel",
+    "risk_multiplier": 1.1390094706809797,
+    "share_at_birth": 0.03920770587437254,
+    "share_at_entry": 0.03632113378889792
+   },
+   {
+    "group": "German Shepherd Dog",
+    "risk_multiplier": 1.2496057901251219,
+    "share_at_birth": 0.05019671686338353,
+    "share_at_entry": 0.04480950100810432
+   },
+   {
+    "group": "Boxer",
+    "risk_multiplier": 1.2984535538045838,
+    "share_at_birth": 0.03780581558359336,
+    "share_at_entry": 0.03320384946589906
+   },
+   {
+    "group": "Beagle",
+    "risk_multiplier": 1.3797305725061535,
+    "share_at_birth": 0.007778230000452223,
+    "share_at_entry": 0.006649871259199558
+   },
+   {
+    "group": "Husky",
+    "risk_multiplier": 1.528281404906098,
+    "share_at_birth": 0.006964229186451409,
+    "share_at_entry": 0.00567036894184425
+   },
+   {
+    "group": "Chihuahua",
+    "risk_multiplier": 2.564626352903571,
+    "share_at_birth": 0.02071179848957627,
+    "share_at_entry": 0.012174600772274684
+   },
+   {
+    "group": "American Bulldog",
+    "risk_multiplier": 2.6648789789739173,
+    "share_at_birth": 0.005833672500339167,
+    "share_at_entry": 0.0033269849941801287
+   },
+   {
+    "group": "Pug",
+    "risk_multiplier": 2.786804137338477,
+    "share_at_birth": 0.008908786686564465,
+    "share_at_entry": 0.004898773332893685
+   },
+   {
+    "group": "English Bulldog",
+    "risk_multiplier": 3.0282295473935896,
+    "share_at_birth": 0.02161624383846606,
+    "share_at_entry": 0.011068377251840913
+   },
+   {
+    "group": "French Bulldog",
+    "risk_multiplier": 7.552567221145501,
+    "share_at_birth": 0.010491566047121603,
+    "share_at_entry": 0.0016882955663229452
+   }
+  ]
+ }
+}

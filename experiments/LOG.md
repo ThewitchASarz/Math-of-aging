@@ -2,6 +2,14 @@
 
 One entry per experiment, newest first. Each entry says what was predicted, what happened, and what changed as a result.
 
+## 2026-11-11: experiment 008, differences between breeds
+
+- **Question.** Are differences in risk between breeds large enough to make the slope test misread a risk cut as slowed aging, and does a baseline per breed fix it?
+- **Predicted.** Safe at spread 0.15; broken at 0.29 (over 10 percent false alarms) and 0.71 (over 15 percent); a baseline per breed gives 3 to 8 percent and keeps power above 80 percent.
+- **Happened.** Safe at every spread: a 50 percent risk cut is misread in about 5 percent of 1,300-dog, 10-year trials even at 0.71 (refuted). A baseline per breed gives 4 to 6 percent and 88 to 91 percent power (both confirmed). A control with widely spread hidden differences of 0.3 still breaks the test (22 percent).
+- **Check.** Reproduced independently with separate code; no errors; all 19 rows of the breed table matched to the source paper. The check supplied the reason: five rare, short-lived breeds carry about 82 percent of the spread but are about 3 percent of trial dogs.
+- **Changed.** Published breed differences in level of risk are no longer an open threat to the slope test. The "spread" number is a poor yardstick. The open threats are differences inside breeds and breeds that age at different rates; both go to the queue.
+
 ## 2026-11-10: experiment 010, the trial that would settle it
 
 - **Question.** How large and how long must a dog trial be to recognise slowed aging?
@@ -64,7 +72,8 @@ Predictions recorded in `001_trial_fingerprint/PREDICTION.md` and `002_dog_cell_
 
 ## Next in the queue
 
-1. **008: differences between breeds.** Simulate trials with breed-level differences across the plausible range (spread 0.15 to 0.7) and test an analysis that models them.
-2. **011: a realistic version of the settling trial.** Repeat experiment 010 with dropout, mortality that bends at old ages, and a mix of sizes, to see how far 1,300 dogs moves.
+1. **011: a realistic version of the settling trial.** Repeat experiment 010 with dropout, mortality that bends at old ages, and a mix of sizes, to see how far 1,300 dogs moves.
+2. **012: a slope test that allows for hidden differences.** Add a hidden-difference term to the analysis and test whether it removes the 22 percent false alarms of the control in experiment 008 without losing power.
 3. **005: fit the cell model itself, not the shortcut.** Refit experiment 002 by solving the model's equation directly.
 4. **009: a partial fade.** Repeat experiment 006 with benefits that fade part of the way.
+5. **013: breeds that age at different rates.** Repeat experiment 008 with breed-level differences in the rate of aging, not only in the level of risk.
