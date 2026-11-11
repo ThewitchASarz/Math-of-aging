@@ -63,6 +63,8 @@ To run one part, change into its folder and run its scripts, for example `cd hum
 - Several items could not be verified. They are listed in `KNOWN_GAPS.md`.
 - This work has not been peer reviewed.
 
+**What is already known.** A literature search is recorded in [`papers/literature-check.md`](papers/literature-check.md). Most of the theory here restates published results (the escape-velocity threshold, the life-expectancy formulas, the cell model fitted to dogs). The search did not find published figures for what a dog trial of a given size and length can detect, which is what the experiments compute. The search was limited and was not reviewed by an expert, so nothing here is claimed as original.
+
 ## How this was made
 
 This project was produced with Claude (Anthropic's AI model) under human direction. AI agents wrote the code, transcribed the data and drafted the papers. A second set of AI agents then re-ran the code, recomputed the key numbers independently and re-opened the sources. Corrections from that check are listed at the end of the report.

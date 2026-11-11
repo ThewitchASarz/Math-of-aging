@@ -1,0 +1,56 @@
+{
+ "source": "Coleman et al. 2025, GeroScience 47:2851 (PMC12181551)",
+ "gompertz_level": 0.0066,
+ "gompertz_slope_per_year": 0.29,
+ "dogs_per_group": 290,
+ "simulated_trials_per_case": 4000,
+ "test": "two-sided log-rank, 5% level (ASSUMPTION)",
+ "cases": [
+  {
+   "case": "no effect",
+   "follow_up_years": 3,
+   "power": 0.0442,
+   "placebo_share_dead_in_window": 0.2981
+  },
+  {
+   "case": "20% risk cut for all 3 years",
+   "follow_up_years": 3,
+   "power": 0.2932,
+   "placebo_share_dead_in_window": 0.2975,
+   "mean_total_lifespan_gain_percent": 4.07
+  },
+  {
+   "case": "30% risk cut for all 3 years",
+   "follow_up_years": 3,
+   "power": 0.581,
+   "placebo_share_dead_in_window": 0.2973,
+   "mean_total_lifespan_gain_percent": 6.61
+  },
+  {
+   "case": "38% risk cut for all 3 years",
+   "follow_up_years": 3,
+   "power": 0.8062,
+   "placebo_share_dead_in_window": 0.2968,
+   "mean_total_lifespan_gain_percent": 8.98
+  },
+  {
+   "case": "22% risk cut, every dog followed until death",
+   "follow_up_years": 60,
+   "power": 0.8102,
+   "placebo_share_dead_in_window": 1.0,
+   "mean_total_lifespan_gain_percent": 4.55
+  },
+  {
+   "case": "20% risk cut during the dosing year only",
+   "follow_up_years": 3,
+   "power": 0.0655,
+   "placebo_share_dead_in_window": 0.2981
+  },
+  {
+   "case": "20% slower rise of risk from enrolment",
+   "follow_up_years": 3,
+   "power": 0.0865,
+   "placebo_share_dead_in_window": 0.2974
+  }
+ ]
+}

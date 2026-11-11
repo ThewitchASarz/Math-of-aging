@@ -2,6 +2,18 @@
 
 10 November 2026
 
+## Prior work
+
+Added 11 November 2026. A literature search (`literature-check.md` in this folder) found that the main theoretical results here restate known results. They are proved again in this paper so that the argument is complete in one place, and they are not claimed as original.
+
+- The escape-velocity threshold (Theorem 16): de Grey 2004 in words; Missov & Lenart 2011 and Goldstein & Wachter 2006 as formulas.
+- The life-expectancy formula under the doubling law, and the small gain from removing a cause of death (Theorems 2 to 4): Missov 2013; Keyfitz 1977.
+- Hidden differences between individuals bending the mortality curve: Beard 1959; Vaupel, Manton & Stallard 1979.
+- The worn-out-cell model and its fit across species, including dog breeds: Karin et al. 2019; Raz et al. 2026.
+- Level of risk versus rate of rise, and stopping treatment to tell them apart: Mair et al. 2003; Simons et al. 2013.
+
+The search did not find published figures for how often a dog or human trial would recognise a slower rise of risk. That is a statement about a limited search, not a claim of priority.
+
 ## What this paper proves and what it does not
 
 This paper proves 19 theorems about aging. Together they say exactly what a cure for aging must do, how to recognise one in trial data, and why nothing available today is one. It does not contain a cure, and no theorem can.
