@@ -41,7 +41,10 @@ Things in this project that are unverified, unresolved or approximate. Read this
 - **The "spread" number is a poor yardstick for the slope test** (experiment 008). A spread of 0.3 breaks the test when it is spread across all dogs and does nothing when it sits in a few rare, short-lived breeds. Statements in experiments 004 and 007 that compare a spread with "0.3 broke the test" should be read with that in mind.
 - **Hidden differences inside breeds are unmeasured.** No source for their size has been found. If they are widely spread with a spread near 0.3, the slope test gives about 22 percent false alarms for a 50 percent risk cut in a 10-year trial. No analysis that allows for them has been built yet.
 - **Breeds that age at different rates have not been simulated.** A baseline per breed would not repair that.
-- **The trial-size result of experiment 010 is an idealised lower bound.** It assumes no dropout, perfect adherence, an effect that acts fully from enrolment, and mortality that follows the doubling law at all ages. A realistic version has not been run.
+- **The trial-size result of experiment 010 was idealised; experiment 011 added dropout, bending risk and a mix of sizes.** The answer becomes a range, about 1,300 to 1,600 dogs, with about 2,000 for a margin. It still assumes perfect adherence and an effect that acts fully from enrolment.
+- **Dropout rates in experiment 011 are assumptions (0, 5 and 10 percent a year).** No published dropout rate for a dog trial was found. The experiment could not open the design paper of the rapamycin dog trial (TRIAD, Coleman et al. 2025); `papers/literature-check.md` records other figures from that paper but no dropout rate.
+- **Dropout linked to health or to treatment has not been simulated.** Experiment 011 assumes dogs leave for reasons unrelated to health, equally in both groups. If sick dogs or treated dogs leave more often, the slope test could be biased, not only weaker.
+- **Experiment 011 applies the hidden risk factor of experiment 004 inside every size class.** Part of the bend in the UK table comes from the size mix, so the bend is probably counted partly twice.
 - **The UK dog table is built from deaths in one period**, not by following dogs. Its shape at the oldest ages mixes aging with breed mix and recording errors.
 
 ## Judgement, not data

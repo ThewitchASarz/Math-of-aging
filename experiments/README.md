@@ -35,5 +35,6 @@ Every experiment follows the same seven steps, in order.
 | 007 | Are breed and size differences large enough to break the slope test? | Done. Size mix: no, but adjust for it (false alarms 9% unadjusted in short trials). Breed differences: still open. 3 confirmed, 1 refuted. |
 | 008 | Are differences in risk between breeds large enough to break the slope test? | Done. No: false alarms stay near 5% even at the widest published spread, with or without a baseline per breed. Widely spread hidden differences still break it. 3 confirmed, 1 refuted. |
 | 010 | How large and how long must a dog trial be to recognise slowed aging? | Done. About 1,300 dogs treated and followed for 10 years for a 20% slowing; no 4-year trial is enough. 2 confirmed, 2 refuted; first headline corrected by the check. |
+| 011 | How many dogs does the 10-year trial need with dropout, bending risk and a mix of sizes? | Done. About 1,300 to 1,600 dogs (80% with 5% dropout a year at 1,300; 73% with 10%); 2,000 gives a margin. False alarms stay at 5 to 6%. Dropout rates are assumptions. 2 confirmed, 1 refuted, 1 half and half. |
 
 Experiments 005 and 009 are still in the queue. The queue of next experiments is at the end of `LOG.md`.

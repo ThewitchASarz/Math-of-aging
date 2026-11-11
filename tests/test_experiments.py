@@ -13,6 +13,7 @@ EXP6 = ROOT / "experiments" / "006_stop_and_watch"
 EXP7 = ROOT / "experiments" / "007_breed_differences"
 EXP8 = ROOT / "experiments" / "008_breed_levels"
 EXP10 = ROOT / "experiments" / "010_trial_that_settles_it"
+EXP11 = ROOT / "experiments" / "011_realistic_trial"
 
 
 def case(results, design_start, effect):
@@ -135,3 +136,21 @@ def test_experiment_010_recorded_result():
     # more dogs and more years never hurt, allowing for simulation noise
     for n in (300, 600, 1000, 1300, 2000, 5000):
         assert cell[(n, 10.0, slow20)] >= cell[(n, 4.0, slow20)]
+
+
+def test_experiment_011_recorded_result():
+    r = json.loads((EXP11 / "results.json").read_text())
+    assert 0.09 < r["frailty_variance_from_experiment_004"] < 0.11
+    cell = {(c["scenario"], c["dogs"], c["effect"]): c for c in r["cases"]}
+    slow, real, harsh = "aging slowed 20%", "realistic (bending, 5% dropout)", "harsh (bending, 10% dropout)"
+    flag = lambda *k: cell[k]["slope_change_flagged"]
+    assert flag("size mix + bending", 1300, slow) > 0.8                  # bending and size mix cost little
+    assert 0.70 < flag("size mix + 10% dropout", 1300, slow) < 0.85      # dropout costs more
+    assert 0.74 < flag(real, 1300, slow) < 0.85                          # 1,300 dogs sit near the line
+    assert 0.68 < flag(harsh, 1300, slow) < 0.80                         # and below it with heavy dropout
+    assert flag(real, 2000, slow) > 0.85 and flag(harsh, 2000, slow) > 0.85   # 2,000 dogs give a margin
+    for sc in (real, harsh):
+        for effect in ("no effect", "risk cut 50%"):
+            assert 0.03 < flag(sc, 1300, effect) < 0.09                  # the test stays honest
+        assert flag(sc, 2600, slow) >= flag(sc, 1300, slow)              # more dogs never hurt
+    assert 0.35 < cell[(harsh, 1300, slow)]["share_of_dogs_dropped_out"] < 0.42

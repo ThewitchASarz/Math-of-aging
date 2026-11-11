@@ -2,6 +2,14 @@
 
 One entry per experiment, newest first. Each entry says what was predicted, what happened, and what changed as a result.
 
+## 2026-11-11: experiment 011, a realistic version of the settling trial
+
+- **Question.** How many dogs does the 10-year trial need once dogs drop out, risk bends at old ages, and the dogs are a mix of sizes?
+- **Predicted.** Size mix and bending cost little (80 to 95 percent with 1,300 dogs); 10 percent dropout a year costs more (60 to 78 percent); with 5 percent dropout 1,300 dogs reach 70 to 82 percent and 1,600 are enough; with 10 percent it takes 2,000; false alarms stay at 3 to 9 percent.
+- **Happened.** 89 percent with size mix and bending (confirmed). 79 percent with 10 percent dropout (refuted, narrowly: dropout costs less than predicted). With bending and 5 percent dropout, 1,300 dogs reach about 80 percent and 1,600 reach 89 (confirmed). With 10 percent dropout, 1,300 reach about 73 percent and 1,600 sit on the 80 percent line, so 2,000 was too gloomy (refuted, on the edge). False alarms 5 to 6 percent (confirmed).
+- **Check.** Reproduced independently with separate code in 14 cases; no errors. The check showed both threshold cells sit within noise of the 80 percent line, so the answer is stated as a range. It could not re-open the paper behind the size table.
+- **Changed.** The design of experiment 010 stands but has no margin: about 1,300 to 1,600 dogs, or about 2,000 for a margin against heavy dropout. Dropout rates are assumptions; dropout linked to health is untested and goes to the queue.
+
 ## 2026-11-11: experiment 008, differences between breeds
 
 - **Question.** Are differences in risk between breeds large enough to make the slope test misread a risk cut as slowed aging, and does a baseline per breed fix it?
@@ -72,8 +80,9 @@ Predictions recorded in `001_trial_fingerprint/PREDICTION.md` and `002_dog_cell_
 
 ## Next in the queue
 
-1. **011: a realistic version of the settling trial.** Repeat experiment 010 with dropout, mortality that bends at old ages, and a mix of sizes, to see how far 1,300 dogs moves.
-2. **012: a slope test that allows for hidden differences.** Add a hidden-difference term to the analysis and test whether it removes the 22 percent false alarms of the control in experiment 008 without losing power.
+1. **012: a slope test that allows for hidden differences.** Add a hidden-difference term to the analysis and test whether it removes the 22 percent false alarms of the control in experiment 008 without losing power.
+2. **014: dropout that depends on health or on treatment.** Repeat experiment 011 with sick dogs more likely to leave, and with treated dogs leaving more often, to see whether the slope test reports slowed aging that is not there.
 3. **005: fit the cell model itself, not the shortcut.** Refit experiment 002 by solving the model's equation directly.
 4. **009: a partial fade.** Repeat experiment 006 with benefits that fade part of the way.
 5. **013: breeds that age at different rates.** Repeat experiment 008 with breed-level differences in the rate of aging, not only in the level of risk.
+6. **015: a delayed or partial effect.** Repeat experiment 011 with an effect that builds up over the first year or two, and with some owners not giving the treatment.

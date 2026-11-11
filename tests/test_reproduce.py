@@ -27,6 +27,7 @@ PARTS = {
     "experiments/007_breed_differences": ["breeds.py"],
     "experiments/008_breed_levels": ["breed_levels.py"],
     "experiments/010_trial_that_settles_it": ["design_grid.py"],
+    "experiments/011_realistic_trial": ["realistic_trial.py"],
 }
 # Experiments count outcomes over simulated trials and stop optimisers at a tolerance, so a different
 # machine can move a count by one or two trials. They get a looser comparison.
@@ -36,7 +37,8 @@ LOOSE = {"damage_repair": (1e-4, 1e-9),
          "experiments/001_trial_fingerprint": (0.05, 0.011), "experiments/002_dog_cell_model": (0.02, 1e-3),
          "experiments/003_fading_effect": (0.05, 0.011), "experiments/004_old_dogs": (0.05, 0.011),
          "experiments/006_stop_and_watch": (0.05, 0.011), "experiments/007_breed_differences": (0.05, 0.011),
-         "experiments/008_breed_levels": (0.05, 0.011), "experiments/010_trial_that_settles_it": (0.05, 0.011)}
+         "experiments/008_breed_levels": (0.05, 0.011), "experiments/010_trial_that_settles_it": (0.05, 0.011),
+         "experiments/011_realistic_trial": (0.05, 0.011)}
 SKIP_KEYS = ("runtime", "seconds", "elapsed", "time_s")
 
 

@@ -1,0 +1,226 @@
+{
+ "note": "Simulated 10-year trials, entry ages 7 to 12, half the dogs treated throughout. 'slope_change_flagged' is the share of trials in which the size-aware slope test reports a change in the rate of aging. ASSUMPTIONS: dropout rates (0, 5, 10 percent a year, unrelated to health); the hidden risk factor of experiment 004 applied inside every size class; entry ages; size mix equal to the US population mix. The scenario names 'realistic' and 'harsh' are labels, not measurements.",
+ "seed": 20261117,
+ "trials_per_case": 800,
+ "frailty_variance_from_experiment_004": 0.10190214599720965,
+ "size_classes": [
+  "toy",
+  "small",
+  "medium",
+  "large",
+  "giant"
+ ],
+ "rate_of_aging_per_year": [
+  0.3217404108181793,
+  0.316488031994736,
+  0.34358451707461857,
+  0.3898801338670896,
+  0.4962134541772647
+ ],
+ "population_share": [
+  0.22415565847819954,
+  0.29908383021963425,
+  0.13794914915353582,
+  0.3245147312979483,
+  0.014296630850682128
+ ],
+ "common_level_a": 0.0019931693453973443,
+ "smallest_grid_size_reaching_80_percent": {
+  "realistic (bending, 5% dropout)": 1600,
+  "harsh (bending, 10% dropout)": 1600
+ },
+ "cases": [
+  {
+   "scenario": "size mix only",
+   "dogs": 1300,
+   "effect": "aging slowed 20%",
+   "n_trials": 800,
+   "bending": false,
+   "dropout_per_year": 0.0,
+   "slope_change_flagged": 0.93875,
+   "median_slope_estimate": 0.7954969564564076,
+   "share_of_deaths_seen": 0.9214788461538461,
+   "share_of_dogs_dropped_out": 0.0
+  },
+  {
+   "scenario": "size mix + bending",
+   "dogs": 1300,
+   "effect": "aging slowed 20%",
+   "n_trials": 800,
+   "bending": true,
+   "dropout_per_year": 0.0,
+   "slope_change_flagged": 0.88875,
+   "median_slope_estimate": 0.7953918916833639,
+   "share_of_deaths_seen": 0.9041317307692307,
+   "share_of_dogs_dropped_out": 0.0
+  },
+  {
+   "scenario": "size mix + 5% dropout",
+   "dogs": 1300,
+   "effect": "aging slowed 20%",
+   "n_trials": 800,
+   "bending": false,
+   "dropout_per_year": 0.05,
+   "slope_change_flagged": 0.8775,
+   "median_slope_estimate": 0.7928064544641655,
+   "share_of_deaths_seen": 0.7323173076923077,
+   "share_of_dogs_dropped_out": 0.22000096153846155
+  },
+  {
+   "scenario": "size mix + 10% dropout",
+   "dogs": 1300,
+   "effect": "aging slowed 20%",
+   "n_trials": 800,
+   "bending": false,
+   "dropout_per_year": 0.1,
+   "slope_change_flagged": 0.79,
+   "median_slope_estimate": 0.7942444582106315,
+   "share_of_deaths_seen": 0.5903317307692307,
+   "share_of_dogs_dropped_out": 0.3807134615384616
+  },
+  {
+   "scenario": "realistic (bending, 5% dropout)",
+   "dogs": 1300,
+   "effect": "aging slowed 20%",
+   "n_trials": 800,
+   "bending": true,
+   "dropout_per_year": 0.05,
+   "slope_change_flagged": 0.78875,
+   "median_slope_estimate": 0.7963183257537402,
+   "share_of_deaths_seen": 0.7168346153846155,
+   "share_of_dogs_dropped_out": 0.22494615384615385
+  },
+  {
+   "scenario": "harsh (bending, 10% dropout)",
+   "dogs": 1300,
+   "effect": "aging slowed 20%",
+   "n_trials": 800,
+   "bending": true,
+   "dropout_per_year": 0.1,
+   "slope_change_flagged": 0.75125,
+   "median_slope_estimate": 0.7959059464727618,
+   "share_of_deaths_seen": 0.5789317307692308,
+   "share_of_dogs_dropped_out": 0.3860163461538461
+  },
+  {
+   "scenario": "realistic (bending, 5% dropout)",
+   "dogs": 1600,
+   "effect": "aging slowed 20%",
+   "n_trials": 800,
+   "bending": true,
+   "dropout_per_year": 0.05,
+   "slope_change_flagged": 0.8875,
+   "median_slope_estimate": 0.7935874097475348,
+   "share_of_deaths_seen": 0.71692890625,
+   "share_of_dogs_dropped_out": 0.22469921874999998
+  },
+  {
+   "scenario": "realistic (bending, 5% dropout)",
+   "dogs": 2000,
+   "effect": "aging slowed 20%",
+   "n_trials": 800,
+   "bending": true,
+   "dropout_per_year": 0.05,
+   "slope_change_flagged": 0.94625,
+   "median_slope_estimate": 0.7949458283345607,
+   "share_of_deaths_seen": 0.717086875,
+   "share_of_dogs_dropped_out": 0.224881875
+  },
+  {
+   "scenario": "realistic (bending, 5% dropout)",
+   "dogs": 2600,
+   "effect": "aging slowed 20%",
+   "n_trials": 800,
+   "bending": true,
+   "dropout_per_year": 0.05,
+   "slope_change_flagged": 0.9675,
+   "median_slope_estimate": 0.7937441936158582,
+   "share_of_deaths_seen": 0.7166913461538461,
+   "share_of_dogs_dropped_out": 0.22543846153846153
+  },
+  {
+   "scenario": "harsh (bending, 10% dropout)",
+   "dogs": 1600,
+   "effect": "aging slowed 20%",
+   "n_trials": 800,
+   "bending": true,
+   "dropout_per_year": 0.1,
+   "slope_change_flagged": 0.80375,
+   "median_slope_estimate": 0.7928060143692162,
+   "share_of_deaths_seen": 0.5776265625,
+   "share_of_dogs_dropped_out": 0.387109375
+  },
+  {
+   "scenario": "harsh (bending, 10% dropout)",
+   "dogs": 2000,
+   "effect": "aging slowed 20%",
+   "n_trials": 800,
+   "bending": true,
+   "dropout_per_year": 0.1,
+   "slope_change_flagged": 0.88125,
+   "median_slope_estimate": 0.7944030238162503,
+   "share_of_deaths_seen": 0.578310625,
+   "share_of_dogs_dropped_out": 0.38652250000000005
+  },
+  {
+   "scenario": "harsh (bending, 10% dropout)",
+   "dogs": 2600,
+   "effect": "aging slowed 20%",
+   "n_trials": 800,
+   "bending": true,
+   "dropout_per_year": 0.1,
+   "slope_change_flagged": 0.9475,
+   "median_slope_estimate": 0.7934974977269003,
+   "share_of_deaths_seen": 0.5785802884615384,
+   "share_of_dogs_dropped_out": 0.38618413461538464
+  },
+  {
+   "scenario": "realistic (bending, 5% dropout)",
+   "dogs": 1300,
+   "effect": "no effect",
+   "n_trials": 800,
+   "bending": true,
+   "dropout_per_year": 0.05,
+   "slope_change_flagged": 0.05625,
+   "median_slope_estimate": 0.9966625587442122,
+   "share_of_deaths_seen": 0.7477375,
+   "share_of_dogs_dropped_out": 0.2154701923076923
+  },
+  {
+   "scenario": "realistic (bending, 5% dropout)",
+   "dogs": 1300,
+   "effect": "risk cut 50%",
+   "n_trials": 800,
+   "bending": true,
+   "dropout_per_year": 0.05,
+   "slope_change_flagged": 0.04875,
+   "median_slope_estimate": 1.0164237174357336,
+   "share_of_deaths_seen": 0.6881240384615385,
+   "share_of_dogs_dropped_out": 0.24083942307692308
+  },
+  {
+   "scenario": "harsh (bending, 10% dropout)",
+   "dogs": 1300,
+   "effect": "no effect",
+   "n_trials": 800,
+   "bending": true,
+   "dropout_per_year": 0.1,
+   "slope_change_flagged": 0.0575,
+   "median_slope_estimate": 0.9934764600296497,
+   "share_of_deaths_seen": 0.6045317307692308,
+   "share_of_dogs_dropped_out": 0.37301634615384616
+  },
+  {
+   "scenario": "harsh (bending, 10% dropout)",
+   "dogs": 1300,
+   "effect": "risk cut 50%",
+   "n_trials": 800,
+   "bending": true,
+   "dropout_per_year": 0.1,
+   "slope_change_flagged": 0.05875,
+   "median_slope_estimate": 1.0158402667176816,
+   "share_of_deaths_seen": 0.5451769230769231,
+   "share_of_dogs_dropped_out": 0.4113009615384615
+  }
+ ]
+}
