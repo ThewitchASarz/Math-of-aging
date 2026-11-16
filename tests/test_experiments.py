@@ -14,6 +14,7 @@ EXP7 = ROOT / "experiments" / "007_breed_differences"
 EXP8 = ROOT / "experiments" / "008_breed_levels"
 EXP10 = ROOT / "experiments" / "010_trial_that_settles_it"
 EXP11 = ROOT / "experiments" / "011_realistic_trial"
+EXP12 = ROOT / "experiments" / "012_hidden_differences_test"
 
 
 def case(results, design_start, effect):
@@ -154,3 +155,21 @@ def test_experiment_011_recorded_result():
             assert 0.03 < flag(sc, 1300, effect) < 0.09                  # the test stays honest
         assert flag(sc, 2600, slow) >= flag(sc, 1300, slow)              # more dogs never hurt
     assert 0.35 < cell[(harsh, 1300, slow)]["share_of_dogs_dropped_out"] < 0.42
+
+
+def test_experiment_012_recorded_result():
+    r = json.loads((EXP12 / "results.json").read_text())
+    assert r["gradient_check_max_relative_error"] < 1e-5
+    cell = {(c["world"][0], c["effect"], c["analysis"]): c for c in r["cases"]}
+    flag = lambda *k: cell[k]["slope_change_flagged"]
+    cut, slow = "risk cut 50%", "aging slowed 20%"
+    assert flag("C", cut, "plain") > 0.15 and 0.03 < flag("C", cut, "new") < 0.08      # P1: broken, then repaired
+    assert cell[("C", cut, "plain")]["flagged_as_slower_aging"] < 0.02                  # misread as faster aging
+    for w in "ABC":
+        for effect in ("no effect", cut):
+            assert 0.03 < flag(w, effect, "new") < 0.08                                 # P2: honest
+    assert flag("A", slow, "plain") > 0.85                                              # P3 refuted: no cost
+    assert abs(flag("A", slow, "new") - flag("A", slow, "plain")) < 0.03
+    assert flag("B", slow, "new") > 0.75 and flag("C", slow, "new") > 0.75
+    assert 0.08 < flag("D", cut, "plain") < 0.15 and flag("D", cut, "new") < 0.10       # P4: half and half
+    assert 0.2 < cell[("C", cut, "new")]["median_spread_estimate"] < 0.4

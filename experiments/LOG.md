@@ -2,6 +2,14 @@
 
 One entry per experiment, newest first. Each entry says what was predicted, what happened, and what changed as a result.
 
+## 2026-11-16: experiment 012, a slope test that allows for hidden differences
+
+- **Question.** If the slope test is given an extra setting for hidden differences between dogs, does it stop misreading a plain cut in risk as a change in the rate of aging, and how much power does it keep?
+- **Predicted.** With widely spread hidden differences (0.3) the plain test gives over 15 percent false alarms and the new test 3 to 8; the new test stays at 3 to 8 percent wherever its assumed shape is right; the repair costs at least 5 points of power when it is not needed; with a different shape the plain test is above 15 percent and the new test below 10.
+- **Happened.** Plain 19 percent, new 5.5 (confirmed). New test 3.5 to 6.9 percent in all six cases (confirmed). No cost in power: 88.5 against 88.0 percent with no hidden differences, and 81 to 85 percent with them (refuted in its main part, in the useful direction). With a different shape the plain test gives 12.5 percent, not over 15, and the new test 4.5 (half and half).
+- **Check.** Reproduced independently with separate code in six cases; no errors; inputs confirmed. The check stopped us calling the higher power in the wide-spread worlds a clean gain, since the plain test is the wrong model there, and showed false alarms can only be stated as "about 5 percent".
+- **Changed.** The threat left open by experiments 004 and 008 has a repair for a long trial: add one setting for hidden differences. The plain test's false alarms pointed to faster aging, not slower. Untested: short trials, dropout and sizes with the new test, and treatments that help frail dogs more.
+
 ## 2026-11-11: experiment 011, a realistic version of the settling trial
 
 - **Question.** How many dogs does the 10-year trial need once dogs drop out, risk bends at old ages, and the dogs are a mix of sizes?
@@ -80,9 +88,10 @@ Predictions recorded in `001_trial_fingerprint/PREDICTION.md` and `002_dog_cell_
 
 ## Next in the queue
 
-1. **012: a slope test that allows for hidden differences.** Add a hidden-difference term to the analysis and test whether it removes the 22 percent false alarms of the control in experiment 008 without losing power.
+1. **016: the two real trials with their real designs.** From the literature check, so it comes first. Repeat experiments 001 and 010 with the rapamycin trial's published design and with a design like Loyal's STAY study; state the share of placebo dogs that die in each.
 2. **014: dropout that depends on health or on treatment.** Repeat experiment 011 with sick dogs more likely to leave, and with treated dogs leaving more often, to see whether the slope test reports slowed aging that is not there.
 3. **005: fit the cell model itself, not the shortcut.** Refit experiment 002 by solving the model's equation directly.
 4. **009: a partial fade.** Repeat experiment 006 with benefits that fade part of the way.
 5. **013: breeds that age at different rates.** Repeat experiment 008 with breed-level differences in the rate of aging, not only in the level of risk.
 6. **015: a delayed or partial effect.** Repeat experiment 011 with an effect that builds up over the first year or two, and with some owners not giving the treatment.
+7. **017: the hidden-differences test in harder conditions.** Repeat experiment 012 in a 4-year trial, with dropout and a mix of sizes, and with a treatment that helps frail dogs more than sturdy ones.

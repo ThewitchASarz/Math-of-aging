@@ -36,5 +36,6 @@ Every experiment follows the same seven steps, in order.
 | 008 | Are differences in risk between breeds large enough to break the slope test? | Done. No: false alarms stay near 5% even at the widest published spread, with or without a baseline per breed. Widely spread hidden differences still break it. 3 confirmed, 1 refuted. |
 | 010 | How large and how long must a dog trial be to recognise slowed aging? | Done. About 1,300 dogs treated and followed for 10 years for a 20% slowing; no 4-year trial is enough. 2 confirmed, 2 refuted; first headline corrected by the check. |
 | 011 | How many dogs does the 10-year trial need with dropout, bending risk and a mix of sizes? | Done. About 1,300 to 1,600 dogs (80% with 5% dropout a year at 1,300; 73% with 10%); 2,000 gives a margin. False alarms stay at 5 to 6%. Dropout rates are assumptions. 2 confirmed, 1 refuted, 1 half and half. |
+| 012 | Does an extra setting for hidden differences between dogs repair the slope test, and what does it cost? | Done. Yes: false alarms for a 50% risk cut fall from 19% to 5.5% at an assumed spread of 0.3, with no loss of power found (88.5% against 88.0%). Tested only for a 10-year trial. 2 confirmed, 1 refuted, 1 half and half. |
 
 Experiments 005 and 009 are still in the queue. The queue of next experiments is at the end of `LOG.md`.
