@@ -2,6 +2,14 @@
 
 One entry per experiment, newest first. Each entry says what was predicted, what happened, and what changed as a result.
 
+## 2026-11-17: experiment 014, dropout linked to health or to treatment
+
+- **Question.** In a 1,300-dog, 10-year trial, when dogs leave for reasons linked to their health or to the treatment, do the standard analyses report slowed aging or a cut in risk that is not there?
+- **Predicted.** Dropout linked only to treatment, or to health equally in both groups, leaves the slope test at 3 to 8 percent false alarms. Sick dogs withdrawn before death more often in the treated group (30 against 15 percent) make a useless treatment look like a risk cut in over half of trials (risk ratio 0.78 to 0.88) but leave the slope test alone. The slope test is fooled only when the share of missed deaths drifts over time in one group: 6 to 15 percent for a drift to 15 percent, 15 to 40 for a drift to 30. A true 20 percent slowing is still recognised in 65 to 82 percent.
+- **Happened.** Slope test 5 to 7 percent in the fair-looking cases. Unequal withdrawal: a false risk cut in 69 percent of trials, middle risk ratio 0.83, slope test 6 percent. Drift: 11 and 29 percent, always pointing to slowed aging. Frail treated dogs leaving: 6 percent. True slowing recognised in 68 to 75 percent (82 with fair dropout). All four confirmed.
+- **Check.** Reproduced independently with separate code, 25 numbers, 600 to 3,000 trials per case; no errors. The check showed two of our first figures (8.3 and 8.9 percent false alarms, from 800 trials) were noise: larger runs by both sides give about 6. It also showed the slope test fires in 5 to 7 percent even with fair dropout. No outside source was opened in this run.
+- **Changed.** The danger from unfair dropout is mostly to the ordinary "did it cut deaths" result, not to the slope test. A trial should record what happens to every dog that leaves, in both groups, and compare withdrawals between the groups year by year. Every dropout pattern here is an assumption; no published pattern for a dog trial was found.
+
 ## 2026-11-17: experiment 019, risk that rebounds after stopping
 
 - **Question.** In a trial that doses for one year and watches for three, what do the standard analyses report when risk rebounds after dosing stops, or when only part of the benefit lasts, and does the mix of surviving dogs bias the after-dosing comparison?
@@ -104,12 +112,14 @@ Predictions recorded in `001_trial_fingerprint/PREDICTION.md` and `002_dog_cell_
 
 ## Next in the queue
 
-1. **014: dropout that depends on health or on treatment.** Repeat experiment 011 with sick dogs more likely to leave, and with treated dogs leaving more often, to see whether the slope test reports slowed aging that is not there.
-2. **005: fit the cell model itself, not the shortcut.** Refit experiment 002 by solving the model's equation directly.
-3. **009: a partial fade.** Repeat experiment 006 with benefits that fade part of the way. Experiment 019 covered a benefit that half lasts in the rapamycin design; the other designs and a slow fade remain.
-4. **013: breeds that age at different rates.** Repeat experiment 008 with breed-level differences in the rate of aging, not only in the level of risk.
-5. **015: a delayed or partial effect.** Repeat experiment 011 with an effect that builds up over the first year or two, and with some owners not giving the treatment.
-6. **017: the hidden-differences test in harder conditions.** Repeat experiment 012 in a 4-year trial, with dropout and a mix of sizes, and with a treatment that helps frail dogs more than sturdy ones.
-7. **018: how the settling trial's size depends on the inputs.** Experiment 016 found 1,300 dogs reach 78 percent with the rapamycin trial's published inputs against 88 with ours. Vary the slope (0.29 to 0.36) and the entry ages separately to find which one matters and how many dogs each case needs.
-8. **020: how many dogs a stop-and-watch trial needs.** Experiment 019 found a 580-dog trial sees a 1.25-fold rebound in about a quarter of trials and a half-lasting benefit in about a third. Find the number of dogs and years of watching that bring each to 80 percent, with the rapamycin trial's published inputs.
-9. **021: splitting the time after dosing.** Give the two-period test a third period (the first six months after stopping) and measure whether it can tell a short large rebound from a lasting small one, and what that costs in false alarms.
+1. **022: compare our fitted cell-model settings with Raz et al. 2026.** Raised by the literature check. Open that paper's supplement and compare breed by breed with experiment 002. Waiting on the source: the paper could not be opened on 17 November 2026 (web pages cannot be opened in an unattended run). Take this when the paper can be opened; otherwise go to the next item.
+2. **023: between-breed spread from a better table.** Raised by the literature check. Compute the spread of risk between breeds from the 155-breed table of McMillan et al. 2024. Waiting on the source, for the same reason. Take this when the table can be opened; otherwise go to the next item.
+3. **005: fit the cell model itself, not the shortcut.** Refit experiment 002 by solving the model's equation directly.
+4. **009: a partial fade.** Repeat experiment 006 with benefits that fade part of the way. Experiment 019 covered a benefit that half lasts in the rapamycin design; the other designs and a slow fade remain.
+5. **013: breeds that age at different rates.** Repeat experiment 008 with breed-level differences in the rate of aging, not only in the level of risk.
+6. **015: a delayed or partial effect.** Repeat experiment 011 with an effect that builds up over the first year or two, and with some owners not giving the treatment.
+7. **017: the hidden-differences test in harder conditions.** Repeat experiment 012 in a 4-year trial, with dropout and a mix of sizes, and with a treatment that helps frail dogs more than sturdy ones.
+8. **018: how the settling trial's size depends on the inputs.** Experiment 016 found 1,300 dogs reach 78 percent with the rapamycin trial's published inputs against 88 with ours. Vary the slope (0.29 to 0.36) and the entry ages separately to find which one matters and how many dogs each case needs.
+9. **020: how many dogs a stop-and-watch trial needs.** Experiment 019 found a 580-dog trial sees a 1.25-fold rebound in about a quarter of trials and a half-lasting benefit in about a third. Find the number of dogs and years of watching that bring each to 80 percent, with the rapamycin trial's published inputs.
+10. **021: splitting the time after dosing.** Give the two-period test a third period (the first six months after stopping) and measure whether it can tell a short large rebound from a lasting small one, and what that costs in false alarms.
+11. **024: how much tracing of withdrawn dogs is enough.** Experiment 014 found that sick dogs withdrawn unequally create a false risk cut, and a drifting share creates false slowed aging. Repeat with the trial finding the date of death for half, or nine in ten, of the withdrawn dogs, and measure how much of each false result remains. Also test whether a year-by-year comparison of withdrawals between the groups would flag the problem.

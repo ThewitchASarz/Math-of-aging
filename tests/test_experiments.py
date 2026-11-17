@@ -15,6 +15,7 @@ EXP8 = ROOT / "experiments" / "008_breed_levels"
 EXP10 = ROOT / "experiments" / "010_trial_that_settles_it"
 EXP11 = ROOT / "experiments" / "011_realistic_trial"
 EXP12 = ROOT / "experiments" / "012_hidden_differences_test"
+EXP14 = ROOT / "experiments" / "014_health_linked_dropout"
 EXP16 = ROOT / "experiments" / "016_real_trial_designs"
 EXP19 = ROOT / "experiments" / "019_rebound_after_stopping"
 
@@ -226,3 +227,30 @@ def test_experiment_019_recorded_result():
     assert 1.0 < side["average_after_dosing"] < side["pooled_deaths_per_dog_year"] < 1.03
     brute = r["survivor_risk_ratio_after_dosing"]["brute-force check, 2 million dogs, rapamycin design, hidden variance 0.3"]
     assert abs(brute - side["pooled_deaths_per_dog_year"]) < 0.01
+
+
+def test_experiment_014_recorded_result():
+    r = json.loads((EXP14 / "results.json").read_text())
+    assert r["dogs"] == 1300 and r["follow_up_years"] == 10.0 and r["background_dropout_per_year"] == 0.05
+    cell = {(c["pattern"], c["effect"]): c for c in r["cases"]}
+    none, slow, cut = "no effect", "aging slowed 20%", "risk cut 50%"
+    for p in ("treated dogs leave more", "sick dogs leave, equally"):                     # P1 (see borderline)
+        assert 0.03 < cell[(p, none)]["slope_test_fires"] < 0.09
+        assert 0.03 < cell[(p, cut)]["slope_test_fires"] < 0.08
+    unequal = cell[("sick treated dogs leave more", none)]                                # P2 confirmed
+    assert unequal["risk_test_fires"] > 0.5
+    assert unequal["risk_test_fires_pointing_to_benefit"] == unequal["risk_test_fires"]
+    assert 0.78 < unequal["median_risk_ratio"] < 0.88
+    assert 0.03 < unequal["slope_test_fires"] < 0.08
+    assert cell[("sick untreated dogs leave more", none)]["median_risk_ratio"] > 1.12
+    assert 0.06 < cell[("missed deaths drift, to 15%", none)]["slope_test_fires"] < 0.15   # P3 confirmed
+    drift = cell[("missed deaths drift, to 30%", none)]
+    assert 0.15 < drift["slope_test_fires"] < 0.40
+    assert drift["slope_test_fires_pointing_to_slowed_aging"] >= 0.9 * drift["slope_test_fires"]
+    for p in ("treated dogs leave more", "sick dogs leave, equally", "sick treated dogs leave more"):
+        assert 0.65 < cell[(p, slow)]["slope_test_fires"] < 0.82                          # P4 confirmed
+    assert cell[("reference", slow)]["slope_test_fires"] > 0.75
+    b = json.loads((EXP14 / "borderline.json").read_text())                               # edge cases, 2,500 trials
+    assert b["trials_per_case"] == 2500
+    for c in b["cases"]:
+        assert c["effect"] == none and 0.04 < c["slope_test_fires"] < 0.08

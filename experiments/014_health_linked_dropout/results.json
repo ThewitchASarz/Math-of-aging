@@ -1,0 +1,363 @@
+{
+ "note": "Simulated 10-year trials of 1,300 dogs, entry ages 7 to 12, half treated throughout, size mix and hidden risk factor as in experiment 011's realistic scenario. Each number is a share of simulated trials. ALL DROPOUT PATTERNS ARE ASSUMPTIONS: background 5 percent a year; the 10 percent rate; the 15 and 30 percent shares of sick dogs withdrawn; the 6-month window; the frail-dog rate; the drifts.",
+ "seed": 20261118,
+ "trials_per_case": 800,
+ "dogs": 1300,
+ "follow_up_years": 10.0,
+ "entry_ages": [
+  7.0,
+  12.0
+ ],
+ "background_dropout_per_year": 0.05,
+ "withdrawal_window_years": 0.5,
+ "frailty_variance_from_experiment_004": 0.10190214599720965,
+ "size_classes": [
+  "toy",
+  "small",
+  "medium",
+  "large",
+  "giant"
+ ],
+ "rate_of_aging_per_year": [
+  0.3217404108181793,
+  0.316488031994736,
+  0.34358451707461857,
+  0.3898801338670896,
+  0.4962134541772647
+ ],
+ "population_share": [
+  0.22415565847819954,
+  0.29908383021963425,
+  0.13794914915353582,
+  0.3245147312979483,
+  0.014296630850682128
+ ],
+ "common_level_a": 0.0019931693453973443,
+ "patterns": {
+  "reference": {},
+  "treated dogs leave more": {
+   "rate": [
+    0.05,
+    0.1
+   ]
+  },
+  "sick dogs leave, equally": {
+   "sick": [
+    0.3,
+    0.3
+   ]
+  },
+  "sick treated dogs leave more": {
+   "sick": [
+    0.15,
+    0.3
+   ]
+  },
+  "sick untreated dogs leave more": {
+   "sick": [
+    0.3,
+    0.15
+   ]
+  },
+  "frail treated dogs leave": {
+   "frail": 0.05
+  },
+  "missed deaths drift, to 15%": {
+   "drift": 0.15
+  },
+  "missed deaths drift, to 30%": {
+   "drift": 0.3
+  }
+ },
+ "cases": [
+  {
+   "pattern": "reference",
+   "effect": "no effect",
+   "n_trials": 800,
+   "dogs": 1300,
+   "slope_test_fires": 0.06375,
+   "slope_test_fires_pointing_to_slowed_aging": 0.02875,
+   "risk_test_fires": 0.05375,
+   "risk_test_fires_pointing_to_benefit": 0.0225,
+   "median_slope_ratio": 0.998097193330316,
+   "median_risk_ratio": 1.0007759809181036,
+   "share_of_dogs_with_death_recorded": 0.7471923076923076,
+   "share_left_untreated": 0.2159288461538461,
+   "share_left_treated": 0.2171076923076923,
+   "share_died_unrecorded_untreated": 0.1920769230769231,
+   "share_died_unrecorded_treated": 0.19301923076923078
+  },
+  {
+   "pattern": "treated dogs leave more",
+   "effect": "no effect",
+   "n_trials": 800,
+   "dogs": 1300,
+   "slope_test_fires": 0.05375,
+   "slope_test_fires_pointing_to_slowed_aging": 0.02875,
+   "risk_test_fires": 0.0475,
+   "risk_test_fires_pointing_to_benefit": 0.0275,
+   "median_slope_ratio": 0.9964423800657096,
+   "median_risk_ratio": 1.0034544127252314,
+   "share_of_dogs_with_death_recorded": 0.6757048076923077,
+   "share_left_untreated": 0.21608846153846156,
+   "share_left_treated": 0.3740769230769231,
+   "share_died_unrecorded_untreated": 0.19230961538461536,
+   "share_died_unrecorded_treated": 0.33560384615384614
+  },
+  {
+   "pattern": "sick dogs leave, equally",
+   "effect": "no effect",
+   "n_trials": 800,
+   "dogs": 1300,
+   "slope_test_fires": 0.0825,
+   "slope_test_fires_pointing_to_slowed_aging": 0.0475,
+   "risk_test_fires": 0.04875,
+   "risk_test_fires_pointing_to_benefit": 0.02625,
+   "median_slope_ratio": 0.9987873440245352,
+   "median_risk_ratio": 1.0035566346277915,
+   "share_of_dogs_with_death_recorded": 0.5233423076923077,
+   "share_left_untreated": 0.44243653846153846,
+   "share_left_treated": 0.44019807692307694,
+   "share_died_unrecorded_untreated": 0.41668461538461543,
+   "share_died_unrecorded_treated": 0.41483653846153845
+  },
+  {
+   "pattern": "sick treated dogs leave more",
+   "effect": "no effect",
+   "n_trials": 800,
+   "dogs": 1300,
+   "slope_test_fires": 0.05875,
+   "slope_test_fires_pointing_to_slowed_aging": 0.01875,
+   "risk_test_fires": 0.69125,
+   "risk_test_fires_pointing_to_benefit": 0.69125,
+   "median_slope_ratio": 1.0045575651729455,
+   "median_risk_ratio": 0.8327876959304454,
+   "share_of_dogs_with_death_recorded": 0.5795951923076923,
+   "share_left_untreated": 0.32934038461538456,
+   "share_left_treated": 0.44112307692307695,
+   "share_died_unrecorded_untreated": 0.30440384615384614,
+   "share_died_unrecorded_treated": 0.4156096153846154
+  },
+  {
+   "pattern": "sick untreated dogs leave more",
+   "effect": "no effect",
+   "n_trials": 800,
+   "dogs": 1300,
+   "slope_test_fires": 0.06125,
+   "slope_test_fires_pointing_to_slowed_aging": 0.0425,
+   "risk_test_fires": 0.7025,
+   "risk_test_fires_pointing_to_benefit": 0.0,
+   "median_slope_ratio": 0.9825836267232986,
+   "median_risk_ratio": 1.1967046741149594,
+   "share_of_dogs_with_death_recorded": 0.5789548076923077,
+   "share_left_untreated": 0.441725,
+   "share_left_treated": 0.32941923076923074,
+   "share_died_unrecorded_untreated": 0.41643076923076916,
+   "share_died_unrecorded_treated": 0.30465384615384616
+  },
+  {
+   "pattern": "frail treated dogs leave",
+   "effect": "no effect",
+   "n_trials": 800,
+   "dogs": 1300,
+   "slope_test_fires": 0.08875,
+   "slope_test_fires_pointing_to_slowed_aging": 0.06625,
+   "risk_test_fires": 0.05875,
+   "risk_test_fires_pointing_to_benefit": 0.0425,
+   "median_slope_ratio": 0.9801380450064673,
+   "median_risk_ratio": 0.9840307769213699,
+   "share_of_dogs_with_death_recorded": 0.6785788461538462,
+   "share_left_untreated": 0.21507500000000002,
+   "share_left_treated": 0.3659326923076922,
+   "share_died_unrecorded_untreated": 0.19131923076923074,
+   "share_died_unrecorded_treated": 0.3301480769230769
+  },
+  {
+   "pattern": "missed deaths drift, to 15%",
+   "effect": "no effect",
+   "n_trials": 800,
+   "dogs": 1300,
+   "slope_test_fires": 0.11125,
+   "slope_test_fires_pointing_to_slowed_aging": 0.105,
+   "risk_test_fires": 0.17125,
+   "risk_test_fires_pointing_to_benefit": 0.17125,
+   "median_slope_ratio": 0.9476183495928455,
+   "median_risk_ratio": 0.9393566877589153,
+   "share_of_dogs_with_death_recorded": 0.7227038461538462,
+   "share_left_untreated": 0.21571538461538464,
+   "share_left_treated": 0.2659903846153846,
+   "share_died_unrecorded_untreated": 0.19212307692307692,
+   "share_died_unrecorded_treated": 0.24144807692307693
+  },
+  {
+   "pattern": "missed deaths drift, to 30%",
+   "effect": "no effect",
+   "n_trials": 800,
+   "dogs": 1300,
+   "slope_test_fires": 0.2875,
+   "slope_test_fires_pointing_to_slowed_aging": 0.2875,
+   "risk_test_fires": 0.495,
+   "risk_test_fires_pointing_to_benefit": 0.495,
+   "median_slope_ratio": 0.8911861987927554,
+   "median_risk_ratio": 0.8781588606014408,
+   "share_of_dogs_with_death_recorded": 0.6980346153846153,
+   "share_left_untreated": 0.21505384615384615,
+   "share_left_treated": 0.31688076923076924,
+   "share_died_unrecorded_untreated": 0.19103653846153848,
+   "share_died_unrecorded_treated": 0.29144038461538463
+  },
+  {
+   "pattern": "reference",
+   "effect": "aging slowed 20%",
+   "n_trials": 800,
+   "dogs": 1300,
+   "slope_test_fires": 0.81875,
+   "slope_test_fires_pointing_to_slowed_aging": 0.81875,
+   "risk_test_fires": 0.995,
+   "risk_test_fires_pointing_to_benefit": 0.995,
+   "median_slope_ratio": 0.7943792080244387,
+   "median_risk_ratio": 0.7430102338643362,
+   "share_of_dogs_with_death_recorded": 0.7165201923076924,
+   "share_left_untreated": 0.21547307692307693,
+   "share_left_treated": 0.233925,
+   "share_died_unrecorded_untreated": 0.191525,
+   "share_died_unrecorded_treated": 0.18232307692307692
+  },
+  {
+   "pattern": "treated dogs leave more",
+   "effect": "aging slowed 20%",
+   "n_trials": 800,
+   "dogs": 1300,
+   "slope_test_fires": 0.74625,
+   "slope_test_fires_pointing_to_slowed_aging": 0.74625,
+   "risk_test_fires": 0.97125,
+   "risk_test_fires_pointing_to_benefit": 0.97125,
+   "median_slope_ratio": 0.7931872507985729,
+   "median_risk_ratio": 0.7540578401953624,
+   "share_of_dogs_with_death_recorded": 0.6501586538461538,
+   "share_left_untreated": 0.2155846153846154,
+   "share_left_treated": 0.3994519230769231,
+   "share_died_unrecorded_untreated": 0.19188076923076927,
+   "share_died_unrecorded_treated": 0.316675
+  },
+  {
+   "pattern": "sick dogs leave, equally",
+   "effect": "aging slowed 20%",
+   "n_trials": 800,
+   "dogs": 1300,
+   "slope_test_fires": 0.685,
+   "slope_test_fires_pointing_to_slowed_aging": 0.685,
+   "risk_test_fires": 0.96875,
+   "risk_test_fires_pointing_to_benefit": 0.96875,
+   "median_slope_ratio": 0.7889322219349874,
+   "median_risk_ratio": 0.738427505423101,
+   "share_of_dogs_with_death_recorded": 0.5021423076923077,
+   "share_left_untreated": 0.44127115384615384,
+   "share_left_treated": 0.4420346153846154,
+   "share_died_unrecorded_untreated": 0.4158153846153846,
+   "share_died_unrecorded_treated": 0.38779423076923075
+  },
+  {
+   "pattern": "sick treated dogs leave more",
+   "effect": "aging slowed 20%",
+   "n_trials": 800,
+   "dogs": 1300,
+   "slope_test_fires": 0.68,
+   "slope_test_fires_pointing_to_slowed_aging": 0.68,
+   "risk_test_fires": 1.0,
+   "risk_test_fires_pointing_to_benefit": 1.0,
+   "median_slope_ratio": 0.7966782444615645,
+   "median_risk_ratio": 0.6145441563507017,
+   "share_of_dogs_with_death_recorded": 0.5574019230769232,
+   "share_left_untreated": 0.32789999999999997,
+   "share_left_treated": 0.44331730769230776,
+   "share_died_unrecorded_untreated": 0.30301346153846154,
+   "share_died_unrecorded_treated": 0.3899865384615384
+  },
+  {
+   "pattern": "frail treated dogs leave",
+   "effect": "aging slowed 20%",
+   "n_trials": 800,
+   "dogs": 1300,
+   "slope_test_fires": 0.805,
+   "slope_test_fires_pointing_to_slowed_aging": 0.805,
+   "risk_test_fires": 0.99375,
+   "risk_test_fires_pointing_to_benefit": 0.99375,
+   "median_slope_ratio": 0.7832199881975999,
+   "median_risk_ratio": 0.7392139413560527,
+   "share_of_dogs_with_death_recorded": 0.6516201923076923,
+   "share_left_untreated": 0.2152653846153846,
+   "share_left_treated": 0.3921384615384615,
+   "share_died_unrecorded_untreated": 0.1916769230769231,
+   "share_died_unrecorded_treated": 0.31345576923076923
+  },
+  {
+   "pattern": "treated dogs leave more",
+   "effect": "risk cut 50%",
+   "n_trials": 800,
+   "dogs": 1300,
+   "slope_test_fires": 0.05375,
+   "slope_test_fires_pointing_to_slowed_aging": 0.015,
+   "risk_test_fires": 1.0,
+   "risk_test_fires_pointing_to_benefit": 1.0,
+   "median_slope_ratio": 1.0186887475906115,
+   "median_risk_ratio": 0.5211833417172103,
+   "share_of_dogs_with_death_recorded": 0.6164634615384615,
+   "share_left_untreated": 0.2164153846153846,
+   "share_left_treated": 0.44927115384615385,
+   "share_died_unrecorded_untreated": 0.19274423076923078,
+   "share_died_unrecorded_treated": 0.33906730769230764
+  },
+  {
+   "pattern": "sick dogs leave, equally",
+   "effect": "risk cut 50%",
+   "n_trials": 800,
+   "dogs": 1300,
+   "slope_test_fires": 0.065,
+   "slope_test_fires_pointing_to_slowed_aging": 0.0275,
+   "risk_test_fires": 1.0,
+   "risk_test_fires_pointing_to_benefit": 1.0,
+   "median_slope_ratio": 1.0148705552698707,
+   "median_risk_ratio": 0.5155732559617894,
+   "share_of_dogs_with_death_recorded": 0.4805903846153846,
+   "share_left_untreated": 0.4422865384615385,
+   "share_left_treated": 0.45877307692307695,
+   "share_died_unrecorded_untreated": 0.4168173076923077,
+   "share_died_unrecorded_treated": 0.3873365384615384
+  },
+  {
+   "pattern": "sick treated dogs leave more",
+   "effect": "risk cut 50%",
+   "n_trials": 800,
+   "dogs": 1300,
+   "slope_test_fires": 0.06375,
+   "slope_test_fires_pointing_to_slowed_aging": 0.01875,
+   "risk_test_fires": 1.0,
+   "risk_test_fires_pointing_to_benefit": 1.0,
+   "median_slope_ratio": 1.0177441188705914,
+   "median_risk_ratio": 0.4311274789443633,
+   "share_of_dogs_with_death_recorded": 0.5375932692307692,
+   "share_left_untreated": 0.32903269230769233,
+   "share_left_treated": 0.45760192307692305,
+   "share_died_unrecorded_untreated": 0.30432499999999996,
+   "share_died_unrecorded_treated": 0.38549807692307697
+  },
+  {
+   "pattern": "frail treated dogs leave",
+   "effect": "risk cut 50%",
+   "n_trials": 800,
+   "dogs": 1300,
+   "slope_test_fires": 0.045,
+   "slope_test_fires_pointing_to_slowed_aging": 0.02,
+   "risk_test_fires": 1.0,
+   "risk_test_fires_pointing_to_benefit": 1.0,
+   "median_slope_ratio": 1.0126677801284119,
+   "median_risk_ratio": 0.5138347969521472,
+   "share_of_dogs_with_death_recorded": 0.618175,
+   "share_left_untreated": 0.214575,
+   "share_left_treated": 0.4431346153846154,
+   "share_died_unrecorded_untreated": 0.19065384615384617,
+   "share_died_unrecorded_treated": 0.3377365384615385
+  }
+ ]
+}

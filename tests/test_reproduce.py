@@ -29,6 +29,7 @@ PARTS = {
     "experiments/010_trial_that_settles_it": ["design_grid.py"],
     "experiments/011_realistic_trial": ["realistic_trial.py"],
     "experiments/012_hidden_differences_test": ["hidden_differences.py"],
+    "experiments/014_health_linked_dropout": ["dropout.py"],
     "experiments/016_real_trial_designs": ["real_designs.py"],
     "experiments/019_rebound_after_stopping": ["rebound.py"],
 }
@@ -43,6 +44,7 @@ LOOSE = {"damage_repair": (1e-4, 1e-9),
          "experiments/008_breed_levels": (0.05, 0.011), "experiments/010_trial_that_settles_it": (0.05, 0.011),
          "experiments/011_realistic_trial": (0.05, 0.011),
          "experiments/012_hidden_differences_test": (0.05, 0.011),
+         "experiments/014_health_linked_dropout": (0.05, 0.011),
          "experiments/016_real_trial_designs": (0.05, 0.011),
          "experiments/019_rebound_after_stopping": (0.05, 0.011)}
 SKIP_KEYS = ("runtime", "seconds", "elapsed", "time_s")
