@@ -15,6 +15,7 @@ EXP8 = ROOT / "experiments" / "008_breed_levels"
 EXP10 = ROOT / "experiments" / "010_trial_that_settles_it"
 EXP11 = ROOT / "experiments" / "011_realistic_trial"
 EXP12 = ROOT / "experiments" / "012_hidden_differences_test"
+EXP16 = ROOT / "experiments" / "016_real_trial_designs"
 
 
 def case(results, design_start, effect):
@@ -173,3 +174,29 @@ def test_experiment_012_recorded_result():
     assert flag("B", slow, "new") > 0.75 and flag("C", slow, "new") > 0.75
     assert 0.08 < flag("D", cut, "plain") < 0.15 and flag("D", cut, "new") < 0.10       # P4: half and half
     assert 0.2 < cell[("C", cut, "new")]["median_spread_estimate"] < 0.4
+
+
+def test_experiment_016_recorded_result():
+    r = json.loads((EXP16 / "results.json").read_text())
+    assert r["triad_level_per_year"] == 0.0066 and r["triad_slope_per_year"] == 0.29      # published inputs
+    cell = {(c["design"], c["effect"]): c for c in r["cases"]}
+    A = "rapamycin trial as published"
+    slowed, fades = "aging slowed 20% in the dosing year, gain kept", "risk cut 50% in the dosing year, then fades"
+    assert 0.28 < cell[(A, "no effect")]["placebo_share_dead"] < 0.32
+    assert cell[(A, slowed)]["any_difference_detected"] < 0.10                           # P1 confirmed
+    assert cell[(A, slowed)]["slope_change_flagged"] < 0.10
+    assert 0.10 < cell[(A, fades)]["any_difference_detected"] < 0.25                     # P2 first part refuted
+    assert cell[(A, fades)]["slope_change_flagged"] > 0.20                               # P2 second part confirmed
+    assert cell[(A, fades)]["flagged_as_slower_aging"] < 0.02                            # misread as faster aging
+    assert cell[(A, fades)]["lasting_benefit_reported"] < 0.09                           # two-period test honest
+    assert 0.72 < cell[(A, "risk cut 38%, lasts all 3 years")]["any_difference_detected"] < 0.86
+    for ages in ("even 10-14", "population 10-16"):                                      # P3 confirmed
+        B = f"STAY-like, entry ages {ages}"
+        assert 0.60 < cell[(B, "no effect")]["placebo_share_dead"] < 0.85
+        assert cell[(B, "risk cut 20%")]["any_difference_detected"] > 0.85
+        assert 0.22 < cell[(B, "aging slowed 20%")]["slope_change_flagged"] < 0.40
+        assert 0.02 < cell[(B, "risk cut 20%")]["slope_change_flagged"] < 0.09
+    C = "rapamycin trial's dogs, treated throughout, 10 years, {} dogs"
+    assert 0.70 < cell[(C.format(1300), "aging slowed 20%")]["slope_change_flagged"] < 0.84   # P4: just short of 80%
+    assert cell[(C.format(580), "aging slowed 20%")]["slope_change_flagged"] < 0.65
+    assert 0.5 < r["side_calculations"]["stay_like_risk_ratio_that_adds_one_year"]["even 10-14"] < 0.6

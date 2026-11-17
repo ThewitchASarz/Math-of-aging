@@ -2,6 +2,14 @@
 
 One entry per experiment, newest first. Each entry says what was predicted, what happened, and what changed as a result.
 
+## 2026-11-17: experiment 016, the two real trials with their real designs
+
+- **Question.** When the two dog trials now running are simulated with their own published designs, what could each one detect, and what share of placebo dogs dies?
+- **Predicted.** Rapamycin trial as published: a year of 20 percent slowed aging is invisible (under 10 percent); a 50 percent risk cut that fades after the dosing year is detected in 25 to 50 percent and misread by the slope test in over 20. STAY-like trial: 60 to 85 percent of placebo dogs die, a 20 percent risk cut is detected in over 85 percent, a 20 percent slowing recognised in under 35. The rapamycin trial's dogs treated for 10 years: 80 to 95 percent with 1,300 dogs, under 65 with 580.
+- **Happened.** Slowed aging in the dosing year: 6 percent (confirmed). Fading 50 percent cut: detected in 16 percent (refuted, too hopeful) and misread in 38 (confirmed). STAY-like: 83 percent of placebo dogs die, the risk cut is detected in 89 to 92 percent, the slowing recognised in 30 to 35 (confirmed, the last on the line). Ten years: 78 percent with 1,300 dogs (refuted, narrowly), 46 with 580 (confirmed). About 30 percent of placebo dogs die in the rapamycin design.
+- **Check.** Reproduced independently with separate code, more than 30 numbers; no errors. The check showed the misreading is not an artefact of search limits, and that two trial facts (a second early look after 400 dogs; STAY dosing throughout) are weakly recorded. Neither we nor the check could open the rapamycin trial's design paper in this run.
+- **Changed.** The earlier findings hold with the real designs. Two things are new: a benefit that ends with dosing is almost undetectable in the rapamycin design, and the 1,300-dog figure of experiment 010 is the low end, since it falls just short with the rapamycin trial's published inputs. The slope test must not be applied to a trial that stops dosing.
+
 ## 2026-11-16: experiment 012, a slope test that allows for hidden differences
 
 - **Question.** If the slope test is given an extra setting for hidden differences between dogs, does it stop misreading a plain cut in risk as a change in the rate of aging, and how much power does it keep?
@@ -88,10 +96,11 @@ Predictions recorded in `001_trial_fingerprint/PREDICTION.md` and `002_dog_cell_
 
 ## Next in the queue
 
-1. **016: the two real trials with their real designs (in progress; prediction recorded).** From the literature check, so it comes first. Repeat experiments 001 and 010 with the rapamycin trial's published design and with a design like Loyal's STAY study; state the share of placebo dogs that die in each.
+1. **019: risk that rebounds after stopping.** From the literature check. Repeat Part A of experiment 016 with risk that rises above the untreated level after dosing stops, and with part of the benefit lasting, and look for bias from which dogs survive the dosing year.
 2. **014: dropout that depends on health or on treatment.** Repeat experiment 011 with sick dogs more likely to leave, and with treated dogs leaving more often, to see whether the slope test reports slowed aging that is not there.
 3. **005: fit the cell model itself, not the shortcut.** Refit experiment 002 by solving the model's equation directly.
 4. **009: a partial fade.** Repeat experiment 006 with benefits that fade part of the way.
 5. **013: breeds that age at different rates.** Repeat experiment 008 with breed-level differences in the rate of aging, not only in the level of risk.
 6. **015: a delayed or partial effect.** Repeat experiment 011 with an effect that builds up over the first year or two, and with some owners not giving the treatment.
 7. **017: the hidden-differences test in harder conditions.** Repeat experiment 012 in a 4-year trial, with dropout and a mix of sizes, and with a treatment that helps frail dogs more than sturdy ones.
+8. **018: how the settling trial's size depends on the inputs.** Experiment 016 found 1,300 dogs reach 78 percent with the rapamycin trial's published inputs against 88 with ours. Vary the slope (0.29 to 0.36) and the entry ages separately to find which one matters and how many dogs each case needs.
