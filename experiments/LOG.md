@@ -2,6 +2,14 @@
 
 One entry per experiment, newest first. Each entry says what was predicted, what happened, and what changed as a result.
 
+## 2026-11-17: experiment 019, risk that rebounds after stopping
+
+- **Question.** In a trial that doses for one year and watches for three, what do the standard analyses report when risk rebounds after dosing stops, or when only part of the benefit lasts, and does the mix of surviving dogs bias the after-dosing comparison?
+- **Predicted.** With risk halved in the dosing year and then 1.5 times the untreated level, the main test fires in 20 to 45 percent of trials and nearly always points to harm. The two-period test sees that lasting rebound in 60 to 85 percent and a short one (double for six months) in under 35. When half of a halving lasts, the main test fires in 50 to 75 percent and the benefit is recognised as lasting in 20 to 45. Survivor mix does not matter: false alarms under 8 percent and a survivor risk ratio under 1.03.
+- **Happened.** Main test 28 percent, every time pointing to harm. Two-period test 76 percent for the lasting rebound, 30 for the short one. Half-lasting benefit: 63 and 35 percent. Survivor mix: 5.8 percent false alarms and a ratio of 1.013 to 1.015. All four confirmed. Not predicted: under a short rebound the main test sits at chance (5.5 percent), because the benefit and the rebound cancel.
+- **Check.** Reproduced independently with separate code and 8,000 trials per case, about 30 numbers; no errors. The check showed our survivor ratio and our brute-force test of it measured two different things (same-age dogs against whole groups); both are now computed and reported. Neither we nor the check could open the trial's design paper or the three animal papers in this run.
+- **Changed.** A trial that stops dosing should plan the two-period comparison in advance: the test over the whole trial can cancel a benefit against a rebound or read a helpful-while-given treatment as harmful. Survivor mix is cleared as a practical threat for this design. New limits: one after-dosing number cannot tell a short large rebound from a lasting small one, and "no lasting benefit found" is weak evidence at this size. All effect sizes are assumptions; no rebound is known in dogs.
+
 ## 2026-11-17: experiment 016, the two real trials with their real designs
 
 - **Question.** When the two dog trials now running are simulated with their own published designs, what could each one detect, and what share of placebo dogs dies?
@@ -96,11 +104,12 @@ Predictions recorded in `001_trial_fingerprint/PREDICTION.md` and `002_dog_cell_
 
 ## Next in the queue
 
-1. **019: risk that rebounds after stopping.** From the literature check. Repeat Part A of experiment 016 with risk that rises above the untreated level after dosing stops, and with part of the benefit lasting, and look for bias from which dogs survive the dosing year.
-2. **014: dropout that depends on health or on treatment.** Repeat experiment 011 with sick dogs more likely to leave, and with treated dogs leaving more often, to see whether the slope test reports slowed aging that is not there.
-3. **005: fit the cell model itself, not the shortcut.** Refit experiment 002 by solving the model's equation directly.
-4. **009: a partial fade.** Repeat experiment 006 with benefits that fade part of the way.
-5. **013: breeds that age at different rates.** Repeat experiment 008 with breed-level differences in the rate of aging, not only in the level of risk.
-6. **015: a delayed or partial effect.** Repeat experiment 011 with an effect that builds up over the first year or two, and with some owners not giving the treatment.
-7. **017: the hidden-differences test in harder conditions.** Repeat experiment 012 in a 4-year trial, with dropout and a mix of sizes, and with a treatment that helps frail dogs more than sturdy ones.
-8. **018: how the settling trial's size depends on the inputs.** Experiment 016 found 1,300 dogs reach 78 percent with the rapamycin trial's published inputs against 88 with ours. Vary the slope (0.29 to 0.36) and the entry ages separately to find which one matters and how many dogs each case needs.
+1. **014: dropout that depends on health or on treatment.** Repeat experiment 011 with sick dogs more likely to leave, and with treated dogs leaving more often, to see whether the slope test reports slowed aging that is not there.
+2. **005: fit the cell model itself, not the shortcut.** Refit experiment 002 by solving the model's equation directly.
+3. **009: a partial fade.** Repeat experiment 006 with benefits that fade part of the way. Experiment 019 covered a benefit that half lasts in the rapamycin design; the other designs and a slow fade remain.
+4. **013: breeds that age at different rates.** Repeat experiment 008 with breed-level differences in the rate of aging, not only in the level of risk.
+5. **015: a delayed or partial effect.** Repeat experiment 011 with an effect that builds up over the first year or two, and with some owners not giving the treatment.
+6. **017: the hidden-differences test in harder conditions.** Repeat experiment 012 in a 4-year trial, with dropout and a mix of sizes, and with a treatment that helps frail dogs more than sturdy ones.
+7. **018: how the settling trial's size depends on the inputs.** Experiment 016 found 1,300 dogs reach 78 percent with the rapamycin trial's published inputs against 88 with ours. Vary the slope (0.29 to 0.36) and the entry ages separately to find which one matters and how many dogs each case needs.
+8. **020: how many dogs a stop-and-watch trial needs.** Experiment 019 found a 580-dog trial sees a 1.25-fold rebound in about a quarter of trials and a half-lasting benefit in about a third. Find the number of dogs and years of watching that bring each to 80 percent, with the rapamycin trial's published inputs.
+9. **021: splitting the time after dosing.** Give the two-period test a third period (the first six months after stopping) and measure whether it can tell a short large rebound from a lasting small one, and what that costs in false alarms.

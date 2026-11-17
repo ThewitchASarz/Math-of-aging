@@ -1,0 +1,308 @@
+{
+ "note": "Simulated trials with the rapamycin trial's published design. 'any_difference_detected' is a two-sided 5% log-rank test; 'after_dosing_difference_reported' is experiment 006's two-period test; 'slope_change_flagged' is experiment 001's test. All effect sizes are assumptions.",
+ "triad_level_per_year": 0.0066,
+ "triad_slope_per_year": 0.29,
+ "n_dogs": 580,
+ "follow_up_years": 3.0,
+ "dosing_years": 1.0,
+ "short_rebound_ends_at_years": 1.5,
+ "seed": 20261119,
+ "trials_per_case": 1000,
+ "survivor_risk_ratio_after_dosing": {
+  "rapamycin design, fades (0.5 then 1)": {
+   "hidden variance 0.1": {
+    "just_after_dosing": 1.0043105126663145,
+    "at_end": 1.004190035149177,
+    "average_after_dosing": 1.0044741298760047,
+    "pooled_deaths_per_dog_year": 1.0072304768904432
+   },
+   "hidden variance 0.3": {
+    "just_after_dosing": 1.0128133938154449,
+    "at_end": 1.0118087036892751,
+    "average_after_dosing": 1.0129229002219229,
+    "pooled_deaths_per_dog_year": 1.015329135504041
+   }
+  },
+  "older dogs (entry 10 to 14, UK rates; ASSUMPTION), fades (0.5 then 1)": {
+   "hidden variance 0.1": {
+    "just_after_dosing": 1.0142486164617168,
+    "at_end": 1.0129041870586504,
+    "average_after_dosing": 1.0142013188710286,
+    "pooled_deaths_per_dog_year": 1.0291729421511993
+   },
+   "hidden variance 0.3": {
+    "just_after_dosing": 1.041417909442211,
+    "at_end": 1.031935848866955,
+    "average_after_dosing": 1.038386387588945,
+    "pooled_deaths_per_dog_year": 1.049644718024531
+   }
+  },
+  "brute-force check, 2 million dogs, rapamycin design, hidden variance 0.3": 1.0149636953267476
+ },
+ "cases": [
+  {
+   "effect": "no effect",
+   "multipliers": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "hidden_variance": 0.0,
+   "n_trials": 1000,
+   "placebo_share_dead": 0.29669310344827593,
+   "treated_share_dead": 0.297851724137931,
+   "placebo_share_dead_in_dosing_year": 0.08250689655172413,
+   "any_difference_detected": 0.046,
+   "any_difference_with_more_treated_deaths": 0.024,
+   "after_dosing_difference_reported": 0.048,
+   "reported_worse_after_stopping": 0.027,
+   "reported_lasting_benefit": 0.021,
+   "median_ratio_in_dosing_year": 0.999450870007002,
+   "median_ratio_after_dosing": 1.004950078084898,
+   "slope_change_flagged": 0.052,
+   "flagged_as_faster_aging": 0.021
+  },
+  {
+   "effect": "fades",
+   "multipliers": [
+    0.5,
+    1.0,
+    1.0
+   ],
+   "hidden_variance": 0.0,
+   "n_trials": 1000,
+   "placebo_share_dead": 0.2978068965517241,
+   "treated_share_dead": 0.2667103448275862,
+   "placebo_share_dead_in_dosing_year": 0.08254137931034483,
+   "any_difference_detected": 0.163,
+   "any_difference_with_more_treated_deaths": 0.004,
+   "after_dosing_difference_reported": 0.045,
+   "reported_worse_after_stopping": 0.025,
+   "reported_lasting_benefit": 0.02,
+   "median_ratio_in_dosing_year": 0.49677353680447867,
+   "median_ratio_after_dosing": 0.9940340525128153,
+   "slope_change_flagged": 0.368,
+   "flagged_as_faster_aging": 0.368
+  },
+  {
+   "effect": "lasting rebound",
+   "multipliers": [
+    0.5,
+    1.5,
+    1.5
+   ],
+   "hidden_variance": 0.0,
+   "n_trials": 1000,
+   "placebo_share_dead": 0.2970379310344828,
+   "treated_share_dead": 0.3574275862068965,
+   "placebo_share_dead_in_dosing_year": 0.08273793103448275,
+   "any_difference_detected": 0.28,
+   "any_difference_with_more_treated_deaths": 0.28,
+   "after_dosing_difference_reported": 0.759,
+   "reported_worse_after_stopping": 0.759,
+   "reported_lasting_benefit": 0.0,
+   "median_ratio_in_dosing_year": 0.4999532420973937,
+   "median_ratio_after_dosing": 1.511596256488502,
+   "slope_change_flagged": 0.772,
+   "flagged_as_faster_aging": 0.772
+  },
+  {
+   "effect": "short rebound",
+   "multipliers": [
+    0.5,
+    2.0,
+    1.0
+   ],
+   "hidden_variance": 0.0,
+   "n_trials": 1000,
+   "placebo_share_dead": 0.2975896551724138,
+   "treated_share_dead": 0.30524482758620697,
+   "placebo_share_dead_in_dosing_year": 0.08274827586206897,
+   "any_difference_detected": 0.055,
+   "any_difference_with_more_treated_deaths": 0.037,
+   "after_dosing_difference_reported": 0.304,
+   "reported_worse_after_stopping": 0.303,
+   "reported_lasting_benefit": 0.001,
+   "median_ratio_in_dosing_year": 0.47806970638386326,
+   "median_ratio_after_dosing": 1.2555308028231256,
+   "slope_change_flagged": 0.118,
+   "flagged_as_faster_aging": 0.118
+  },
+  {
+   "effect": "small lasting rebound",
+   "multipliers": [
+    0.8,
+    1.25,
+    1.25
+   ],
+   "hidden_variance": 0.0,
+   "n_trials": 1000,
+   "placebo_share_dead": 0.2963724137931035,
+   "treated_share_dead": 0.32837586206896546,
+   "placebo_share_dead_in_dosing_year": 0.08267931034482759,
+   "any_difference_detected": 0.111,
+   "any_difference_with_more_treated_deaths": 0.109,
+   "after_dosing_difference_reported": 0.267,
+   "reported_worse_after_stopping": 0.267,
+   "reported_lasting_benefit": 0.0,
+   "median_ratio_in_dosing_year": 0.7917244430535324,
+   "median_ratio_after_dosing": 1.2490038489472708,
+   "slope_change_flagged": 0.256,
+   "flagged_as_faster_aging": 0.255
+  },
+  {
+   "effect": "rebound with no benefit first",
+   "multipliers": [
+    1.0,
+    1.5,
+    1.5
+   ],
+   "hidden_variance": 0.0,
+   "n_trials": 1000,
+   "placebo_share_dead": 0.2973172413793104,
+   "treated_share_dead": 0.38331379310344826,
+   "placebo_share_dead_in_dosing_year": 0.0828448275862069,
+   "any_difference_detected": 0.556,
+   "any_difference_with_more_treated_deaths": 0.556,
+   "after_dosing_difference_reported": 0.753,
+   "reported_worse_after_stopping": 0.753,
+   "reported_lasting_benefit": 0.0,
+   "median_ratio_in_dosing_year": 1.0001595301278274,
+   "median_ratio_after_dosing": 1.4968076572941769,
+   "slope_change_flagged": 0.225,
+   "flagged_as_faster_aging": 0.224
+  },
+  {
+   "effect": "half the benefit lasts",
+   "multipliers": [
+    0.5,
+    0.75,
+    0.75
+   ],
+   "hidden_variance": 0.0,
+   "n_trials": 1000,
+   "placebo_share_dead": 0.2968034482758621,
+   "treated_share_dead": 0.21716896551724135,
+   "placebo_share_dead_in_dosing_year": 0.08221379310344827,
+   "any_difference_detected": 0.625,
+   "any_difference_with_more_treated_deaths": 0.0,
+   "after_dosing_difference_reported": 0.352,
+   "reported_worse_after_stopping": 0.0,
+   "reported_lasting_benefit": 0.352,
+   "median_ratio_in_dosing_year": 0.494714177928089,
+   "median_ratio_after_dosing": 0.7528734715794594,
+   "slope_change_flagged": 0.159,
+   "flagged_as_faster_aging": 0.158
+  },
+  {
+   "effect": "half of a smaller benefit lasts",
+   "multipliers": [
+    0.7,
+    0.85,
+    0.85
+   ],
+   "hidden_variance": 0.0,
+   "n_trials": 1000,
+   "placebo_share_dead": 0.2973862068965517,
+   "treated_share_dead": 0.24948965517241378,
+   "placebo_share_dead_in_dosing_year": 0.08379310344827587,
+   "any_difference_detected": 0.26,
+   "any_difference_with_more_treated_deaths": 0.0,
+   "after_dosing_difference_reported": 0.153,
+   "reported_worse_after_stopping": 0.0,
+   "reported_lasting_benefit": 0.153,
+   "median_ratio_in_dosing_year": 0.6927886441289819,
+   "median_ratio_after_dosing": 0.845826753508395,
+   "slope_change_flagged": 0.078,
+   "flagged_as_faster_aging": 0.072
+  },
+  {
+   "effect": "no effect",
+   "multipliers": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "hidden_variance": 0.1,
+   "n_trials": 1000,
+   "placebo_share_dead": 0.29258275862068966,
+   "treated_share_dead": 0.29374137931034483,
+   "placebo_share_dead_in_dosing_year": 0.08208275862068966,
+   "any_difference_detected": 0.059,
+   "any_difference_with_more_treated_deaths": 0.035,
+   "after_dosing_difference_reported": 0.049,
+   "reported_worse_after_stopping": 0.024,
+   "reported_lasting_benefit": 0.025,
+   "median_ratio_in_dosing_year": 1.0010447705533292,
+   "median_ratio_after_dosing": 0.9926945596191374,
+   "slope_change_flagged": 0.048,
+   "flagged_as_faster_aging": 0.026
+  },
+  {
+   "effect": "fades",
+   "multipliers": [
+    0.5,
+    1.0,
+    1.0
+   ],
+   "hidden_variance": 0.1,
+   "n_trials": 1000,
+   "placebo_share_dead": 0.29231379310344824,
+   "treated_share_dead": 0.26317241379310347,
+   "placebo_share_dead_in_dosing_year": 0.08274827586206897,
+   "any_difference_detected": 0.132,
+   "any_difference_with_more_treated_deaths": 0.002,
+   "after_dosing_difference_reported": 0.052,
+   "reported_worse_after_stopping": 0.031,
+   "reported_lasting_benefit": 0.021,
+   "median_ratio_in_dosing_year": 0.4971343238480066,
+   "median_ratio_after_dosing": 1.0023047346804899,
+   "slope_change_flagged": 0.36,
+   "flagged_as_faster_aging": 0.36
+  },
+  {
+   "effect": "no effect",
+   "multipliers": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "hidden_variance": 0.3,
+   "n_trials": 1000,
+   "placebo_share_dead": 0.28375517241379306,
+   "treated_share_dead": 0.28505517241379313,
+   "placebo_share_dead_in_dosing_year": 0.08123103448275863,
+   "any_difference_detected": 0.049,
+   "any_difference_with_more_treated_deaths": 0.021,
+   "after_dosing_difference_reported": 0.057,
+   "reported_worse_after_stopping": 0.028,
+   "reported_lasting_benefit": 0.029,
+   "median_ratio_in_dosing_year": 1.020043448523782,
+   "median_ratio_after_dosing": 0.9982912632336253,
+   "slope_change_flagged": 0.042,
+   "flagged_as_faster_aging": 0.013
+  },
+  {
+   "effect": "fades",
+   "multipliers": [
+    0.5,
+    1.0,
+    1.0
+   ],
+   "hidden_variance": 0.3,
+   "n_trials": 1000,
+   "placebo_share_dead": 0.2835448275862069,
+   "treated_share_dead": 0.2562551724137931,
+   "placebo_share_dead_in_dosing_year": 0.08228620689655174,
+   "any_difference_detected": 0.143,
+   "any_difference_with_more_treated_deaths": 0.006,
+   "after_dosing_difference_reported": 0.058,
+   "reported_worse_after_stopping": 0.036,
+   "reported_lasting_benefit": 0.022,
+   "median_ratio_in_dosing_year": 0.5026480155035921,
+   "median_ratio_after_dosing": 1.0060838944483543,
+   "slope_change_flagged": 0.352,
+   "flagged_as_faster_aging": 0.352
+  }
+ ]
+}

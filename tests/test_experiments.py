@@ -16,6 +16,7 @@ EXP10 = ROOT / "experiments" / "010_trial_that_settles_it"
 EXP11 = ROOT / "experiments" / "011_realistic_trial"
 EXP12 = ROOT / "experiments" / "012_hidden_differences_test"
 EXP16 = ROOT / "experiments" / "016_real_trial_designs"
+EXP19 = ROOT / "experiments" / "019_rebound_after_stopping"
 
 
 def case(results, design_start, effect):
@@ -200,3 +201,28 @@ def test_experiment_016_recorded_result():
     assert 0.70 < cell[(C.format(1300), "aging slowed 20%")]["slope_change_flagged"] < 0.84   # P4: just short of 80%
     assert cell[(C.format(580), "aging slowed 20%")]["slope_change_flagged"] < 0.65
     assert 0.5 < r["side_calculations"]["stay_like_risk_ratio_that_adds_one_year"]["even 10-14"] < 0.6
+
+
+def test_experiment_019_recorded_result():
+    r = json.loads((EXP19 / "results.json").read_text())
+    assert r["triad_level_per_year"] == 0.0066 and r["triad_slope_per_year"] == 0.29      # published inputs
+    assert r["n_dogs"] == 580 and r["follow_up_years"] == 3.0 and r["dosing_years"] == 1.0
+    cell = {(c["effect"], c["hidden_variance"]): c for c in r["cases"]}
+    assert 0.28 < cell[("no effect", 0.0)]["placebo_share_dead"] < 0.32
+    reb = cell[("lasting rebound", 0.0)]
+    assert 0.20 < reb["any_difference_detected"] < 0.45                                   # P1 confirmed
+    assert reb["any_difference_with_more_treated_deaths"] >= 0.9 * reb["any_difference_detected"]
+    assert 0.60 < reb["reported_worse_after_stopping"] < 0.85                             # P2 confirmed
+    short = cell[("short rebound", 0.0)]
+    assert short["reported_worse_after_stopping"] < 0.35
+    assert short["any_difference_detected"] < 0.09                                        # benefit and rebound cancel
+    half = cell[("half the benefit lasts", 0.0)]
+    assert 0.50 < half["any_difference_detected"] < 0.75                                  # P3 confirmed
+    assert 0.20 < half["reported_lasting_benefit"] < 0.45
+    for v in (0.0, 0.10, 0.30):                                                           # P4 confirmed
+        for effect in ("no effect", "fades"):
+            assert 0.02 < cell[(effect, v)]["after_dosing_difference_reported"] < 0.08
+    side = r["survivor_risk_ratio_after_dosing"]["rapamycin design, fades (0.5 then 1)"]["hidden variance 0.3"]
+    assert 1.0 < side["average_after_dosing"] < side["pooled_deaths_per_dog_year"] < 1.03
+    brute = r["survivor_risk_ratio_after_dosing"]["brute-force check, 2 million dogs, rapamycin design, hidden variance 0.3"]
+    assert abs(brute - side["pooled_deaths_per_dog_year"]) < 0.01
