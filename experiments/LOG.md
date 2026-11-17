@@ -88,7 +88,7 @@ Predictions recorded in `001_trial_fingerprint/PREDICTION.md` and `002_dog_cell_
 
 ## Next in the queue
 
-1. **016: the two real trials with their real designs.** From the literature check, so it comes first. Repeat experiments 001 and 010 with the rapamycin trial's published design and with a design like Loyal's STAY study; state the share of placebo dogs that die in each.
+1. **016: the two real trials with their real designs (in progress; prediction recorded).** From the literature check, so it comes first. Repeat experiments 001 and 010 with the rapamycin trial's published design and with a design like Loyal's STAY study; state the share of placebo dogs that die in each.
 2. **014: dropout that depends on health or on treatment.** Repeat experiment 011 with sick dogs more likely to leave, and with treated dogs leaving more often, to see whether the slope test reports slowed aging that is not there.
 3. **005: fit the cell model itself, not the shortcut.** Refit experiment 002 by solving the model's equation directly.
 4. **009: a partial fade.** Repeat experiment 006 with benefits that fade part of the way.
