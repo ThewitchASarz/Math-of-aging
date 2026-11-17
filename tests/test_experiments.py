@@ -7,6 +7,7 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parents[1]
 EXP1 = ROOT / "experiments" / "001_trial_fingerprint"
 EXP2 = ROOT / "experiments" / "002_dog_cell_model"
+EXP5 = ROOT / "experiments" / "005_cell_model_direct"
 EXP3 = ROOT / "experiments" / "003_fading_effect"
 EXP4 = ROOT / "experiments" / "004_old_dogs"
 EXP6 = ROOT / "experiments" / "006_stop_and_watch"
@@ -254,3 +255,28 @@ def test_experiment_014_recorded_result():
     assert b["trials_per_case"] == 2500
     for c in b["cases"]:
         assert c["effect"] == none and 0.04 < c["slope_test_fires"] < 0.08
+
+
+def test_experiment_005_recorded_result():
+    r = json.loads((EXP5 / "results.json").read_text())
+    old = {"UK": dict(B=0.283, C=0.230, D=0.204), "US": dict(B=0.196, C=0.168, D=0.155)}
+    for label, t in r["tables"].items():
+        f = t["fits"]
+        assert f["A"]["rmse_log_death_rate"] > 1.0                                         # P1 confirmed
+        for name in ("B", "C", "D"):                                                       # P2 confirmed
+            e = f[name]["rmse_log_death_rate"]
+            assert 0.12 < e and abs(e - old[label[:2]][name]) < 0.08
+            assert abs(f[name]["experiment_002"]["rmse_log_death_rate"] - old[label[:2]][name]) < 0.001
+            assert max(f[name]["rmse_from_each_start"]) - min(f[name]["rmse_from_each_start"]) < 0.002
+        assert 0.40 < f["B"]["beta_ratio_to_human"] < 0.65                                 # P3 confirmed
+        assert 2.8 < f["B"]["eta_ratio_to_human"] < 4.6
+        assert t["spread_of_BCD_errors"] < 0.10 and t["order_best_to_worst_BCD"] == ["D", "C", "B"]   # P4
+        res = t["residuals_fit_B_log_model_minus_log_observed"]                            # shape of the miss
+        assert res[0] < -0.35 and max(res[3:6]) > 0.15
+        for name in ("B", "C", "D"):                                                       # extra: ages 5 to 15
+            assert t["extra_ages_5_to_15"]["fits"][name]["rmse_log_death_rate"] < 0.07
+    g = r["solver_guard"]
+    assert g["max_abs_z"] < 3.0 and abs(g["mean_log_ratio"]) < 0.02
+    assert g["max_abs_log_gap_grid_refinement"] < 0.002
+    assert -0.09 < g["experiment_002_simulation"]["mean_log_ratio"] < -0.03
+    assert 0.02 < r["human_check"]["max_abs_log_gap"] < 0.05
