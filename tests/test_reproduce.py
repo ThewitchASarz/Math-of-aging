@@ -27,6 +27,7 @@ PARTS = {
     "experiments/006_stop_and_watch": ["two_period.py"],
     "experiments/007_breed_differences": ["breeds.py"],
     "experiments/008_breed_levels": ["breed_levels.py"],
+    "experiments/009_partial_fade": ["partial_fade.py"],
     "experiments/010_trial_that_settles_it": ["design_grid.py"],
     "experiments/011_realistic_trial": ["realistic_trial.py"],
     "experiments/012_hidden_differences_test": ["hidden_differences.py"],
@@ -48,7 +49,8 @@ LOOSE = {"damage_repair": (1e-4, 1e-9),
          "experiments/012_hidden_differences_test": (0.05, 0.011),
          "experiments/014_health_linked_dropout": (0.05, 0.011),
          "experiments/016_real_trial_designs": (0.05, 0.011),
-         "experiments/019_rebound_after_stopping": (0.05, 0.011)}
+         "experiments/019_rebound_after_stopping": (0.05, 0.011),
+         "experiments/009_partial_fade": (0.05, 0.011)}
 SKIP_KEYS = ("runtime", "seconds", "elapsed", "time_s")
 
 

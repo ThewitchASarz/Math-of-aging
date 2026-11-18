@@ -13,6 +13,7 @@ EXP4 = ROOT / "experiments" / "004_old_dogs"
 EXP6 = ROOT / "experiments" / "006_stop_and_watch"
 EXP7 = ROOT / "experiments" / "007_breed_differences"
 EXP8 = ROOT / "experiments" / "008_breed_levels"
+EXP9 = ROOT / "experiments" / "009_partial_fade"
 EXP10 = ROOT / "experiments" / "010_trial_that_settles_it"
 EXP11 = ROOT / "experiments" / "011_realistic_trial"
 EXP12 = ROOT / "experiments" / "012_hidden_differences_test"
@@ -280,3 +281,37 @@ def test_experiment_005_recorded_result():
     assert g["max_abs_log_gap_grid_refinement"] < 0.002
     assert -0.09 < g["experiment_002_simulation"]["mean_log_ratio"] < -0.03
     assert 0.02 < r["human_check"]["max_abs_log_gap"] < 0.05
+
+
+def test_experiment_009_recorded_result():
+    r = json.loads((EXP9 / "results.json").read_text())
+    assert r["triad_level_per_year"] == 0.0066 and r["triad_slope_per_year"] == 0.29      # published inputs
+    assert r["dosing_years"] == 1.0
+    cell = {(c["design"][:2], c["effect"]): c for c in r["cases"]}
+    assert len(cell) == 21
+    assert cell[("D1", "no effect")]["n_dogs"] == 580 and cell[("D1", "no effect")]["follow_up_years"] == 3.0
+    assert 0.28 < cell[("D1", "no effect")]["placebo_share_dead"] < 0.32
+    assert cell[("D2", "no effect")]["placebo_share_dead"] > 0.95
+    for d in ("D1", "D2", "D3"):                                                          # false alarms near 5%
+        for effect in ("no effect", "fades at once"):
+            assert 0.02 < cell[(d, effect)]["after_dosing_difference_reported"] < 0.08
+    half = "half lasts"                                                                   # P1 confirmed
+    assert 0.25 < cell[("D1", half)]["reported_lasting_benefit"] < 0.45
+    assert cell[("D2", half)]["reported_lasting_benefit"] > 0.85
+    assert cell[("D3", half)]["reported_lasting_benefit"] > 0.95
+    fifth = "a fifth lasts"                                                               # P2 confirmed
+    assert cell[("D1", fifth)]["reported_lasting_benefit"] < 0.15
+    assert cell[("D2", fifth)]["reported_lasting_benefit"] < 0.50
+    assert cell[("D3", fifth)]["reported_lasting_benefit"] < 0.50
+    slow = "slow fade (halves every 2 years)"                                             # P3 confirmed
+    assert 0.45 < cell[("D1", slow)]["reported_lasting_benefit"] < 0.70
+    assert 0.60 < cell[("D1", slow)]["median_ratio_after_dosing"] < 0.72
+    assert 0.35 < cell[("D2", slow)]["reported_lasting_benefit"] < 0.70
+    assert 0.78 < cell[("D2", slow)]["median_ratio_after_dosing"] < 0.92
+    quick = "quick fade (halves every 6 months)"                                          # P4: half and half
+    assert cell[("D1", quick)]["reported_lasting_benefit"] < 0.20
+    assert 0.80 < cell[("D3", quick)]["reported_lasting_benefit"] < 0.92                  # on the 85% line
+    assert cell[("D2", quick)]["reported_lasting_benefit"] < 0.12                         # washes out in 10 years
+    small = "half of a smaller benefit lasts"                                             # look the same in D1
+    assert abs(cell[("D1", quick)]["median_ratio_after_dosing"] - cell[("D1", small)]["median_ratio_after_dosing"]) < 0.03
+    assert cell[("D3", quick)]["true_multiplier_at_end_of_follow_up"] > 0.96
