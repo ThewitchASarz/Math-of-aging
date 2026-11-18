@@ -21,6 +21,7 @@ EXP13 = ROOT / "experiments" / "013_breed_slopes"
 EXP14 = ROOT / "experiments" / "014_health_linked_dropout"
 EXP15 = ROOT / "experiments" / "015_delayed_partial_effect"
 EXP16 = ROOT / "experiments" / "016_real_trial_designs"
+EXP17 = ROOT / "experiments" / "017_hidden_differences_harder"
 EXP19 = ROOT / "experiments" / "019_rebound_after_stopping"
 
 
@@ -381,3 +382,34 @@ def test_experiment_015_recorded_result():
     assert 0.03 < two["from_year_2_slope_change_flagged"] < 0.08                 # P4 confirmed: the repair works
     assert 0.03 < cell[("no effect", 1300)]["from_year_2_slope_change_flagged"] < 0.08
     assert 0.45 < cell[("slowed 20%, at once", 1300)]["from_year_2_slope_change_flagged"] < 0.58   # at a price
+
+
+def test_experiment_017_recorded_result():
+    r = json.loads((EXP17 / "results.json").read_text())
+    r12 = json.loads((EXP12 / "results.json").read_text())
+    assert r["uk_a_per_year"] == r12["dog_a_per_year"] and r["uk_b_per_year"] == r12["dog_b_per_year"]
+    assert r["trials_per_case"] == 800 and r["dropout_per_year"] == 0.05
+    assert r["gradient_check_max_relative_error"] < 1e-5
+    cell = {(c["case"], c["analysis"]): c for c in r["cases"]}
+    assert len(cell) == 20
+    flag = lambda case, an: cell[(case, an)]["slope_change_flagged"]
+    assert 0.065 < flag("4 years | risk cut 50%", "plain") < 0.15                # P1 confirmed
+    assert 0.03 < flag("4 years | risk cut 50%", "new") < 0.08
+    assert 0.03 < flag("4 years | no effect", "new") < 0.08
+    assert 0.15 < flag("4 years | aging slowed 20%", "new") < 0.32               # P2 confirmed: no power lost
+    nov = "4 years, no hidden differences | aging slowed 20%"
+    assert flag(nov, "new") > flag(nov, "plain") - 0.05
+    mix = "10 years, sizes, dropout | "
+    assert 0.06 < flag(mix + "risk cut 50%", "plain") < 0.12                     # P3: below the predicted 12 to 25
+    assert 0.03 < flag(mix + "risk cut 50%", "new") < 0.08
+    assert 0.03 < flag(mix + "no effect", "new") < 0.08
+    assert 0.77 < flag(mix + "aging slowed 20%", "new") < 0.84                   # on the upper line of 60 to 80
+    frail = "10 years | frail helped more (70% and 30% cuts)"                    # P4: both tests defeated
+    assert 0.72 < flag(frail, "plain") < 0.83 and 0.25 < flag(frail, "new") < 0.36
+    assert cell[(frail, "plain")]["flagged_as_slower_aging"] < 0.03
+    assert cell[(frail, "new")]["flagged_as_slower_aging"] < 0.03
+    sturdy = "10 years | sturdy helped more (30% and 70% cuts)"                  # not predicted: read as slowed aging
+    assert 0.52 < cell[(sturdy, "plain")]["flagged_as_slower_aging"] < 0.64
+    assert 0.84 < cell[(sturdy, "new")]["flagged_as_slower_aging"] < 0.92
+    short = "4 years | frail helped more (70% and 30% cuts)"
+    assert 0.19 < flag(short, "plain") < 0.29 and 0.03 < flag(short, "new") < 0.08
