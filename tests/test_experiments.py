@@ -17,6 +17,7 @@ EXP9 = ROOT / "experiments" / "009_partial_fade"
 EXP10 = ROOT / "experiments" / "010_trial_that_settles_it"
 EXP11 = ROOT / "experiments" / "011_realistic_trial"
 EXP12 = ROOT / "experiments" / "012_hidden_differences_test"
+EXP13 = ROOT / "experiments" / "013_breed_slopes"
 EXP14 = ROOT / "experiments" / "014_health_linked_dropout"
 EXP16 = ROOT / "experiments" / "016_real_trial_designs"
 EXP19 = ROOT / "experiments" / "019_rebound_after_stopping"
@@ -315,3 +316,36 @@ def test_experiment_009_recorded_result():
     small = "half of a smaller benefit lasts"                                             # look the same in D1
     assert abs(cell[("D1", quick)]["median_ratio_after_dosing"] - cell[("D1", small)]["median_ratio_after_dosing"]) < 0.03
     assert cell[("D3", quick)]["true_multiplier_at_end_of_follow_up"] > 0.96
+
+
+def test_experiment_013_recorded_result():
+    r = json.loads((EXP13 / "results.json").read_text())
+    fits = json.loads((ROOT / "dog_lifespan" / "results.json").read_text())
+    assert r["dog_b_per_year"] == fits["part1_mortality_fits"]["RECOMMENDED_dog_parameters"]["b_per_year"]
+    assert r["trials_per_case"] == 1000 and r["gradient_check_max_relative_error"] < 1e-5
+    main = r["worlds"][0]
+    assert main["breed_list"] == "without the French Bulldog" and main["share_on_rate"] == 1.0
+    assert main["analysis_groups"] == 12 and len(main["breeds"]) == 18
+    assert 0.27 < main["lowest_rate"] < 0.28 and 0.55 < main["highest_rate"] < 0.58
+    assert 0.035 < main["rate_sd_at_entry"] < 0.045            # rates are close together among dogs at entry
+    assert all(abs(b["level"] / main["reference_level"] - 1) < 1e-6 for b in main["breeds"])  # all on the rate
+    cell = {(c["breed_list"], c["share_on_rate"], c["design"][-8:].strip(), c["effect"], c["analysis"]): c
+            for c in r["cases"]}
+    assert len(cell) == 36 and all(c["trials_analysed"] == 1000 for c in r["cases"])
+    for key, c in cell.items():
+        if key[3] != "aging slowed 20%":                        # P1 and P3: no true change of slope
+            assert 0.03 < c["slope_change_flagged"] < 0.08, key
+    m = ("without the French Bulldog", 1.0, "10 years")
+    cut = "risk cut 50%"                                        # P2 refuted: under 8 percent, simple fix enough
+    assert cell[m + (cut, "ignoring breed")]["slope_change_flagged"] < 0.08
+    assert cell[m + (cut, "level per breed")]["slope_change_flagged"] < 0.08
+    assert 1.0 < cell[m + (cut, "ignoring breed")]["median_slope_estimate"] < 1.05
+    slow = "aging slowed 20%"                                   # P4 confirmed
+    assert 0.75 < cell[m + (slow, "level and rate per breed")]["slope_change_flagged"] < 0.90
+    four = ("without the French Bulldog", 1.0, "4 years")
+    assert 0.15 < cell[four + (slow, "level and rate per breed")]["slope_change_flagged"] < 0.35
+    for w in (m, ("without the French Bulldog", 0.5, "10 years"), ("all 19 groups", 1.0, "10 years")):
+        best = cell[w + (slow, "level per breed")]["slope_change_flagged"]      # a level per breed has the best power
+        assert best > 0.83
+        assert best > cell[w + (slow, "ignoring breed")]["slope_change_flagged"] + 0.04
+        assert best > cell[w + (slow, "level and rate per breed")]["slope_change_flagged"]
