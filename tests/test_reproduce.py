@@ -33,6 +33,7 @@ PARTS = {
     "experiments/012_hidden_differences_test": ["hidden_differences.py"],
     "experiments/013_breed_slopes": ["breed_slopes.py"],
     "experiments/014_health_linked_dropout": ["dropout.py"],
+    "experiments/015_delayed_partial_effect": ["delayed_partial.py"],
     "experiments/016_real_trial_designs": ["real_designs.py"],
     "experiments/019_rebound_after_stopping": ["rebound.py"],
 }
@@ -50,6 +51,7 @@ LOOSE = {"damage_repair": (1e-4, 1e-9),
          "experiments/012_hidden_differences_test": (0.05, 0.011),
          "experiments/013_breed_slopes": (0.05, 0.011),
          "experiments/014_health_linked_dropout": (0.05, 0.011),
+         "experiments/015_delayed_partial_effect": (0.05, 0.011),
          "experiments/016_real_trial_designs": (0.05, 0.011),
          "experiments/019_rebound_after_stopping": (0.05, 0.011),
          "experiments/009_partial_fade": (0.05, 0.011)}

@@ -1,0 +1,181 @@
+{
+ "note": "Simulated 10-year trials in the 'realistic' scenario of experiment 011 (size mix, hidden risk factor, 5 percent of dogs lost a year, entry ages 7 to 12). Dogs are analysed in the group they were assigned to. 'slope_change_flagged' is the share of trials in which the size-aware slope test reports a change in the rate of aging; 'from_year_2' is the same test on dogs still followed 2 years after enrolment. ASSUMPTIONS: straight-line build-up over 1 or 2 years; shares of dogs never given the treatment; owners stopping at 10 percent a year with the gain kept; and all assumptions of experiment 011.",
+ "seed": 20261118,
+ "trials_per_case": 800,
+ "frailty_variance_from_experiment_004": 0.10190214599720965,
+ "dropout_per_year": 0.05,
+ "size_classes": [
+  "toy",
+  "small",
+  "medium",
+  "large",
+  "giant"
+ ],
+ "rate_of_aging_per_year": [
+  0.3217404108181793,
+  0.316488031994736,
+  0.34358451707461857,
+  0.3898801338670896,
+  0.4962134541772647
+ ],
+ "population_share": [
+  0.22415565847819954,
+  0.29908383021963425,
+  0.13794914915353582,
+  0.3245147312979483,
+  0.014296630850682128
+ ],
+ "common_level_a": 0.0019931693453973443,
+ "grid_solver_max_error_years": 1.0276970741074365e-07,
+ "smallest_grid_size_reaching_80_percent_combined_case": 2000,
+ "cases": [
+  {
+   "world": "no effect",
+   "dogs": 1300,
+   "n_trials": 800,
+   "slope_change_flagged": 0.05125,
+   "median_slope_estimate": 0.9953958016736455,
+   "share_of_deaths_seen": 0.747689423076923,
+   "from_year_2_slope_change_flagged": 0.0625,
+   "from_year_2_median_slope_estimate": 0.9992591652786682,
+   "from_year_2_share_of_dogs_still_followed": 0.7569663461538463
+  },
+  {
+   "world": "slowed 20%, at once",
+   "dogs": 1300,
+   "n_trials": 800,
+   "slope_change_flagged": 0.78875,
+   "median_slope_estimate": 0.794353279238575,
+   "share_of_deaths_seen": 0.7164576923076922,
+   "from_year_2_slope_change_flagged": 0.51125,
+   "from_year_2_median_slope_estimate": 0.8049415969721685,
+   "from_year_2_share_of_dogs_still_followed": 0.7614903846153845
+  },
+  {
+   "world": "slowed 20%, builds over 1 year",
+   "dogs": 1300,
+   "n_trials": 800,
+   "slope_change_flagged": 0.77625,
+   "median_slope_estimate": 0.7966331753515229,
+   "share_of_deaths_seen": 0.7198173076923077
+  },
+  {
+   "world": "slowed 20%, builds over 2 years",
+   "dogs": 1300,
+   "n_trials": 800,
+   "slope_change_flagged": 0.79125,
+   "median_slope_estimate": 0.800363686120847,
+   "share_of_deaths_seen": 0.7230403846153847
+  },
+  {
+   "world": "slowed 20%, 10% never given",
+   "dogs": 1300,
+   "n_trials": 800,
+   "slope_change_flagged": 0.73625,
+   "median_slope_estimate": 0.8095691223895698,
+   "share_of_deaths_seen": 0.7201298076923078
+  },
+  {
+   "world": "slowed 20%, 20% never given",
+   "dogs": 1300,
+   "n_trials": 800,
+   "slope_change_flagged": 0.67125,
+   "median_slope_estimate": 0.823822572982646,
+   "share_of_deaths_seen": 0.7240971153846152
+  },
+  {
+   "world": "slowed 20%, 30% never given",
+   "dogs": 1300,
+   "n_trials": 800,
+   "slope_change_flagged": 0.6125,
+   "median_slope_estimate": 0.8353560764158636,
+   "share_of_deaths_seen": 0.7258423076923077
+  },
+  {
+   "world": "slowed 20%, 10% stop each year",
+   "dogs": 1300,
+   "n_trials": 800,
+   "slope_change_flagged": 0.4625,
+   "median_slope_estimate": 0.8659842580276101,
+   "share_of_deaths_seen": 0.7260048076923076
+  },
+  {
+   "world": "slowed 20%, builds over 1 year, 20% never given",
+   "dogs": 1300,
+   "n_trials": 800,
+   "slope_change_flagged": 0.7175,
+   "median_slope_estimate": 0.8176322540484091,
+   "share_of_deaths_seen": 0.725175
+  },
+  {
+   "world": "risk cut 50%, at once",
+   "dogs": 1300,
+   "n_trials": 800,
+   "slope_change_flagged": 0.06125,
+   "median_slope_estimate": 1.0159534890248425,
+   "share_of_deaths_seen": 0.687701923076923
+  },
+  {
+   "world": "risk cut 50%, builds over 1 year",
+   "dogs": 1300,
+   "n_trials": 800,
+   "slope_change_flagged": 0.08625,
+   "median_slope_estimate": 0.9609057140712616,
+   "share_of_deaths_seen": 0.6899201923076923,
+   "from_year_2_slope_change_flagged": 0.0675,
+   "from_year_2_median_slope_estimate": 1.0182933068063773,
+   "from_year_2_share_of_dogs_still_followed": 0.7849442307692308
+  },
+  {
+   "world": "risk cut 50%, builds over 2 years",
+   "dogs": 1300,
+   "n_trials": 800,
+   "slope_change_flagged": 0.23375,
+   "median_slope_estimate": 0.912042478745724,
+   "share_of_deaths_seen": 0.6915480769230768,
+   "from_year_2_slope_change_flagged": 0.055,
+   "from_year_2_median_slope_estimate": 1.0199741525516077,
+   "from_year_2_share_of_dogs_still_followed": 0.7772182692307693
+  },
+  {
+   "world": "risk cut 50%, 20% never given",
+   "dogs": 1300,
+   "n_trials": 800,
+   "slope_change_flagged": 0.06875,
+   "median_slope_estimate": 0.9785130919378814,
+   "share_of_deaths_seen": 0.699514423076923
+  },
+  {
+   "world": "risk cut 50%, 30% never given",
+   "dogs": 1300,
+   "n_trials": 800,
+   "slope_change_flagged": 0.07625,
+   "median_slope_estimate": 0.9619866525438516,
+   "share_of_deaths_seen": 0.7050701923076923
+  },
+  {
+   "world": "slowed 20%, builds over 1 year, 20% never given",
+   "dogs": 1600,
+   "n_trials": 800,
+   "slope_change_flagged": 0.75625,
+   "median_slope_estimate": 0.821341540977647,
+   "share_of_deaths_seen": 0.7253093749999999
+  },
+  {
+   "world": "slowed 20%, builds over 1 year, 20% never given",
+   "dogs": 2000,
+   "n_trials": 800,
+   "slope_change_flagged": 0.83625,
+   "median_slope_estimate": 0.8252777970913853,
+   "share_of_deaths_seen": 0.72566125
+  },
+  {
+   "world": "slowed 20%, builds over 1 year, 20% never given",
+   "dogs": 2600,
+   "n_trials": 800,
+   "slope_change_flagged": 0.9225,
+   "median_slope_estimate": 0.8284838176355885,
+   "share_of_deaths_seen": 0.7258264423076923
+  }
+ ]
+}

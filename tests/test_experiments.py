@@ -19,6 +19,7 @@ EXP11 = ROOT / "experiments" / "011_realistic_trial"
 EXP12 = ROOT / "experiments" / "012_hidden_differences_test"
 EXP13 = ROOT / "experiments" / "013_breed_slopes"
 EXP14 = ROOT / "experiments" / "014_health_linked_dropout"
+EXP15 = ROOT / "experiments" / "015_delayed_partial_effect"
 EXP16 = ROOT / "experiments" / "016_real_trial_designs"
 EXP19 = ROOT / "experiments" / "019_rebound_after_stopping"
 
@@ -349,3 +350,34 @@ def test_experiment_013_recorded_result():
         assert best > 0.83
         assert best > cell[w + (slow, "ignoring breed")]["slope_change_flagged"] + 0.04
         assert best > cell[w + (slow, "level and rate per breed")]["slope_change_flagged"]
+
+
+def test_experiment_015_recorded_result():
+    r = json.loads((EXP15 / "results.json").read_text())
+    r11 = json.loads((EXP11 / "results.json").read_text())
+    assert r["rate_of_aging_per_year"] == r11["rate_of_aging_per_year"]          # same trial as experiment 011
+    assert r["frailty_variance_from_experiment_004"] == r11["frailty_variance_from_experiment_004"]
+    assert r["trials_per_case"] == 800 and r["dropout_per_year"] == 0.05
+    assert r["grid_solver_max_error_years"] < 1e-5
+    cell = {(c["world"], c["dogs"]): c for c in r["cases"]}
+    assert len(cell) == 17
+    flag = lambda w, n=1300: cell[(w, n)]["slope_change_flagged"]
+    base = flag("slowed 20%, at once")
+    assert 0.74 < base < 0.84                                                    # experiment 011 found 79%
+    assert abs(flag("slowed 20%, builds over 1 year") - base) < 0.05             # P1 confirmed: delay costs nothing
+    assert abs(flag("slowed 20%, builds over 2 years") - base) < 0.05
+    assert 0.64 < flag("slowed 20%, 10% never given") < 0.76                     # P2: half and half
+    assert 0.66 < flag("slowed 20%, 20% never given") < 0.72                     # above the predicted 52 to 66
+    assert 0.56 < flag("slowed 20%, 30% never given") < 0.66                     # above the predicted 40 to 56
+    assert 0.45 < flag("slowed 20%, 10% stop each year") < 0.52
+    combined = "slowed 20%, builds over 1 year, 20% never given"
+    assert flag(combined, 1600) < 0.80 <= flag(combined, 2000) < flag(combined, 2600)
+    assert r["smallest_grid_size_reaching_80_percent_combined_case"] == 2000
+    two = cell[("risk cut 50%, builds over 2 years", 1300)]                      # P3 confirmed: misread as slowing
+    assert 0.20 < two["slope_change_flagged"] < 0.28 and 0.90 < two["median_slope_estimate"] < 0.93
+    assert 0.08 < flag("risk cut 50%, builds over 1 year") < 0.12
+    for w in ("no effect", "risk cut 50%, at once", "risk cut 50%, 20% never given", "risk cut 50%, 30% never given"):
+        assert 0.03 < flag(w) < 0.10, w
+    assert 0.03 < two["from_year_2_slope_change_flagged"] < 0.08                 # P4 confirmed: the repair works
+    assert 0.03 < cell[("no effect", 1300)]["from_year_2_slope_change_flagged"] < 0.08
+    assert 0.45 < cell[("slowed 20%, at once", 1300)]["from_year_2_slope_change_flagged"] < 0.58   # at a price
