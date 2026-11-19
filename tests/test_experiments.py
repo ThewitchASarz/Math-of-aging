@@ -26,6 +26,7 @@ EXP19 = ROOT / "experiments" / "019_rebound_after_stopping"
 EXP32 = ROOT / "experiments" / "032_frailty_score"
 EXP34 = ROOT / "experiments" / "034_entry_age_setting"
 EXP33 = ROOT / "experiments" / "033_benefit_difference_size"
+EXP37 = ROOT / "experiments" / "037_opposite_and_weaker"
 
 
 def case(results, design_start, effect):
@@ -504,3 +505,27 @@ def test_experiment_033_recorded_result():
     assert 0.08 < slow(short, "plain") < 0.16 and 0.20 < slow(short, "new") < 0.27
     sizes = "10 years, sizes, dropout, spread 0.3 | halves 70 and 30"
     assert 0.25 < slow(sizes, "plain") < 0.35 and 0.55 < slow(sizes, "new") < 0.65
+
+
+def test_experiment_037_recorded_result():
+    r = json.loads((EXP37 / "results.json").read_text())
+    r17 = json.loads((EXP17 / "results.json").read_text())
+    assert r["uk_a_per_year"] == r17["uk_a_per_year"] and r["uk_b_per_year"] == r17["uk_b_per_year"]
+    cell = {(c["case"], c["analysis"]): c for c in r["cases"]}
+    assert len(cell) == 24 and all(c["n_trials"] == 600 for c in r["cases"])
+    assert all(abs((c["cut_sturdier_half"] + c["cut_frailer_half"]) / 2 - c["average_cut"]) < 1e-12 for c in r["cases"])
+    fast = lambda case, an: cell[(case, an)]["flagged_as_faster_aging"]
+    slow = lambda case, an: cell[(case, an)]["flagged_as_slower_aging"]
+    c50, c30, c20 = "average cut 50 | ", "average cut 30 | ", "average cut 20 | "
+    assert fast(c50 + "45 and 55", "new") < 0.10                                    # P1 refuted: higher than predicted
+    assert 0.18 < fast(c50 + "40 and 60", "new") < 0.25 and 0.28 < fast(c50 + "35 and 65", "new") < 0.35
+    order = [fast(c50 + f"{x} and {100 - x}", "new") for x in (45, 40, 35, 30)]
+    assert order == sorted(order)
+    assert 0.22 < fast(c50 + "45 and 55", "plain") < 0.42                           # P2 confirmed
+    assert 0.35 < fast(c50 + "40 and 60", "plain") < 0.58 and 0.48 < fast(c50 + "35 and 65", "plain") < 0.72
+    assert 0.04 < slow(c30 + "36 and 24", "new") < 0.14 and 0.14 < slow(c30 + "42 and 18", "new") < 0.32   # P3 confirmed
+    assert slow(c20 + "24 and 16", "new") < 0.09 and 0.05 < slow(c20 + "28 and 12", "new") < 0.16
+    assert 0.05 < fast(c30 + "30 and 30", "plain") < 0.14 and 0.03 < fast(c20 + "20 and 20", "plain") < 0.10  # P4 first part
+    assert 0.32 < fast(c30 + "18 and 42", "plain") < 0.44                           # P4 second part: above the range
+    assert all(fast(c + "and".join(k), "new") < 0.05 and slow(c + "and".join(k), "new") < 0.05
+               for c, k in ((c30, ("30 ", " 30")), (c20, ("20 ", " 20"))))          # equal cut: the new test is sound
