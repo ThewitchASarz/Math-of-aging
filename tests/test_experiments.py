@@ -24,6 +24,7 @@ EXP16 = ROOT / "experiments" / "016_real_trial_designs"
 EXP17 = ROOT / "experiments" / "017_hidden_differences_harder"
 EXP19 = ROOT / "experiments" / "019_rebound_after_stopping"
 EXP32 = ROOT / "experiments" / "032_frailty_score"
+EXP34 = ROOT / "experiments" / "034_entry_age_setting"
 
 
 def case(results, design_start, effect):
@@ -446,3 +447,33 @@ def test_experiment_032_recorded_result():
     assert 0.10 < extra[sturdy]["flagged_as_slower_aging"] < 0.20
     assert 0.03 < extra["no effect"]["slope_change_flagged"] < 0.09
     assert abs(extra["no effect"]["median_slope_estimate"] - 1.0) < 0.01
+
+
+def test_experiment_034_recorded_result():
+    r = json.loads((EXP34 / "results.json").read_text())
+    r32 = json.loads((EXP32 / "results.json").read_text())
+    assert r["uk_a_per_year"] == r32["uk_a_per_year"] and r["uk_b_per_year"] == r32["uk_b_per_year"]
+    assert r["spread"] == 0.3 and r["n_dogs"] == 1300 and r["years"] == 10.0
+    assert r["gradient_check_max_relative_error"] < 1e-5
+    assert r["difference_from_experiment_032_likelihood"] < 1e-6
+    cell = {(c["case"], c["score_kind"], c["score_quality"], c["analysis"]): c for c in r["cases"]}
+    assert len(cell) == 48 and all(c["n_trials"] == 600 for c in r["cases"])
+    flag = lambda case, q, an, kind="rank": cell[(case, kind, q, an)]["slope_change_flagged"]
+    for q in (0.9, 1.0):                                                           # P1 confirmed
+        assert 0.03 < flag("no effect", q, "entry-age") < 0.08
+        assert 0.98 < cell[("no effect", "rank", q, "entry-age")]["median_slope_estimate"] < 1.03
+    assert 0.08 < flag("no effect", 1.0, "old") < 0.14                             # the lean of experiment 032
+    sturdy = "sturdy helped more (70% and 30% cuts)"
+    slow = lambda q, an, kind="rank": cell[(sturdy, kind, q, an)]["flagged_as_slower_aging"]
+    assert 0.08 < slow(1.0, "entry-age") < 0.22 and 0.28 < slow(0.7, "entry-age") < 0.45    # P2 confirmed
+    assert 0.03 < slow(1.0, "five groups") < 0.10                                  # P3 confirmed
+    assert abs(slow(0.7, "five groups") - slow(0.7, "entry-age")) < 0.06
+    assert all(slow(q, "entry-age") > slow(q, "old") for q in (0.5, 0.7, 0.9, 1.0))  # the lean hid part of it
+    assert 0.17 < slow(0.9, "entry-age") < 0.26
+    age = "aging slowed 20% in every dog"
+    assert 0.60 < flag(age, 0.7, "entry-age") < 0.76 and 0.70 < flag(age, 1.0, "entry-age") < 0.90   # P4 confirmed
+    assert all(flag(age, q, "five groups") > flag(age, q, "entry-age") - 0.05 for q in (0.7, 1.0))
+    assert all(flag(age, q, "old", "risk") > flag(age, q, "entry-age", "risk") + 0.08 for q in (0.7, 1.0))
+    found = lambda case, q, an: cell[(case, "rank", q, an)]["benefit_differs_by_score_found"]
+    assert 0.83 < found(sturdy, 0.7, "entry-age") < 0.93 and 0.03 < found("no effect", 0.7, "entry-age") < 0.08
+    assert 0.11 < found("no effect", 1.0, "five groups") < 0.20                    # not predicted: the grouped test
