@@ -23,6 +23,7 @@ EXP15 = ROOT / "experiments" / "015_delayed_partial_effect"
 EXP16 = ROOT / "experiments" / "016_real_trial_designs"
 EXP17 = ROOT / "experiments" / "017_hidden_differences_harder"
 EXP19 = ROOT / "experiments" / "019_rebound_after_stopping"
+EXP32 = ROOT / "experiments" / "032_frailty_score"
 
 
 def case(results, design_start, effect):
@@ -413,3 +414,35 @@ def test_experiment_017_recorded_result():
     assert 0.84 < cell[(sturdy, "new")]["flagged_as_slower_aging"] < 0.92
     short = "4 years | frail helped more (70% and 30% cuts)"
     assert 0.19 < flag(short, "plain") < 0.29 and 0.03 < flag(short, "new") < 0.08
+
+
+def test_experiment_032_recorded_result():
+    r = json.loads((EXP32 / "results.json").read_text())
+    r12 = json.loads((EXP12 / "results.json").read_text())
+    assert r["uk_a_per_year"] == r12["dog_a_per_year"] and r["uk_b_per_year"] == r12["dog_b_per_year"]
+    assert r["spread"] == 0.3 and r["n_dogs"] == 1300 and r["years"] == 10.0
+    assert r["gradient_check_max_relative_error"] < 1e-5
+    assert r["difference_from_experiment_001_likelihood"] < 1e-6
+    cell = {(c["case"], c["analysis"], c["score_quality"]): c for c in r["cases"]}
+    assert len(cell) == 34 and all(c["n_trials"] == 600 for c in r["cases"])
+    sturdy = "sturdy helped more (70% and 30% cuts)"
+    slow = lambda an, rho: cell[(sturdy, an, rho)]["flagged_as_slower_aging"]
+    assert 0.50 < slow("plain", None) < 0.65 and 0.82 < slow("new", None) < 0.93      # P1 confirmed
+    assert slow("plain+score", 0.5) > 0.30 and 0.20 < slow("plain+score", 0.7) < 0.45  # P2 confirmed
+    assert 0.05 < slow("plain+score", 0.9) < 0.13                                      # P3: on the lower line of 8 to 25
+    assert slow("plain+score", 1.0) < 0.03                                             # below the predicted 3 to 10
+    assert all(slow("new+score", q) > slow("plain+score", q) for q in (0.3, 0.5, 0.7, 0.9))
+    flag = lambda case, an, rho: cell[(case, an, rho)]["slope_change_flagged"]
+    assert 0.03 < flag("no effect", "plain+score", 0.7) < 0.08                         # P4, first half confirmed
+    assert 0.03 < flag("no effect", "new+score", 0.7) < 0.08
+    assert 0.08 < flag("no effect", "plain+score", 1.0) < 0.13                         # not predicted: the lean
+    assert cell[("no effect", "plain+score", 1.0)]["median_slope_estimate"] > 1.03
+    age = "aging slowed 20% in every dog"
+    assert flag(age, "plain+score", 0.7) > flag(age, "plain", None) - 0.05
+    assert flag(age, "new+score", 0.7) < flag(age, "new", None) - 0.05                 # P4, second half refuted
+    found = lambda rho: cell[(sturdy, "plain+score", rho)]["benefit_differs_by_score_found"]
+    assert 0.42 < found(0.5) < 0.58 and 0.83 < found(0.7) < 0.93
+    extra = {e["case"]: e for e in r["extra_score_is_hidden_risk_itself"]}
+    assert 0.10 < extra[sturdy]["flagged_as_slower_aging"] < 0.20
+    assert 0.03 < extra["no effect"]["slope_change_flagged"] < 0.09
+    assert abs(extra["no effect"]["median_slope_estimate"] - 1.0) < 0.01

@@ -37,6 +37,7 @@ PARTS = {
     "experiments/016_real_trial_designs": ["real_designs.py"],
     "experiments/017_hidden_differences_harder": ["harder.py"],
     "experiments/019_rebound_after_stopping": ["rebound.py"],
+    "experiments/032_frailty_score": ["frailty_score.py"],
 }
 # Experiments count outcomes over simulated trials and stop optimisers at a tolerance, so a different
 # machine can move a count by one or two trials. They get a looser comparison.
@@ -56,6 +57,7 @@ LOOSE = {"damage_repair": (1e-4, 1e-9),
          "experiments/016_real_trial_designs": (0.05, 0.011),
          "experiments/017_hidden_differences_harder": (0.05, 0.011),
          "experiments/019_rebound_after_stopping": (0.05, 0.011),
+         "experiments/032_frailty_score": (0.05, 0.011),
          "experiments/009_partial_fade": (0.05, 0.011)}
 SKIP_KEYS = ("runtime", "seconds", "elapsed", "time_s")
 
