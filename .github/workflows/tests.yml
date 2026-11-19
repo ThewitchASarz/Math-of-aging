@@ -11,8 +11,9 @@ concurrency:
 jobs:
   test:
     runs-on: ubuntu-latest
-    # The slow step re-runs every experiment and grows with each one; run 24 was cut off at 30 minutes.
-    timeout-minutes: 60
+    # The slow step re-runs every experiment and grows with each one; run 24 was cut off at 30 minutes
+    # and run 35 at 60 minutes.
+    timeout-minutes: 120
     env:
       OMP_NUM_THREADS: "1"
       OPENBLAS_NUM_THREADS: "1"
