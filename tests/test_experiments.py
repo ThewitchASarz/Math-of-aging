@@ -25,6 +25,7 @@ EXP17 = ROOT / "experiments" / "017_hidden_differences_harder"
 EXP19 = ROOT / "experiments" / "019_rebound_after_stopping"
 EXP32 = ROOT / "experiments" / "032_frailty_score"
 EXP34 = ROOT / "experiments" / "034_entry_age_setting"
+EXP33 = ROOT / "experiments" / "033_benefit_difference_size"
 
 
 def case(results, design_start, effect):
@@ -477,3 +478,29 @@ def test_experiment_034_recorded_result():
     found = lambda case, q, an: cell[(case, "rank", q, an)]["benefit_differs_by_score_found"]
     assert 0.83 < found(sturdy, 0.7, "entry-age") < 0.93 and 0.03 < found("no effect", 0.7, "entry-age") < 0.08
     assert 0.11 < found("no effect", 1.0, "five groups") < 0.20                    # not predicted: the grouped test
+
+
+def test_experiment_033_recorded_result():
+    r = json.loads((EXP33 / "results.json").read_text())
+    r17 = json.loads((EXP17 / "results.json").read_text())
+    assert r["uk_a_per_year"] == r17["uk_a_per_year"] and r["uk_b_per_year"] == r17["uk_b_per_year"]
+    cell = {(c["case"], c["analysis"]): c for c in r["cases"]}
+    assert len(cell) == 22 and all(c["n_trials"] == 600 for c in r["cases"])
+    slow = lambda case, an: cell[(case, an)]["flagged_as_slower_aging"]
+    long3 = "10 years, spread 0.3 | "
+    assert 0.06 < slow(long3 + "halves 55 and 45", "new") < 0.18                    # P1 confirmed
+    assert 0.20 < slow(long3 + "halves 60 and 40", "new") < 0.45
+    assert slow(long3 + "halves 60 and 40", "plain") < 0.12
+    assert 0.15 < slow(long3 + "halves 65 and 35", "plain") < 0.35
+    order = [slow(long3 + f"halves {x} and {100 - x}", "new") for x in (50, 55, 60, 65, 70)]
+    assert order == sorted(order) and order[0] < 0.05
+    assert slow("10 years, spread 0.1 | halves 70 and 30", "plain") > 0.45           # P2: first part refuted
+    assert slow("10 years, spread 0.1 | halves 70 and 30", "new") > 0.65
+    assert all(slow("10 years, spread 0.1 | halves 60 and 40", an) < 0.25 for an in ("plain", "new"))
+    assert slow(long3 + "steady 90 to 10", "new") > 0.85                            # P3 confirmed
+    assert 0.25 < slow(long3 + "steady 70 to 30", "new") < 0.55
+    assert slow(long3 + "steady 70 to 30", "new") > slow(long3 + "halves 60 and 40", "new")
+    short = "4 years, spread 0.3 | halves 70 and 30"                                # P4 refuted
+    assert 0.08 < slow(short, "plain") < 0.16 and 0.20 < slow(short, "new") < 0.27
+    sizes = "10 years, sizes, dropout, spread 0.3 | halves 70 and 30"
+    assert 0.25 < slow(sizes, "plain") < 0.35 and 0.55 < slow(sizes, "new") < 0.65

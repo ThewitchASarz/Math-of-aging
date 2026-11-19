@@ -1,0 +1,465 @@
+{
+ "note": "Simulated trials of 1,300 dogs, half treated from enrolment. No dog's rate of aging changes in any case; the treatment cuts risk by 50 percent on average, more in sturdy dogs than in frail ones. 'flagged_as_slower_aging' is the share of trials in which a 5% likelihood-ratio test rejects 'the slope did not change' with an estimated rate below 1. 'plain' ignores hidden differences; 'new' adds one setting for the spread of a gamma-shaped hidden risk factor. ASSUMPTIONS: the spread, entry ages, dropout 0.05 a year, size mix, and every cut and pattern.",
+ "seed": 20261133,
+ "uk_a_per_year": 0.004967182098875431,
+ "uk_b_per_year": 0.31954873909049325,
+ "size_class_a_per_year": 0.0019931693453973443,
+ "size_class_b_per_year": [
+  0.3217404108181793,
+  0.316488031994736,
+  0.34358451707461857,
+  0.3898801338670896,
+  0.4962134541772647
+ ],
+ "size_class_shares": [
+  0.22415565847819954,
+  0.29908383021963425,
+  0.13794914915353582,
+  0.3245147312979483,
+  0.014296630850682128
+ ],
+ "dropout_per_year": 0.05,
+ "trials_per_case": 600,
+ "cases": [
+  {
+   "case": "10 years, spread 0.3 | halves 50 and 50",
+   "analysis": "plain",
+   "n_trials": 600,
+   "years": 10.0,
+   "entry_ages": [
+    7.0,
+    12.0
+   ],
+   "spread": 0.3,
+   "sizes_and_dropout": false,
+   "pattern": "halves",
+   "cut_sturdy_end": 0.5,
+   "cut_frail_end": 0.5,
+   "share_of_dogs_dead": 0.9292935897435899,
+   "slope_change_flagged": 0.25333333333333335,
+   "flagged_as_slower_aging": 0.0,
+   "flagged_as_faster_aging": 0.25333333333333335,
+   "median_slope_estimate": 1.1056422028885877
+  },
+  {
+   "case": "10 years, spread 0.3 | halves 50 and 50",
+   "analysis": "new",
+   "n_trials": 600,
+   "years": 10.0,
+   "entry_ages": [
+    7.0,
+    12.0
+   ],
+   "spread": 0.3,
+   "sizes_and_dropout": false,
+   "pattern": "halves",
+   "cut_sturdy_end": 0.5,
+   "cut_frail_end": 0.5,
+   "share_of_dogs_dead": 0.9292935897435899,
+   "slope_change_flagged": 0.06833333333333333,
+   "flagged_as_slower_aging": 0.028333333333333332,
+   "flagged_as_faster_aging": 0.039999999999999994,
+   "median_slope_estimate": 1.0049522632461203
+  },
+  {
+   "case": "10 years, spread 0.3 | halves 55 and 45",
+   "analysis": "plain",
+   "n_trials": 600,
+   "years": 10.0,
+   "entry_ages": [
+    7.0,
+    12.0
+   ],
+   "spread": 0.3,
+   "sizes_and_dropout": false,
+   "pattern": "halves",
+   "cut_sturdy_end": 0.55,
+   "cut_frail_end": 0.45,
+   "share_of_dogs_dead": 0.9241102564102561,
+   "slope_change_flagged": 0.085,
+   "flagged_as_slower_aging": 0.016666666666666666,
+   "flagged_as_faster_aging": 0.06833333333333334,
+   "median_slope_estimate": 1.0424674590744136
+  },
+  {
+   "case": "10 years, spread 0.3 | halves 55 and 45",
+   "analysis": "new",
+   "n_trials": 600,
+   "years": 10.0,
+   "entry_ages": [
+    7.0,
+    12.0
+   ],
+   "spread": 0.3,
+   "sizes_and_dropout": false,
+   "pattern": "halves",
+   "cut_sturdy_end": 0.55,
+   "cut_frail_end": 0.45,
+   "share_of_dogs_dead": 0.9241102564102561,
+   "slope_change_flagged": 0.1,
+   "flagged_as_slower_aging": 0.09833333333333333,
+   "flagged_as_faster_aging": 0.0016666666666666774,
+   "median_slope_estimate": 0.9493071056635977
+  },
+  {
+   "case": "10 years, spread 0.3 | halves 60 and 40",
+   "analysis": "plain",
+   "n_trials": 600,
+   "years": 10.0,
+   "entry_ages": [
+    7.0,
+    12.0
+   ],
+   "spread": 0.3,
+   "sizes_and_dropout": false,
+   "pattern": "halves",
+   "cut_sturdy_end": 0.6,
+   "cut_frail_end": 0.4,
+   "share_of_dogs_dead": 0.9174782051282049,
+   "slope_change_flagged": 0.03666666666666667,
+   "flagged_as_slower_aging": 0.03333333333333333,
+   "flagged_as_faster_aging": 0.003333333333333334,
+   "median_slope_estimate": 0.9771118046325101
+  },
+  {
+   "case": "10 years, spread 0.3 | halves 60 and 40",
+   "analysis": "new",
+   "n_trials": 600,
+   "years": 10.0,
+   "entry_ages": [
+    7.0,
+    12.0
+   ],
+   "spread": 0.3,
+   "sizes_and_dropout": false,
+   "pattern": "halves",
+   "cut_sturdy_end": 0.6,
+   "cut_frail_end": 0.4,
+   "share_of_dogs_dead": 0.9174782051282049,
+   "slope_change_flagged": 0.2866666666666667,
+   "flagged_as_slower_aging": 0.2866666666666667,
+   "flagged_as_faster_aging": 0.0,
+   "median_slope_estimate": 0.8987102063435474
+  },
+  {
+   "case": "10 years, spread 0.3 | halves 65 and 35",
+   "analysis": "plain",
+   "n_trials": 600,
+   "years": 10.0,
+   "entry_ages": [
+    7.0,
+    12.0
+   ],
+   "spread": 0.3,
+   "sizes_and_dropout": false,
+   "pattern": "halves",
+   "cut_sturdy_end": 0.65,
+   "cut_frail_end": 0.35,
+   "share_of_dogs_dead": 0.9086243589743597,
+   "slope_change_flagged": 0.245,
+   "flagged_as_slower_aging": 0.245,
+   "flagged_as_faster_aging": 0.0,
+   "median_slope_estimate": 0.887767684240004
+  },
+  {
+   "case": "10 years, spread 0.3 | halves 65 and 35",
+   "analysis": "new",
+   "n_trials": 600,
+   "years": 10.0,
+   "entry_ages": [
+    7.0,
+    12.0
+   ],
+   "spread": 0.3,
+   "sizes_and_dropout": false,
+   "pattern": "halves",
+   "cut_sturdy_end": 0.65,
+   "cut_frail_end": 0.35,
+   "share_of_dogs_dead": 0.9086243589743597,
+   "slope_change_flagged": 0.6366666666666667,
+   "flagged_as_slower_aging": 0.6366666666666667,
+   "flagged_as_faster_aging": 0.0,
+   "median_slope_estimate": 0.8234396050040379
+  },
+  {
+   "case": "10 years, spread 0.3 | halves 70 and 30",
+   "analysis": "plain",
+   "n_trials": 600,
+   "years": 10.0,
+   "entry_ages": [
+    7.0,
+    12.0
+   ],
+   "spread": 0.3,
+   "sizes_and_dropout": false,
+   "pattern": "halves",
+   "cut_sturdy_end": 0.7,
+   "cut_frail_end": 0.3,
+   "share_of_dogs_dead": 0.8973666666666668,
+   "slope_change_flagged": 0.55,
+   "flagged_as_slower_aging": 0.55,
+   "flagged_as_faster_aging": 0.0,
+   "median_slope_estimate": 0.8056354775841177
+  },
+  {
+   "case": "10 years, spread 0.3 | halves 70 and 30",
+   "analysis": "new",
+   "n_trials": 600,
+   "years": 10.0,
+   "entry_ages": [
+    7.0,
+    12.0
+   ],
+   "spread": 0.3,
+   "sizes_and_dropout": false,
+   "pattern": "halves",
+   "cut_sturdy_end": 0.7,
+   "cut_frail_end": 0.3,
+   "share_of_dogs_dead": 0.8973666666666668,
+   "slope_change_flagged": 0.8683333333333333,
+   "flagged_as_slower_aging": 0.8683333333333333,
+   "flagged_as_faster_aging": 0.0,
+   "median_slope_estimate": 0.7553350997213201
+  },
+  {
+   "case": "10 years, spread 0.3 | steady 70 to 30",
+   "analysis": "plain",
+   "n_trials": 600,
+   "years": 10.0,
+   "entry_ages": [
+    7.0,
+    12.0
+   ],
+   "spread": 0.3,
+   "sizes_and_dropout": false,
+   "pattern": "steady",
+   "cut_sturdy_end": 0.7,
+   "cut_frail_end": 0.3,
+   "share_of_dogs_dead": 0.9139064102564104,
+   "slope_change_flagged": 0.10833333333333334,
+   "flagged_as_slower_aging": 0.105,
+   "flagged_as_faster_aging": 0.003333333333333341,
+   "median_slope_estimate": 0.9333876648297329
+  },
+  {
+   "case": "10 years, spread 0.3 | steady 70 to 30",
+   "analysis": "new",
+   "n_trials": 600,
+   "years": 10.0,
+   "entry_ages": [
+    7.0,
+    12.0
+   ],
+   "spread": 0.3,
+   "sizes_and_dropout": false,
+   "pattern": "steady",
+   "cut_sturdy_end": 0.7,
+   "cut_frail_end": 0.3,
+   "share_of_dogs_dead": 0.9139064102564104,
+   "slope_change_flagged": 0.455,
+   "flagged_as_slower_aging": 0.455,
+   "flagged_as_faster_aging": 0.0,
+   "median_slope_estimate": 0.8623204133065749
+  },
+  {
+   "case": "10 years, spread 0.3 | steady 90 to 10",
+   "analysis": "plain",
+   "n_trials": 600,
+   "years": 10.0,
+   "entry_ages": [
+    7.0,
+    12.0
+   ],
+   "spread": 0.3,
+   "sizes_and_dropout": false,
+   "pattern": "steady",
+   "cut_sturdy_end": 0.9,
+   "cut_frail_end": 0.1,
+   "share_of_dogs_dead": 0.889801282051282,
+   "slope_change_flagged": 0.8183333333333334,
+   "flagged_as_slower_aging": 0.8183333333333334,
+   "flagged_as_faster_aging": 0.0,
+   "median_slope_estimate": 0.7259133608768669
+  },
+  {
+   "case": "10 years, spread 0.3 | steady 90 to 10",
+   "analysis": "new",
+   "n_trials": 600,
+   "years": 10.0,
+   "entry_ages": [
+    7.0,
+    12.0
+   ],
+   "spread": 0.3,
+   "sizes_and_dropout": false,
+   "pattern": "steady",
+   "cut_sturdy_end": 0.9,
+   "cut_frail_end": 0.1,
+   "share_of_dogs_dead": 0.889801282051282,
+   "slope_change_flagged": 0.9683333333333334,
+   "flagged_as_slower_aging": 0.9683333333333334,
+   "flagged_as_faster_aging": 0.0,
+   "median_slope_estimate": 0.6931029138675491
+  },
+  {
+   "case": "10 years, spread 0.1 | halves 60 and 40",
+   "analysis": "plain",
+   "n_trials": 600,
+   "years": 10.0,
+   "entry_ages": [
+    7.0,
+    12.0
+   ],
+   "spread": 0.1,
+   "sizes_and_dropout": false,
+   "pattern": "halves",
+   "cut_sturdy_end": 0.6,
+   "cut_frail_end": 0.4,
+   "share_of_dogs_dead": 0.953239743589744,
+   "slope_change_flagged": 0.11166666666666666,
+   "flagged_as_slower_aging": 0.11166666666666666,
+   "flagged_as_faster_aging": 0.0,
+   "median_slope_estimate": 0.945016810485648
+  },
+  {
+   "case": "10 years, spread 0.1 | halves 60 and 40",
+   "analysis": "new",
+   "n_trials": 600,
+   "years": 10.0,
+   "entry_ages": [
+    7.0,
+    12.0
+   ],
+   "spread": 0.1,
+   "sizes_and_dropout": false,
+   "pattern": "halves",
+   "cut_sturdy_end": 0.6,
+   "cut_frail_end": 0.4,
+   "share_of_dogs_dead": 0.953239743589744,
+   "slope_change_flagged": 0.21666666666666667,
+   "flagged_as_slower_aging": 0.21666666666666667,
+   "flagged_as_faster_aging": 0.0,
+   "median_slope_estimate": 0.9183779621900996
+  },
+  {
+   "case": "10 years, spread 0.1 | halves 70 and 30",
+   "analysis": "plain",
+   "n_trials": 600,
+   "years": 10.0,
+   "entry_ages": [
+    7.0,
+    12.0
+   ],
+   "spread": 0.1,
+   "sizes_and_dropout": false,
+   "pattern": "halves",
+   "cut_sturdy_end": 0.7,
+   "cut_frail_end": 0.3,
+   "share_of_dogs_dead": 0.9363807692307694,
+   "slope_change_flagged": 0.66,
+   "flagged_as_slower_aging": 0.66,
+   "flagged_as_faster_aging": 0.0,
+   "median_slope_estimate": 0.8180675412375047
+  },
+  {
+   "case": "10 years, spread 0.1 | halves 70 and 30",
+   "analysis": "new",
+   "n_trials": 600,
+   "years": 10.0,
+   "entry_ages": [
+    7.0,
+    12.0
+   ],
+   "spread": 0.1,
+   "sizes_and_dropout": false,
+   "pattern": "halves",
+   "cut_sturdy_end": 0.7,
+   "cut_frail_end": 0.3,
+   "share_of_dogs_dead": 0.9363807692307694,
+   "slope_change_flagged": 0.795,
+   "flagged_as_slower_aging": 0.795,
+   "flagged_as_faster_aging": 0.0,
+   "median_slope_estimate": 0.7953770686062825
+  },
+  {
+   "case": "4 years, spread 0.3 | halves 70 and 30",
+   "analysis": "plain",
+   "n_trials": 600,
+   "years": 4.0,
+   "entry_ages": [
+    10.0,
+    14.0
+   ],
+   "spread": 0.3,
+   "sizes_and_dropout": false,
+   "pattern": "halves",
+   "cut_sturdy_end": 0.7,
+   "cut_frail_end": 0.3,
+   "share_of_dogs_dead": 0.6038820512820513,
+   "slope_change_flagged": 0.12333333333333334,
+   "flagged_as_slower_aging": 0.11833333333333333,
+   "flagged_as_faster_aging": 0.0050000000000000044,
+   "median_slope_estimate": 0.8125816339716136
+  },
+  {
+   "case": "4 years, spread 0.3 | halves 70 and 30",
+   "analysis": "new",
+   "n_trials": 600,
+   "years": 4.0,
+   "entry_ages": [
+    10.0,
+    14.0
+   ],
+   "spread": 0.3,
+   "sizes_and_dropout": false,
+   "pattern": "halves",
+   "cut_sturdy_end": 0.7,
+   "cut_frail_end": 0.3,
+   "share_of_dogs_dead": 0.6038820512820513,
+   "slope_change_flagged": 0.23166666666666666,
+   "flagged_as_slower_aging": 0.23,
+   "flagged_as_faster_aging": 0.0016666666666666496,
+   "median_slope_estimate": 0.7437042162880578
+  },
+  {
+   "case": "10 years, sizes, dropout, spread 0.3 | halves 70 and 30",
+   "analysis": "plain",
+   "n_trials": 600,
+   "years": 10.0,
+   "entry_ages": [
+    7.0,
+    12.0
+   ],
+   "spread": 0.3,
+   "sizes_and_dropout": true,
+   "pattern": "halves",
+   "cut_sturdy_end": 0.7,
+   "cut_frail_end": 0.3,
+   "share_of_dogs_dead": 0.6426076923076922,
+   "slope_change_flagged": 0.305,
+   "flagged_as_slower_aging": 0.305,
+   "flagged_as_faster_aging": 0.0,
+   "median_slope_estimate": 0.863460591166489
+  },
+  {
+   "case": "10 years, sizes, dropout, spread 0.3 | halves 70 and 30",
+   "analysis": "new",
+   "n_trials": 600,
+   "years": 10.0,
+   "entry_ages": [
+    7.0,
+    12.0
+   ],
+   "spread": 0.3,
+   "sizes_and_dropout": true,
+   "pattern": "halves",
+   "cut_sturdy_end": 0.7,
+   "cut_frail_end": 0.3,
+   "share_of_dogs_dead": 0.6426076923076922,
+   "slope_change_flagged": 0.6233333333333333,
+   "flagged_as_slower_aging": 0.6233333333333333,
+   "flagged_as_faster_aging": 0.0,
+   "median_slope_estimate": 0.8185059650823867
+  }
+ ]
+}
