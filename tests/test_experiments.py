@@ -27,6 +27,7 @@ EXP32 = ROOT / "experiments" / "032_frailty_score"
 EXP34 = ROOT / "experiments" / "034_entry_age_setting"
 EXP33 = ROOT / "experiments" / "033_benefit_difference_size"
 EXP37 = ROOT / "experiments" / "037_opposite_and_weaker"
+EXP38 = ROOT / "experiments" / "038_larger_trial"
 
 
 def case(results, design_start, effect):
@@ -529,3 +530,34 @@ def test_experiment_037_recorded_result():
     assert 0.32 < fast(c30 + "18 and 42", "plain") < 0.44                           # P4 second part: above the range
     assert all(fast(c + "and".join(k), "new") < 0.05 and slow(c + "and".join(k), "new") < 0.05
                for c, k in ((c30, ("30 ", " 30")), (c20, ("20 ", " 20"))))          # equal cut: the new test is sound
+
+
+def test_experiment_038_recorded_result():
+    r = json.loads((EXP38 / "results.json").read_text())
+    r17 = json.loads((EXP17 / "results.json").read_text())
+    assert r["uk_a_per_year"] == r17["uk_a_per_year"] and r["uk_b_per_year"] == r17["uk_b_per_year"]
+    cell = {(c["design"], c["pattern"], c["n_dogs"], c["analysis"]): c for c in r["cases"]}
+    assert len(cell) == 54 and all(c["n_trials"] == (600 if c["n_dogs"] <= 1300 else 300) for c in r["cases"])
+    slow = lambda d, p, n, an="new": cell[(d, p, n, an)]["flagged_as_slower_aging"]
+    fast = lambda d, p, n, an="new": cell[(d, p, n, an)]["flagged_as_faster_aging"]
+    ten, four, sizes = "10 years", "4 years", (600, 2600, 5000)
+    for pattern, lo_hi in (("60 and 40", ((0.08, 0.22), (0.40, 0.62), (0.65, 0.88))),      # P1 confirmed
+                           ("55 and 45", ((0.03, 0.11), (0.10, 0.24), (0.17, 0.36))),
+                           ("42 and 18", ((0.09, 0.24), (0.42, 0.65), (0.68, 0.90)))):     # P2 confirmed
+        got = [slow(ten, pattern, n) for n in sizes]
+        assert got == sorted(got) and all(lo < g < hi for g, (lo, hi) in zip(got, lo_hi))
+    got = [fast(ten, "40 and 60", n) for n in sizes]
+    assert got == sorted(got) and 0.05 < got[0] < 0.18 and 0.28 < got[1] < 0.50 and 0.48 < got[2] < 0.72
+    got = [slow(four, "60 and 40", n) for n in (600, 1300, 2600, 5000)]                    # P3 confirmed
+    assert got[0] < 0.10 and 0.04 < got[1] < 0.14 and 0.08 < got[2] < 0.20 and 0.14 < got[3] < 0.32
+    power = [slow(four, "true slowing 20%", n) for n in sizes]
+    assert 0.08 < power[0] < 0.20 and 0.36 < power[1] < 0.58 and 0.62 < power[2] < 0.84
+    assert 0.03 < cell[(ten, "50 and 50", 5000, "new")]["slope_change_flagged"] < 0.08     # P4 confirmed
+    assert 0.48 < fast(ten, "50 and 50", 5000, "plain") < 0.75
+    # the estimate is off by the same amount at every size; a true slowing needs no more than 2,600 dogs
+    est = [cell[(ten, "60 and 40", n, "new")]["median_slope_estimate"] for n in sizes]
+    assert max(est) - min(est) < 0.02 and 0.87 < min(est) and max(est) < 0.91
+    assert slow(ten, "true slowing 20%", 2600) > 0.97
+    assert all(slow(four, "55 and 45", n) < 0.08 for n in (600, 1300, 2600, 5000))
+    rule = r["square_root_rule"]
+    assert len(rule) == 18 and sum(abs(x["square_root_rule"] - x["simulated"]) < 0.04 for x in rule) == 17
