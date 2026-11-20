@@ -28,6 +28,7 @@ EXP34 = ROOT / "experiments" / "034_entry_age_setting"
 EXP33 = ROOT / "experiments" / "033_benefit_difference_size"
 EXP37 = ROOT / "experiments" / "037_opposite_and_weaker"
 EXP38 = ROOT / "experiments" / "038_larger_trial"
+EXP35 = ROOT / "experiments" / "035_score_and_hidden_differences"
 
 
 def case(results, design_start, effect):
@@ -561,3 +562,36 @@ def test_experiment_038_recorded_result():
     assert all(slow(four, "55 and 45", n) < 0.08 for n in (600, 1300, 2600, 5000))
     rule = r["square_root_rule"]
     assert len(rule) == 18 and sum(abs(x["square_root_rule"] - x["simulated"]) < 0.04 for x in rule) == 17
+
+
+def test_experiment_035_recorded_result():
+    r = json.loads((EXP35 / "results.json").read_text())
+    r34 = json.loads((EXP34 / "results.json").read_text())
+    assert r["uk_a_per_year"] == r34["uk_a_per_year"] and r["uk_b_per_year"] == r34["uk_b_per_year"]
+    assert r["spread"] == 0.3 and r["n_dogs"] == 1300 and r["years"] == 10.0
+    assert r["gradient_check_max_relative_error"] < 1e-5
+    assert r["difference_from_experiment_034_likelihood"] < 1e-6
+    cell = {(c["case"], c["score_kind"], c["score_quality"], c["analysis"]): c for c in r["cases"]}
+    assert len(cell) == 40 and all(c["n_trials"] == 600 for c in r["cases"])
+    plain, spread = "entry-age", "entry-age with spread"
+    get = lambda key, case, kind, q, an: cell[(case, kind, q, an)][key]
+    flag = lambda *k: get("slope_change_flagged", *k)
+    slow = lambda *k: get("flagged_as_slower_aging", *k)
+    fast = lambda *k: get("flagged_as_faster_aging", *k)
+    for kind, q in (("none", 0.0), ("rank", 0.7), ("rank", 1.0)):                    # P1 confirmed
+        assert 0.03 < flag("no effect", kind, q, spread) < 0.08
+    assert 0.25 < cell[("no effect", "none", 0.0, spread)]["median_fitted_spread"] < 0.35
+    sturdy = "sturdy helped more (70% and 30% cuts)"
+    assert 0.80 < slow(sturdy, "none", 0.0, spread) < 0.95                           # P2 confirmed
+    assert 0.48 < slow(sturdy, "rank", 0.7, spread) < 0.70 and 0.24 < slow(sturdy, "rank", 0.9, spread) < 0.42
+    for kind, q in (("none", 0.0), ("rank", 0.5), ("rank", 0.7), ("risk", 0.7)):     # the spread setting is worse
+        assert slow(sturdy, kind, q, spread) > slow(sturdy, kind, q, plain) + 0.15
+    assert abs(slow(sturdy, "rank", 1.0, spread) - slow(sturdy, "rank", 1.0, plain)) < 0.03
+    cut = "risk cut 50% in every dog"
+    assert 0.12 < fast(cut, "none", 0.0, plain) < 0.28 and 0.08 < fast(cut, "rank", 0.7, plain) < 0.22   # P3 confirmed
+    assert 0.03 < flag(cut, "none", 0.0, spread) < 0.09 and 0.03 < flag(cut, "rank", 0.7, spread) < 0.09
+    age = "aging slowed 20% in every dog"
+    assert 0.55 < slow(age, "rank", 0.7, spread) < 0.74                              # P4 confirmed
+    assert slow(age, "rank", 0.7, spread) > slow(age, "rank", 0.7, plain) - 0.08
+    assert 0.58 < slow(age, "none", 0.0, spread) < 0.80
+    assert slow(age, "none", 0.0, spread) > slow(age, "none", 0.0, plain) + 0.08     # the setting adds power

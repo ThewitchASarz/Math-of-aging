@@ -42,6 +42,7 @@ PARTS = {
     "experiments/033_benefit_difference_size": ["benefit_size.py"],
     "experiments/037_opposite_and_weaker": ["opposite_weaker.py"],
     "experiments/038_larger_trial": ["larger_trial.py"],
+    "experiments/035_score_and_hidden_differences": ["score_and_spread.py"],
 }
 # Experiments count outcomes over simulated trials and stop optimisers at a tolerance, so a different
 # machine can move a count by one or two trials. They get a looser comparison.
@@ -66,6 +67,7 @@ LOOSE = {"damage_repair": (1e-4, 1e-9),
          "experiments/033_benefit_difference_size": (0.05, 0.011),
          "experiments/037_opposite_and_weaker": (0.05, 0.011),
          "experiments/038_larger_trial": (0.05, 0.011),
+         "experiments/035_score_and_hidden_differences": (0.05, 0.011),
          "experiments/009_partial_fade": (0.05, 0.011)}
 SKIP_KEYS = ("runtime", "seconds", "elapsed", "time_s")
 
