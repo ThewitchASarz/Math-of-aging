@@ -29,6 +29,7 @@ EXP33 = ROOT / "experiments" / "033_benefit_difference_size"
 EXP37 = ROOT / "experiments" / "037_opposite_and_weaker"
 EXP38 = ROOT / "experiments" / "038_larger_trial"
 EXP35 = ROOT / "experiments" / "035_score_and_hidden_differences"
+EXP36 = ROOT / "experiments" / "036_grouped_benefit_test"
 
 
 def case(results, design_start, effect):
@@ -595,3 +596,40 @@ def test_experiment_035_recorded_result():
     assert slow(age, "rank", 0.7, spread) > slow(age, "rank", 0.7, plain) - 0.08
     assert 0.58 < slow(age, "none", 0.0, spread) < 0.80
     assert slow(age, "none", 0.0, spread) > slow(age, "none", 0.0, plain) + 0.08     # the setting adds power
+
+
+def test_experiment_036_recorded_result():
+    r = json.loads((EXP36 / "results.json").read_text())
+    r34 = json.loads((EXP34 / "results.json").read_text())
+    assert r["uk_a_per_year"] == r34["uk_a_per_year"] and r["uk_b_per_year"] == r34["uk_b_per_year"]
+    assert r["spread"] == 0.3 and r["n_dogs"] == 1300 and r["years"] == 10.0
+    assert r["max_difference_from_experiment_032_simulation"] < 1e-12
+    assert r["fits_where_larger_model_fitted_worse"] == 0
+    assert r["extra_settings"] == {"straight-line": 1, "five groups, treated only": 4,
+                                   "five groups, both arms": 4, "three groups, both arms": 2}
+    cell = {(c["case"], c["score_kind"], c["score_quality"]): c for c in r["cases"]}
+    assert len(cell) == 30 and all(c["n_trials"] == 600 for c in r["cases"])
+    scores = (("rank", 0.5), ("rank", 0.7), ("rank", 0.9), ("rank", 1.0), ("risk", 0.7), ("risk", 1.0))
+    line = lambda case, kind, q: cell[(case, kind, q)]["fired: straight-line"]
+    treated = lambda case, kind, q: cell[(case, kind, q)]["fired: five groups, treated only"]
+    five = lambda case, kind, q: cell[(case, kind, q)]["fired: five groups, both arms"]
+    three = lambda case, kind, q: cell[(case, kind, q)]["fired: three groups, both arms"]
+    assert all(0.03 < five("no effect", *sc) < 0.08 for sc in scores)                 # P1 confirmed
+    assert 0.11 < treated("no effect", "rank", 1.0) < 0.20
+    cut = "risk cut 50% in every dog"
+    for sc in (("rank", 0.7), ("risk", 0.7)):                                         # P2 confirmed
+        assert 0.03 < line(cut, *sc) < 0.09 and 0.03 < five(cut, *sc) < 0.09
+    sturdy = "sturdy helped more (70% and 30% cuts)"
+    assert 0.22 < five(sturdy, "rank", 0.5) < 0.40 and 0.62 < five(sturdy, "rank", 0.7) < 0.80   # P3 confirmed
+    assert five(sturdy, "rank", 1.0) >= 0.97
+    assert 0.06 < line(sturdy, "rank", 0.7) - five(sturdy, "rank", 0.7) < 0.24
+    middle = "middle helped more (70% middle half, 30% both ends)"
+    assert line(middle, "rank", 0.7) < 0.12 and line(middle, "rank", 1.0) < 0.12      # P4 confirmed
+    assert five(middle, "rank", 1.0) >= 0.95 and 0.20 < five(middle, "rank", 0.7) < 0.45
+    # not predicted: the treated-only test is faulty for other scores too; three groups against five
+    assert treated("no effect", "rank", 0.9) > 0.09 and treated("no effect", "risk", 0.7) > 0.09
+    assert three(sturdy, "rank", 0.7) > five(sturdy, "rank", 0.7)
+    assert three(middle, "rank", 0.9) < five(middle, "rank", 0.9) - 0.05
+    little = "sturdy helped a little more (60% and 40% cuts)"
+    assert 0.30 < line(little, "rank", 0.7) < 0.42 and 0.14 < five(little, "rank", 0.7) < 0.26
+    assert all(line(middle, *sc) < 0.20 for sc in scores)
